@@ -1,0 +1,143 @@
+---
+// Trang chủ — hướng A trong docs/NOI-DUNG-TRANG.md (chỉ dùng thông tin cấp hệ thống).
+import Base from '../../layouts/Base.astro';
+import Icon from '../Icon.astro';
+import Can from '../Can.astro';
+import HinhDauTrang from '../HinhDauTrang.astro';
+import KhoiCta from '../KhoiCta.astro';
+import { CO_SO, type Lang } from '../../data/co-so';
+import { LIEN_HE, SITE } from '../../data/lien-he';
+import { url, taoT, FORM_ANCHOR } from '../../i18n/routes';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = taoT(lang);
+
+const schema = [{
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${SITE}/#truong`,
+  name: 'Casa dei Bambini',
+  url: SITE + '/',
+  telephone: LIEN_HE.telSchema,
+  email: LIEN_HE.email,
+  sameAs: [LIEN_HE.facebook],
+}];
+---
+<Base lang={lang} routeKey="home" tieuDeDayDu schema={schema}
+  tieuDe={t('Mầm non Casa dei Bambini Hà Nội: nhận bé 15 tháng–6 tuổi', 'Casa dei Bambini preschools in Hanoi, ages 15 months to 6')}
+  moTa={t(
+    'Hệ thống mầm non hơn 10 năm tại Hà Nội. Ba cơ sở Kim Mã, Chùa Láng, Mỹ Đình đang tuyển sinh; cơ sở Ciputra dự kiến khai trương quý 4/2027.',
+    'A preschool group in Hanoi for over 10 years. Kim Mã, Chùa Láng and Mỹ Đình are enrolling; the Ciputra campus is expected to open in Q4 2027.',
+  )}>
+
+  <section class="dau-trang">
+    <div class="khung dau-trang__luoi">
+      <div>
+        <p class="nhan-phan">{t('Hệ thống mầm non hơn 10 năm tại Hà Nội', 'A Hanoi preschool group for over 10 years')}</p>
+        <h1>{t('Mầm non Casa dei Bambini cho bé từ 15 tháng đến 6 tuổi', 'Casa dei Bambini preschools for children from 15 months to 6 years')}</h1>
+        <p class="dau-trang__phu">{t(
+          'Ba cơ sở Kim Mã, Chùa Láng, Mỹ Đình đang tuyển sinh. Cơ sở Ciputra dự kiến khai trương quý 4/2027.',
+          'Our Kim Mã, Chùa Láng and Mỹ Đình campuses are enrolling now. The Ciputra campus is expected to open in Q4 2027.',
+        )}</p>
+        <div class="cum">
+          <a class="nut nut--chinh nut--lon" href={url('admissions', lang) + FORM_ANCHOR}>{t('Đăng ký tham quan', 'Book a visit')}</a>
+          <a class="nut nut--phu nut--lon" href={LIEN_HE.tel}><Icon ten="dien-thoai" />{t(`Gọi ${LIEN_HE.hotline}`, `Call ${LIEN_HE.hotlineQuocTe}`)}</a>
+        </div>
+      </div>
+      <HinhDauTrang />
+    </div>
+  </section>
+
+  <section class="phan phan--sat" aria-labelledby="chon-co-so">
+    <div class="khung">
+      <div class="phan__dau">
+        <h2 id="chon-co-so">{t('Chọn cơ sở gần bạn', 'Find a campus near you')}</h2>
+        <p>{t('Mỗi cơ sở có trang riêng với địa chỉ, bản đồ và lớp học.', 'Each campus has its own page with the address, map and classes.')}</p>
+      </div>
+      <ul class="luoi danh-sach-tron" role="list">
+        {CO_SO.map((c) => (
+          <li class="the the--lien-ket">
+            {c.trangThai === 'sap-khai-truong'
+              ? <span class="huy-hieu huy-hieu--sap">{t('Sắp khai trương', 'Opening soon')}</span>
+              : <span class="huy-hieu">{t('Đang tuyển sinh', 'Enrolling now')}</span>}
+            <h3><a class="the__lien-ket" href={url(`co-so-${c.slug}`, lang)}>{t(`Cơ sở ${c.ten.vi}`, `${c.ten.en} campus`)}</a></h3>
+            <p class="the__mo-ta">
+              {c.trangThai === 'sap-khai-truong'
+                ? t('Khu đô thị Ciputra. Dự kiến khai trương quý 4/2027.', 'Ciputra urban area. Expected to open in Q4 2027.')
+                : c.diaChiNgan ? c.diaChiNgan[lang] : <Can noi={t('địa chỉ', 'address')} />}
+            </p>
+            <span class="the__chan" aria-hidden="true">{t('Xem cơ sở', 'See campus')} →</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="phan phan--phu" aria-labelledby="theo-tuoi">
+    <div class="khung">
+      <div class="phan__dau">
+        <h2 id="theo-tuoi">{t('Con bạn bao nhiêu tuổi?', 'How old is your child?')}</h2>
+        <p>{t('Chọn theo tuổi của bé để xem con sẽ học gì.', "Choose your child's age to see what they will learn.")}</p>
+      </div>
+      <div class="luoi luoi--2">
+        <article class="the the--nhan the--lien-ket">
+          <span class="huy-hieu">{t('15 tháng – 3 tuổi', '15 months – 3 years')}</span>
+          <h3><a class="the__lien-ket" href={url('nursery', lang)}>{t('Nhà trẻ', 'Nursery')}</a></h3>
+          <p class="the__mo-ta">{t('Bé làm quen với lớp học, bạn bè và tiếng Anh. Xem mô hình lớp ở từng cơ sở.', 'Children get used to the classroom, friends and English. See the class model at each campus.')}</p>
+          <span class="the__chan" aria-hidden="true">{t('Xem chương trình nhà trẻ', 'See the nursery programme')} →</span>
+        </article>
+        <article class="the the--nhan the--lien-ket">
+          <span class="huy-hieu">{t('3 – 6 tuổi', '3 – 6 years')}</span>
+          <h3><a class="the__lien-ket" href={url('kindergarten', lang)}>{t('Mẫu giáo', 'Kindergarten')}</a></h3>
+          <p class="the__mo-ta">{t('Chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi, có lớp tiền tiểu học chuẩn bị vào lớp 1.', 'A programme based on the Cambridge Early Years framework for children aged 3–6, including a pre-primary class that prepares them for Grade 1.')}</p>
+          <span class="the__chan" aria-hidden="true">{t('Xem chương trình mẫu giáo', 'See the kindergarten programme')} →</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="phan" aria-labelledby="hai-he">
+    <div class="khung">
+      <div class="phan__dau">
+        <h2 id="hai-he">{t('Hai hệ học cho trẻ 3–6 tuổi', 'Two tracks for children aged 3–6')}</h2>
+        <p>{t('Gia đình chọn hệ phù hợp với mong muốn về tiếng Anh cho con.', 'Families choose the track that fits their hopes for their child’s English.')}</p>
+      </div>
+      <div class="luoi luoi--2">
+        <div class="the">
+          <h3>{t('Hệ quốc tế', 'International track')}</h3>
+          <p class="the__mo-ta">{t('Mỗi lớp có giáo viên chủ nhiệm, trợ giảng và giáo viên nước ngoài.', 'Each class has a homeroom teacher, a teaching assistant and a foreign teacher.')}</p>
+        </div>
+        <div class="the">
+          <h3>{t('Hệ song ngữ', 'Bilingual track')}</h3>
+          <p class="the__mo-ta">{t('Mỗi lớp có giáo viên chủ nhiệm và hai trợ giảng; giáo viên nước ngoài dạy theo tiết.', 'Each class has a homeroom teacher and two teaching assistants; a foreign teacher teaches scheduled lessons.')}</p>
+        </div>
+      </div>
+      <p class="sau-luoi"><a href={url('programmes', lang) + '#so-sanh-he'}>{t('So sánh hai hệ chi tiết', 'Compare the two tracks in detail')}</a></p>
+    </div>
+  </section>
+
+  <section class="phan phan--phu" aria-labelledby="mot-ngay">
+    <div class="khung">
+      <div class="phan__dau">
+        <h2 id="mot-ngay">{t('Một ngày ở Casa', 'A day at Casa')}</h2>
+      </div>
+      <ul class="o-so-lieu">
+        <li><strong>7h30–17h30</strong>{t('Thứ Hai đến thứ Sáu', 'Monday to Friday')}</li>
+        <li><strong>{t('Trông muộn đến 18h30', 'Late care until 18:30')}</strong>{t('Khi ba mẹ cần đón muộn', 'When parents need to pick up later')}</li>
+        <li><strong>{t('4 bữa mỗi ngày', '4 meals a day')}</strong>{t('Bếp của trường tự nấu', "Cooked in the school's own kitchen")}</li>
+        <li><strong>{t('Hè vẫn học', 'Open in summer')}</strong>{t('Trường chỉ nghỉ 1 tuần theo lịch', 'Closed for only one week')}</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="phan" aria-labelledby="ve-casa">
+    <div class="khung khung-chu">
+      <h2 id="ve-casa">{t('Về Casa dei Bambini', 'About Casa dei Bambini')}</h2>
+      <p>{t('Casa dei Bambini là hệ thống mầm non xuyên suốt hơn 10 năm tại Hà Nội.', 'Casa dei Bambini is a preschool group that has been running in Hanoi for over 10 years.')}</p>
+      <p><a href={url('about', lang)}>{t('Tìm hiểu về Casa dei Bambini', 'Learn more about Casa dei Bambini')}</a></p>
+    </div>
+  </section>
+
+  <KhoiCta lang={lang} />
+</Base>

@@ -1,0 +1,61 @@
+---
+// Chính sách bảo vệ dữ liệu cá nhân (Nghị định 13/2023/NĐ-CP, Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15).
+// BẢN NHÁP: cần chủ trường và người có chuyên môn pháp lý rà soát trước khi đăng.
+import Base from '../../layouts/Base.astro';
+import Can from '../Can.astro';
+import type { Lang } from '../../data/co-so';
+import { LIEN_HE } from '../../data/lien-he';
+import { url, taoT } from '../../i18n/routes';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = taoT(lang);
+const duongDan = [
+  { ten: t('Trang chủ', 'Home'), href: url('home', lang) },
+  { ten: t('Chính sách bảo vệ dữ liệu cá nhân', 'Personal Data Protection Policy'), href: url('privacy', lang) },
+];
+---
+<Base lang={lang} routeKey="privacy" duongDan={duongDan}
+  tieuDe={t('Chính sách bảo vệ dữ liệu cá nhân', 'Personal Data Protection Policy')}
+  moTa={t('Casa dei Bambini thu thông tin gì qua form đăng ký tham quan, dùng vào việc gì, lưu bao lâu và quyền của phụ huynh.', 'What Casa dei Bambini collects through the visit form, how it is used, how long it is kept and your rights.')}>
+  <section class="phan phan--sat">
+    <div class="khung noi-dung">
+      <h1>{t('Chính sách bảo vệ dữ liệu cá nhân', 'Personal Data Protection Policy')}</h1>
+      <p><Can noi={t('chủ trường và người có chuyên môn pháp lý rà soát toàn văn trước khi đăng', 'review of the full text by the owner and a legal adviser before publication')} /></p>
+
+      <h2>{t('1. Bên kiểm soát dữ liệu', '1. Data controller')}</h2>
+      <p>{LIEN_HE.phapNhan ?? <Can noi={t('tên đơn vị, mã số doanh nghiệp, địa chỉ trụ sở', 'entity name, business registration number, registered address')} />}</p>
+
+      <h2>{t('2. Thông tin chúng tôi thu', '2. Information we collect')}</h2>
+      <p>{t('Qua form đăng ký tham quan, chúng tôi chỉ thu:', 'Through the visit form we collect only:')}</p>
+      <ul>
+        <li>{t('Họ tên ba/mẹ;', "Parent's name;")}</li>
+        <li>{t('Số điện thoại;', 'Phone number;')}</li>
+        <li>{t('Tháng và năm sinh của bé (không thu tên bé hay thông tin sức khỏe);', "Child's month and year of birth (we do not collect the child's name or health information);")}</li>
+        <li>{t('Cơ sở gia đình muốn tham quan.', 'The campus your family would like to visit.')}</li>
+      </ul>
+
+      <h2>{t('3. Mục đích', '3. Purpose')}</h2>
+      <p>{t('Chỉ để liên hệ tư vấn, hẹn lịch tham quan và gửi biểu phí theo yêu cầu của gia đình. Chúng tôi không dùng thông tin này để quảng cáo cho bên khác và không bán cho bất kỳ ai.', 'Only to contact you, arrange a visit and send the fee schedule you asked for. We do not use this information for third-party advertising and never sell it.')}</p>
+
+      <h2>{t('4. Cơ sở xử lý', '4. Legal basis')}</h2>
+      <p>{t('Sự đồng ý của anh/chị, thể hiện bằng việc tích vào ô đồng ý trước khi gửi form. Anh/chị có thể rút lại đồng ý bất cứ lúc nào.', 'Your consent, given by ticking the consent box before sending the form. You may withdraw consent at any time.')}</p>
+
+      <h2>{t('5. Ai được xem thông tin', '5. Who can see the information')}</h2>
+      <p>{t('Bộ phận tuyển sinh của nhà trường.', "The school's admissions team.")} <Can noi={t('chủ trường xác nhận danh sách người được xem (phiếu câu 18)', 'owner to confirm who has access (form question 18)')} /></p>
+      <p>{t('Thông tin được gửi về hộp thư tuyển sinh của trường (dịch vụ Google Workspace) và lưu trên máy chủ của trường.', "Information is sent to the school's admissions mailbox (Google Workspace) and stored on the school's server.")}</p>
+
+      <h2>{t('6. Thời gian lưu', '6. How long we keep it')}</h2>
+      <p><Can noi={t('thời gian lưu trước khi xoá (phiếu câu 19)', 'retention period before deletion (form question 19)')} /></p>
+
+      <h2>{t('7. Quyền của anh/chị', '7. Your rights')}</h2>
+      <p>{t('Anh/chị có quyền được biết, đồng ý hoặc rút lại đồng ý, xem và sửa thông tin, yêu cầu xoá hoặc hạn chế xử lý, phản đối việc xử lý, khiếu nại theo quy định pháp luật về bảo vệ dữ liệu cá nhân.', 'You have the right to be informed, to give or withdraw consent, to access and correct your information, to request deletion or restriction of processing, to object to processing, and to complain, as provided by personal data protection law.')}</p>
+      <p>{t('Gửi yêu cầu tới', 'Send requests to')} <a href={`mailto:${LIEN_HE.email}`}>{LIEN_HE.email}</a>. <Can noi={t('chủ trường xác nhận đầu mối nhận yêu cầu (phiếu câu 20)', 'owner to confirm the contact for requests (form question 20)')} /></p>
+
+      <h2>{t('8. Cookie và theo dõi', '8. Cookies and tracking')}</h2>
+      <p>{t('Website không dùng cookie quảng cáo hay công cụ theo dõi người xem.', 'This website does not use advertising cookies or visitor-tracking tools.')}</p>
+
+      <h2>{t('9. Thay đổi chính sách', '9. Changes to this policy')}</h2>
+      <p>{t('Khi chính sách thay đổi, bản mới được đăng tại trang này kèm ngày cập nhật.', 'When this policy changes, the new version will be posted on this page with the date of the update.')} <Can noi={t('ngày hiệu lực', 'effective date')} /></p>
+    </div>
+  </section>
+</Base>

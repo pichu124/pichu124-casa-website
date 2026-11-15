@@ -1,0 +1,87 @@
+---
+// Tuyển sinh: quy trình, biểu phí, câu hỏi chung, form (#dang-ky).
+import Base from '../../layouts/Base.astro';
+import FormDangKy from '../FormDangKy.astro';
+import HoiDap from '../HoiDap.astro';
+import Can from '../Can.astro';
+import type { Lang } from '../../data/co-so';
+import { LIEN_HE } from '../../data/lien-he';
+import { url, taoT } from '../../i18n/routes';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = taoT(lang);
+const duongDan = [
+  { ten: t('Trang chủ', 'Home'), href: url('home', lang) },
+  { ten: t('Tuyển sinh', 'Admissions'), href: url('admissions', lang) },
+];
+const hotline = lang === 'en' ? LIEN_HE.hotlineQuocTe : LIEN_HE.hotline;
+const hoiDap = [
+  { hoi: t('Bé bao nhiêu tháng thì được nhận?', 'From what age do you accept children?'),
+    dap: t('Từ 15 tháng đến 6 tuổi. Bé từ 12 tháng có thể được nhận nếu đạt yêu cầu của trường.', 'From 15 months to 6 years. Children from 12 months may be accepted if they meet the school’s requirements.') },
+  { hoi: t('Hệ quốc tế và hệ song ngữ khác nhau ở đâu?', 'How do the international and bilingual tracks differ?'),
+    dap: t('Hệ quốc tế có giáo viên nước ngoài trong mỗi lớp 3–6 tuổi, cùng giáo viên chủ nhiệm và trợ giảng. Hệ song ngữ có giáo viên chủ nhiệm và hai trợ giảng; giáo viên nước ngoài dạy theo tiết.', 'The international track has a foreign teacher in every class for ages 3–6, together with a homeroom teacher and a teaching assistant. The bilingual track has a homeroom teacher and two teaching assistants; a foreign teacher teaches scheduled lessons.') },
+  { hoi: t('Giờ học và giờ đón muộn thế nào?', 'What are the school hours and late pick-up?'),
+    dap: t('Bé học từ 7h30 đến 17h30, thứ Hai đến thứ Sáu; có trông muộn đến 18h30.', 'Children attend from 7:30 to 17:30, Monday to Friday, with late care until 18:30.') },
+  { hoi: t('Bé ăn uống thế nào?', 'What do children eat?'),
+    dap: t('Bé ăn 4 bữa mỗi ngày, nấu tại bếp của trường.', 'Children have 4 meals a day, cooked in the school’s own kitchen.') },
+  { hoi: t('Mùa hè trường có học không?', 'Is the school open in summer?'),
+    dap: t('Có. Trường chỉ nghỉ một tuần theo lịch.', 'Yes. The school closes for only one week, according to its calendar.') },
+  { hoi: t('Trường có ngoại khoá, trại hè không?', 'Are there extracurricular activities or a summer camp?'),
+    dap: t('Có, theo đăng ký và thu phí riêng.', 'Yes, on registration and with separate fees.') },
+  { hoi: t('Học phí bao nhiêu?', 'How much are the fees?'),
+    dap: t(`Nhà trường gửi biểu phí sau khi trao đổi với gia đình. Anh/chị để lại số điện thoại hoặc gọi ${LIEN_HE.hotline}.`, `The school sends the fee schedule after talking with your family. Please leave your phone number or call ${LIEN_HE.hotlineQuocTe}.`) },
+];
+const schema = [{
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: hoiDap.map((q) => ({ '@type': 'Question', name: q.hoi, acceptedAnswer: { '@type': 'Answer', text: q.dap } })),
+}];
+---
+<Base lang={lang} routeKey="admissions" duongDan={duongDan} schema={schema}
+  tieuDe={t('Tuyển sinh và đăng ký tham quan', 'Admissions and visit booking')}
+  moTa={t(
+    'Đăng ký tham quan Casa dei Bambini: độ tuổi nhận, quy trình, câu hỏi thường gặp và cách nhận biểu phí. Hotline 0989 059 838.',
+    'Book a visit to Casa dei Bambini: age of entry, how admissions work, common questions and how to get the fee schedule. Hotline +84 989 059 838.',
+  )}>
+
+  <section class="dau-trang-con">
+    <div class="khung">
+      <h1>{t('Tuyển sinh và đăng ký tham quan', 'Admissions and visit booking')}</h1>
+      <p class="dau-trang__phu">{t('Nhận bé từ 15 tháng đến 6 tuổi. Hãy đến xem trường cùng con trước khi quyết định.', 'We welcome children from 15 months to 6 years. Come and see the school with your child before you decide.')}</p>
+    </div>
+  </section>
+
+  <section class="phan phan--sat" aria-labelledby="quy-trinh">
+    <div class="khung noi-dung">
+      <h2 id="quy-trinh">{t('Các bước', 'How it works')}</h2>
+      <ol>
+        <li>{t('Gửi đăng ký bên dưới hoặc gọi', 'Send the form below or call')} <a href={LIEN_HE.tel}>{hotline}</a>.</li>
+        <li>{t('Bộ phận tuyển sinh gọi lại để hẹn lịch tham quan.', 'Our admissions team calls you to arrange a visit.')} <Can noi={t('thời gian gọi lại', 'how soon we call back')} /></li>
+        <li>{t('Gia đình đến tham quan cơ sở và nhận biểu phí.', 'Your family visits the campus and receives the fee schedule.')}</li>
+        <li><Can noi={t('các bước nhập học và giấy tờ cần chuẩn bị', 'enrolment steps and documents needed')} /></li>
+      </ol>
+
+      <h2 id="bieu-phi">{t('Biểu phí', 'Fees')}</h2>
+      <p>{t('Liên hệ để nhận biểu phí. Nhà trường gửi biểu phí sau khi trao đổi với gia đình về độ tuổi của bé, cơ sở và hệ học.', "Contact us for the fee schedule. The school sends it after talking with your family about your child's age, campus and track.")}</p>
+      <p><a href="#dang-ky">{t('Để lại số điện thoại để nhận biểu phí', 'Leave your number to get the fee schedule')}</a></p>
+    </div>
+  </section>
+
+  <section class="phan phan--phu phan--sat" aria-labelledby="hoi-dap-tieu-de">
+    <div class="khung noi-dung">
+      <h2 id="hoi-dap-tieu-de">{t('Câu hỏi thường gặp', 'Frequently asked questions')}</h2>
+      <HoiDap cau={hoiDap} id="hoi-dap" />
+      <p class="sau-luoi">{t('Câu hỏi riêng về cơ sở mới:', 'Questions about the new campus:')} <a href={url('co-so-ciputra', lang)}>{t('xem trang Ciputra', 'see the Ciputra page')}</a>.</p>
+    </div>
+  </section>
+
+  <section class="phan phan--sat" aria-labelledby="dang-ky-tieu-de">
+    <div class="khung khoi-dang-ky">
+      <div>
+        <p class="nhan-phan">{t('Tham quan', 'Visit')}</p>
+        <p>{t('Để lại số điện thoại, nhà trường gọi lại để hẹn lịch tham quan và gửi biểu phí.', 'Leave your phone number and the school will call you to arrange a visit and send the fee schedule.')}</p>
+        <p>{t('Chưa biết chọn cơ sở nào?', 'Not sure which campus?')} <a href={url('campuses', lang)}>{t('Xem các cơ sở', 'See all campuses')}</a>. {t('Hoặc liên hệ qua', 'Or reach us via')} <a href={url('contact', lang)}>{t('trang Liên hệ', 'the Contact page')}</a>.</p>
+      </div>
+      <FormDangKy lang={lang} />
+    </div>
+  </section>
+</Base>

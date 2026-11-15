@@ -1,0 +1,27 @@
+---
+// Trang cảm ơn sau khi gửi form. Không lập chỉ mục, không thanh đáy.
+import Base from '../../layouts/Base.astro';
+import Can from '../Can.astro';
+import type { Lang } from '../../data/co-so';
+import { LIEN_HE } from '../../data/lien-he';
+import { url, taoT } from '../../i18n/routes';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = taoT(lang);
+---
+<Base lang={lang} routeKey="thanks" khongLapChiMuc thanhDay={false}
+  tieuDe={t('Đã nhận đăng ký tham quan', 'Visit request received')}
+  moTa={t('Nhà trường đã nhận đăng ký tham quan của anh/chị.', 'The school has received your visit request.')}>
+  <section class="phan">
+    <div class="khung noi-dung">
+      <h1>{t('Cảm ơn anh/chị, nhà trường đã nhận đăng ký', 'Thank you, we have received your request')}</h1>
+      <p class="dau-trang__phu">{t('Bộ phận tuyển sinh sẽ gọi lại để hẹn lịch tham quan.', 'Our admissions team will call you to arrange a visit.')} <Can noi={t('trong bao lâu', 'how soon')} /></p>
+      <p>{t('Cần gấp? Gọi', 'Need us sooner? Call')} <a href={LIEN_HE.tel}>{lang === 'en' ? LIEN_HE.hotlineQuocTe : LIEN_HE.hotline}</a>.</p>
+      <h2>{t('Trong lúc chờ', 'While you wait')}</h2>
+      <ul>
+        <li><a href={url('campuses', lang)}>{t('Xem các cơ sở', 'See our campuses')}</a></li>
+        <li><a href={url('programmes', lang)}>{t('Tìm hiểu chương trình học', 'Learn about our programmes')}</a></li>
+      </ul>
+    </div>
+  </section>
+</Base>

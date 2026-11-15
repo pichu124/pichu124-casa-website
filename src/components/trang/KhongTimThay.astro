@@ -1,0 +1,25 @@
+---
+// 404 hai thứ tiếng. Không lập chỉ mục.
+import Base from '../../layouts/Base.astro';
+import type { Lang } from '../../data/co-so';
+import { url, taoT, FORM_ANCHOR } from '../../i18n/routes';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = taoT(lang);
+---
+<Base lang={lang} khongLapChiMuc
+  tieuDe={t('Không tìm thấy trang', 'Page not found')}
+  moTa={t('Trang này không tồn tại hoặc đã đổi đường dẫn.', 'This page does not exist or has moved.')}>
+  <section class="phan">
+    <div class="khung noi-dung">
+      <h1>{t('Không tìm thấy trang này', "We couldn't find this page")}</h1>
+      <p class="dau-trang__phu">{t('Có thể đường dẫn đã thay đổi khi trường làm website mới.', 'The link may have changed when the school launched its new website.')}</p>
+      <ul>
+        <li><a href={url('home', lang)}>{t('Trang chủ', 'Home')}</a></li>
+        <li><a href={url('programmes', lang)}>{t('Chương trình học', 'Programmes')}</a></li>
+        <li><a href={url('campuses', lang)}>{t('Các cơ sở', 'Campuses')}</a></li>
+        <li><a href={url('admissions', lang) + FORM_ANCHOR}>{t('Đăng ký tham quan', 'Book a visit')}</a></li>
+      </ul>
+    </div>
+  </section>
+</Base>

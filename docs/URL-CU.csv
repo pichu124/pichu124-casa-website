@@ -9,7 +9,7 @@ url_cu,ngon_ngu,loai,tieu_de,dich_moi,noi_dung,ghi_chu,sitemap,sua_lan_cuoi
 /51-ban-ron-trong-gio-montessori-cung-cac-ban-nho-casa-dei-bambini/,vi,bai-viet,,/tin-tuc/,bỏ,"Tin hoạt động của bé: có ảnh trẻ, chưa rõ đồng ý",post,2025-08-05
 /53-ban-ron-trong-gio-montessori-cung-cac-ban-nho-casa-dei-bambini/,vi,bai-viet,,/tin-tuc/,bỏ,"Tin hoạt động của bé: có ảnh trẻ, chưa rõ đồng ý",post,2025-08-05
 /8170/,vi,bai-viet,,/tin-tuc/,bỏ,"Bài SEO chung, không gắn chương trình mới",post,2025-08-05
-/author-sitemap.xml,vi,sitemap,,/sitemap-index.xml,bỏ,Sitemap cũ trỏ về sitemap mới,sitemap_index,
+/author-sitemap.xml,vi,sitemap,,/sitemap.xml,bỏ,Sitemap cũ trỏ về sitemap mới,sitemap_index,
 /author/dev-anothemes/,vi,tac-gia,,/tin-tuc/,bỏ,Trang tác giả,author,2024-09-19
 /author/le-thi-thu-sang/,vi,tac-gia,,/tin-tuc/,bỏ,Trang tác giả,author,2026-01-02
 /ban-ron-trong-gio-montessori-cung-cac-ban-nho-casa-dei-bambini/,vi,bai-viet,,/tin-tuc/,bỏ,"Tin hoạt động của bé: có ảnh trẻ, chưa rõ đồng ý",post,2025-08-05
@@ -23,7 +23,7 @@ url_cu,ngon_ngu,loai,tieu_de,dich_moi,noi_dung,ghi_chu,sitemap,sua_lan_cuoi
 /cach-trang-tri-cau-thang/,vi,bai-viet,,/tin-tuc/,bỏ,"Bài SEO chung, không gắn chương trình mới",post,2025-12-12
 /cam-giac-quay-lai-truong-hoc-sau-3-ngay-nghi-le-duong-lich-cua-cac-ban-nho-casa-se-nhu-the-nao/,vi,bai-viet,,/tin-tuc/,bỏ,"Tin hoạt động của bé: có ảnh trẻ, chưa rõ đồng ý",post,2025-08-05
 /casa-dei-bambini-hanh-trinh-10-nam-gieo-mam-yeu-thuong/,vi,bai-viet,,/ve-casa/,viết lại nếu khớp,Tư liệu cho trang Về Casa,post,2026-04-22
-/category-sitemap.xml,vi,sitemap,,/sitemap-index.xml,bỏ,Sitemap cũ trỏ về sitemap mới,sitemap_index,
+/category-sitemap.xml,vi,sitemap,,/sitemap.xml,bỏ,Sitemap cũ trỏ về sitemap mới,sitemap_index,
 /cau-do-cho-tre-mam-non/,vi,bai-viet,,/tin-tuc/,bỏ,"Bài SEO chung, không gắn chương trình mới",post,2026-01-29
 /che-do-dinh-duong/,vi,trang,,/chuong-trinh/,viết lại,"4 bữa, bếp tự nấu: đưa vào mục Một ngày ở Casa",page,2026-01-28
 /chinh-sach-bao-mat/,vi,trang,,/chinh-sach-bao-ve-du-lieu/,bỏ,Viết mới theo Nghị định 13/2023 và Luật 91/2025,page,2025-08-09
@@ -34,9 +34,9 @@ url_cu,ngon_ngu,loai,tieu_de,dich_moi,noi_dung,ghi_chu,sitemap,sua_lan_cuoi
 /chuong-trinh-hoc-cho-tre-3-5-tuoi/,vi,trang,,/chuong-trinh/mau-giao/,viết lại,Site cũ ghi 3–5 tuổi; nay là 3–6 tuổi,page,2025-08-09
 /chuong-trinh-hoc-montessori-la-gi/,vi,bai-viet,,/tin-tuc/,bỏ,Bài về phương pháp giáo dục; Montessori không còn là định vị chính,post,2026-02-08
 /chuong-trinh-hoc/,vi,trang,,/chuong-trinh/,viết lại,,page,2026-02-04
-/class-sitemap.xml,vi,sitemap,,/sitemap-index.xml,bỏ,Sitemap cũ trỏ về sitemap mới,sitemap_index,
+/class-sitemap.xml,vi,sitemap,,/sitemap.xml,bỏ,Sitemap cũ trỏ về sitemap mới,sitemap_index,
 /class/,vi,lop,,/co-so/,bỏ,"Trang lớp 2022 (tên thành phố), chỉ có bản EN",class,2022-07-05
-/class_category-sitemap.xml,vi,sitemap,,/sitemap-index.xml,bỏ,Sitemap cũ trỏ về sitemap mới,sitemap_index,
+/class_category-sitemap.xml,vi,sitemap,,/sitemap.xml,bỏ,Sitemap cũ trỏ về sitemap mới,sitemap_index,
 /co-nen-cho-con-hoc-truong-mam-non-quoc-te/,vi,bai-viet,,/tuyen-sinh/,bỏ,Bài về chọn trường / độ tuổi nhập học,post,2025-11-26
 /co-so-cau-giay/,vi,trang,,/co-so/,viết lại,"[CẦN: ""Cầu Giấy"" là cơ sở nào? Nếu là Chùa Láng thì đổi đích sang trang Chùa Láng]",page,2026-02-04
 /co-so-kim-ma/,vi,trang,,/co-so/kim-ma/,viết lại,,page,2026-02-04
@@ -154,9 +154,9 @@ url_cu,ngon_ngu,loai,tieu_de,dich_moi,noi_dung,ghi_chu,sitemap,sua_lan_cuoi
 /nhung-cau-noi-hay-ve-truong-mam-non-hanh-phuc/,vi,bai-viet,,/tin-tuc/,bỏ,"Bài SEO chung, không gắn chương trình mới",post,2025-11-21
 /nhung-nguoi-anh-hung-tham-lang-luon-am-tham-dong-hanh-voi-cac-con/,vi,bai-viet,,/tin-tuc/,bỏ,"Tin hoạt động của bé: có ảnh trẻ, chưa rõ đồng ý",post,2025-08-05
 /noi-quy/,vi,trang,,/tuyen-sinh/,bỏ,Nội quy: bỏ (QUYET-DINH Q6),page,2025-08-09
-/page-sitemap.xml,vi,sitemap,,/sitemap-index.xml,bỏ,Sitemap cũ trỏ về sitemap mới,sitemap_index,
+/page-sitemap.xml,vi,sitemap,,/sitemap.xml,bỏ,Sitemap cũ trỏ về sitemap mới,sitemap_index,
 /phat-trien-giac-quan-cho-tre/,vi,bai-viet,,/tin-tuc/,viết lại nếu khớp,Ứng viên viết lại (QUYET-DINH Q8),post,2026-04-06
-/photo-sitemap.xml,vi,sitemap,,/sitemap-index.xml,bỏ,Sitemap cũ trỏ về sitemap mới,sitemap_index,
+/photo-sitemap.xml,vi,sitemap,,/sitemap.xml,bỏ,Sitemap cũ trỏ về sitemap mới,sitemap_index,
 /photo/,vi,album-anh,,/co-so/,bỏ,"Thư viện ảnh: có ảnh trẻ, chưa rõ đồng ý của phụ huynh",photo,2025-07-19
 /photo/anh-co-so-cau-giay/,vi,album-anh,,/co-so/,viết lại,"[CẦN: ""Cầu Giấy"" là cơ sở nào? Nếu là Chùa Láng thì đổi đích sang trang Chùa Láng]",photo,2025-07-18
 /phuong-phap-giao-duc-tre-mam-non/,vi,bai-viet,,/tin-tuc/,bỏ,Bài về phương pháp giáo dục; Montessori không còn là định vị chính,post,2025-11-21
@@ -170,17 +170,17 @@ url_cu,ngon_ngu,loai,tieu_de,dich_moi,noi_dung,ghi_chu,sitemap,sua_lan_cuoi
 /phuong-phap-shichida/,vi,bai-viet,,/tin-tuc/,bỏ,Bài về phương pháp giáo dục; Montessori không còn là định vị chính,post,2025-11-09
 /phuong-phap-steam-trong-giao-duc-mam-non/,vi,bai-viet,,/tin-tuc/,bỏ,Bài về phương pháp giáo dục; Montessori không còn là định vị chính,post,2026-01-03
 /phuong-phap-steiner/,vi,bai-viet,,/tin-tuc/,bỏ,Bài về phương pháp giáo dục; Montessori không còn là định vị chính,post,2025-11-09
-/post-sitemap.xml,vi,sitemap,,/sitemap-index.xml,bỏ,Sitemap cũ trỏ về sitemap mới,sitemap_index,
+/post-sitemap.xml,vi,sitemap,,/sitemap.xml,bỏ,Sitemap cũ trỏ về sitemap mới,sitemap_index,
 /project-based-learning/,vi,bai-viet,,/tin-tuc/,bỏ,Bài về phương pháp giáo dục; Montessori không còn là định vị chính,post,2025-11-04
 /quy-trinh-5e/,vi,bai-viet,,/tin-tuc/,bỏ,Bài về phương pháp giáo dục; Montessori không còn là định vị chính,post,2026-01-09
 /share/,vi,danh-muc,,/tin-tuc/,bỏ,Danh mục bài viết cũ,category,2025-08-05
-/sitemap_index.xml,vi,sitemap,,/sitemap-index.xml,bỏ,Sitemap cũ trỏ về sitemap mới,sitemap_index,
+/sitemap_index.xml,vi,sitemap,,/sitemap.xml,bỏ,Sitemap cũ trỏ về sitemap mới,sitemap_index,
 /so-sanh-phuong-phap-montessori-va-reggio-emilia/,vi,bai-viet,,/tin-tuc/,bỏ,Bài về phương pháp giáo dục; Montessori không còn là định vị chính,post,2026-02-08
 /su-kien-family-day-growing-together/,vi,bai-viet,,/tin-tuc/,bỏ,"Tin hoạt động của bé: có ảnh trẻ, chưa rõ đồng ý",post,2026-01-21
 /tap-lam-banh-pizza-cung-cac-ban-nho-casa/,vi,bai-viet,,/tin-tuc/,bỏ,"Tin hoạt động của bé: có ảnh trẻ, chưa rõ đồng ý",post,2025-08-05
 /tap-lam-khoai-tay-xao-cung-cac-ban-nho-casa-3/,vi,bai-viet,,/tin-tuc/,bỏ,"Tin hoạt động của bé: có ảnh trẻ, chưa rõ đồng ý",post,2025-08-05
 /tap-lam-nem-ran-truyen-thong-cung-cac-ban-nho-casa/,vi,bai-viet,,/tin-tuc/,bỏ,"Tin hoạt động của bé: có ảnh trẻ, chưa rõ đồng ý",post,2025-08-05
-/teacher-sitemap.xml,vi,sitemap,,/sitemap-index.xml,bỏ,Sitemap cũ trỏ về sitemap mới,sitemap_index,
+/teacher-sitemap.xml,vi,sitemap,,/sitemap.xml,bỏ,Sitemap cũ trỏ về sitemap mới,sitemap_index,
 /teacher/,vi,giao-vien,,/ve-casa/,bỏ,"Hồ sơ giáo viên 2022, nhiều trang trùng/mẫu (ms-fray-2…6, mrs-zenny-copy)",teacher,2022-07-04
 /teacher/mrs-zenny-copy/,vi,giao-vien,,/ve-casa/,bỏ,"Hồ sơ giáo viên 2022, nhiều trang trùng/mẫu (ms-fray-2…6, mrs-zenny-copy)",teacher,2022-07-04
 /teacher/mrs-zenny/,vi,giao-vien,,/ve-casa/,bỏ,"Hồ sơ giáo viên 2022, nhiều trang trùng/mẫu (ms-fray-2…6, mrs-zenny-copy)",teacher,2022-07-04

@@ -1,0 +1,104 @@
+---
+// Chương trình: tổng quan theo tuổi, so sánh hai hệ (góc riêng của trang), một ngày ở Casa.
+import Base from '../../layouts/Base.astro';
+import KhoiCta from '../KhoiCta.astro';
+import BangLop from '../BangLop.astro';
+import type { Lang } from '../../data/co-so';
+import { url, taoT } from '../../i18n/routes';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = taoT(lang);
+const duongDan = [
+  { ten: t('Trang chủ', 'Home'), href: url('home', lang) },
+  { ten: t('Chương trình', 'Programmes'), href: url('programmes', lang) },
+];
+---
+<Base lang={lang} routeKey="programmes" duongDan={duongDan}
+  tieuDe={t('Chương trình học theo tuổi và hai hệ học', 'Programmes by age and our two tracks')}
+  moTa={t(
+    'Nhà trẻ cho bé 15–36 tháng, mẫu giáo 3–6 tuổi theo khung Cambridge Early Years. So sánh hệ quốc tế và hệ song ngữ; giờ học, bữa ăn, mùa hè.',
+    'Nursery for 15–36 months and kindergarten for ages 3–6 based on the Cambridge Early Years framework. Compare the international and bilingual tracks.',
+  )}>
+
+  <section class="dau-trang-con">
+    <div class="khung">
+      <h1>{t('Chương trình học tại Casa dei Bambini', 'Programmes at Casa dei Bambini')}</h1>
+      <p class="dau-trang__phu">{t('Chọn theo tuổi của bé, rồi chọn hệ học phù hợp với gia đình.', "Start with your child's age, then choose the track that suits your family.")}</p>
+    </div>
+  </section>
+
+  <section class="phan phan--sat" aria-labelledby="theo-tuoi">
+    <div class="khung">
+      <h2 id="theo-tuoi">{t('Theo tuổi của bé', "By your child's age")}</h2>
+      <div class="luoi luoi--2">
+        <article class="the the--nhan the--lien-ket">
+          <span class="huy-hieu">{t('15 tháng – 3 tuổi', '15 months – 3 years')}</span>
+          <h3><a class="the__lien-ket" href={url('nursery', lang)}>{t('Nhà trẻ', 'Nursery')}</a></h3>
+          <p class="the__mo-ta">{t('Lớp cho bé dưới 3 tuổi: làm quen với lớp học, bạn bè và tiếng Anh.', 'Classes for children under 3: getting used to school, friends and English.')}</p>
+          <span class="the__chan" aria-hidden="true">{t('Xem chương trình nhà trẻ', 'See the nursery programme')} →</span>
+        </article>
+        <article class="the the--nhan the--lien-ket">
+          <span class="huy-hieu">{t('3 – 6 tuổi', '3 – 6 years')}</span>
+          <h3><a class="the__lien-ket" href={url('kindergarten', lang)}>{t('Mẫu giáo', 'Kindergarten')}</a></h3>
+          <p class="the__mo-ta">{t('Chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi, gồm lớp tiền tiểu học.', 'A programme based on the Cambridge Early Years framework for ages 3–6, including a pre-primary class.')}</p>
+          <span class="the__chan" aria-hidden="true">{t('Xem chương trình mẫu giáo', 'See the kindergarten programme')} →</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="phan phan--phu" aria-labelledby="so-sanh-he" id="so-sanh-he">
+    <div class="khung">
+      <div class="phan__dau">
+        <h2 id="so-sanh-he-tieu-de">{t('So sánh hệ quốc tế và hệ song ngữ', 'International and bilingual tracks compared')}</h2>
+        <p>{t('Hai hệ áp dụng cho lớp 3–6 tuổi. Khác nhau ở đội ngũ trong lớp và thời gian có giáo viên nước ngoài.', 'Both tracks are for classes aged 3–6. They differ in the classroom team and time with a foreign teacher.')}</p>
+      </div>
+      <div class="bang-cuon" role="region" aria-labelledby="so-sanh-he-tieu-de" tabindex="0">
+        <table class="bang--so-sanh">
+          <thead>
+            <tr>
+              <th scope="col">{t('Trong mỗi lớp', 'In each class')}</th>
+              <th scope="col">{t('Hệ quốc tế', 'International track')}</th>
+              <th scope="col">{t('Hệ song ngữ', 'Bilingual track')}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">{t('Giáo viên chủ nhiệm', 'Homeroom teacher')}</th>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <th scope="row">{t('Trợ giảng', 'Teaching assistants')}</th>
+              <td>{t('1 (ưu tiên người nói tiếng Anh tốt)', '1 (preferably a strong English speaker)')}</td>
+              <td>{t('2 (ít nhất 1 người nói tiếng Anh tốt)', '2 (at least 1 strong English speaker)')}</td>
+            </tr>
+            <tr>
+              <th scope="row">{t('Giáo viên nước ngoài', 'Foreign teacher')}</th>
+              <td>{t('1, trong lớp', '1, in the class')}</td>
+              <td>{t('Dạy theo tiết', 'Teaches scheduled lessons')}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <BangLop lang={lang} cot={['songNgu', 'quocTe']} tieuDe={t('Hệ học có ở cơ sở nào', 'Which campus offers each track')} />
+    </div>
+  </section>
+
+  <section class="phan" aria-labelledby="mot-ngay">
+    <div class="khung">
+      <div class="phan__dau">
+        <h2 id="mot-ngay">{t('Một ngày ở Casa', 'A day at Casa')}</h2>
+      </div>
+      <ul class="o-so-lieu">
+        <li><strong>7h30–17h30</strong>{t('Thứ Hai đến thứ Sáu', 'Monday to Friday')}</li>
+        <li><strong>{t('Trông muộn đến 18h30', 'Late care until 18:30')}</strong>{t('Khi ba mẹ cần đón muộn', 'When parents need to pick up later')}</li>
+        <li><strong>{t('4 bữa mỗi ngày', '4 meals a day')}</strong>{t('Bếp của trường tự nấu', "Cooked in the school's own kitchen")}</li>
+        <li><strong>{t('Hè vẫn học', 'Open in summer')}</strong>{t('Trường chỉ nghỉ 1 tuần theo lịch', 'Closed for only one week')}</li>
+      </ul>
+      <p class="sau-luoi">{t('Hoạt động ngoại khoá và trại hè theo đăng ký, thu phí riêng.', 'Extracurricular activities and summer camp are optional, with separate fees.')}</p>
+    </div>
+  </section>
+
+  <KhoiCta lang={lang} />
+</Base>

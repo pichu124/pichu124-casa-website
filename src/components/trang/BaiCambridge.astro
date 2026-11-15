@@ -1,0 +1,106 @@
+---
+// Bài 1 "Cambridge Early Years là gì" — nội dung từ Docs (https://claude.ai/artifact/FrJdSXt17WaoqnNQJSWpb9).
+// Phần "Phụ huynh nên hỏi gì khi trường nói dạy Cambridge?" CHƯA đăng: chỉ thêm khi Casa hoàn tất đăng ký Cambridge.
+import Base from '../../layouts/Base.astro';
+import type { Lang } from '../../data/co-so';
+import { LIEN_HE, SITE } from '../../data/lien-he';
+import { url, taoT, FORM_ANCHOR } from '../../i18n/routes';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = taoT(lang);
+const duongDan = [
+  { ten: t('Trang chủ', 'Home'), href: url('home', lang) },
+  { ten: t('Bài viết', 'Articles'), href: url('articles', lang) },
+  { ten: t('Cambridge Early Years là gì?', 'What is Cambridge Early Years?'), href: url('article-cey', lang) },
+];
+const h1 = t('Cambridge Early Years là gì? Giải thích cho phụ huynh có con 3–6 tuổi', 'What is Cambridge Early Years? A guide for parents of children aged 3–6');
+const schema = [{
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: h1, inLanguage: lang,
+  mainEntityOfPage: SITE + url('article-cey', lang),
+  author: { '@id': `${SITE}/#truong` }, publisher: { '@id': `${SITE}/#truong` },
+}];
+const LINH_VUC = [
+  { ten: t('Giao tiếp, ngôn ngữ và đọc viết', 'Communication, language and literacy'), goc: 'Communication, Language and Literacy',
+    noi: t('Trẻ tập nghe, kể lại, đặt câu hỏi và làm quen với chữ viết. Ví dụ: các bé nghe cô đọc truyện, rồi đoán xem nhân vật sẽ làm gì tiếp theo.', 'Children practise listening, retelling, asking questions and getting to know written words. Example: children listen to the teacher read a story, then guess what the character will do next.') },
+  { ten: t('Biểu đạt sáng tạo', 'Creative expression'), goc: 'Creative Expression',
+    noi: t('Trẻ thể hiện ý tưởng qua vẽ, nặn, âm nhạc, vận động và đóng vai. Ví dụ: dùng hộp giấy cũ để dựng một "cửa hàng" rồi chơi mua bán cùng bạn.', 'Children express ideas through drawing, modelling, music, movement and role play. Example: using old cardboard boxes to build a "shop" and playing at buying and selling with friends.') },
+  { ten: t('Toán', 'Mathematics'), goc: 'Mathematics',
+    noi: t('Trẻ làm quen với số lượng, hình dạng, quy luật và đo lường qua đồ vật thật. Ví dụ: đếm và chia đều hoa quả cho các bạn trong bàn.', 'Children explore quantity, shape, pattern and measurement with real objects. Example: counting fruit and sharing it equally among the friends at their table.') },
+  { ten: t('Phát triển cá nhân, xã hội và cảm xúc', 'Personal, social and emotional development'), goc: 'Personal, Social and Emotional Development',
+    noi: t('Trẻ học gọi tên cảm xúc của mình, chờ đến lượt, chia sẻ và tự phục vụ. Ví dụ: cả nhóm cùng thống nhất cách thay phiên nhau dùng một món đồ chơi.', 'Children learn to name their feelings, wait their turn, share and look after themselves. Example: the group agrees together how to take turns with a toy.') },
+  { ten: t('Phát triển thể chất', 'Physical development'), goc: 'Physical Development',
+    noi: t('Trẻ rèn vận động thô như chạy, nhảy, giữ thăng bằng, và vận động tinh như cầm bút, dùng kéo, cài cúc áo; đồng thời hình thành thói quen sức khỏe.', 'Children build gross motor skills such as running, jumping and balancing, and fine motor skills such as holding a pencil, using scissors and doing up buttons, while forming healthy habits.') },
+  { ten: t('Khám phá thế giới', 'Understanding the world'), goc: 'Understanding the World',
+    noi: t('Trẻ quan sát thiên nhiên, con người và các vật dụng quanh mình, rồi đặt câu hỏi "vì sao". Ví dụ: gieo một hạt đậu và theo dõi cây lớn lên mỗi ngày.', 'Children observe nature, people and everyday objects, and ask "why?". Example: planting a bean and watching it grow each day.') },
+];
+---
+<Base lang={lang} routeKey="article-cey" duongDan={duongDan} schema={schema} tieuDeDayDu
+  tieuDe={t('Cambridge Early Years là gì? Chương trình cho trẻ 3–6 tuổi', 'What is Cambridge Early Years? The programme for ages 3–6')}
+  moTa={t(
+    'Cambridge Early Years là chương trình của Cambridge International cho trẻ 3–6 tuổi: ba lớp, sáu lĩnh vực, học qua chơi. Giải thích cho phụ huynh.',
+    'Cambridge Early Years is Cambridge International’s programme for children aged 3–6: three year groups, six areas, learning through play. A guide for parents.',
+  )}>
+  <article class="phan phan--sat">
+    <div class="khung bai-viet">
+      <h1>{h1}</h1>
+      <p class="dau-trang__phu">{t(
+        'Khi đi tìm trường mầm non, nhiều phụ huynh nghe câu "trường dạy theo chương trình Cambridge". Câu này nghe quen vì Cambridge gắn với tiếng Anh và các kỳ thi quốc tế. Với trẻ 3–6 tuổi, Cambridge có một chương trình riêng, khác hẳn chuyện học tiếng Anh hay luyện thi. Bài viết này giải thích chương trình đó gồm những gì và trẻ học thế nào, để ba mẹ biết nên hỏi gì khi đi tham quan trường.',
+        'When looking for a preschool, many parents hear "this school follows the Cambridge programme". It sounds familiar because Cambridge is linked with English and international exams. For children aged 3–6, Cambridge has a programme of its own, quite different from English lessons or exam preparation. This article explains what that programme includes and how children learn, so you know what to ask when you visit a school.',
+      )}</p>
+
+      <h2>{t('Cambridge Early Years là chương trình gì?', 'What is Cambridge Early Years?')}</h2>
+      <p>{t('Cambridge Early Years là chương trình mầm non của Cambridge International, dành cho trẻ từ 3 đến 6 tuổi. Đây là bước đầu tiên trong lộ trình học của Cambridge, trước các cấp tiểu học và trung học.', 'Cambridge Early Years is the preschool programme of Cambridge International, for children aged 3 to 6. It is the first stage of the Cambridge pathway, before primary and secondary.')}</p>
+      <p>{t('Chương trình có ba đặc điểm chính:', 'The programme has three main features:')}</p>
+      <ul>
+        <li><strong>{t('Toàn diện.', 'Holistic.')}</strong> {t('Chương trình quan tâm tới toàn bộ con người đứa trẻ, không chỉ chữ và số. Cảm xúc, cách kết bạn, vận động và sự tò mò về thế giới xung quanh đều là mục tiêu học tập.', 'It cares about the whole child, not just letters and numbers. Feelings, making friends, movement and curiosity about the world are all learning goals.')}</li>
+        <li><strong>{t('Lấy trẻ làm trung tâm.', 'Child-centred.')}</strong> {t('Giáo viên quan sát điều từng bé quan tâm và đang làm được, rồi chuẩn bị hoạt động giúp bé đi thêm một bước.', 'Teachers observe what each child is interested in and can already do, then prepare activities that help them take the next step.')}</li>
+        <li><strong>{t('Học qua chơi.', 'Learning through play.')}</strong> {t('Trò chơi được thiết kế có mục đích, để trẻ vừa vui vừa hình thành kỹ năng và sự tự tin.', 'Games are designed with a purpose, so children enjoy themselves while building skills and confidence.')}</li>
+      </ul>
+
+      <h2>{t('Ba lớp theo độ tuổi', 'Three year groups by age')}</h2>
+      <p>{t('Cambridge Early Years chia thành ba lớp, mỗi lớp ứng với một năm tuổi:', 'Cambridge Early Years has three year groups, one for each year of age:')}</p>
+      <div class="bang-cuon" role="region" aria-label={t('Ba lớp theo độ tuổi', 'Three year groups by age')} tabindex="0">
+        <table>
+          <thead><tr><th scope="col">{t('Lớp', 'Year group')}</th><th scope="col">{t('Độ tuổi', 'Age')}</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Early Years 1</th><td>{t('3–4 tuổi', '3–4 years')}</td></tr>
+            <tr><th scope="row">Early Years 2</th><td>{t('4–5 tuổi', '4–5 years')}</td></tr>
+            <tr><th scope="row">Early Years 3</th><td>{t('5–6 tuổi', '5–6 years')}</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>{t('Early Years 3 là năm cuối trước khi trẻ vào tiểu học. Tại Casa dei Bambini, lớp tiền tiểu học học theo Early Years 3 và bổ sung thêm kỹ năng chuẩn bị vào lớp 1.', 'Early Years 3 is the last year before primary school. At Casa dei Bambini, the pre-primary class follows Early Years 3 and adds skills to prepare for Grade 1.')}</p>
+
+      <h2>{t('Sáu lĩnh vực trẻ được phát triển', 'Six areas of development')}</h2>
+      <p>{t('Chương trình xây dựng quanh sáu lĩnh vực phát triển của trẻ nhỏ. Trong một ngày ở lớp, các lĩnh vực này đan vào nhau chứ không tách thành từng môn. Các ví dụ dưới đây chỉ để minh họa.', 'The programme is built around six areas of early childhood development. In a day at school these areas are woven together rather than taught as separate subjects. The examples below are for illustration only.')}</p>
+      {LINH_VUC.map((l, i) => (
+        <>
+          <h3>{i + 1}. {l.ten}{lang === 'vi' && <span class="chu-phu" lang="en"> ({l.goc})</span>}</h3>
+          <p>{l.noi}</p>
+        </>
+      ))}
+
+      <h2>{t('"Học qua chơi" trong lớp diễn ra thế nào?', 'What does "learning through play" look like in class?')}</h2>
+      <p>{t('"Học qua chơi" không có nghĩa là trẻ chơi tự do cả ngày. Mỗi hoạt động được giáo viên chuẩn bị với một mục đích rõ ràng, nhưng trẻ trải nghiệm nó như một trò chơi.', '"Learning through play" does not mean children play freely all day. Each activity is prepared by the teacher with a clear purpose, but children experience it as a game.')}</p>
+      <p>{t('Chương trình đi theo kiểu', 'The programme is')} <strong>{t('xoắn ốc', 'spiral')}</strong>{t(': một kỹ năng không chỉ học một lần rồi thôi, mà quay lại nhiều lần, mỗi lần ở mức cao hơn. Ví dụ, ở Early Years 1 trẻ đếm đồ vật trong phạm vi nhỏ; đến Early Years 3, trẻ dùng việc đếm để so sánh, thêm bớt và giải một bài toán nhỏ trong tình huống thật.', ': a skill is not learned once and left behind, but revisited many times, each time at a higher level. For example, in Early Years 1 children count a small number of objects; by Early Years 3 they use counting to compare, add and take away, and solve a small problem in a real situation.')}</p>
+      <p>{t('Một buổi học có thể bắt đầu từ một câu chuyện về khu chợ. Sau đó trẻ dựng quầy hàng (biểu đạt sáng tạo), đếm và trả "tiền" (toán), mời bạn mua hàng bằng tiếng Anh (ngôn ngữ), và thay phiên nhau làm người bán (kỹ năng xã hội). Một trò chơi chạm tới nhiều lĩnh vực cùng lúc.', 'A lesson might start with a story about a market. Children then build stalls (creative expression), count and pay with "money" (maths), invite friends to buy in English (language), and take turns being the seller (social skills). One game touches many areas at once.')}</p>
+
+      <h2>{t('Cambridge Early Years tại Casa dei Bambini Ciputra', 'Cambridge Early Years at Casa dei Bambini Ciputra')}</h2>
+      <p>{t('Casa dei Bambini Ciputra áp dụng chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi, gồm lớp tiền tiểu học theo Early Years 3 có bổ sung kỹ năng chuẩn bị vào lớp 1. Bé từ 15 tháng đến 3 tuổi học lớp trộn tuổi theo tinh thần Montessori, làm quen tiếng Anh mỗi ngày.', 'Casa dei Bambini Ciputra follows a programme based on the Cambridge Early Years framework for children aged 3–6, including a pre-primary class following Early Years 3 with added skills to prepare for Grade 1. Children from 15 months to 3 years learn in mixed-age classes in the spirit of Montessori and are introduced to English every day.')}</p>
+      <p>{t('Cơ sở mới của hệ thống Casa dei Bambini nằm trong khu đô thị Ciputra, phường Phú Thượng, Hà Nội, và dự kiến khai trương quý 4/2027.', 'The new Casa dei Bambini campus is in the Ciputra urban area, Phú Thượng ward, Hanoi, and is expected to open in Q4 2027.')} <a href={url('co-so-ciputra', lang)}>{t('Xem giới thiệu cơ sở Ciputra', 'See the Ciputra campus')}</a>.</p>
+      <p><strong>{t('Đăng ký nhận thông tin sớm', 'Register for early updates')}</strong> {t('để được gửi chương trình, biểu phí và lịch tham quan ngay khi có:', 'to receive the programme, fees and visit schedule as soon as they are available:')}</p>
+      <div class="cum">
+        <a class="nut nut--chinh" href={url('co-so-ciputra', lang) + FORM_ANCHOR}>{t('Đăng ký nhận thông tin sớm', 'Get early updates')}</a>
+        <a class="nut nut--phu" href={LIEN_HE.tel}>{t(`Gọi ${LIEN_HE.hotline}`, `Call ${LIEN_HE.hotlineQuocTe}`)}</a>
+      </div>
+      <p class="sau-luoi"><a href={url('kindergarten', lang)}>{t('Xem chương trình mẫu giáo 3–6 tuổi ở các cơ sở', 'See the kindergarten programme across our campuses')}</a></p>
+
+      <p class="bai-viet__nguon">
+        {t('Nguồn thông tin về chương trình: Cambridge International.', 'Source for programme information: Cambridge International.')}
+        {' '}<a href="https://help.cambridgeinternational.org/hc/en-gb/articles/15391923464593-What-is-in-the-Cambridge-Early-Years-curriculum" rel="noopener" lang="en">What is in the Cambridge Early Years curriculum</a>;
+        {' '}<a href="https://help.cambridgeinternational.org/hc/en-gb/articles/15392009487889-What-are-the-year-groups-and-age-ranges-for-the-Cambridge-Early-Years-programme" rel="noopener" lang="en">Year groups and age ranges for Cambridge Early Years</a>.
+      </p>
+    </div>
+  </article>
+</Base>

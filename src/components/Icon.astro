@@ -1,0 +1,19 @@
+---
+// Biểu tượng SVG nội tuyến, luôn aria-hidden (chữ đi kèm mang nghĩa).
+interface Props { ten: 'dien-thoai' | 'mui-ten-xuong' | 'menu' | 'dong' | 'ban-do' | 'thu' | 'mui-ten-phai'; class?: string }
+const { ten, class: cls } = Astro.props;
+const paths: Record<string, string> = {
+  'dien-thoai': 'M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z',
+  'mui-ten-xuong': 'M6 9l6 6 6-6',
+  'menu': 'M4 7h16M4 12h16M4 17h16',
+  'dong': 'M6 6l12 12M18 6L6 18',
+  'ban-do': 'M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21zm0-9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z',
+  'thu': 'M4 6h16v12H4zM4 7l8 6 8-6',
+  'mui-ten-phai': 'M5 12h14M13 6l6 6-6 6',
+};
+const fill = ten === 'dien-thoai';
+---
+<svg class={cls} viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"
+  fill={fill ? 'currentColor' : 'none'} stroke={fill ? 'none' : 'currentColor'} stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d={paths[ten]} />
+</svg>

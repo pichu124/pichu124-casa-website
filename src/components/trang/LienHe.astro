@@ -1,0 +1,64 @@
+---
+// Liên hệ: mọi kênh trên một trang + việc nào liên hệ kênh nào.
+// Địa chỉ chi tiết nằm ở trang từng cơ sở (tránh trùng, KIEN-TRUC mục 3).
+import Base from '../../layouts/Base.astro';
+import Can from '../Can.astro';
+import Icon from '../Icon.astro';
+import { CO_SO, type Lang } from '../../data/co-so';
+import { LIEN_HE } from '../../data/lien-he';
+import { url, taoT, FORM_ANCHOR } from '../../i18n/routes';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = taoT(lang);
+const duongDan = [
+  { ten: t('Trang chủ', 'Home'), href: url('home', lang) },
+  { ten: t('Liên hệ', 'Contact'), href: url('contact', lang) },
+];
+const hotline = lang === 'en' ? LIEN_HE.hotlineQuocTe : LIEN_HE.hotline;
+---
+<Base lang={lang} routeKey="contact" duongDan={duongDan}
+  tieuDe={t('Liên hệ: hotline, email, Facebook', 'Contact: hotline, email, Facebook')}
+  moTa={t(`Liên hệ Casa dei Bambini: hotline ${LIEN_HE.hotline}, email ${LIEN_HE.email}, Facebook. Đăng ký tham quan một trong bốn cơ sở.`, `Contact Casa dei Bambini: hotline ${LIEN_HE.hotlineQuocTe}, email ${LIEN_HE.email}, Facebook. Book a visit to one of our four campuses.`)}>
+  <section class="dau-trang-con">
+    <div class="khung">
+      <h1>{t('Liên hệ Casa dei Bambini', 'Contact Casa dei Bambini')}</h1>
+      <p class="dau-trang__phu">{t('Gọi hotline là cách nhanh nhất để hẹn lịch tham quan.', 'Calling our hotline is the quickest way to arrange a visit.')}</p>
+    </div>
+  </section>
+  <section class="phan phan--sat" aria-labelledby="kenh">
+    <div class="khung">
+      <h2 id="kenh" class="chi-doc-man-hinh">{t('Các kênh liên hệ', 'Ways to contact us')}</h2>
+      <ul class="luoi danh-sach-tron" role="list">
+        <li class="the">
+          <h3>{t('Hotline tuyển sinh', 'Admissions hotline')}</h3>
+          <p class="the__mo-ta">{t('Hẹn lịch tham quan, hỏi về chương trình và biểu phí.', 'Arrange a visit, ask about programmes and fees.')}</p>
+          <a class="nut nut--chinh" href={LIEN_HE.tel}><Icon ten="dien-thoai" />{hotline}</a>
+        </li>
+        <li class="the">
+          <h3>Email</h3>
+          <p class="the__mo-ta">{t('Câu hỏi cần trả lời bằng văn bản, gửi giấy tờ.', 'Questions you would like answered in writing, or documents.')}</p>
+          <a class="nut nut--phu" href={`mailto:${LIEN_HE.email}`}><Icon ten="thu" />{LIEN_HE.email}</a>
+        </li>
+        <li class="the">
+          <h3>Facebook</h3>
+          <p class="the__mo-ta">{t('Tin tức và hoạt động của trường.', 'School news and activities.')}</p>
+          <a class="nut nut--phu" href={LIEN_HE.facebook} rel="noopener">{LIEN_HE.facebookHienThi}</a>
+        </li>
+        <li class="the">
+          <h3>Zalo</h3>
+          <p class="the__mo-ta">{LIEN_HE.zalo ? <a href={LIEN_HE.zalo} rel="noopener">Zalo</a> : <Can noi={t('trường có dùng Zalo không (phiếu câu 23)', 'whether the school uses Zalo (form question 23)')} />}</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="phan phan--phu phan--sat" aria-labelledby="co-so">
+    <div class="khung">
+      <h2 id="co-so">{t('Bốn cơ sở', 'Our four campuses')}</h2>
+      <p>{t('Địa chỉ, bản đồ và lớp học nằm ở trang từng cơ sở.', 'Addresses, maps and classes are on each campus page.')}</p>
+      <ul class="cum danh-sach-tron" role="list">
+        {CO_SO.map((c) => <li><a class="nut nut--phu" href={url(`co-so-${c.slug}`, lang)}>{t(`Cơ sở ${c.ten.vi}`, `${c.ten.en} campus`)}</a></li>)}
+      </ul>
+      <p class="sau-luoi"><a href={url('admissions', lang) + FORM_ANCHOR}>{t('Hoặc gửi đăng ký tham quan, nhà trường gọi lại', 'Or send a visit request and we will call you back')}</a></p>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,15 @@
+---
+import type { Lang } from '../data/co-so';
+export interface Muc { ten: string; href: string }
+interface Props { lang: Lang; muc: Muc[] }
+const { lang, muc } = Astro.props;
+---
+<nav class="duong-dan khung" aria-label={lang === 'en' ? 'Breadcrumb' : 'Vị trí trang'}>
+  <ol>
+    {muc.map((m, i) => (
+      <li>
+        {i < muc.length - 1 ? <a href={m.href}>{m.ten}</a> : <span aria-current="page">{m.ten}</span>}
+      </li>
+    ))}
+  </ol>
+</nav>

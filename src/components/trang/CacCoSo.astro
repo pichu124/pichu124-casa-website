@@ -1,0 +1,61 @@
+---
+// Các cơ sở: góc riêng = bảng bốn cơ sở (địa chỉ, trạng thái, lớp và hệ).
+import Base from '../../layouts/Base.astro';
+import KhoiCta from '../KhoiCta.astro';
+import BangLop from '../BangLop.astro';
+import Can from '../Can.astro';
+import Icon from '../Icon.astro';
+import { CO_SO, linkBanDo, type Lang } from '../../data/co-so';
+import { url, taoT } from '../../i18n/routes';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = taoT(lang);
+const duongDan = [
+  { ten: t('Trang chủ', 'Home'), href: url('home', lang) },
+  { ten: t('Các cơ sở', 'Campuses'), href: url('campuses', lang) },
+];
+---
+<Base lang={lang} routeKey="campuses" duongDan={duongDan}
+  tieuDe={t('Các cơ sở: Kim Mã, Chùa Láng, Mỹ Đình, Ciputra', 'Campuses: Kim Mã, Chùa Láng, Mỹ Đình, Ciputra')}
+  moTa={t(
+    'Bốn cơ sở Casa dei Bambini tại Hà Nội: Kim Mã, Chùa Láng, Mỹ Đình đang tuyển sinh; Ciputra dự kiến khai trương quý 4/2027. Địa chỉ, bản đồ, lớp học.',
+    'Four Casa dei Bambini campuses in Hanoi: Kim Mã, Chùa Láng and Mỹ Đình are enrolling; Ciputra is expected to open in Q4 2027. Addresses, maps, classes.',
+  )}>
+
+  <section class="dau-trang-con">
+    <div class="khung">
+      <h1>{t('Các cơ sở Casa dei Bambini', 'Casa dei Bambini campuses')}</h1>
+      <p class="dau-trang__phu">{t('Ba cơ sở đang tuyển sinh và một cơ sở mới tại khu đô thị Ciputra.', 'Three campuses enrolling now and a new campus in the Ciputra urban area.')}</p>
+    </div>
+  </section>
+
+  <section class="phan phan--sat" aria-labelledby="danh-sach">
+    <div class="khung">
+      <h2 id="danh-sach" class="chi-doc-man-hinh">{t('Danh sách cơ sở', 'List of campuses')}</h2>
+      <ul class="luoi luoi--2 danh-sach-tron" role="list">
+        {CO_SO.map((c) => (
+          <li class="the">
+            {c.trangThai === 'sap-khai-truong'
+              ? <span class="huy-hieu huy-hieu--sap">{t('Dự kiến khai trương quý 4/2027', 'Expected to open in Q4 2027')}</span>
+              : <span class="huy-hieu">{t('Đang tuyển sinh', 'Enrolling now')}</span>}
+            <h3><a href={url(`co-so-${c.slug}`, lang)}>{t(`Cơ sở ${c.ten.vi}`, `${c.ten.en} campus`)}</a></h3>
+            <p class="the__mo-ta">{c.diaChi ? c.diaChi[lang] : <Can noi={t('địa chỉ đã chốt', 'confirmed address')} />}</p>
+            <div class="cum">
+              <a class="nut nut--phu" href={url(`co-so-${c.slug}`, lang)}>{t(`Xem cơ sở ${c.ten.vi}`, `See ${c.ten.en} campus`)}</a>
+              {c.banDo && <a href={linkBanDo(c.banDo)} rel="noopener"><span class="cum"><Icon ten="ban-do" />{t('Mở trên Google Maps', 'Open in Google Maps')}</span></a>}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="phan phan--phu phan--sat" aria-labelledby="lop-he">
+    <div class="khung">
+      <h2 id="lop-he">{t('Lớp và hệ học ở từng cơ sở', 'Classes and tracks at each campus')}</h2>
+      <BangLop lang={lang} />
+    </div>
+  </section>
+
+  <KhoiCta lang={lang} />
+</Base>

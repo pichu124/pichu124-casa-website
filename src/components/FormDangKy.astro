@@ -1,0 +1,94 @@
+---
+// Form đăng ký tham quan. Chỉ thu 4 thông tin + ô đồng ý (CLAUDE.md, Giai đoạn 4).
+// Gửi bằng HTML thường tới dịch vụ form trên máy chủ; không cần JS.
+// TRẠNG THÁI: giao diện xong; dịch vụ nhận form CHƯA CÓ (Giai đoạn 4).
+import Can from './Can.astro';
+import { CO_SO, type Lang } from '../data/co-so';
+import { FORM_ACTION, FORM_DA_HOAT_DONG, LIEN_HE } from '../data/lien-he';
+import { url, taoT } from '../i18n/routes';
+
+interface Props { lang: Lang; coSoChon?: string; tieuDe?: string; nhanNut?: string }
+const { lang, coSoChon } = Astro.props;
+const t = taoT(lang);
+const tieuDe = Astro.props.tieuDe ?? t('Đăng ký tham quan', 'Book a visit');
+const nhanNut = Astro.props.nhanNut ?? t('Gửi đăng ký', 'Send');
+const namNay = new Date().getFullYear();
+const cacNam = Array.from({ length: 8 }, (_, i) => namNay - i);
+const thang = Array.from({ length: 12 }, (_, i) => i + 1);
+const nhanCoSo = (slug: string, ten: string, sap: boolean) =>
+  sap ? t(`${ten} (nhận thông tin khi có lịch tham quan)`, `${ten} (get updates when visits open)`) : ten;
+---
+<form class="form" id="dang-ky" action={FORM_ACTION} method="post" aria-labelledby="dang-ky-tieu-de" accept-charset="UTF-8">
+  <h2 id="dang-ky-tieu-de">{tieuDe}</h2>
+  <p class="chu-phu">{t('Các ô có dấu', 'Fields marked')} <span class="form__bat-buoc" aria-hidden="true">*</span> {t('là bắt buộc.', 'are required.')}</p>
+
+  <input type="hidden" name="ngon_ngu" value={lang} />
+  <div class="form__bay" aria-hidden="true">
+    <label for="dk-website">{t('Không điền ô này', 'Leave this empty')}</label>
+    <input type="text" id="dk-website" name="website" tabindex="-1" autocomplete="off" />
+  </div>
+
+  <div class="form__o">
+    <label for="dk-ten">{t('Họ tên ba/mẹ', "Parent's name")} <span class="form__bat-buoc" aria-hidden="true">*</span></label>
+    <input type="text" id="dk-ten" name="ten_phu_huynh" required autocomplete="name" maxlength="80" />
+  </div>
+
+  <div class="form__o">
+    <label for="dk-sdt">{t('Số điện thoại', 'Phone number')} <span class="form__bat-buoc" aria-hidden="true">*</span></label>
+    <input type="tel" id="dk-sdt" name="so_dien_thoai" required autocomplete="tel" inputmode="tel"
+      pattern="[0-9+ .]{9,16}" maxlength="16" aria-describedby="dk-sdt-goi-y"
+      title={t('Số điện thoại gồm 10 chữ số, ví dụ 0912 345 678', 'A 10-digit phone number, e.g. 0912 345 678')} />
+    <span class="form__goi-y" id="dk-sdt-goi-y">{t('Ví dụ: 0912 345 678', 'Example: 0912 345 678')}</span>
+  </div>
+
+  <fieldset>
+    <legend>{t('Tháng và năm sinh của bé', "Child's month and year of birth")} <span class="form__bat-buoc" aria-hidden="true">*</span></legend>
+    <div class="form__hang">
+      <div>
+        <label class="chi-doc-man-hinh" for="dk-thang">{t('Tháng sinh', 'Month of birth')}</label>
+        <select id="dk-thang" name="thang_sinh" required>
+          <option value="">{t('Tháng', 'Month')}</option>
+          {thang.map((m) => <option value={m}>{t(`Tháng ${m}`, new Date(2000, m - 1, 1).toLocaleString('en-GB', { month: 'long' }))}</option>)}
+        </select>
+      </div>
+      <div>
+        <label class="chi-doc-man-hinh" for="dk-nam">{t('Năm sinh', 'Year of birth')}</label>
+        <select id="dk-nam" name="nam_sinh" required>
+          <option value="">{t('Năm', 'Year')}</option>
+          {cacNam.map((y) => <option value={y}>{y}</option>)}
+        </select>
+      </div>
+    </div>
+  </fieldset>
+
+  <div class="form__o">
+    <label for="dk-co-so">{t('Cơ sở muốn tham quan', 'Campus you would like to visit')} <span class="form__bat-buoc" aria-hidden="true">*</span></label>
+    <select id="dk-co-so" name="co_so" required>
+      <option value="chua-chon" selected={!coSoChon}>{t('Chưa chọn, nhờ trường tư vấn', 'Not sure yet, please advise')}</option>
+      {CO_SO.map((c) => (
+        <option value={c.slug} selected={coSoChon === c.slug}>{nhanCoSo(c.slug, c.ten[lang], c.trangThai === 'sap-khai-truong')}</option>
+      ))}
+    </select>
+  </div>
+
+  <div class="form__o">
+    <label class="form__dong-y" for="dk-dong-y">
+      <input type="checkbox" id="dk-dong-y" name="dong_y" value="co" required />
+      <span>
+        {t('Tôi đồng ý để nhà trường dùng thông tin này để liên hệ tư vấn, theo', 'I agree that the school may use this information to contact me, under the')}
+        <a href={url('privacy', lang)}>{t('Chính sách bảo vệ dữ liệu cá nhân', 'Personal Data Protection Policy')}</a>.
+        <span class="form__bat-buoc" aria-hidden="true">*</span>
+      </span>
+    </label>
+  </div>
+
+  {!FORM_DA_HOAT_DONG && (
+    <p role="note"><Can noi={t('dịch vụ nhận form (Giai đoạn 4); bản xem trước chưa gửi được', 'form service (phase 4); this preview cannot send yet')} /></p>
+  )}
+
+  <button type="submit" class="nut nut--chinh nut--lon nut--rong">{nhanNut}</button>
+  <p class="form__chu-thich">
+    {t('Nhà trường chỉ dùng số điện thoại để gọi lại hẹn lịch. Cần gấp? Gọi', 'The school uses your number only to call you back about a visit. In a hurry? Call')}
+    <a href={LIEN_HE.tel}>{lang === 'en' ? LIEN_HE.hotlineQuocTe : LIEN_HE.hotline}</a>.
+  </p>
+</form>

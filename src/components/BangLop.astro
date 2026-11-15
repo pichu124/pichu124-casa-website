@@ -1,0 +1,38 @@
+---
+// Bảng "cơ sở nào có lớp và hệ nào", sinh từ src/data/co-so.ts (một nguồn duy nhất).
+import Can from './Can.astro';
+import { CO_SO, type GiaTriLop, type Lang } from '../data/co-so';
+import { url, taoT } from '../i18n/routes';
+interface Props { lang: Lang; cot?: Array<'nhaTre' | 'songNgu' | 'quocTe' | 'tienTieuHoc'>; tieuDe?: string }
+const { lang } = Astro.props;
+const t = taoT(lang);
+const cot = Astro.props.cot ?? ['nhaTre', 'songNgu', 'quocTe', 'tienTieuHoc'];
+const TEN_COT = {
+  nhaTre: t('Nhà trẻ (15–36 tháng)', 'Nursery (15–36 months)'),
+  songNgu: t('Hệ song ngữ (3–6 tuổi)', 'Bilingual track (3–6 years)'),
+  quocTe: t('Hệ quốc tế (3–6 tuổi)', 'International track (3–6 years)'),
+  tienTieuHoc: t('Lớp tiền tiểu học', 'Pre-primary class'),
+};
+const tieuDe = Astro.props.tieuDe ?? t('Lớp và hệ học ở từng cơ sở', 'Classes and tracks at each campus');
+const hien = (v: GiaTriLop) =>
+  v === 'co' ? t('Có', 'Yes') : v === 'khong' ? t('Không', 'No') : v === 'du-kien' ? t('Có (dự kiến)', 'Yes (planned)') : null;
+---
+<div class="bang-cuon" role="region" aria-label={tieuDe} tabindex="0">
+  <table class="bang--so-sanh">
+    <caption>{tieuDe}</caption>
+    <thead>
+      <tr>
+        <th scope="col">{t('Cơ sở', 'Campus')}</th>
+        {cot.map((c) => <th scope="col">{TEN_COT[c]}</th>)}
+      </tr>
+    </thead>
+    <tbody>
+      {CO_SO.map((s) => (
+        <tr>
+          <th scope="row"><a href={url(`co-so-${s.slug}`, lang)}>{s.ten[lang]}</a></th>
+          {cot.map((c) => <td>{hien(s.lop[c]) ?? <Can noi={t('nhà trường xác nhận', 'to be confirmed')} />}</td>)}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

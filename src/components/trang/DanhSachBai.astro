@@ -1,0 +1,43 @@
+---
+// Bài viết: danh sách bài giải thích cho phụ huynh. Thêm bài: thêm vào BAI, đủ hai thứ tiếng (QUYET-DINH Q15).
+import Base from '../../layouts/Base.astro';
+import KhoiCta from '../KhoiCta.astro';
+import type { Lang } from '../../data/co-so';
+import { url, taoT } from '../../i18n/routes';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = taoT(lang);
+const duongDan = [
+  { ten: t('Trang chủ', 'Home'), href: url('home', lang) },
+  { ten: t('Bài viết', 'Articles'), href: url('articles', lang) },
+];
+const BAI = [
+  { key: 'article-cey',
+    ten: t('Cambridge Early Years là gì? Giải thích cho phụ huynh có con 3–6 tuổi', 'What is Cambridge Early Years? A guide for parents of children aged 3–6'),
+    tom: t('Ba lớp theo độ tuổi, sáu lĩnh vực phát triển và cách trẻ học qua chơi.', 'Three year groups, six areas of development and how children learn through play.') },
+];
+---
+<Base lang={lang} routeKey="articles" duongDan={duongDan}
+  tieuDe={t('Bài viết cho phụ huynh', 'Articles for parents')}
+  moTa={t('Bài viết giải thích chương trình mầm non và những điều phụ huynh nên biết khi chọn trường cho con.', 'Articles explaining preschool programmes and what parents should know when choosing a school.')}>
+  <section class="dau-trang-con">
+    <div class="khung">
+      <h1>{t('Bài viết cho phụ huynh', 'Articles for parents')}</h1>
+      <p class="dau-trang__phu">{t('Giải thích ngắn gọn để ba mẹ hỏi đúng khi đi chọn trường.', 'Short explanations to help you ask the right questions when choosing a school.')}</p>
+    </div>
+  </section>
+  <section class="phan phan--sat">
+    <div class="khung">
+      <ul class="luoi luoi--2 danh-sach-tron" role="list">
+        {BAI.map((b) => (
+          <li class="the the--lien-ket">
+            <h2 class="the__tieu-de-bai"><a class="the__lien-ket" href={url(b.key, lang)}>{b.ten}</a></h2>
+            <p class="the__mo-ta">{b.tom}</p>
+            <span class="the__chan" aria-hidden="true">{t('Đọc bài', 'Read')} →</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+  <KhoiCta lang={lang} />
+</Base>

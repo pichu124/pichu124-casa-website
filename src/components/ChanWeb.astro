@@ -1,0 +1,63 @@
+---
+import Can from './Can.astro';
+import { CO_SO, type Lang } from '../data/co-so';
+import { LIEN_HE } from '../data/lien-he';
+import { url, taoT, FORM_ANCHOR } from '../i18n/routes';
+interface Props { lang: Lang; routeKey?: string }
+const { lang, routeKey } = Astro.props;
+const t = taoT(lang);
+const khac: Lang = lang === 'vi' ? 'en' : 'vi';
+const nam = new Date().getFullYear();
+---
+<footer class="chan-web">
+  <div class="khung">
+    <div class="chan-web__luoi">
+      <section aria-labelledby="chan-co-so">
+        <h2 id="chan-co-so">{t('Các cơ sở', 'Campuses')}</h2>
+        <ul>
+          {CO_SO.map((c) => (
+            <li>
+              <a href={url(`co-so-${c.slug}`, lang)}>{c.ten[lang]}</a>
+              <div class="chan-web__phu">
+                {c.trangThai === 'sap-khai-truong'
+                  ? t('Dự kiến khai trương quý 4/2027', 'Expected to open in Q4 2027')
+                  : c.diaChiNgan ? c.diaChiNgan[lang] : <Can noi={t('địa chỉ', 'address')} />}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+      <section aria-labelledby="chan-tim-hieu">
+        <h2 id="chan-tim-hieu">{t('Tìm hiểu', 'Explore')}</h2>
+        <ul>
+          <li><a href={url('nursery', lang)}>{t('Nhà trẻ 15–36 tháng', 'Nursery, 15–36 months')}</a></li>
+          <li><a href={url('kindergarten', lang)}>{t('Mẫu giáo 3–6 tuổi', 'Kindergarten, 3–6 years')}</a></li>
+          <li><a href={url('admissions', lang)}>{t('Tuyển sinh', 'Admissions')}</a></li>
+          <li><a href={url('admissions', lang) + FORM_ANCHOR}>{t('Đăng ký tham quan', 'Book a visit')}</a></li>
+        </ul>
+      </section>
+      <section aria-labelledby="chan-ve-truong">
+        <h2 id="chan-ve-truong">{t('Về trường', 'About')}</h2>
+        <ul>
+          <li><a href={url('about', lang)}>{t('Về Casa', 'About Casa')}</a></li>
+          <li><a href={url('articles', lang)}>{t('Bài viết', 'Articles')}</a></li>
+          <li><a href={url('contact', lang)}>{t('Liên hệ', 'Contact')}</a></li>
+          <li><a href={url('privacy', lang)}>{t('Chính sách bảo vệ dữ liệu cá nhân', 'Personal Data Protection Policy')}</a></li>
+        </ul>
+      </section>
+      <section aria-labelledby="chan-lien-he">
+        <h2 id="chan-lien-he">{t('Liên hệ', 'Contact')}</h2>
+        <ul>
+          <li>{t('Hotline', 'Hotline')}: <a href={LIEN_HE.tel}>{lang === 'en' ? LIEN_HE.hotlineQuocTe : LIEN_HE.hotline}</a></li>
+          <li>Email: <a href={`mailto:${LIEN_HE.email}`}>{LIEN_HE.email}</a></li>
+          <li><a href={LIEN_HE.facebook} rel="noopener">Facebook</a></li>
+          <li>Zalo: {LIEN_HE.zalo ? <a href={LIEN_HE.zalo} rel="noopener">Zalo</a> : <Can noi={t('nếu có', 'if any')} />}</li>
+        </ul>
+      </section>
+    </div>
+    <div class="chan-web__day">
+      <p>{LIEN_HE.phapNhan ?? <Can noi={t('tên đơn vị (pháp nhân)', 'legal entity name')} />} · © {nam} Casa dei Bambini</p>
+      <p><a href={routeKey ? url(routeKey, khac) : url('home', khac)} hreflang={khac} lang={khac}>{khac === 'en' ? 'English' : 'Tiếng Việt'}</a></p>
+    </div>
+  </div>
+</footer>

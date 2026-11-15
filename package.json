@@ -1,0 +1,25 @@
+{
+  "name": "casa-website",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Website hệ thống mầm non Casa dei Bambini (site tĩnh, Astro)",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "node scripts/kiem-tra/index.mjs",
+    "check:truoc-khi-dang": "node scripts/kiem-tra/index.mjs --truoc-khi-dang",
+    "redirects": "node scripts/tao-redirects.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@fontsource/be-vietnam-pro": "5.3.0",
+    "astro": "5.18.2"
+  },
+  "devDependencies": {
+    "node-html-parser": "9.0.7"
+  }
+}

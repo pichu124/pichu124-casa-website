@@ -1,0 +1,15 @@
+---
+// Câu hỏi thường gặp: mỗi câu là <details>, câu hỏi trong <h3>.
+// Kèm schema FAQPage cho đúng những câu trên trang này (mỗi câu chỉ nằm ở một nơi).
+export interface CauHoi { hoi: string; dap: string }
+interface Props { cau: CauHoi[]; id?: string }
+const { cau, id } = Astro.props;
+---
+<div class="hoi-dap" id={id}>
+  {cau.map((c) => (
+    <details>
+      <summary><h3>{c.hoi}</h3></summary>
+      <div class="hoi-dap__tra-loi"><p>{c.dap}</p></div>
+    </details>
+  ))}
+</div>

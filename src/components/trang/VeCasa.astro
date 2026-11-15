@@ -1,0 +1,51 @@
+---
+// Về Casa: chỉ dùng thông tin đã chốt. Thông điệp, giá trị cốt lõi, đội ngũ sẽ viết lại
+// từ trang cũ khi có bản xuất WordPress (phiếu câu 20).
+import Base from '../../layouts/Base.astro';
+import KhoiCta from '../KhoiCta.astro';
+import Can from '../Can.astro';
+import type { Lang } from '../../data/co-so';
+import { url, taoT } from '../../i18n/routes';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = taoT(lang);
+const duongDan = [
+  { ten: t('Trang chủ', 'Home'), href: url('home', lang) },
+  { ten: t('Về Casa', 'About Casa'), href: url('about', lang) },
+];
+---
+<Base lang={lang} routeKey="about" duongDan={duongDan}
+  tieuDe={t('Về Casa dei Bambini: hệ thống mầm non hơn 10 năm', 'About Casa dei Bambini: a preschool group for over 10 years')}
+  moTa={t(
+    'Casa dei Bambini là hệ thống mầm non xuyên suốt hơn 10 năm tại Hà Nội, với ba cơ sở đang tuyển sinh và cơ sở Ciputra dự kiến khai trương quý 4/2027.',
+    'Casa dei Bambini has been a preschool group in Hanoi for over 10 years, with three campuses enrolling now and Ciputra expected to open in Q4 2027.',
+  )}>
+  <section class="dau-trang-con">
+    <div class="khung">
+      <h1>{t('Về Casa dei Bambini', 'About Casa dei Bambini')}</h1>
+      <p class="dau-trang__phu">{t('Hệ thống mầm non xuyên suốt hơn 10 năm tại Hà Nội.', 'A preschool group that has been running in Hanoi for over 10 years.')}</p>
+    </div>
+  </section>
+
+  <section class="phan phan--sat">
+    <div class="khung noi-dung">
+      <h2 id="he-thong">{t('Một hệ thống, bốn cơ sở', 'One group, four campuses')}</h2>
+      <p>{t('Ba cơ sở Kim Mã, Chùa Láng, Mỹ Đình đang tuyển sinh. Cơ sở mới tại khu đô thị Ciputra dự kiến khai trương quý 4/2027.', 'Kim Mã, Chùa Láng and Mỹ Đình are enrolling now. A new campus in the Ciputra urban area is expected to open in Q4 2027.')}</p>
+      <p><a href={url('campuses', lang)}>{t('Xem các cơ sở', 'See our campuses')}</a></p>
+
+      <h2 id="thong-diep">{t('Thông điệp nhà trường', 'Message from the school')}</h2>
+      <p><Can noi={t('viết lại từ trang "Thông điệp nhà trường" cũ, chủ trường xác nhận', 'rewritten from the old "Message from the school" page, confirmed by the owner')} /></p>
+
+      <h2 id="gia-tri">{t('Giá trị cốt lõi', 'Core values')}</h2>
+      <p><Can noi={t('viết lại từ trang "Giá trị cốt lõi" cũ', 'rewritten from the old "Core values" page')} /></p>
+
+      <h2 id="doi-ngu">{t('Đội ngũ', 'Our team')}</h2>
+      <p><Can noi={t('thông tin đội ngũ được phép đăng (phiếu câu 16)', 'team information approved for publication (form question 16)')} /></p>
+
+      <h2 id="chuong-trinh">{t('Chương trình học', 'Our programmes')}</h2>
+      <p>{t('Nhà trẻ cho bé từ 15 tháng; mẫu giáo 3–6 tuổi theo khung Cambridge Early Years; hai hệ quốc tế và song ngữ.', 'Nursery from 15 months; kindergarten for ages 3–6 based on the Cambridge Early Years framework; international and bilingual tracks.')}</p>
+      <p><a href={url('programmes', lang)}>{t('Xem chương trình học', 'See our programmes')}</a></p>
+    </div>
+  </section>
+  <KhoiCta lang={lang} />
+</Base>

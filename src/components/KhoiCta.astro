@@ -1,0 +1,29 @@
+---
+// Khối hành động cuối trang nội dung (docs/KIEN-TRUC-THONG-TIN.md, mục 6, quy tắc 1).
+import Icon from './Icon.astro';
+import type { Lang } from '../data/co-so';
+import { LIEN_HE } from '../data/lien-he';
+import { url, taoT, FORM_ANCHOR } from '../i18n/routes';
+interface Props { lang: Lang; tieuDe?: string; cau?: string; href?: string; nhanNut?: string }
+const { lang } = Astro.props;
+const t = taoT(lang);
+const tieuDe = Astro.props.tieuDe ?? t('Đến xem trường cùng con', 'Come and see the school with your child');
+const cau = Astro.props.cau ?? t(
+  'Để lại số điện thoại, nhà trường gọi lại để hẹn lịch tham quan và gửi biểu phí.',
+  'Leave your phone number and the school will call you to arrange a visit and send the fee schedule.',
+);
+const href = Astro.props.href ?? url('admissions', lang) + FORM_ANCHOR;
+const nhanNut = Astro.props.nhanNut ?? t('Đăng ký tham quan', 'Book a visit');
+---
+<section class="phan phan--sat" aria-labelledby="khoi-cta-tieu-de">
+  <div class="khung">
+    <div class="khoi-cta">
+      <h2 id="khoi-cta-tieu-de">{tieuDe}</h2>
+      <p>{cau}</p>
+      <div class="cum">
+        <a class="nut nut--chinh nut--lon" href={href}>{nhanNut}</a>
+        <a class="nut nut--phu nut--lon" href={LIEN_HE.tel}><Icon ten="dien-thoai" />{t(`Gọi ${LIEN_HE.hotline}`, `Call ${LIEN_HE.hotlineQuocTe}`)}</a>
+      </div>
+    </div>
+  </div>
+</section>

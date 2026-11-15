@@ -1,0 +1,80 @@
+---
+// Mẫu giáo 3–6 tuổi (QUYET-DINH Q13). Trang nói về việc con học ở Casa;
+// phần giải thích bản thân khung chương trình nằm ở bài viết (tránh trùng, KIEN-TRUC mục 3).
+import Base from '../../layouts/Base.astro';
+import KhoiCta from '../KhoiCta.astro';
+import BangLop from '../BangLop.astro';
+import type { Lang } from '../../data/co-so';
+import { url, taoT } from '../../i18n/routes';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = taoT(lang);
+const duongDan = [
+  { ten: t('Trang chủ', 'Home'), href: url('home', lang) },
+  { ten: t('Chương trình', 'Programmes'), href: url('programmes', lang) },
+  { ten: t('Mẫu giáo 3–6 tuổi', 'Kindergarten, 3–6 years'), href: url('kindergarten', lang) },
+];
+const LINH_VUC = [
+  t('Giao tiếp, ngôn ngữ và đọc viết', 'Communication, language and literacy'),
+  t('Biểu đạt sáng tạo', 'Creative expression'),
+  t('Toán', 'Mathematics'),
+  t('Phát triển cá nhân, xã hội và cảm xúc', 'Personal, social and emotional development'),
+  t('Phát triển thể chất', 'Physical development'),
+  t('Khám phá thế giới', 'Understanding the world'),
+];
+---
+<Base lang={lang} routeKey="kindergarten" duongDan={duongDan}
+  tieuDe={t('Mẫu giáo 3–6 tuổi theo khung Cambridge Early Years', 'Kindergarten for ages 3–6, Cambridge Early Years framework')}
+  moTa={t(
+    'Ba năm mẫu giáo theo khung Cambridge Early Years: Early Years 1, 2, 3; lớp tiền tiểu học bổ sung kỹ năng chuẩn bị vào lớp 1; hai hệ quốc tế và song ngữ.',
+    'Three kindergarten years based on the Cambridge Early Years framework: Early Years 1, 2 and 3, a pre-primary class preparing for Grade 1, and two tracks.',
+  )}>
+
+  <section class="dau-trang-con">
+    <div class="khung">
+      <p class="nhan-phan">{t('Mẫu giáo 3–6 tuổi', 'Kindergarten, 3–6 years')}</p>
+      <h1>{t('Chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi', 'A programme based on the Cambridge Early Years framework for children aged 3–6')}</h1>
+      <p class="dau-trang__phu">{t('Mỗi năm con học đúng mức của tuổi mình; kỹ năng được nhắc lại và nâng dần qua từng năm.', 'Each year matches your child’s age, and skills are revisited and built on year after year.')}</p>
+    </div>
+  </section>
+
+  <section class="phan phan--sat" aria-labelledby="ba-lop">
+    <div class="khung">
+      <h2 id="ba-lop">{t('Ba lớp theo độ tuổi', 'Three classes by age')}</h2>
+      <div class="bang-cuon" role="region" aria-labelledby="ba-lop" tabindex="0">
+        <table>
+          <thead>
+            <tr><th scope="col">{t('Lớp', 'Class')}</th><th scope="col">{t('Độ tuổi', 'Age')}</th><th scope="col">{t('Ghi chú', 'Notes')}</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Early Years 1</th><td>{t('3–4 tuổi', '3–4 years')}</td><td></td></tr>
+            <tr><th scope="row">Early Years 2</th><td>{t('4–5 tuổi', '4–5 years')}</td><td></td></tr>
+            <tr><th scope="row">Early Years 3</th><td>{t('5–6 tuổi', '5–6 years')}</td><td>{t('Lớp tiền tiểu học, bổ sung kỹ năng chuẩn bị vào lớp 1', 'Pre-primary class, with added skills to prepare for Grade 1')}</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="phan phan--phu phan--sat" aria-labelledby="linh-vuc">
+    <div class="khung noi-dung">
+      <h2 id="linh-vuc">{t('Con học qua chơi, phát triển đều sáu lĩnh vực', 'Learning through play across six areas')}</h2>
+      <p>{t('Con phát triển cả ngôn ngữ, toán, vận động, cảm xúc và sự tò mò, không chỉ học chữ và số:', 'Children grow in language, maths, movement, emotions and curiosity, not just letters and numbers:')}</p>
+      <ol>{LINH_VUC.map((l) => <li>{l}</li>)}</ol>
+      <p><a href={url('article-cey', lang)}>{t('Đọc: Cambridge Early Years là gì? Giải thích cho phụ huynh', 'Read: What is Cambridge Early Years? A guide for parents')}</a></p>
+    </div>
+  </section>
+
+  <section class="phan phan--sat" aria-labelledby="he-hoc">
+    <div class="khung">
+      <div class="phan__dau">
+        <h2 id="he-hoc">{t('Hai hệ học', 'Two tracks')}</h2>
+        <p>{t('Hệ quốc tế có giáo viên nước ngoài trong mỗi lớp. Hệ song ngữ có hai trợ giảng, giáo viên nước ngoài dạy theo tiết.', 'The international track has a foreign teacher in every class. The bilingual track has two teaching assistants, with a foreign teacher for scheduled lessons.')}</p>
+        <p><a href={url('programmes', lang) + '#so-sanh-he'}>{t('So sánh hai hệ chi tiết', 'Compare the two tracks in detail')}</a></p>
+      </div>
+      <BangLop lang={lang} cot={['songNgu', 'quocTe', 'tienTieuHoc']} tieuDe={t('Lớp mẫu giáo ở từng cơ sở', 'Kindergarten classes at each campus')} />
+    </div>
+  </section>
+
+  <KhoiCta lang={lang} />
+</Base>

@@ -1,0 +1,79 @@
+---
+// Khung chung mọi trang: <head> (tiêu đề, mô tả, canonical, hreflang, schema),
+// đầu trang web, chân trang, thanh đáy điện thoại.
+import '../styles/global.css';
+import DauWeb from '../components/DauWeb.astro';
+import ChanWeb from '../components/ChanWeb.astro';
+import DuongDan, { type Muc } from '../components/DuongDan.astro';
+import Icon from '../components/Icon.astro';
+import type { Lang } from '../data/co-so';
+import { LIEN_HE, SITE } from '../data/lien-he';
+import { url, taoT, FORM_ANCHOR } from '../i18n/routes';
+
+interface Props {
+  lang: Lang;
+  /** Khoá trong src/i18n/routes.ts; bỏ trống cho trang 404 */
+  routeKey?: string;
+  tieuDe: string;
+  moTa: string;
+  /** Tiêu đề đã đầy đủ, không nối " | Casa dei Bambini" (trang chủ) */
+  tieuDeDayDu?: boolean;
+  khongLapChiMuc?: boolean;
+  schema?: object[];
+  duongDan?: Muc[];
+  thanhDay?: boolean;
+}
+const { lang, routeKey, tieuDe, moTa, tieuDeDayDu = false, khongLapChiMuc = false, schema = [], duongDan, thanhDay = true } = Astro.props;
+const t = taoT(lang);
+const title = tieuDeDayDu ? tieuDe : `${tieuDe} | Casa dei Bambini`;
+const canonical = routeKey ? SITE + url(routeKey, lang) : undefined;
+
+const schemaDuongDan = duongDan && duongDan.length > 1 ? [{
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: duongDan.map((m, i) => ({ '@type': 'ListItem', position: i + 1, name: m.ten, item: SITE + m.href })),
+}] : [];
+const tatCaSchema = [...schema, ...schemaDuongDan];
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={moTa} />
+    {khongLapChiMuc && <meta name="robots" content="noindex, follow" />}
+    {canonical && <link rel="canonical" href={canonical} />}
+    {routeKey && !khongLapChiMuc && (
+      <>
+        <link rel="alternate" hreflang="vi" href={SITE + url(routeKey, 'vi')} />
+        <link rel="alternate" hreflang="en" href={SITE + url(routeKey, 'en')} />
+        <link rel="alternate" hreflang="x-default" href={SITE + url(routeKey, 'vi')} />
+      </>
+    )}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Casa dei Bambini" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={moTa} />
+    <meta property="og:locale" content={lang === 'en' ? 'en_GB' : 'vi_VN'} />
+    {canonical && <meta property="og:url" content={canonical} />}
+    <meta name="theme-color" content="#fbf8f3" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {tatCaSchema.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
+  </head>
+  <body class={thanhDay ? 'co-thanh-day' : undefined}>
+    <a class="bo-qua" href="#noi-dung">{t('Bỏ qua menu, tới nội dung chính', 'Skip to main content')}</a>
+    <DauWeb lang={lang} routeKey={routeKey} />
+    <main id="noi-dung" tabindex="-1">
+      {duongDan && <DuongDan lang={lang} muc={duongDan} />}
+      <slot />
+    </main>
+    <ChanWeb lang={lang} routeKey={routeKey} />
+    {thanhDay && (
+      <nav class="thanh-day" aria-label={t('Liên hệ nhanh', 'Quick contact')}>
+        <a class="nut nut--phu" href={LIEN_HE.tel}><Icon ten="dien-thoai" />{t('Gọi ngay', 'Call now')}</a>
+        <a class="nut nut--chinh" href={url('admissions', lang) + FORM_ANCHOR}>{t('Đăng ký tham quan', 'Book a visit')}</a>
+      </nav>
+    )}
+  </body>
+</html>

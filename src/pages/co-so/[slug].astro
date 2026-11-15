@@ -1,0 +1,9 @@
+---
+import TrangCoSo from '../../components/trang/TrangCoSo.astro';
+import { CO_SO } from '../../data/co-so';
+export function getStaticPaths() {
+  return CO_SO.map((c) => ({ params: { slug: c.slug } }));
+}
+const { slug } = Astro.params;
+---
+<TrangCoSo lang="vi" slug={slug} />

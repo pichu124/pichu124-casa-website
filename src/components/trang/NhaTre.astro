@@ -1,0 +1,64 @@
+---
+// Nhà trẻ 15–36 tháng. Mô hình trộn tuổi theo tinh thần Montessori là của Ciputra (Casa facts);
+// mô hình ở ba cơ sở cũ chờ nhà trường xác nhận (phiếu câu 10).
+import Base from '../../layouts/Base.astro';
+import KhoiCta from '../KhoiCta.astro';
+import BangLop from '../BangLop.astro';
+import Can from '../Can.astro';
+import type { Lang } from '../../data/co-so';
+import { url, taoT } from '../../i18n/routes';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = taoT(lang);
+const duongDan = [
+  { ten: t('Trang chủ', 'Home'), href: url('home', lang) },
+  { ten: t('Chương trình', 'Programmes'), href: url('programmes', lang) },
+  { ten: t('Nhà trẻ 15–36 tháng', 'Nursery, 15–36 months'), href: url('nursery', lang) },
+];
+---
+<Base lang={lang} routeKey="nursery" duongDan={duongDan}
+  tieuDe={t('Nhà trẻ cho bé 15–36 tháng', 'Nursery for children aged 15–36 months')}
+  moTa={t(
+    'Casa dei Bambini nhận bé từ 15 tháng. Lớp nhà trẻ giúp bé làm quen với lớp học, bạn bè và tiếng Anh. Xem mô hình lớp ở từng cơ sở.',
+    'Casa dei Bambini welcomes children from 15 months. Nursery classes help them get used to school, friends and English. See the class model at each campus.',
+  )}>
+
+  <section class="dau-trang-con">
+    <div class="khung">
+      <h1>{t('Nhà trẻ cho bé từ 15 tháng đến 3 tuổi', 'Nursery for children from 15 months to 3 years')}</h1>
+      <p class="dau-trang__phu">{t('Những năm đầu tiên con rời vòng tay gia đình để đến lớp.', 'The first years your child spends at school away from home.')}</p>
+    </div>
+  </section>
+
+  <section class="phan phan--sat" aria-labelledby="do-tuoi">
+    <div class="khung noi-dung">
+      <h2 id="do-tuoi">{t('Độ tuổi nhận', 'Age of entry')}</h2>
+      <p>{t('Trường nhận bé từ 15 tháng. Bé từ 12 tháng có thể được nhận nếu đạt yêu cầu của trường; nhà trường trao đổi cụ thể khi gia đình đến tham quan.', 'We welcome children from 15 months. Children from 12 months may be accepted if they meet the school’s requirements; the school will discuss this with you during your visit.')}</p>
+
+      <h2 id="ciputra">{t('Lớp trộn tuổi tại cơ sở Ciputra', 'Mixed-age classes at the Ciputra campus')}</h2>
+      <p>{t('Ở cơ sở Ciputra (dự kiến khai trương quý 4/2027), bé từ 15 tháng đến 3 tuổi học lớp trộn tuổi theo tinh thần Montessori:', 'At the Ciputra campus (expected to open in Q4 2027), children from 15 months to 3 years learn in mixed-age classes in the spirit of Montessori:')}</p>
+      <ul>
+        <li>{t('Bé tự chọn hoạt động.', 'Children choose their own activities.')}</li>
+        <li>{t('Bé học cùng anh chị lớn hơn.', 'They learn alongside older children.')}</li>
+        <li>{t('Bé làm quen tiếng Anh mỗi ngày.', 'They are introduced to English every day.')}</li>
+      </ul>
+      <p><a href={url('co-so-ciputra', lang)}>{t('Xem cơ sở Ciputra', 'See the Ciputra campus')}</a></p>
+
+      <h2 id="co-so-cu">{t('Nhà trẻ ở cơ sở Kim Mã, Chùa Láng, Mỹ Đình', 'Nursery at Kim Mã, Chùa Láng and Mỹ Đình')}</h2>
+      <p><Can noi={t('nhà trường mô tả mô hình lớp nhà trẻ ở ba cơ sở đang hoạt động', 'the school to describe the nursery model at the three current campuses')} /></p>
+    </div>
+    <div class="khung">
+      <BangLop lang={lang} cot={['nhaTre']} tieuDe={t('Cơ sở có lớp nhà trẻ', 'Campuses with nursery classes')} />
+    </div>
+  </section>
+
+  <section class="phan phan--phu phan--sat" aria-labelledby="tiep-theo">
+    <div class="khung noi-dung">
+      <h2 id="tiep-theo">{t('Khi bé lên 3 tuổi', 'When your child turns 3')}</h2>
+      <p>{t('Từ 3 tuổi, bé học chương trình mẫu giáo theo khung Cambridge Early Years.', 'From age 3, children move on to the kindergarten programme based on the Cambridge Early Years framework.')}</p>
+      <p><a href={url('kindergarten', lang)}>{t('Xem chương trình mẫu giáo 3–6 tuổi', 'See the kindergarten programme, ages 3–6')}</a></p>
+    </div>
+  </section>
+
+  <KhoiCta lang={lang} />
+</Base>

@@ -1,0 +1,96 @@
+---
+// Đầu trang web: menu 4 mục + nút "Đăng ký tham quan" (QUYET-DINH Q14).
+// Menu điện thoại dùng <details>, không cần JS (docs/KIEN-TRUC-THONG-TIN.md, mục 7).
+import Icon from './Icon.astro';
+import { CO_SO, type Lang } from '../data/co-so';
+import { LIEN_HE } from '../data/lien-he';
+import { url, taoT, FORM_ANCHOR } from '../i18n/routes';
+
+interface Props { lang: Lang; routeKey?: string }
+const { lang, routeKey } = Astro.props;
+const t = taoT(lang);
+const khac: Lang = lang === 'vi' ? 'en' : 'vi';
+const hienTai = routeKey ? url(routeKey, lang) : '';
+
+const MENU = [
+  { key: 'programmes', ten: t('Chương trình', 'Programmes'), con: [
+    { key: 'nursery', ten: t('Nhà trẻ 15–36 tháng', 'Nursery, 15–36 months') },
+    { key: 'kindergarten', ten: t('Mẫu giáo 3–6 tuổi', 'Kindergarten, 3–6 years') },
+  ] },
+  { key: 'campuses', ten: t('Các cơ sở', 'Campuses'), con: CO_SO.map((c) => ({
+    key: `co-so-${c.slug}`,
+    ten: c.ten[lang] + (c.trangThai === 'sap-khai-truong' ? t(' (sắp khai trương)', ' (opening soon)') : ''),
+  })) },
+  { key: 'admissions', ten: t('Tuyển sinh', 'Admissions'), con: [] },
+  { key: 'about', ten: t('Về Casa', 'About Casa'), con: [] },
+];
+const MENU_PHU = [
+  { key: 'articles', ten: t('Bài viết', 'Articles') },
+  { key: 'contact', ten: t('Liên hệ', 'Contact') },
+];
+const laTrangHienTai = (key: string) => (routeKey === key ? 'page' : undefined);
+const thuocNhanh = (key: string) => hienTai !== '' && routeKey !== key && hienTai.startsWith(url(key, lang)) && key !== 'home';
+const linkKhac = routeKey ? url(routeKey, khac) : url('home', khac);
+const dangKy = url('admissions', lang) + FORM_ANCHOR;
+---
+<header class="dau-web">
+  <div class="khung dau-web__trong">
+    <a class="chu-logo" href={url('home', lang)} aria-label={t('Casa dei Bambini, về trang chủ', 'Casa dei Bambini, home')}>
+      <span class="chu-logo__ten">Casa dei Bambini</span>
+      <span class="chu-logo__phu">{t('Hệ thống mầm non tại Hà Nội', 'Preschools in Hanoi')}</span>
+    </a>
+
+    <nav class="menu-rong" aria-label={t('Menu chính', 'Main menu')}>
+      <ul>
+        {MENU.map((m) => (
+          <li>
+            <a class="menu__muc" href={url(m.key, lang)} aria-current={laTrangHienTai(m.key)} data-nhanh={thuocNhanh(m.key) ? 'true' : undefined}>
+              {m.ten}{m.con.length > 0 && <Icon ten="mui-ten-xuong" class="menu__mui-ten" />}
+            </a>
+            {m.con.length > 0 && (
+              <ul class="menu__con">
+                {m.con.map((c) => <li><a href={url(c.key, lang)} aria-current={laTrangHienTai(c.key)}>{c.ten}</a></li>)}
+              </ul>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="dau-web__hanh-dong">
+      <a class="dau-web__dien-thoai" href={LIEN_HE.tel}>{lang === 'en' ? LIEN_HE.hotlineQuocTe : LIEN_HE.hotline}</a>
+      <a class="doi-ngon-ngu" href={linkKhac} hreflang={khac} lang={khac}
+        aria-label={khac === 'en' ? 'English version' : 'Bản tiếng Việt'}>{khac.toUpperCase()}</a>
+      <a class="nut-goi-nho" href={LIEN_HE.tel} aria-label={t(`Gọi ${LIEN_HE.hotline}`, `Call ${LIEN_HE.hotlineQuocTe}`)}><Icon ten="dien-thoai" /></a>
+      <a class="nut nut--chinh dau-web__nut-dang-ky" href={dangKy}>{t('Đăng ký tham quan', 'Book a visit')}</a>
+
+      <details class="menu-hep">
+        <summary>
+          <span class="nhan-mo cum"><Icon ten="menu" />{t('Menu', 'Menu')}</span>
+          <span class="nhan-dong"><span class="cum"><Icon ten="dong" />{t('Đóng', 'Close')}</span></span>
+        </summary>
+        <nav class="menu-hep__bang" aria-label={t('Menu chính', 'Main menu')}>
+          <ul>
+            {MENU.map((m) => (
+              <li class="menu-hep__nhom">
+                <a href={url(m.key, lang)} aria-current={laTrangHienTai(m.key)}>{m.ten}</a>
+                {m.con.length > 0 && (
+                  <ul class="menu__con">
+                    {m.con.map((c) => <li><a href={url(c.key, lang)} aria-current={laTrangHienTai(c.key)}>{c.ten}</a></li>)}
+                  </ul>
+                )}
+              </li>
+            ))}
+            {MENU_PHU.map((m) => (
+              <li class="menu-hep__nhom"><a href={url(m.key, lang)} aria-current={laTrangHienTai(m.key)}>{m.ten}</a></li>
+            ))}
+          </ul>
+          <div class="menu-hep__cuoi">
+            <a class="nut nut--chinh nut--lon nut--rong" href={dangKy}>{t('Đăng ký tham quan', 'Book a visit')}</a>
+            <a class="nut nut--phu nut--lon nut--rong" href={LIEN_HE.tel}><Icon ten="dien-thoai" />{t(`Gọi ${LIEN_HE.hotline}`, `Call ${LIEN_HE.hotlineQuocTe}`)}</a>
+          </div>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
