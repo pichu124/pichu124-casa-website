@@ -1,6 +1,6 @@
 # Kế hoạch website (brief)
 
-Lập ngày 15/11/2026, dựa trên `CLAUDE.md`, `docs/NGUON-SU-THAT.md`, `docs/KIEM-KE-SITE-CU.md` và `docs/URL-CU.csv`. Đây là kế hoạch, chưa dựng trang nào. Mọi chỗ ghi `[CẦN: …]` là thông tin chưa có, không được tự điền.
+Lập ngày 15/11/2026. Sơ đồ trang, menu và liên kết nội bộ chi tiết: `docs/KIEN-TRUC-THONG-TIN.md` (theo tài liệu đó nếu có chỗ lệch). Dựa trên `CLAUDE.md`, `docs/NGUON-SU-THAT.md`, `docs/KIEM-KE-SITE-CU.md` và `docs/URL-CU.csv`. Đây là kế hoạch, chưa dựng trang nào. Mọi chỗ ghi `[CẦN: …]` là thông tin chưa có, không được tự điền.
 
 **Đầu vào của brief**
 
@@ -71,7 +71,7 @@ Không trang nào cần JS phía trình duyệt. Form gửi bằng HTML thườn
 |---|---|---|---|---|---|
 | 1 | Trang chủ `/` · `/en/` | Cho thấy đây là một hệ thống bốn cơ sở; dẫn phụ huynh tới cơ sở và chương trình hợp tuổi con | Câu định vị đã duyệt `[CẦN]`; 4 thẻ cơ sở; 2 thẻ chương trình theo tuổi; tóm tắt hai hệ; giờ học, 4 bữa; schema `Organization` | Đăng ký tham quan | Chọn cơ sở, chọn tuổi (đều là liên kết); nút gọi; đổi ngôn ngữ |
 | 2 | Chương trình `/chuong-trinh/` · `/en/programmes/` | Giải thích tổng quan và giúp chọn hệ | Hai hệ (bảng so sánh); "Một ngày ở Casa" (giờ học, đón muộn, hè, 4 bữa, ngoại khoá theo đăng ký, thu phí riêng); tư liệu trang cũ | Đăng ký tham quan | Bảng so sánh đọc được trên điện thoại |
-| 3 | Cambridge Early Years 3–6 tuổi `/chuong-trinh/cambridge-early-years/` · `/en/programmes/cambridge-early-years/` | Giải thích chương trình 3–6 tuổi và lớp tiền tiểu học | Bài 1 (Docs); trang cũ tiền tiểu học, 3–5 tuổi (viết lại thành 3–6) | Đăng ký tham quan | Liên kết tới Bài 1 |
+| 3 | Mẫu giáo 3–6 tuổi (QUYET-DINH Q13) `/chuong-trinh/mau-giao/` · `/en/programmes/kindergarten/` | Giải thích chương trình 3–6 tuổi và lớp tiền tiểu học | Bài 1 (Docs); trang cũ tiền tiểu học, 3–5 tuổi (viết lại thành 3–6) | Đăng ký tham quan | Liên kết tới Bài 1 |
 | 4 | Nhà trẻ 15–36 tháng `/chuong-trinh/nha-tre/` · `/en/programmes/nursery/` | Trấn an phụ huynh có con nhỏ | Mô hình trộn tuổi theo tinh thần Montessori, làm quen tiếng Anh (Ciputra); mô hình ở cơ sở cũ `[CẦN]`; độ tuổi nhận | Đăng ký tham quan | Ghi rõ cơ sở nào áp dụng mô hình nào |
 | 5 | Các cơ sở `/co-so/` · `/en/campuses/` | Giúp chọn cơ sở | 4 thẻ: tên thống nhất `[CẦN]`, địa chỉ, trạng thái (Ciputra "sắp khai trương") | Xem cơ sở | Liên kết bản đồ từng cơ sở |
 | 6 | Trang cơ sở ×4 `/co-so/<ten>/` · `/en/campuses/<name>/` | Trang quyết định: phụ huynh thấy nơi con học | Địa chỉ; chương trình và hệ có ở cơ sở `[CẦN]`; ảnh cơ sở vật chất `[CẦN]`; Ciputra lấy từ Docs; schema `Preschool` + `ChildCare` | Đăng ký tham quan **cơ sở này** | Form điền sẵn cơ sở (làm lúc build, không cần JS); nút gọi; bản đồ |
