@@ -3,11 +3,11 @@
 #   import /etc/caddy/sites/*.caddy
 # Không sửa khối của app casa-mamnon.
 #
-# Thay hai chỗ trước khi dùng:
-#   TEN_MIEN_BAN_THU  → tên miền phụ của bản thử (đã có bản ghi DNS trỏ về VPS)
+# Tên miền bản thử: casa-website-thu.duckdns.org (DuckDNS, chọn ngày 15/11/2026).
+# Thay một chỗ trước khi dùng:
 #   MA_BAM_MAT_KHAU   → kết quả của lệnh `caddy hash-password` (không phải mật khẩu gốc)
 
-TEN_MIEN_BAN_THU {
+casa-website-thu.duckdns.org {
 	root * /var/www/casa-website/current
 	encode zstd gzip
 

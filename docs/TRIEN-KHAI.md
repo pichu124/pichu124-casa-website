@@ -11,10 +11,9 @@ Lập ngày 15/11/2026, theo tình trạng máy `casamamon` do người phụ tr
 ## Trước khi chạy bất kỳ lệnh nào
 
 - [ ] **Chủ trường đã đồng ý** đưa bản thử lên VPS (`CLAUDE.md`: triển khai phải được chủ trường xác nhận).
-- [ ] **Đã chọn tên miền bản thử**, gọi là `TEN_MIEN_BAN_THU` trong tài liệu này. Có hai cách:
-  - `moi.casadeibambini.edu.vn`: cần người quản lý tên miền thêm bản ghi **A** `moi` trỏ về IP của VPS.
-  - Một tên DuckDNS như app đang dùng, ví dụ `casa-website-thu.duckdns.org`: tạo trong tài khoản DuckDNS, trỏ về IP của VPS.
-- [ ] **Bản ghi DNS đã có hiệu lực.** Từ máy bất kỳ chạy `nslookup TEN_MIEN_BAN_THU`; kết quả phải ra IP của VPS. Nếu chưa, Caddy không cấp được HTTPS.
+- [x] **Tên miền bản thử:** `casa-website-thu.duckdns.org` (DuckDNS, người phụ trách dự án chọn ngày 15/11/2026).
+- [ ] **Tạo tên này trên DuckDNS:** đăng nhập duckdns.org (cùng tài khoản đang dùng cho app), thêm tên miền phụ `casa-website-thu`, điền IP của VPS vào ô *current ip* rồi bấm *update ip*.
+- [ ] **Tên miền đã trỏ đúng.** Từ máy bất kỳ chạy `nslookup casa-website-thu.duckdns.org`; kết quả phải ra IP của VPS (giống IP của `casa-school.duckdns.org`). Nếu chưa, Caddy không cấp được HTTPS.
 - [ ] Người chạy lệnh đăng nhập bằng user **casa** (có `sudo`).
 
 Chạy lần lượt từng khối. Khối nào báo lỗi thì dừng lại, gửi nguyên thông báo lỗi cho người phụ trách dự án. **Không gửi mật khẩu vào chat.**
@@ -96,7 +95,7 @@ Chép tệp cấu hình của site vào thư mục riêng:
 sudo mkdir -p /etc/caddy/sites && sudo cp /opt/casa-website/src/deploy/casa-website.caddy /etc/caddy/sites/casa-website.caddy
 ```
 
-Mở tệp để thay hai chỗ: `TEN_MIEN_BAN_THU` (tên miền đã chọn) và `MA_BAM_MAT_KHAU` (chuỗi `$2a$...` ở bước 4):
+Mở tệp để thay **một chỗ**: `MA_BAM_MAT_KHAU` thành chuỗi `$2a$...` ở bước 4 (tên miền đã điền sẵn):
 
 ```bash
 sudo nano /etc/caddy/sites/casa-website.caddy
@@ -127,13 +126,13 @@ sudo systemctl reload caddy
 Không có mật khẩu thì phải bị chặn (mã `401`):
 
 ```bash
-curl -sI https://TEN_MIEN_BAN_THU/ | head -1
+curl -sI https://casa-website-thu.duckdns.org/ | head -1
 ```
 
 Có mật khẩu thì vào được (mã `200`) và có dòng `x-robots-tag: noindex, nofollow`. Lệnh sẽ hỏi mật khẩu:
 
 ```bash
-curl -sI -u xem https://TEN_MIEN_BAN_THU/ | grep -iE '^HTTP|x-robots-tag'
+curl -sI -u xem https://casa-website-thu.duckdns.org/ | grep -iE '^HTTP|x-robots-tag'
 ```
 
 **App vẫn chạy bình thường** (mã `200`, `301` hoặc `302`):
@@ -142,7 +141,7 @@ curl -sI -u xem https://TEN_MIEN_BAN_THU/ | grep -iE '^HTTP|x-robots-tag'
 curl -sI https://casa-school.duckdns.org/ | head -1
 ```
 
-Mở `https://TEN_MIEN_BAN_THU/` trên điện thoại, đăng nhập `xem` và mật khẩu, thử vài trang và trang tiếng Anh.
+Mở `https://casa-website-thu.duckdns.org/` trên điện thoại, đăng nhập `xem` và mật khẩu, thử vài trang và trang tiếng Anh.
 
 ## Cập nhật khi có bản mới
 
