@@ -6,6 +6,8 @@ Lập ngày 15/11/2026, theo tình trạng máy `casamamon` do người phụ tr
 - App casa-mamnon chạy ở `127.0.0.1:3000` (dịch vụ `casa-mamnon.service`).
 - Không có nginx, không có certbot. Tường lửa ufw mở cổng 22, 80, 443.
 
+**Trạng thái:** bản thử đã chạy từ 15/11/2026 tại `https://casa-website-thu.duckdns.org` (bản `releases/20261115-171851`). Đã kiểm: không mật khẩu → 401; có mật khẩu → 200 kèm `x-robots-tag: noindex, nofollow`; app `casa-school.duckdns.org` vẫn trả 200.
+
 **Vì vậy dùng Caddy, không cài nginx** (QUYET-DINH Q16). Cài nginx sẽ tranh cổng 80/443 với Caddy và làm app ngừng chạy.
 
 ## Trước khi chạy bất kỳ lệnh nào

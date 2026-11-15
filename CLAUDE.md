@@ -114,4 +114,4 @@ Liệt kê lại trong mỗi báo cáo nếu chặn việc. Câu hỏi chi tiế
 - Tệp logo gốc, màu nhận diện; ảnh cơ sở vật chất và giáo viên (đã có đồng ý nếu có trẻ trong ảnh).
 - Địa chỉ đúng của cơ sở Chùa Láng; tên gọi thống nhất cho từng cơ sở; số nhà, tên tòa ở Ciputra (khi có).
 - Pháp nhân ghi ở chân trang site mới.
-- IP của VPS; tên miền bản thử và bản ghi DNS của nó; chủ trường đồng ý triển khai bản thử.
+- (Bản thử đã chạy ở `casa-website-thu.duckdns.org` từ 15/11/2026; VPS IP `103.195.238.114`.)
