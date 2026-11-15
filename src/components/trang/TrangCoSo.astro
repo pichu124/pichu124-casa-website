@@ -53,7 +53,7 @@ const schemaHoiDap = laCiputra ? [{
 
 const tieuDe = laCiputra
   ? t('Casa dei Bambini Ciputra: mầm non theo khung Cambridge Early Years', 'Casa dei Bambini Ciputra: preschool based on Cambridge Early Years')
-  : t(`Cơ sở ${c.ten.vi}`, `${c.ten.en} campus`) + (c.diaChiNgan ? `: ${c.diaChiNgan[lang]}` : '');
+  : t(`Mầm non ${c.ten.vi} – Casa dei Bambini`, `${c.ten.en} preschool – Casa dei Bambini`) + (c.diaChiNgan ? ` (${c.diaChiNgan[lang]})` : '');
 const moTa = laCiputra
   ? t('Mầm non Casa dei Bambini tại Ciputra (Phú Thượng): khung Cambridge Early Years cho trẻ 3–6 tuổi, nhận bé từ 15 tháng. Dự kiến khai trương quý 4/2027.',
       'Casa dei Bambini at Ciputra (Phú Thượng): Cambridge Early Years framework for ages 3–6, children from 15 months. Expected to open in Q4 2027.')
@@ -61,7 +61,7 @@ const moTa = laCiputra
       `Casa dei Bambini ${c.ten.en} campus: address, map, classes and visit booking. Now enrolling. Hotline ${LIEN_HE.hotlineQuocTe}.`);
 const khac = CO_SO.filter((x) => x.slug !== slug && x.trangThai === 'dang-tuyen-sinh');
 ---
-<Base lang={lang} routeKey={key} duongDan={duongDan} tieuDe={tieuDe} tieuDeDayDu={laCiputra} moTa={moTa} schema={[...schema, ...schemaHoiDap]}>
+<Base lang={lang} routeKey={key} duongDan={duongDan} tieuDe={tieuDe} tieuDeDayDu moTa={moTa} schema={[...schema, ...schemaHoiDap]}>
 
   <section class="dau-trang-con">
     <div class="khung">
