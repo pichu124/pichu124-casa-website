@@ -52,7 +52,8 @@ Không chép nguyên văn sang site mới. Mỗi đoạn dùng lại phải đ�
   - `/truong-mam-non-quoc-te-ha-noi/`, `/tieu-chuan-truong-mam-non-quoc-te/`, `/co-nen-cho-con-hoc-truong-mam-non-quoc-te/` dễ vướng tên gọi "quốc tế".
 - **25 tin hoạt động của bé** (làm bánh, Family Day, Year End Party, Casa Cup, 8/3…): gần như chắc chắn có ảnh thấy rõ mặt trẻ, chưa rõ đã có đồng ý bằng văn bản của phụ huynh.
 - **32 bài về phương pháp giáo dục** (Montessori, Reggio Emilia, Steiner, Shichida, Glenn Doman, HighScope, STEAM…): Montessori không còn là định vị chính, các phương pháp khác không thuộc chương trình.
-- **Khoảng 45 bài SEO chung** (giáo án, trang trí lớp, câu đố, thực đơn, "trường công lập là gì"…): không gắn với chương trình mới.
+- **37 bài SEO chung hoặc theo địa bàn** (giáo án, trang trí lớp, câu đố, thực đơn, "trường công lập là gì", "trường mầm non Mỹ Đình"…): không gắn với chương trình mới.
+- **16 bài về tiền tiểu học, vào lớp 1, chọn trường, độ tuổi nhập học, mầm non tiếng Anh:** 301 về trang chương trình hoặc tuyển sinh gần nhất.
 - **Hồ sơ giáo viên năm 2022:** phần lớn là dữ liệu mẫu của giao diện (`ms-fray-2` đến `ms-fray-6`, `mrs-zenny-copy`, ảnh "Thiet-ke-chua-co-ten.png").
 - **Trang lớp năm 2022** (Seoul, Berlin, London…), chỉ có bản tiếng Anh.
 - **Thư viện ảnh, album ảnh, trang tác giả, danh mục bài viết.**
