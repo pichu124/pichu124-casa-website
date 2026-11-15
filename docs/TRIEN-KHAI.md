@@ -155,6 +155,16 @@ sudo -H -u casa-website /opt/casa-website/src/deploy/cap-nhat-ban-thu.sh
 
 Không cần nạp lại Caddy khi chỉ cập nhật nội dung.
 
+## Đổi mật khẩu xem
+
+Chỉ cần gõ mật khẩu mới hai lần; kịch bản tự tạo mã băm, thay vào tệp cấu hình, kiểm tra và nạp lại Caddy. Cấu hình lỗi thì tự khôi phục, mật khẩu cũ vẫn dùng được.
+
+```bash
+sudo bash /opt/casa-website/src/deploy/doi-mat-khau.sh
+```
+
+Mật khẩu tối thiểu 8 ký tự. Gửi mật khẩu mới cho người duyệt qua Zalo hoặc điện thoại.
+
 ## Quay lui
 
 Xem các bản đang có (mới nhất ở cuối):
