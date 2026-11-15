@@ -10,10 +10,10 @@ Lập ngày 15/11/2026, theo tình trạng máy `casamamon` do người phụ tr
 
 ## Trước khi chạy bất kỳ lệnh nào
 
-- [ ] **Chủ trường đã đồng ý** đưa bản thử lên VPS (`CLAUDE.md`: triển khai phải được chủ trường xác nhận).
+- [x] **Chủ trường đã đồng ý** đưa bản thử lên VPS (người phụ trách dự án xác nhận ngày 15/11/2026; `CLAUDE.md`: triển khai phải được chủ trường xác nhận).
 - [x] **Tên miền bản thử:** `casa-website-thu.duckdns.org` (DuckDNS, người phụ trách dự án chọn ngày 15/11/2026).
-- [ ] **Tạo tên này trên DuckDNS:** đăng nhập duckdns.org (cùng tài khoản đang dùng cho app), thêm tên miền phụ `casa-website-thu`, điền IP của VPS vào ô *current ip* rồi bấm *update ip*.
-- [ ] **Tên miền đã trỏ đúng.** Từ máy bất kỳ chạy `nslookup casa-website-thu.duckdns.org`; kết quả phải ra IP của VPS (giống IP của `casa-school.duckdns.org`). Nếu chưa, Caddy không cấp được HTTPS.
+- [x] **Tạo tên này trên DuckDNS:** đăng nhập duckdns.org (cùng tài khoản đang dùng cho app), thêm tên miền phụ `casa-website-thu`, điền IP của VPS vào ô *current ip* rồi bấm *update ip*.
+- [x] **Tên miền đã trỏ đúng** (15/11/2026: `103.195.238.114`, cùng IP với app). Từ máy bất kỳ chạy `nslookup casa-website-thu.duckdns.org`; kết quả phải ra IP của VPS (giống IP của `casa-school.duckdns.org`). Nếu chưa, Caddy không cấp được HTTPS.
 - [ ] Người chạy lệnh đăng nhập bằng user **casa** (có `sudo`).
 
 Chạy lần lượt từng khối. Khối nào báo lỗi thì dừng lại, gửi nguyên thông báo lỗi cho người phụ trách dự án. **Không gửi mật khẩu vào chat.**
