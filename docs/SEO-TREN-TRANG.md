@@ -59,7 +59,7 @@ Bản tiếng Anh có bản đồ tương ứng (ví dụ "Kim Mã preschool", "
 
 | Việc | Cần gì | Giai đoạn |
 |---|---|---|
-| `og:image` (ảnh xem trước khi chia sẻ Zalo/Facebook) | Logo hoặc ảnh cơ sở đã được đồng ý | Khi có tài sản (phiếu câu 1, 21) |
+| `og:image` (ảnh xem trước khi chia sẻ Zalo/Facebook) | Logo hoặc ảnh cơ sở đã được đồng ý | Khi có tài sản (phiếu câu 1, 23) |
 | `logo` trong schema `Organization` | Tệp logo gốc | Như trên |
 | Schema `Preschool` cho Chùa Láng, Ciputra | Địa chỉ đầy đủ | Phiếu câu 6, 8 |
 | `datePublished`, `image` cho schema `Article` | Ngày đăng thật, ảnh đại diện không thấy mặt bé | Khi đăng bài (Giai đoạn 3) |

@@ -1,6 +1,6 @@
 // Một nguồn duy nhất cho thông tin bốn cơ sở (docs/KIEN-TRUC-THONG-TIN.md, mục 3).
 // Giá trị null = chưa có thông tin đã chốt → giao diện hiện [CẦN: …], không suy đoán.
-// Chương trình trong Casa facts là mô hình Ciputra; ba cơ sở cũ chờ phiếu câu 9–10.
+// Chương trình trong Casa facts là mô hình Ciputra; ba cơ sở cũ chờ phiếu câu 10–11.
 
 export type Lang = 'vi' | 'en';
 export type HaiNgu = { vi: string; en: string };

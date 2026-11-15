@@ -36,7 +36,7 @@ Tài liệu chi tiết cho từng phần:
   - Còn 288 chỗ `[CẦN]` trên 34 trang. Nhiều chỗ lặp lại từ chân trang và bảng lớp/hệ, gốc thật chỉ khoảng 15 thông tin.
   - Chính sách dữ liệu thiếu bên kiểm soát và thời gian lưu.
   - Chưa có dịch vụ nhận form.
-- **Rủi ro lớn nhất về nội dung:** chương trình (Cambridge Early Years, hai hệ, nhà trẻ trộn tuổi) là mô hình của Ciputra. Trang chủ và trang Chương trình đang giới thiệu nó như chương trình của Casa. Trước khi đăng, nhà trường phải xác nhận ba cơ sở cũ có học như vậy không (phiếu câu 9–11). Nếu không, phải viết lại các trang đó.
+- **Rủi ro lớn nhất về nội dung:** chương trình (Cambridge Early Years, hai hệ, nhà trẻ trộn tuổi) là mô hình của Ciputra. Trang chủ và trang Chương trình đang giới thiệu nó như chương trình của Casa. Trước khi đăng, nhà trường phải xác nhận ba cơ sở cũ có học như vậy không (phiếu câu 10–12). Nếu không, phải viết lại các trang đó.
 - **Lỗi nghiêm trọng đã phát hiện và sửa trong lần rà này:**
   - Menu điện thoại không mở được.
   - Đầu trang tràn ngang ở 320 px.
@@ -51,11 +51,11 @@ Mức: **Nghiêm trọng** = chặn việc đăng hoặc sai luật; **Cao** = �
 
 | # | Mức | Việc | Ảnh hưởng tới người dùng | Công sức | Phụ thuộc | Ai làm |
 |---|---|---|---|---|---|---|
-| B1 | Nghiêm trọng | Xác nhận chương trình, hệ học, nhà trẻ ở Kim Mã, Chùa Láng, Mỹ Đình; giờ học, bữa ăn áp dụng cơ sở nào | Tránh quảng cáo sai sự thật cho ba cơ sở cũ | Nhỏ (trả lời phiếu) rồi trung bình (sửa nội dung) | Phiếu câu 9–11 | Nhà trường → Claude |
+| B1 | Nghiêm trọng | Xác nhận chương trình, hệ học, nhà trẻ ở Kim Mã, Chùa Láng, Mỹ Đình; giờ học, bữa ăn áp dụng cơ sở nào | Tránh quảng cáo sai sự thật cho ba cơ sở cũ | Nhỏ (trả lời phiếu) rồi trung bình (sửa nội dung) | Phiếu câu 10–12 | Nhà trường → Claude |
 | B2 | Nghiêm trọng | Hoàn thiện Chính sách bảo vệ dữ liệu: bên kiểm soát, người được xem, thời gian lưu, đầu mối yêu cầu; rà soát pháp lý | Bắt buộc trước khi mở form (Nghị định 13/2023, Luật 91/2025) | Trung bình | Phiếu câu 17–20; người có chuyên môn pháp lý | Chủ trường, Claude |
 | B3 | Nghiêm trọng | Dịch vụ nhận form (Node, systemd, SMTP Google Workspace, ghi tệp, chống spam, lỗi tiếng Việt) | Không có thì không ai đăng ký được | Trung bình | Giai đoạn 4; hộp thư gửi (phiếu câu 21) | Claude; chủ trường đặt mật khẩu ứng dụng trên máy chủ |
 | B4 | Nghiêm trọng | Xoá hết `[CẦN]`: địa chỉ Chùa Láng, tên cơ sở, pháp nhân chân trang, quy trình nhập học, thời gian gọi lại, nội dung Về Casa | Trang có chỗ trống trông như chưa xong | Nhỏ đến trung bình mỗi mục | Phiếu; bản xuất WordPress | Nhà trường → Claude |
-| B5 | Cao | Ảnh thật cơ sở vật chất, giáo viên (đúng quy tắc ảnh trẻ), qua thành phần ảnh của Astro | Niềm tin: hiện site chưa có ảnh nào | Trung bình | Phiếu câu 21 | Nhà trường → Claude |
+| B5 | Cao | Ảnh thật cơ sở vật chất, giáo viên (đúng quy tắc ảnh trẻ), qua thành phần ảnh của Astro | Niềm tin: hiện site chưa có ảnh nào | Trung bình | Phiếu câu 23 | Nhà trường → Claude |
 | B6 | Cao | Logo gốc và màu nhận diện thay cho màu tạm; kiểm lại tương phản | Nhận diện thương hiệu | Nhỏ | Phiếu câu 1–2; chốt tên "Casa dei Bambini" hay "Casa Preschool" | Nhà trường → Claude |
 | B7 | Cao | Cam kết thời gian gọi lại (form, trang Cảm ơn) | Giảm ngần ngại khi gửi (giả thuyết C2) | Nhỏ | Phiếu câu 14; tuyển sinh giữ được cam kết | Nhà trường → Claude |
 | B8 | Cao | Chủ trường xác nhận nội dung soạn sẵn đã dùng: trang Ciputra, FAQ, Bài 1 | Không đăng nội dung chưa xác nhận | Nhỏ | — | Chủ trường |

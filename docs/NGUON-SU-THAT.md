@@ -22,7 +22,7 @@ Khi lệch, **Casa facts thắng**: sửa bản chép này, không sửa ngượ
 
 - 3–6 tuổi: theo khung Cambridge Early Years. Lớp tiền tiểu học học theo Cambridge Early Years 3, bổ sung kỹ năng chuẩn bị vào lớp 1. **Đã chốt.**
 - 15 tháng–3 tuổi: lớp trộn tuổi, theo tinh thần Montessori, làm quen tiếng Anh. **Đã chốt.**
-- Chương trình từng cơ sở cũ: `[CẦN: phiếu câu 9–10]`.
+- Chương trình từng cơ sở cũ: `[CẦN: phiếu câu 10–11]`.
 
 ## Hai hệ (lớp 3–6 tuổi)
 
@@ -36,7 +36,7 @@ Khi lệch, **Casa facts thắng**: sửa bản chép này, không sửa ngượ
 - Hè vẫn hoạt động, nghỉ 1 tuần theo lịch trường. **Đã chốt.**
 - 4 bữa mỗi ngày, bếp của trường tự nấu. **Đã chốt.**
 - Ngoại khoá, trại hè theo đăng ký, thu phí riêng. **Đã chốt.**
-- Áp dụng cho cả bốn cơ sở hay chỉ Ciputra: `[CẦN: phiếu câu 11]`.
+- Áp dụng cho cả bốn cơ sở hay chỉ Ciputra: `[CẦN: phiếu câu 12]`.
 
 ## Cơ sở
 

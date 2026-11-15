@@ -134,4 +134,4 @@ Màu tạm, chọn từ hai ý: xanh mòng két đậm cho sự tin cậy, đấ
 - [x] Áp dụng cho trang chủ và mọi trang khác
 - [ ] Thay màu tạm bằng màu nhận diện (chờ phiếu câu 2)
 - [ ] Thay chữ tên trường bằng logo gốc (chờ phiếu câu 1)
-- [ ] Ảnh thật đã được đồng ý (chờ phiếu câu 21)
+- [ ] Ảnh thật đã được đồng ý (chờ phiếu câu 23)

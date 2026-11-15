@@ -25,8 +25,8 @@ Lập ngày 15/11/2026. Mọi câu chỉ dùng thông tin trong `docs/NGUON-SU-T
 | Hướng | Tiêu đề lớn (H1) | Câu dưới tiêu đề | Khi nào dùng |
 |---|---|---|---|
 | **A. Theo nơi và tuổi** (đang dùng) | Mầm non Casa dei Bambini cho bé từ 15 tháng đến 6 tuổi | Hệ thống mầm non hơn 10 năm tại Hà Nội. Ba cơ sở Kim Mã, Chùa Láng, Mỹ Đình đang tuyển sinh; cơ sở Ciputra dự kiến khai trương quý 4/2027. | Ngay bây giờ: chỉ dùng thông tin cấp hệ thống, đúng cho cả bốn cơ sở |
-| B. Theo chương trình | Học qua chơi theo khung Cambridge Early Years, có giáo viên nước ngoài trong mỗi lớp hệ quốc tế | Chương trình cho trẻ 3–6 tuổi, gồm lớp tiền tiểu học chuẩn bị vào lớp 1. Bé từ 15 tháng học nhà trẻ. | Khi nhà trường xác nhận các cơ sở cũ cùng học chương trình này (phiếu câu 9) |
-| C. Theo lịch gia đình | Một ngày ở trường hợp với lịch đi làm của ba mẹ | Bé học 7h30–17h30 từ thứ Hai đến thứ Sáu, trông muộn đến 18h30, ăn 4 bữa do bếp trường nấu, mùa hè vẫn học. | Khi nhà trường xác nhận giờ học, bữa ăn áp dụng cho cả bốn cơ sở (phiếu câu 11) |
+| B. Theo chương trình | Học qua chơi theo khung Cambridge Early Years, có giáo viên nước ngoài trong mỗi lớp hệ quốc tế | Chương trình cho trẻ 3–6 tuổi, gồm lớp tiền tiểu học chuẩn bị vào lớp 1. Bé từ 15 tháng học nhà trẻ. | Khi nhà trường xác nhận các cơ sở cũ cùng học chương trình này (phiếu câu 10) |
+| C. Theo lịch gia đình | Một ngày ở trường hợp với lịch đi làm của ba mẹ | Bé học 7h30–17h30 từ thứ Hai đến thứ Sáu, trông muộn đến 18h30, ăn 4 bữa do bếp trường nấu, mùa hè vẫn học. | Khi nhà trường xác nhận giờ học, bữa ăn áp dụng cho cả bốn cơ sở (phiếu câu 12) |
 
 Hướng A được chọn vì là hướng duy nhất không cần chờ xác nhận thêm. B và C mạnh hơn về lợi ích, sẽ thay khi đủ điều kiện.
 
@@ -102,7 +102,7 @@ Câu chung nằm ở trang Tuyển sinh. Câu riêng về Ciputra nằm ở tran
 6. **Có ngoại khoá, trại hè không?** Có, theo đăng ký và thu phí riêng.
 7. **Học phí bao nhiêu?** Nhà trường gửi biểu phí sau khi trao đổi với gia đình. Để lại số điện thoại hoặc gọi 0989 059 838.
 
-Câu 2–6 chờ phiếu câu 11 xác nhận phạm vi cơ sở.
+Câu 2–6 chờ phiếu câu 12 xác nhận phạm vi cơ sở.
 
 **Trang Ciputra**
 
@@ -114,9 +114,9 @@ Câu 2–6 chờ phiếu câu 11 xác nhận phạm vi cơ sở.
 
 | Câu hoặc ý | Cần gì trước khi đăng |
 |---|---|
-| Chương trình 3–6 tuổi và nhà trẻ ở ba cơ sở cũ | Nhà trường xác nhận (phiếu câu 9–10). Trước đó, trang cơ sở cũ hiện `[CẦN]` thay vì suy ra |
-| Giờ học, bữa ăn, hè áp dụng cho cơ sở nào | Phiếu câu 11 |
+| Chương trình 3–6 tuổi và nhà trẻ ở ba cơ sở cũ | Nhà trường xác nhận (phiếu câu 10–11). Trước đó, trang cơ sở cũ hiện `[CẦN]` thay vì suy ra |
+| Giờ học, bữa ăn, hè áp dụng cho cơ sở nào | Phiếu câu 12 |
 | Đón trả tại sảnh Ciputra | Đang là "dự kiến": giữ chữ "dự kiến" |
 | Tên gọi từng cơ sở | Phiếu câu 4–5 |
-| Trang Về Casa: thông điệp, giá trị cốt lõi, đội ngũ | Bản xuất WordPress (phiếu câu 20), viết lại rồi chủ trường xác nhận |
+| Trang Về Casa: thông điệp, giá trị cốt lõi, đội ngũ | Bản xuất WordPress (phiếu câu 22), viết lại rồi chủ trường xác nhận |
 | Mọi nội dung | Chủ trường xác nhận đúng sự thật trước khi đăng (Giai đoạn 3) |
