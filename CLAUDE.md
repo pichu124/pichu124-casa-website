@@ -34,7 +34,7 @@ Không tự bịa con số, bằng cấp, giải thưởng, sĩ số, học phí
   - Hotline: 0989 059 838 (+84 989 059 838)
   - Email: tuyensinh@cdb.edu.vn
   - Facebook: facebook.com/CasadeiBambiniSchools
-- **Tách khỏi app casa-mamnon**: không đọc, không gọi, không sửa gì của app hay dữ liệu của app. App ở `app.casadeibambini.edu.vn`, site ở `casadeibambini.edu.vn` và `www`. Trên máy chủ, site có thư mục riêng, khối cấu hình nginx riêng, dịch vụ form riêng, dữ liệu form riêng.
+- **Tách khỏi app casa-mamnon**: không đọc, không gọi, không sửa gì của app hay dữ liệu của app. App ở `app.casadeibambini.edu.vn`, site ở `casadeibambini.edu.vn` và `www`. Trên máy chủ, site có thư mục riêng, khối cấu hình máy chủ web riêng (Caddy, xem dưới), dịch vụ form riêng, dữ liệu form riêng.
 - Giao diện và thông báo lỗi bằng tiếng Việt, dễ hiểu với phụ huynh không rành máy tính.
 
 ## Phân quyền quyết định
@@ -85,7 +85,7 @@ Mỗi giai đoạn kết thúc bằng một báo cáo ngắn và chờ người 
 
 - Dựng từng trang, tiếng Việt trước, tiếng Anh sau. Dùng nội dung đã soạn trong Docs cho trang Ciputra, FAQ, Bài 1.
 - Schema, `sitemap.xml`, `robots.txt`, trang 404 hai thứ tiếng, ảnh AVIF/WebP có kích thước cố định, chỉ ảnh đầu trang tải ngay.
-- Bảng chuyển hướng 301 xuất thành tệp cấu hình nginx (`deploy/redirects.conf`) sinh từ `docs/URL-CU.csv`.
+- Bảng chuyển hướng 301 sinh từ `docs/URL-CU.csv` bằng `npm run redirects`: `deploy/redirects.caddy` (dùng trên VPS) và `deploy/redirects.conf` (bản nginx, dự phòng).
 
 ### Giai đoạn 4: Form đăng ký tham quan
 
@@ -96,14 +96,14 @@ Mỗi giai đoạn kết thúc bằng một báo cáo ngắn và chờ người 
 
 ### Giai đoạn 5: Bản thử trên VPS
 
-- Soạn hướng dẫn `docs/TRIEN-KHAI.md` để chủ trường tự chạy trên VPS: thư mục `/var/www/casa-website/releases/<ngày-giờ>` + liên kết `current` (quay lui một lệnh), tệp `/etc/nginx/sites-available/casa-website` riêng (không sửa khối của app), dịch vụ form, chứng chỉ HTTPS.
-- Phần nginx, tường lửa và HTTPS của máy đang được dựng ở một phiên khác cho app casa-mamnon (theo `docs/TRIEN-KHAI.md` của repo casa-mamnon). Hướng dẫn ở đây phải thêm vào cấu hình đó, không thay. Hỏi người phụ trách dự án tình trạng máy trước khi viết lệnh.
+- Hướng dẫn: `docs/TRIEN-KHAI.md`, để người quản trị tự chạy trên VPS: thư mục `/var/www/casa-website/releases/<ngày-giờ>` + liên kết `current` (quay lui một lệnh), user `casa-website` riêng, tệp `/etc/caddy/sites/casa-website.caddy` riêng (không sửa khối của app), dịch vụ form, HTTPS do Caddy tự cấp.
+- **Máy chủ dùng Caddy, không dùng nginx** (kiểm tra 15/11/2026: Caddy 2.11.9 giữ cổng 80/443, app ở `127.0.0.1:3000`; QUYET-DINH Q16). Không cài nginx: sẽ tranh cổng với Caddy và làm app ngừng chạy. Cấu hình của site chỉ được thêm vào (một dòng `import` cuối Caddyfile + tệp riêng), không thay khối của app. Hỏi người phụ trách dự án tình trạng máy trước khi viết lệnh mới.
 - Bản thử chạy ở tên miền phụ (ví dụ `moi.casadeibambini.edu.vn`) có mật khẩu xem và `X-Robots-Tag: noindex`, để Google không lập chỉ mục bản thử.
 
 ### Giai đoạn 6: Chuyển tên miền chính
 
 - Trước ngày chuyển: cài Google Search Console cho tên miền (nên xác minh bằng bản ghi DNS); hạ TTL bản ghi DNS xuống 300 giây trước 24 giờ.
-- Ngày chuyển: đổi bản ghi A của `casadeibambini.edu.vn` và `www` sang IP của VPS (chủ trường làm); cấp chứng chỉ; chạy kịch bản kiểm tra mọi URL cũ trả về 301 đúng đích; gửi sitemap mới trên Search Console.
+- Ngày chuyển: đổi bản ghi A của `casadeibambini.edu.vn` và `www` sang IP của VPS (chủ trường làm); thêm khối Caddy cho tên miền chính có `import` `deploy/redirects.caddy`, bỏ mật khẩu và `noindex`; chạy kịch bản kiểm tra mọi URL cũ trả về 301 đúng đích; gửi sitemap mới trên Search Console.
 - Sau khi chuyển: theo dõi Search Console 4 tuần (lỗi 404, số trang được lập chỉ mục). Giữ gói hosting WordPress thêm 1–2 tháng làm đường lui rồi mới huỷ.
 
 ## Còn chờ nhà trường
@@ -114,4 +114,4 @@ Liệt kê lại trong mỗi báo cáo nếu chặn việc. Câu hỏi chi tiế
 - Tệp logo gốc, màu nhận diện; ảnh cơ sở vật chất và giáo viên (đã có đồng ý nếu có trẻ trong ảnh).
 - Địa chỉ đúng của cơ sở Chùa Láng; tên gọi thống nhất cho từng cơ sở; số nhà, tên tòa ở Ciputra (khi có).
 - Pháp nhân ghi ở chân trang site mới.
-- Thông tin máy VPS (IP, tình trạng nginx/HTTPS) từ phiên đang dựng máy.
+- IP của VPS; tên miền bản thử và bản ghi DNS của nó; chủ trường đồng ý triển khai bản thử.

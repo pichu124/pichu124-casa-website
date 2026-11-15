@@ -62,4 +62,46 @@ ${dong.join('\n')}
 `;
 mkdirSync(join(GOC, 'deploy'), { recursive: true });
 writeFileSync(join(GOC, 'deploy/redirects.conf'), noiDung);
-console.log(`Đã sinh deploy/redirects.conf: ${dong.length} dòng chuyển hướng, ${bo} URL giữ nguyên.`);
+
+// ---- Bản cho Caddy (máy chủ đang dùng Caddy, QUYET-DINH Q16): nhóm URL cũ theo đích
+const theoDich = new Map();
+for (const h of hang) {
+  const cu = h[iCu], dich = h[iDich];
+  if (cu === dich) continue;
+  if (!theoDich.has(dich)) theoDich.set(dich, []);
+  theoDich.get(dich).push(cu);
+  if (cu.endsWith('/') && cu !== '/') theoDich.get(dich).push(cu.slice(0, -1));
+}
+const tenMatcher = (d) => 'cu_' + (d.replace(/[^a-z0-9]+/gi, '_').replace(/^_|_$/g, '') || 'goc');
+const khoi = [...theoDich].map(([dich, ds]) =>
+  `@${tenMatcher(dich)} path ${ds.join(' ')}\nredir @${tenMatcher(dich)} ${dich} 301`);
+const caddy = `# TỆP SINH TỰ ĐỘNG bởi "npm run redirects" từ docs/URL-CU.csv — không sửa tay.
+# Dùng ở Giai đoạn 6 (chuyển tên miền chính): import tệp này BÊN TRONG khối site của casadeibambini.edu.vn.
+# ${hang.length} URL cũ; ${bo} URL giữ nguyên đường dẫn (không cần chuyển hướng).
+
+${khoi.join('\n\n')}
+
+# Quy tắc chung cho URL cũ không có trong sitemap (docs/KIEM-KE-SITE-CU.md)
+@cu_tag_en path_regexp ^/en/tag/
+redir @cu_tag_en /en/news/ 301
+@cu_tag path_regexp ^/tag/
+redir @cu_tag /tin-tuc/ 301
+@cu_feed_en path_regexp ^/en/(.*/)?feed/?$
+redir @cu_feed_en /en/news/ 301
+@cu_feed path_regexp ^/(.*/)?feed/?$
+redir @cu_feed /tin-tuc/ 301
+@cu_trang_en path_regexp ^/en/(.+/)?page/[0-9]+/?$
+redir @cu_trang_en /en/news/ 301
+@cu_trang path_regexp ^/(.+/)?page/[0-9]+/?$
+redir @cu_trang /tin-tuc/ 301
+@cu_q_lang query lang=en
+redir @cu_q_lang /en/ 301
+@cu_q_p query p=* page_id=*
+redir @cu_q_p / 301
+
+# URL WordPress không còn dùng: trả 410 (đã gỡ)
+@cu_wp path_regexp ^/(wp-admin|wp-login\\.php|xmlrpc\\.php|wp-json|wp-content|wp-includes)(/|$)
+respond @cu_wp 410
+`;
+writeFileSync(join(GOC, 'deploy/redirects.caddy'), caddy);
+console.log(`Đã sinh deploy/redirects.conf (nginx) và deploy/redirects.caddy (Caddy, ${theoDich.size} nhóm đích): ${hang.length - bo} URL chuyển hướng, ${bo} URL giữ nguyên.`);
