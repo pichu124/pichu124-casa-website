@@ -17,7 +17,7 @@ const tieuDe = Astro.props.tieuDe ?? t('Lớp và hệ học ở từng cơ sở
 const hien = (v: GiaTriLop) =>
   v === 'co' ? t('Có', 'Yes') : v === 'khong' ? t('Không', 'No') : v === 'du-kien' ? t('Có (dự kiến)', 'Yes (planned)') : null;
 ---
-<div class="bang-cuon" role="region" aria-label={tieuDe} tabindex="0">
+<div class="bang-cuon" role="region" aria-label={`${t('Bảng', 'Table')}: ${tieuDe}`} tabindex="0">
   <table class="bang--so-sanh">
     <caption>{tieuDe}</caption>
     <thead>

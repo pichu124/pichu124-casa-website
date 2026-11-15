@@ -99,7 +99,7 @@ const khac = CO_SO.filter((x) => x.slug !== slug && x.trangThai === 'dang-tuyen-
     <section class="phan phan--phu phan--sat" aria-labelledby="theo-lua-tuoi">
       <div class="khung">
         <h2 id="theo-lua-tuoi">{t('Chương trình theo từng lứa tuổi', 'Programmes by age')}</h2>
-        <div class="bang-cuon" role="region" aria-labelledby="theo-lua-tuoi" tabindex="0">
+        <div class="bang-cuon" role="region" aria-label={t('Bảng: chương trình theo lứa tuổi', 'Table: programmes by age')} tabindex="0">
           <table>
             <thead><tr><th scope="col">{t('Lứa tuổi', 'Age')}</th><th scope="col">{t('Chương trình', 'Programme')}</th></tr></thead>
             <tbody>
