@@ -37,9 +37,19 @@ Không tự bịa con số, bằng cấp, giải thưởng, sĩ số, học phí
 - **Tách khỏi app casa-mamnon**: không đọc, không gọi, không sửa gì của app hay dữ liệu của app. App ở `app.casadeibambini.edu.vn`, site ở `casadeibambini.edu.vn` và `www`. Trên máy chủ, site có thư mục riêng, khối cấu hình nginx riêng, dịch vụ form riêng, dữ liệu form riêng.
 - Giao diện và thông báo lỗi bằng tiếng Việt, dễ hiểu với phụ huynh không rành máy tính.
 
-## Phải hỏi chủ trường trước khi làm
+## Phân quyền quyết định
 
-Push hoặc merge vào nhánh chính; đổi DNS; triển khai lên máy chủ; xoá bất cứ thứ gì trên máy chủ; đăng bất kỳ nội dung nào chưa được duyệt. Lệnh chạy trên VPS thì soạn sẵn để chủ trường tự chạy. Không bao giờ hỏi hay ghi mật khẩu vào chat hay repo.
+- **Claude tự quyết**, ghi lý do vào `docs/QUYET-DINH.md`: cấu trúc trang, đường dẫn, menu, nút hành động; cách viết và thứ tự nội dung trên trang; giữ hay bỏ nội dung cũ, chuyển hướng, SEO; công nghệ, bộ kiểm tra, tốc độ, bố cục thiết kế; các lựa chọn mặc định đã ghi trong `docs/QUYET-DINH.md`.
+- **Người phụ trách dự án** (người giao việc trong các phiên làm việc này) quyết các bước: xem báo cáo cuối mỗi giai đoạn, cho phép sang giai đoạn sau, đổi một quyết định của Claude.
+- **Nhà trường cung cấp sự thật** qua `docs/PHIEU-BO-SUNG-THONG-TIN.docx`: địa chỉ, tên gọi, chương trình từng cơ sở, pháp nhân, dữ liệu form, logo, ảnh. Claude không tự điền thay.
+- **Chủ trường xác nhận cuối**: nội dung đúng sự thật trước khi đăng; các ranh giới trong "Quy tắc cứng"; đổi DNS và triển khai.
+
+## Phải được xác nhận trước khi làm
+
+- Người phụ trách dự án xác nhận: push hoặc merge vào nhánh chính.
+- Chủ trường xác nhận: đổi DNS; triển khai lên máy chủ; xoá bất cứ thứ gì trên máy chủ; đăng bất kỳ nội dung nào chưa được xác nhận.
+
+Lệnh chạy trên VPS thì soạn sẵn để người được giao tự chạy. Không bao giờ hỏi hay ghi mật khẩu vào chat hay repo.
 
 ## Kiểm tra trước mỗi commit (`npm run check`, dựng ở Giai đoạn 2)
 
@@ -54,7 +64,7 @@ Push hoặc merge vào nhánh chính; đổi DNS; triển khai lên máy chủ; 
 
 ## Quy trình theo giai đoạn
 
-Mỗi giai đoạn kết thúc bằng một báo cáo ngắn và chờ chủ trường duyệt rồi mới sang giai đoạn sau.
+Mỗi giai đoạn kết thúc bằng một báo cáo ngắn và chờ người phụ trách dự án xem rồi mới sang giai đoạn sau.
 
 ### Giai đoạn 1: Kiểm kê site cũ
 
@@ -68,7 +78,7 @@ Mỗi giai đoạn kết thúc bằng một báo cáo ngắn và chờ chủ tr�
 - Đề xuất cây trang hai thứ tiếng. Gợi ý: Trang chủ (hệ thống) · Chương trình (Cambridge Early Years 3–6 tuổi; Nhà trẻ 15–36 tháng) · Các cơ sở (Ciputra "sắp khai trương", Kim Mã, Chùa Láng, Mỹ Đình) · Tuyển sinh và đăng ký tham quan · Tin tức và bài viết · Về Casa · Liên hệ · Chính sách bảo vệ dữ liệu cá nhân (bắt buộc vì form thu thông tin, theo Nghị định 13/2023 và Luật 91/2025).
 - Đề xuất công nghệ. Gợi ý: Astro xuất site tĩnh (có sẵn đa ngôn ngữ, sitemap, tối ưu ảnh), không cần JS phía trình duyệt. Nêu lý do nếu chọn khác.
 - Dựng `npm run check` trước khi viết trang đầu tiên.
-- Làm bản thiết kế trang chủ và một trang cơ sở để chủ trường duyệt giao diện. Màu và logo lấy theo nhận diện hiện có; hỏi nếu cần tệp gốc.
+- Làm bản thiết kế trang chủ và một trang cơ sở để người phụ trách dự án xem giao diện. Màu và logo lấy theo nhận diện hiện có; hỏi nếu cần tệp gốc.
 - Mục tiêu tốc độ: Lighthouse trên điện thoại từ 90 điểm, ảnh đầu trang dưới 2,5 giây.
 
 ### Giai đoạn 3: Dựng nội dung
@@ -87,7 +97,7 @@ Mỗi giai đoạn kết thúc bằng một báo cáo ngắn và chờ chủ tr�
 ### Giai đoạn 5: Bản thử trên VPS
 
 - Soạn hướng dẫn `docs/TRIEN-KHAI.md` để chủ trường tự chạy trên VPS: thư mục `/var/www/casa-website/releases/<ngày-giờ>` + liên kết `current` (quay lui một lệnh), tệp `/etc/nginx/sites-available/casa-website` riêng (không sửa khối của app), dịch vụ form, chứng chỉ HTTPS.
-- Phần nginx, tường lửa và HTTPS của máy đang được dựng ở một phiên khác cho app casa-mamnon (theo `docs/TRIEN-KHAI.md` của repo casa-mamnon). Hướng dẫn ở đây phải thêm vào cấu hình đó, không thay. Hỏi chủ trường tình trạng máy trước khi viết lệnh.
+- Phần nginx, tường lửa và HTTPS của máy đang được dựng ở một phiên khác cho app casa-mamnon (theo `docs/TRIEN-KHAI.md` của repo casa-mamnon). Hướng dẫn ở đây phải thêm vào cấu hình đó, không thay. Hỏi người phụ trách dự án tình trạng máy trước khi viết lệnh.
 - Bản thử chạy ở tên miền phụ (ví dụ `moi.casadeibambini.edu.vn`) có mật khẩu xem và `X-Robots-Tag: noindex`, để Google không lập chỉ mục bản thử.
 
 ### Giai đoạn 6: Chuyển tên miền chính
@@ -96,9 +106,9 @@ Mỗi giai đoạn kết thúc bằng một báo cáo ngắn và chờ chủ tr�
 - Ngày chuyển: đổi bản ghi A của `casadeibambini.edu.vn` và `www` sang IP của VPS (chủ trường làm); cấp chứng chỉ; chạy kịch bản kiểm tra mọi URL cũ trả về 301 đúng đích; gửi sitemap mới trên Search Console.
 - Sau khi chuyển: theo dõi Search Console 4 tuần (lỗi 404, số trang được lập chỉ mục). Giữ gói hosting WordPress thêm 1–2 tháng làm đường lui rồi mới huỷ.
 
-## Còn chờ chủ trường
+## Còn chờ nhà trường
 
-Liệt kê lại trong mỗi báo cáo nếu chặn việc.
+Liệt kê lại trong mỗi báo cáo nếu chặn việc. Câu hỏi chi tiết nằm trong `docs/PHIEU-BO-SUNG-THONG-TIN.docx`.
 
 - Quyền vào nơi quản lý DNS của casadeibambini.edu.vn (nơi mua tên miền).
 - Tệp logo gốc, màu nhận diện; ảnh cơ sở vật chất và giáo viên (đã có đồng ý nếu có trẻ trong ảnh).

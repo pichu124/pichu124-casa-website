@@ -1,6 +1,6 @@
 # Kiểm kê site cũ (Giai đoạn 1)
 
-Lập ngày 15/11/2026 từ các sitemap Yoast do chủ trường tải về: `docs/site-cu/sitemap/` gồm `sitemap_index.xml` và đủ 8 sitemap con mà nó liệt kê. Máy chủ đám mây không vào được site cũ, nên bản kiểm kê này chỉ dựa trên đường dẫn và ngày sửa. Chưa đọc được nội dung từng trang.
+Lập ngày 15/11/2026 từ các sitemap Yoast do người phụ trách dự án tải về: `docs/site-cu/sitemap/` gồm `sitemap_index.xml` và đủ 8 sitemap con mà nó liệt kê. Máy chủ đám mây không vào được site cũ, nên bản kiểm kê này chỉ dựa trên đường dẫn và ngày sửa. Chưa đọc được nội dung từng trang.
 
 Bảng đầy đủ: `docs/URL-CU.csv`, gồm 226 URL. URL nào cũng đã có đích mới.
 
@@ -13,11 +13,11 @@ Bảng đầy đủ: `docs/URL-CU.csv`, gồm 226 URL. URL nào cũng đã có �
 | `loai` | `trang`, `bai-viet`, `danh-muc`, `danh-muc-lop`, `lop`, `giao-vien`, `album-anh`, `tac-gia`, `sitemap` |
 | `tieu_de` | Để trống: sitemap không ghi tiêu đề. Sẽ điền khi có bản xuất WordPress |
 | `dich_moi` | Đích 301 trên site mới. Trùng `url_cu` thì giữ nguyên đường dẫn, không cần chuyển hướng |
-| `noi_dung` | `viết lại` (dùng làm tư liệu cho trang mới), `chủ trường chọn`, `hỏi chủ trường`, `bỏ` |
+| `noi_dung` | `viết lại` (dùng làm tư liệu cho trang mới), `viết lại nếu khớp` (bài ứng viên, `docs/QUYET-DINH.md` Q8), `bỏ` |
 | `ghi_chu` | Lý do |
 | `sitemap`, `sua_lan_cuoi` | Lấy từ sitemap cũ |
 
-Các đích trong bảng dựa trên cây trang đề xuất ở Giai đoạn 2. Nếu chủ trường đổi tên hay đường dẫn trang, sẽ sửa lại cột `dich_moi`.
+Các đích trong bảng dựa trên cây trang đề xuất ở Giai đoạn 2. Nếu cây trang thay đổi, sẽ sửa lại cột `dich_moi`.
 
 ## Số lượng
 
@@ -40,8 +40,8 @@ Không chép nguyên văn sang site mới. Mỗi đoạn dùng lại phải đ�
 
 - **Về Casa:** `/ve-casa/`, `/thong-diep-nha-truong/`, `/gia-tri-cot-loi/`, `/ly-do-chon-casa/`, `/doi-ngu-giao-vien/`, và bài `/casa-dei-bambini-hanh-trinh-10-nam-gieo-mam-yeu-thuong/`.
 - **Chương trình:** `/chuong-trinh-hoc/`, `/phuong-phap-giao-duc/`, `/3-5-tuoi/`, `/chuong-trinh-hoc-cho-tre-3-5-tuoi/`, `/tien-tieu-hoc/`, `/chuong-trinh-hoc-cho-tre-18-36-thang/`, `/tre-18-36-thang-version-2/`, `/hoat-dong-ngoai-khoa/`, `/che-do-dinh-duong/`.
-- **Cơ sở:** `/co-so/`, `/co-so-kim-ma/`, `/co-so-my-dinh/`, `/co-so-cau-giay/`. Cần các trang này để chủ trường xác nhận chương trình từng cơ sở cũ.
-- **Bài viết có thể viết lại** (chủ trường chọn): `/buoi-chia-se-triet-ly-giao-duc-som-tai-australia/`, `/phat-trien-giac-quan-cho-tre/`, `/5-linh-vuc-phat-trien-cua-tre-mam-non/`.
+- **Cơ sở:** `/co-so/`, `/co-so-kim-ma/`, `/co-so-my-dinh/`, `/co-so-cau-giay/`. Cần nội dung các trang này để đối chiếu với câu trả lời của nhà trường về chương trình từng cơ sở cũ.
+- **Bài viết ứng viên viết lại** (chỉ khi nội dung khớp thông tin hiện nay, `docs/QUYET-DINH.md` Q8): `/buoi-chia-se-triet-ly-giao-duc-som-tai-australia/`, `/phat-trien-giac-quan-cho-tre/`, `/5-linh-vuc-phat-trien-cua-tre-mam-non/`.
 
 ## Nội dung nên bỏ (vẫn có 301)
 
@@ -81,8 +81,11 @@ Không chép nguyên văn sang site mới. Mỗi đoạn dùng lại phải đ�
 | `/wp-admin`, `/wp-login.php`, `/xmlrpc.php`, `/wp-json/…` | 410 |
 | Còn lại | Trang 404 hai thứ tiếng, có liên kết về các trang chính |
 
-## Cần thêm từ chủ trường
+## Cần thêm từ nhà trường
 
-- **Bản xuất WordPress:** vào Quản trị → Công cụ → Xuất → "Tất cả nội dung", rồi gửi tệp `.xml` (không chứa mật khẩu). Có tệp này mới điền được tiêu đề và đọc được nội dung các trang "viết lại", thay vì chỉ đoán theo đường dẫn.
-- "Cầu Giấy" là cơ sở nào: Chùa Láng hay Mỹ Đình?
-- Có giữ trang Tuyển dụng, Nội quy, và trang giới thiệu app liên lạc không?
+Đã đưa vào `docs/PHIEU-BO-SUNG-THONG-TIN.docx`:
+
+- Bản xuất WordPress (Công cụ → Xuất → Tất cả nội dung), để điền tiêu đề và đọc nội dung các trang "viết lại".
+- "Cầu Giấy" là cơ sở nào.
+
+Trang Tuyển dụng, Nội quy, giới thiệu app: đã quyết bỏ (`docs/QUYET-DINH.md` Q6, Q7).

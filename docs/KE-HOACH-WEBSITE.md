@@ -28,9 +28,8 @@ Website giúp phụ huynh ở Hà Nội có con từ 15 tháng đến 6 tuổi t
 |---|---|---|
 | A. Phụ huynh Việt ở gần Kim Mã, Chùa Láng, Mỹ Đình | **Chính**, tuyển sinh ngay | |
 | B. Phụ huynh ở khu Ciputra và lân cận | Quan tâm cơ sở mới, đăng ký trước | Cơ sở chưa mở, chỉ được viết "dự kiến" |
-| C. Gia đình đọc tiếng Anh | Dùng bản `/en/` | Giả định, `[CẦN: chủ trường xác nhận nhóm này quan trọng tới đâu]` |
-| D. Phụ huynh đang có con học ở trường | Tìm số điện thoại, địa chỉ | Có dẫn sang app liên lạc không: `[CẦN]` |
-| E. Người xin việc | Nếu giữ trang Tuyển dụng | `[CẦN]` |
+| C. Gia đình đọc tiếng Anh | Dùng bản `/en/` | Bản tiếng Anh là bắt buộc theo quy tắc; chất lượng như bản tiếng Việt |
+| D. Phụ huynh đang có con học ở trường | Tìm số điện thoại, địa chỉ | Không dẫn sang app liên lạc (`docs/QUYET-DINH.md` Q6) |
 
 ### Việc họ cần làm và câu trả lời của site
 
@@ -53,8 +52,8 @@ Website giúp phụ huynh ở Hà Nội có con từ 15 tháng đến 6 tuổi t
 | "Có phải trường Cambridge thật không?" | Dùng đúng câu "chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi"; Bài 1 giải thích khung chương trình | Không viết "trường Cambridge", không dùng logo Cambridge |
 | "Có thật mỗi lớp có giáo viên nước ngoài?" | Bảng so sánh hai hệ, ghi rõ giáo viên ở từng hệ | Không viết "trường mầm non quốc tế" làm tên hay tiêu đề |
 | "Con còn nhỏ quá" | Trang nhà trẻ 15–36 tháng; nói rõ trường trao đổi với từng gia đình | Không hứa kết quả, không dùng ảnh rõ mặt bé |
-| "Ciputra chưa mở, đăng ký có ích gì?" | Ghi "dự kiến khai trương quý 4/2027"; form có chọn Ciputra để trường liên hệ khi có lịch | Không viết "đã được cấp phép", không ghi tháng cụ thể |
-| "Trường có an toàn không?" (camera, đón trả, y tế) | `[CẦN: chủ trường cung cấp thông tin đã chốt]` | Không tự viết |
+| "Ciputra chưa mở, đăng ký có ích gì?" | Ghi "dự kiến khai trương quý 4/2027"; form có chọn Ciputra để trường liên hệ khi có lịch (`docs/QUYET-DINH.md` Q4) | Không viết "đã được cấp phép", không ghi tháng cụ thể |
+| "Trường có an toàn không?" (camera, đón trả, y tế) | `[CẦN: nhà trường cung cấp thông tin đã chốt]` | Không tự viết |
 | "Giáo viên có bằng cấp gì?" | `[CẦN]` | Không bịa bằng cấp |
 
 ### Hành động chuyển đổi duy nhất
@@ -78,12 +77,11 @@ Không trang nào cần JS phía trình duyệt. Form gửi bằng HTML thườn
 | 6 | Trang cơ sở ×4 `/co-so/<ten>/` · `/en/campuses/<name>/` | Trang quyết định: phụ huynh thấy nơi con học | Địa chỉ; chương trình và hệ có ở cơ sở `[CẦN]`; ảnh cơ sở vật chất `[CẦN]`; Ciputra lấy từ Docs; schema `Preschool` + `ChildCare` | Đăng ký tham quan **cơ sở này** | Form điền sẵn cơ sở (làm lúc build, không cần JS); nút gọi; bản đồ |
 | 7 | Tuyển sinh `/tuyen-sinh/` · `/en/admissions/` | Giải đáp và nhận đăng ký | Quy trình nhập học `[CẦN]`; FAQ (Docs); "liên hệ để nhận biểu phí"; form | Gửi đăng ký | Form 4 trường + ô đồng ý (liên kết tới chính sách); báo lỗi tiếng Việt cạnh từng ô |
 | 8 | Cảm ơn / lỗi `/tuyen-sinh/cam-on/` · `/en/admissions/thank-you/` | Xác nhận và nói bước tiếp theo | Thời gian trường gọi lại `[CẦN]`; khi lỗi: hotline | Gọi hotline | Không có |
-| 9 | Tin tức `/tin-tuc/` + bài · `/en/news/` | Giữ lượt tìm kiếm, trả lời câu hỏi sâu | Bài 1; 3 bài cũ chủ trường chọn viết lại | Đăng ký tham quan (cuối bài) | Phân trang khi có nhiều bài |
+| 9 | Tin tức `/tin-tuc/` + bài · `/en/news/` | Giữ lượt tìm kiếm, trả lời câu hỏi sâu | Bài 1; 3 bài cũ ứng viên viết lại (Q8) | Đăng ký tham quan (cuối bài) | Phân trang khi có nhiều bài |
 | 10 | Về Casa `/ve-casa/` · `/en/about/` | Tạo niềm tin vào một hệ thống hơn 10 năm | Thông điệp, giá trị cốt lõi, đội ngũ (viết lại từ trang cũ), hành trình 10 năm; không nêu số liệu chưa chốt | Xem các cơ sở | Không có |
 | 11 | Liên hệ `/lien-he/` · `/en/contact/` | Liên hệ trực tiếp | Hotline, email, Facebook (chép đúng); 4 địa chỉ; Zalo `[CẦN]` | Gọi hotline | `tel:`, `mailto:`, bản đồ |
 | 12 | Chính sách bảo vệ dữ liệu `/chinh-sach-bao-ve-du-lieu/` · `/en/privacy-policy/` | Đáp ứng Nghị định 13/2023 và Luật 91/2025 | Bên kiểm soát dữ liệu `[CẦN: pháp nhân]`; mục đích; thời gian lưu `[CẦN]`; người nhận; quyền của phụ huynh; cách yêu cầu xoá | Không có | Không có |
 | 13 | 404 (hai thứ tiếng) | Không để người xem lạc | Liên kết tới các trang chính | Về trang chủ | Không có |
-| ? | Tuyển dụng (chưa chốt) | Tuyển giáo viên | `[CẦN: có giữ không]` | Gửi hồ sơ qua email `[CẦN]` | Không có |
 
 **Phần chung mọi trang:**
 - Đầu trang: logo, menu, nút đăng ký, nút đổi ngôn ngữ.
@@ -103,7 +101,7 @@ Không trang nào cần JS phía trình duyệt. Form gửi bằng HTML thườn
 | Chương trình và hệ ở từng cơ sở cũ | **Thiếu** | Chủ trường xác nhận |
 | Trang Ciputra, FAQ, schema; Bài 1 | Có bản soạn, **chưa rõ đã duyệt đăng chưa** | Docs |
 | Nội dung trang cũ để viết lại | Có đường dẫn, **chưa có nội dung** | Bản xuất WordPress |
-| Câu định vị và tiêu đề trang chủ | **Thiếu** | Đề xuất rồi chủ trường duyệt |
+| Câu định vị và tiêu đề trang chủ | **Thiếu** | Claude đề xuất trong bản thiết kế (Q10) |
 | Quy trình nhập học, thời gian phản hồi | **Thiếu** | Chủ trường |
 | An toàn, y tế, đón trả | **Thiếu** | Chủ trường (chỉ đăng nếu đã chốt) |
 | Logo gốc (SVG/AI), mã màu, phông | **Thiếu** | Chủ trường |
@@ -111,7 +109,7 @@ Không trang nào cần JS phía trình duyệt. Form gửi bằng HTML thườn
 | Pháp nhân ở chân trang và chính sách dữ liệu | **Thiếu** | Chủ trường |
 | Thời gian lưu dữ liệu form, ai được xem | **Thiếu** | Chủ trường |
 | Bảng chuyển hướng URL cũ | Có (226 URL) | `docs/URL-CU.csv` |
-| Tài khoản Google Workspace gửi mail form | **Thiếu** (mật khẩu ứng dụng do chủ trường tự đặt trên máy chủ) | Chủ trường |
+| Tài khoản Google Workspace gửi mail form | **Thiếu** (mật khẩu ứng dụng do người được giao tự đặt trên máy chủ) | Nhà trường |
 | Quyền quản lý DNS; thông tin VPS | **Thiếu** | Chủ trường, phiên dựng máy |
 
 ## 5. Tiêu chí thành công
@@ -130,9 +128,11 @@ Không trang nào cần JS phía trình duyệt. Form gửi bằng HTML thườn
 
 **Kinh doanh**
 - Đếm số đăng ký tham quan mỗi tháng, theo từng cơ sở, từ tệp dữ liệu form.
-- Chưa có số liệu nền của site cũ, nên chưa đặt chỉ tiêu. `[CẦN: chủ trường cho biết số đăng ký hoặc cuộc gọi hiện nay, nếu có]`.
+- Chưa có số liệu nền của site cũ, nên chưa đặt chỉ tiêu. `[CẦN: nhà trường cho biết số đăng ký hoặc cuộc gọi hiện nay, nếu có]`.
 
 ## 6. Câu hỏi chặn việc triển khai
+
+Các câu về chuyên môn (Ciputra trong form, đo lượt truy cập, trang Tuyển dụng, Nội quy, app, bài cũ, trang quản trị, câu định vị) đã được quyết trong `docs/QUYET-DINH.md`. Còn lại là các câu về sự thật, gửi nhà trường qua `docs/PHIEU-BO-SUNG-THONG-TIN.docx`:
 
 | # | Câu hỏi | Chặn việc gì |
 |---|---|---|
@@ -141,9 +141,7 @@ Không trang nào cần JS phía trình duyệt. Form gửi bằng HTML thườn
 | 3 | Cơ sở cũ nào có hệ quốc tế, hệ song ngữ, nhà trẻ; nhà trẻ ở cơ sở cũ học theo mô hình nào | Trang chương trình và trang cơ sở |
 | 4 | Pháp nhân ghi ở chân trang, đồng thời là bên kiểm soát dữ liệu trong chính sách | Chân trang mọi trang; trang chính sách (bắt buộc trước khi mở form) |
 | 5 | Ai đọc dữ liệu form, lưu bao lâu, trường gọi lại trong bao lâu | Chính sách dữ liệu, trang cảm ơn, Giai đoạn 4 |
-| 6 | Form có cho chọn Ciputra ngay bây giờ không | Form, trang Ciputra |
-| 7 | Nội dung soạn sẵn trên Docs (Ciputra, FAQ, Bài 1) đã duyệt đăng chưa | Giai đoạn 3 |
-| 8 | Bản xuất WordPress (Công cụ → Xuất → Tất cả nội dung) | Viết lại trang Về Casa, Chương trình |
-| 9 | Có dùng Zalo không; có cần đo lượt truy cập không (nếu có thì phải xin đồng ý theo Nghị định 13) | Liên hệ, thanh nút trên điện thoại, chính sách |
-| 10 | Có giữ trang Tuyển dụng, Nội quy, trang giới thiệu app liên lạc không | Cây trang, bảng chuyển hướng |
-| 11 | Chấp nhận việc không có trang quản trị (bài mới phải sửa trong repo) không | Cách làm Tin tức |
+| 6 | Bản xuất WordPress | Viết lại trang Về Casa, Chương trình |
+| 7 | Trường có Zalo không; có cần tự đăng bài thường xuyên không | Trang Liên hệ; cách làm Tin tức |
+
+Chủ trường xác nhận cuối: nội dung đúng sự thật trước khi đăng (gom một lần ở Giai đoạn 3, gồm cả nội dung soạn sẵn trên Docs), các ranh giới trong "Quy tắc cứng", đổi DNS và triển khai.
