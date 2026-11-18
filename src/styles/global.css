@@ -1,43 +1,54 @@
 /* =========================================================================
-   Hệ thống thiết kế Casa dei Bambini — xem docs/HE-THONG-THIET-KE.md
-   Màu đang là BẢNG MÀU TẠM, chờ màu nhận diện của trường. Chỉ đổi giá trị
-   token ở :root; không viết mã màu trực tiếp trong thành phần.
+   Hệ thống thiết kế Casa — xem docs/HE-THONG-THIET-KE.md
+   Màu theo bộ nhận diện thương hiệu (phiếu bổ sung thông tin câu 2, 18/11/2026):
+   navy #23265A (chủ đạo), đỏ san hô #E54041 (nhấn), xanh pastel #8EB7E1 (bổ trợ),
+   xám đậm #51535A (phụ), trắng (nền). Chỉ đổi giá trị token ở :root; không viết
+   mã màu trực tiếp trong thành phần.
+   Phông: bộ nhận diện dùng DIN cho văn bản (Anja Eliane chỉ cho logo). Chưa có
+   giấy phép web của DIN nên dùng Barlow (miễn phí, nét gần DIN, đủ dấu tiếng Việt).
    ========================================================================= */
 
-@import '@fontsource/be-vietnam-pro/vietnamese-400.css';
-@import '@fontsource/be-vietnam-pro/latin-400.css';
-@import '@fontsource/be-vietnam-pro/vietnamese-600.css';
-@import '@fontsource/be-vietnam-pro/latin-600.css';
-@import '@fontsource/be-vietnam-pro/vietnamese-700.css';
-@import '@fontsource/be-vietnam-pro/latin-700.css';
+@import '@fontsource/barlow/vietnamese-400.css';
+@import '@fontsource/barlow/latin-400.css';
+@import '@fontsource/barlow/vietnamese-600.css';
+@import '@fontsource/barlow/latin-600.css';
+@import '@fontsource/barlow/vietnamese-700.css';
+@import '@fontsource/barlow/latin-700.css';
 
 :root {
   color-scheme: light;
 
+  /* Màu thương hiệu (gốc) */
+  --brand-navy: #23265a;
+  --brand-do: #e54041;
+  --brand-pastel: #8eb7e1;
+  --brand-xam: #51535a;
+
   /* Màu nền và bề mặt */
-  --mau-nen: #fbf8f3;
+  --mau-nen: #ffffff;
   --mau-be-mat: #ffffff;
-  --mau-be-mat-phu: #f3eee6;
-  --mau-vien: #ddd5c8;
-  --mau-vien-o-nhap: #6f7b82;
+  --mau-be-mat-phu: #eef4fb;       /* xanh pastel rất nhạt, nền phần xen kẽ */
+  --mau-vien: #d6deea;
+  --mau-vien-o-nhap: #6f7480;
 
   /* Chữ */
-  --mau-chu: #1d2b33;
-  --mau-chu-phu: #4b5a63;
+  --mau-chu: #2b2d3a;
+  --mau-chu-phu: var(--brand-xam);
 
-  /* Thương hiệu (tạm) */
-  --mau-chinh: #1e5a6b;
-  --mau-chinh-dam: #164756;
-  --mau-chinh-nhat: #e2eef0;
+  /* Thương hiệu */
+  --mau-chinh: var(--brand-navy);
+  --mau-chinh-dam: #171a42;
+  --mau-chinh-nhat: #e3ecf8;
 
-  /* Hành động: chỉ dùng cho nút "Đăng ký tham quan" và hành động chính */
-  --mau-hanh-dong: #b5442a;
-  --mau-hanh-dong-dam: #943520;
-  --mau-hanh-dong-nhat: #fbe9e2;
+  /* Hành động: chỉ dùng cho nút "Đăng ký tham quan" và hành động chính.
+     Chữ trắng trên đỏ san hô đạt 4,08:1 → nút chính dùng chữ lớn, đậm (≥19px, 700) */
+  --mau-hanh-dong: var(--brand-do);
+  --mau-hanh-dong-dam: #c6302f;
+  --mau-hanh-dong-nhat: #fde8e8;
 
   /* Trang trí (không dùng cho chữ) */
-  --mau-vang: #f2c14e;
-  --mau-xanh-la: #8fb996;
+  --mau-vang: var(--brand-pastel);
+  --mau-xanh-la: var(--brand-pastel);
 
   /* Trạng thái */
   --mau-loi: #b3261e;
@@ -46,24 +57,24 @@
   --mau-can-vien: #a8841a;
 
   /* Bề mặt tối (chân trang) */
-  --mau-toi-nen: #163f4b;
-  --mau-toi-chu: #f4efe8;
-  --mau-toi-chu-phu: #c9d6da;
+  --mau-toi-nen: var(--brand-navy);
+  --mau-toi-chu: #ffffff;
+  --mau-toi-chu-phu: #d9ddea;
 
   /* Viền tiêu điểm bàn phím */
-  --mau-tieu-diem: #1e5a6b;
-  --mau-tieu-diem-tren-toi: #ffd166;
+  --mau-tieu-diem: var(--brand-navy);
+  --mau-tieu-diem-tren-toi: var(--brand-pastel);
 
   /* Chữ */
-  --font: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
-  --co-nho: 0.875rem;
-  --co-than: 1.0625rem;
-  --co-lon: 1.1875rem;
-  --co-h3: 1.25rem;
-  --co-h2: clamp(1.5rem, 1.15rem + 1.5vw, 2.125rem);
-  --co-h1: clamp(1.875rem, 1.25rem + 2.6vw, 3rem);
-  --dong-than: 1.65;
-  --dong-tieu-de: 1.2;
+  --font: 'Barlow', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --co-nho: 0.9375rem;
+  --co-than: 1.125rem;
+  --co-lon: 1.25rem;
+  --co-h3: 1.3125rem;
+  --co-h2: clamp(1.625rem, 1.25rem + 1.6vw, 2.25rem);
+  --co-h1: clamp(2rem, 1.35rem + 2.8vw, 3.25rem);
+  --dong-than: 1.6;
+  --dong-tieu-de: 1.15;
 
   /* Khoảng cách */
   --k-1: 0.25rem;
@@ -108,7 +119,7 @@ body {
   overflow-wrap: break-word;
 }
 img, svg { max-width: 100%; height: auto; display: block; }
-h1, h2, h3, h4 { line-height: var(--dong-tieu-de); color: var(--mau-chu); margin: 0 0 var(--k-4); font-weight: 700; text-wrap: balance; }
+h1, h2, h3, h4 { line-height: var(--dong-tieu-de); color: var(--brand-navy); margin: 0 0 var(--k-4); font-weight: 700; text-wrap: balance; }
 h1 { font-size: var(--co-h1); letter-spacing: -0.01em; }
 h2 { font-size: var(--co-h2); }
 h3 { font-size: var(--co-h3); font-weight: 600; }
@@ -160,7 +171,7 @@ main:focus { outline: none; }
   font: inherit; font-weight: 600; line-height: 1.2; text-decoration: none; text-align: center;
   cursor: pointer; transition: background-color .15s, color .15s, border-color .15s;
 }
-.nut--chinh { background: var(--mau-hanh-dong); color: #fff; }
+.nut--chinh { background: var(--mau-hanh-dong); color: #fff; font-weight: 700; font-size: 1.1875rem; }
 .nut--chinh:hover { background: var(--mau-hanh-dong-dam); color: #fff; }
 .nut--phu { background: transparent; color: var(--mau-chinh); border-color: var(--mau-chinh); }
 .nut--phu:hover { background: var(--mau-chinh-nhat); color: var(--mau-chinh-dam); }
@@ -174,7 +185,8 @@ main:focus { outline: none; }
   padding: var(--k-5); box-shadow: var(--bong-the); display: flex; flex-direction: column; gap: var(--k-2);
 }
 .the > :last-child { margin-bottom: 0; }
-.the h3 { margin-bottom: var(--k-1); }
+.the h3, .the h4.the__tieu-de { margin-bottom: var(--k-1); }
+.the h4.the__tieu-de { font-size: var(--co-h3); }
 .the--lien-ket { position: relative; transition: box-shadow .15s, border-color .15s; }
 .the--lien-ket:hover { box-shadow: var(--bong-the-noi); border-color: var(--mau-chinh); }
 .the--lien-ket a.the__lien-ket::after { content: ''; position: absolute; inset: 0; border-radius: var(--bo-the); }
@@ -290,6 +302,8 @@ tbody th { font-weight: 600; }
 .chu-logo__phu { font-size: 0.75rem; color: var(--mau-chu-phu); display: none; }
 @media (min-width: 30rem) { .chu-logo__phu { display: block; } }
 .chu-logo:hover { color: var(--mau-chu); }
+.chu-logo img { height: 44px; width: auto; }
+@media (min-width: 64rem) { .chu-logo img { height: 50px; } }
 
 .menu-rong { display: none; }
 .menu-rong > ul { display: flex; gap: var(--k-1); list-style: none; margin: 0; padding: 0; }
@@ -395,6 +409,8 @@ body.co-thanh-day { padding-bottom: calc(var(--cao-thanh-day) + env(safe-area-in
 .chan-web li a { display: inline-flex; align-items: center; min-height: 2.25rem; }
 .chan-web__luoi { display: grid; gap: var(--k-6); grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); }
 .chan-web__phu { color: var(--mau-toi-chu-phu); font-size: var(--co-nho); }
+.chan-web__logo { height: 64px; width: auto; margin-bottom: var(--k-3); }
+.chan-web__khau-hieu { color: var(--mau-toi-chu-phu); font-size: var(--co-lon); margin-bottom: var(--k-6); }
 .chan-web__day { border-top: 1px solid rgb(255 255 255 / 0.15); margin-top: var(--k-7); padding-top: var(--k-5); display: flex; flex-wrap: wrap; gap: var(--k-3) var(--k-5); justify-content: space-between; font-size: var(--co-nho); color: var(--mau-toi-chu-phu); }
 .chan-web .can { color: #5c4a0b; }
 
@@ -411,3 +427,25 @@ body.co-thanh-day { padding-bottom: calc(var(--cao-thanh-day) + env(safe-area-in
 }
 
 .the__tieu-de-bai { font-size: var(--co-h3); font-weight: 600; margin-bottom: var(--k-1); }
+
+.cac-buoc { padding-left: 1.5rem; }
+.cac-buoc li + li { margin-top: var(--k-4); }
+
+.khoi-y-nghia { display: grid; gap: var(--k-6); align-items: center; }
+.khoi-y-nghia__logo { width: 160px; height: auto; justify-self: center; }
+@media (min-width: 48rem) { .khoi-y-nghia { grid-template-columns: auto 1fr; } .khoi-y-nghia__logo { width: 200px; } }
+
+.danh-sach-dau { list-style: none; padding: 0; margin: 0 0 var(--k-5); display: grid; gap: var(--k-2); }
+.danh-sach-dau li { margin: 0; padding-left: 1.75rem; position: relative; font-weight: 600; color: var(--brand-navy); }
+.danh-sach-dau li::before { content: ''; position: absolute; left: 0; top: 0.35em; width: 1rem; height: 1rem; border-radius: 50% 0; background: var(--brand-do); }
+
+/* Trang chủ: nhóm cơ sở, ảnh đầu trang, khối ảnh + chữ */
+.luoi--3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 16.5rem), 1fr)); }
+.nhom-tieu-de { font-size: 1.0625rem; text-transform: uppercase; letter-spacing: .06em; color: var(--brand-xam); margin: var(--k-6) 0 var(--k-3); }
+.nhom-tieu-de:first-of-type { margin-top: 0; }
+.the--sap { border-style: dashed; }
+.the__phu { margin: var(--k-2) 0 0; font-size: .9375rem; font-weight: 600; color: var(--brand-navy); }
+.dau-trang__anh, .khoi-anh-chu__anh { display: block; width: 100%; height: auto; border-radius: var(--bo-the); }
+.khoi-anh-chu { display: grid; gap: var(--k-6); align-items: center; }
+@media (min-width: 56rem) { .khoi-anh-chu { grid-template-columns: 0.8fr 1.2fr; } }
+.danh-sach-tron:has(> .the--sap) { max-width: 40rem; }

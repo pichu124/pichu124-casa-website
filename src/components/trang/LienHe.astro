@@ -18,10 +18,10 @@ const hotline = lang === 'en' ? LIEN_HE.hotlineQuocTe : LIEN_HE.hotline;
 ---
 <Base lang={lang} routeKey="contact" duongDan={duongDan}
   tieuDe={t('Liên hệ: hotline, email, Facebook', 'Contact: hotline, email, Facebook')}
-  moTa={t(`Liên hệ Casa dei Bambini: hotline ${LIEN_HE.hotline}, email ${LIEN_HE.email}, Facebook. Đăng ký tham quan một trong bốn cơ sở.`, `Contact Casa dei Bambini: hotline ${LIEN_HE.hotlineQuocTe}, email ${LIEN_HE.email}, Facebook. Book a visit to one of our four campuses.`)}>
+  moTa={t(`Liên hệ Casa Preschool: hotline ${LIEN_HE.hotline}, email ${LIEN_HE.email}, Facebook. Đăng ký tham quan một trong bốn cơ sở.`, `Contact Casa Preschool: hotline ${LIEN_HE.hotlineQuocTe}, email ${LIEN_HE.email}, Facebook. Book a visit to one of our four campuses.`)}>
   <section class="dau-trang-con">
     <div class="khung">
-      <h1>{t('Liên hệ Casa dei Bambini', 'Contact Casa dei Bambini')}</h1>
+      <h1>{t('Liên hệ Casa Preschool', 'Contact Casa Preschool')}</h1>
       <p class="dau-trang__phu">{t('Gọi hotline là cách nhanh nhất để hẹn lịch tham quan.', 'Calling our hotline is the quickest way to arrange a visit.')}</p>
     </div>
   </section>
@@ -46,7 +46,8 @@ const hotline = lang === 'en' ? LIEN_HE.hotlineQuocTe : LIEN_HE.hotline;
         </li>
         <li class="the">
           <h3>Zalo</h3>
-          <p class="the__mo-ta">{LIEN_HE.zalo ? <a href={LIEN_HE.zalo} rel="noopener">Zalo</a> : <Can noi={t('trường có dùng Zalo không (phiếu câu 25)', 'whether the school uses Zalo (form question 25)')} />}</p>
+          <p class="the__mo-ta">{t(`Nhắn tin tư vấn tuyển sinh qua Zalo ${LIEN_HE.zaloSo} hoặc trang Zalo chính thức của trường.`, `Message our admissions team on Zalo at ${LIEN_HE.zaloSo} or on the school’s official Zalo page.`)}</p>
+          {LIEN_HE.zalo && <a class="nut nut--phu" href={LIEN_HE.zalo} rel="noopener">{t('Mở Zalo của trường', 'Open our Zalo page')}</a>}
         </li>
       </ul>
     </div>

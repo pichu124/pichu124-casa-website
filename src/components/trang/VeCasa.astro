@@ -1,10 +1,13 @@
 ---
-// Về Casa: chỉ dùng thông tin đã chốt. Thông điệp, giá trị cốt lõi, đội ngũ sẽ viết lại
-// từ trang cũ khi có bản xuất WordPress (phiếu câu 22).
+// Về Casa. Nguồn: bộ nhận diện (khẩu hiệu, ý nghĩa logo), phiếu bổ sung thông tin
+// câu 15 (an toàn và chăm sóc) và câu 16 (đội ngũ), 18/11/2026. Chỉ dùng các ý trường
+// đã viết là đang làm; các mục trường ghi "cần xác nhận bổ sung" chưa đăng.
+// Thông điệp nhà trường, 7 giá trị cốt lõi: chờ bản xuất WordPress hoặc nhà trường cung cấp.
 import Base from '../../layouts/Base.astro';
 import KhoiCta from '../KhoiCta.astro';
 import Can from '../Can.astro';
 import type { Lang } from '../../data/co-so';
+import { TEN, KHAU_HIEU, LOGO } from '../../data/thuong-hieu';
 import { url, taoT } from '../../i18n/routes';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -13,37 +16,122 @@ const duongDan = [
   { ten: t('Trang chủ', 'Home'), href: url('home', lang) },
   { ten: t('Về Casa', 'About Casa'), href: url('about', lang) },
 ];
+const DOI_NGU = [
+  { ten: t('Đội ngũ quản lý chuyên môn', 'Academic leadership'),
+    noi: t('Xây dựng, triển khai và giám sát chất lượng chương trình giáo dục qua quan sát lớp học, hỗ trợ giáo viên và trao đổi chuyên môn; phối hợp cùng giáo viên và phụ huynh theo dõi sự phát triển của từng bé.', 'Builds, runs and oversees the quality of the programme through classroom observation, teacher support and professional exchange, working with teachers and parents to follow each child’s development.') },
+  { ten: t('Giáo viên Việt Nam', 'Vietnamese teachers'),
+    noi: t('Chăm sóc, giáo dục và hỗ trợ bé trong các hoạt động học tập, sinh hoạt hằng ngày; quan sát nhu cầu, sở thích và cảm xúc của từng bé để chọn cách hướng dẫn phù hợp; khuyến khích bé chủ động khám phá, đặt câu hỏi và từng bước tự lập.', 'Care for, teach and support children through daily learning and routines; observe each child’s needs, interests and feelings to choose the right guidance; encourage children to explore, ask questions and grow more independent step by step.') },
+  { ten: t('Giáo viên nước ngoài', 'Foreign teachers'),
+    noi: t('Tham gia các hoạt động tiếng Anh và chương trình theo mô hình của từng hệ học. Qua trò chuyện, kể chuyện, trò chơi và khám phá, bé có cơ hội nghe, hiểu và dùng tiếng Anh trong những tình huống phù hợp với độ tuổi.', 'Lead English activities and the programme according to each track. Through conversation, stories, games and exploration, children hear, understand and use English in situations suited to their age.') },
+  { ten: t('Đội ngũ trợ giảng', 'Teaching assistants'),
+    noi: t('Phối hợp cùng giáo viên phụ trách lớp tổ chức hoạt động, chuẩn bị môi trường học tập và quan sát nhu cầu của từng bé, đặc biệt với các bé mới nhập học hoặc đang trong giai đoạn thích nghi.', 'Work with the class teacher to run activities, prepare the learning environment and watch each child’s needs, especially for new children who are still settling in.') },
+  { ten: t('Nhân viên chăm sóc, dinh dưỡng và vận hành', 'Care, nutrition and operations staff'),
+    noi: t('Bếp và dinh dưỡng, vệ sinh, bảo vệ, hành chính và tuyển sinh: mỗi vị trí góp phần tạo nên một ngày đến trường an toàn, thuận tiện và ấm áp cho bé.', 'Kitchen and nutrition, cleaning, security, administration and admissions: every role helps make each school day safe, smooth and warm for children.') },
+];
+const DAO_TAO = [
+  t('Phương pháp giáo dục Montessori', 'Montessori education'),
+  t('Chương trình Cambridge Early Years', 'The Cambridge Early Years programme'),
+  t('Phương pháp dạy tiếng Anh cho trẻ mầm non', 'Teaching English to young children'),
+  t('Quan sát, đánh giá và theo dõi sự phát triển của trẻ', 'Observing, assessing and tracking children’s development'),
+  t('Quản lý lớp học và hỗ trợ cảm xúc', 'Classroom management and emotional support'),
+  t('An toàn, chăm sóc sức khỏe và bảo vệ trẻ', 'Safety, health care and child protection'),
+];
+const AN_TOAN = [
+  { ten: t('Môi trường học tập phù hợp với trẻ mầm non', 'An environment suited to young children'),
+    noi: t('Lớp học, phòng chức năng, khu vui chơi và sinh hoạt được bố trí để bé khám phá, vận động và thực hành kỹ năng trong sự quan sát, hướng dẫn của giáo viên.', 'Classrooms, activity rooms, play and living areas are arranged so children can explore, move and practise skills under their teachers’ watch and guidance.') },
+  { ten: t('Giáo viên quan sát và đồng hành', 'Teachers who watch and guide'),
+    noi: t('Trong học tập, vui chơi và sinh hoạt, giáo viên quan sát, hướng dẫn và hỗ trợ bé theo độ tuổi và nhu cầu riêng, đồng thời giúp bé nhận biết nguy cơ và hình thành thói quen an toàn.', 'During learning, play and routines, teachers observe, guide and support children according to their age and needs, and help them recognise risks and build safe habits.') },
+  { ten: t('Theo dõi sức khỏe', 'Health follow-up'),
+    noi: t('Khi bé có biểu hiện sức khỏe bất thường, giáo viên phối hợp với bộ phận phụ trách và gia đình để chăm sóc phù hợp. Thông tin sức khỏe, dị ứng hoặc nhu cầu chăm sóc đặc biệt được tiếp nhận để cùng phụ huynh xây dựng phương án hỗ trợ.', 'If a child shows signs of being unwell, teachers work with the staff in charge and the family to provide suitable care. Information on health, allergies or special care needs is recorded so a support plan can be agreed with parents.') },
+  { ten: t('Dinh dưỡng', 'Nutrition'),
+    noi: t('Bé được phục vụ 4 bữa mỗi ngày theo thực đơn phù hợp với lứa tuổi mầm non. Giáo viên đồng hành trong giờ ăn, hướng dẫn bé tự phục vụ và giữ vệ sinh cá nhân.', 'Children are served 4 meals a day from a menu suited to preschool ages. Teachers stay with children at mealtimes and help them learn to serve themselves and keep clean.') },
+  { ten: t('Đón và trả trẻ', 'Drop-off and pick-up'),
+    noi: t('Nhà trường phối hợp với phụ huynh cập nhật thông tin người đón, thời gian đưa đón và những thay đổi liên quan.', 'The school works with parents to keep information on who collects the child, drop-off and pick-up times and any changes up to date.') },
+  { ten: t('Camera và ứng dụng liên lạc', 'Cameras and the parent app'),
+    noi: t('Phụ huynh được xem hình ảnh camera trực tiếp tại trường theo quy định, dưới sự quản lý của nhà trường và tôn trọng quyền riêng tư của từng bé. Ứng dụng liên lạc điện tử giúp ba mẹ theo dõi hoạt động, thực đơn, thông báo và trao đổi với giáo viên.', 'Parents can view live camera images at the school in line with school rules, managed by the school and respecting every child’s privacy. The parent app lets families follow activities, menus and notices and talk with teachers.') },
+  { ten: t('An toàn cảm xúc', 'Emotional safety'),
+    noi: t('Giáo viên quan sát cảm xúc, giúp bé thích nghi với môi trường mới, nhận biết và bày tỏ nhu cầu của bản thân, và đồng hành khi bé gặp khó khăn với bạn bè.', 'Teachers notice children’s feelings, help them settle into a new environment, recognise and express their needs, and support them through difficulties with friends.') },
+];
 ---
 <Base lang={lang} routeKey="about" duongDan={duongDan} tieuDeDayDu
-  tieuDe={t('Về Casa dei Bambini: hệ thống mầm non hơn 10 năm', 'About Casa dei Bambini: a preschool group for over 10 years')}
+  tieuDe={t(`Về ${TEN}: hệ thống mầm non hơn 10 năm`, `About ${TEN}: a preschool group for over 10 years`)}
   moTa={t(
-    'Casa dei Bambini là hệ thống mầm non xuyên suốt hơn 10 năm tại Hà Nội, với ba cơ sở đang tuyển sinh và cơ sở Ciputra dự kiến khai trương quý 4/2027.',
-    'Casa dei Bambini has been a preschool group in Hanoi for over 10 years, with three campuses enrolling now and Ciputra expected to open in Q4 2027.',
+    `${TEN} là hệ thống mầm non xuyên suốt hơn 10 năm tại Hà Nội: ý nghĩa thương hiệu, đội ngũ giáo viên, an toàn và chăm sóc trẻ.`,
+    `${TEN} has been a preschool group in Hanoi for over 10 years: our brand, our teachers, and how we keep children safe and cared for.`,
   )}>
   <section class="dau-trang-con">
     <div class="khung">
-      <h1>{t('Về Casa dei Bambini', 'About Casa dei Bambini')}</h1>
-      <p class="dau-trang__phu">{t('Hệ thống mầm non xuyên suốt hơn 10 năm tại Hà Nội.', 'A preschool group that has been running in Hanoi for over 10 years.')}</p>
+      <p class="nhan-phan">{KHAU_HIEU[lang]}</p>
+      <h1>{t(`Về ${TEN}`, `About ${TEN}`)}</h1>
+      <p class="dau-trang__phu">{t('Hệ thống mầm non xuyên suốt hơn 10 năm tại Hà Nội. Ba cơ sở Kim Mã, Chùa Láng, Mỹ Đình đang tuyển sinh; cơ sở Ciputra dự kiến khai trương quý 4/2027.', 'A preschool group running in Hanoi for over 10 years. Kim Mã, Chùa Láng and Mỹ Đình are enrolling now; the Ciputra campus is expected to open in Q4 2027.')}</p>
+      <p><a href={url('campuses', lang)}>{t('Xem các cơ sở', 'See our campuses')}</a></p>
     </div>
   </section>
 
-  <section class="phan phan--sat">
+  <section class="phan phan--phu phan--sat" aria-labelledby="y-nghia">
+    <div class="khung khoi-y-nghia">
+      <img src={LOGO.vuong.src} width={LOGO.vuong.rong} height={LOGO.vuong.cao} alt="" loading="lazy" class="khoi-y-nghia__logo" />
+      <div class="noi-dung">
+        <h2 id="y-nghia">{t('Ý nghĩa hình cây trong logo', 'The tree in our logo')}</h2>
+        <p>{t('Lấy hình ảnh cây làm chủ đạo, Casa nhấn mạnh quá trình nuôi dưỡng sự trưởng thành của các bé. Từ những hạt giống nhỏ, các bé sẽ trở thành những cây xanh đầy sức sống để vươn cao trong tương lai.', 'The tree at the heart of our logo stands for nurturing children as they grow. From small seeds, children become strong, lively trees that reach high in the future.')}</p>
+        <ul>
+          <li>{t('3 chiếc lá đỏ tượng trưng cho bố, mẹ và nhà trường: mối quan hệ gắn kết giữa trẻ em, gia đình và nhà trường.', 'The 3 red leaves stand for father, mother and school: the bond between children, families and the school.')}</li>
+          <li>{t('7 chiếc lá của cây tượng trưng cho 7 giá trị cốt lõi mà Casa luôn hướng đến.', 'The 7 leaves of the tree stand for the 7 core values Casa always works towards.')}</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="phan phan--sat" aria-labelledby="thong-diep">
     <div class="khung noi-dung">
-      <h2 id="he-thong">{t('Một hệ thống, bốn cơ sở', 'One group, four campuses')}</h2>
-      <p>{t('Ba cơ sở Kim Mã, Chùa Láng, Mỹ Đình đang tuyển sinh. Cơ sở mới tại khu đô thị Ciputra dự kiến khai trương quý 4/2027.', 'Kim Mã, Chùa Láng and Mỹ Đình are enrolling now. A new campus in the Ciputra urban area is expected to open in Q4 2027.')}</p>
-      <p><a href={url('campuses', lang)}>{t('Xem các cơ sở', 'See our campuses')}</a></p>
+      <h2 id="thong-diep">{t('Thông điệp và giá trị cốt lõi', 'Our message and core values')}</h2>
+      <p><Can noi={t('thông điệp nhà trường và tên 7 giá trị cốt lõi (từ trang cũ hoặc nhà trường cung cấp)', 'the school’s message and the names of the 7 core values (from the old site or provided by the school)')} /></p>
+    </div>
+  </section>
 
-      <h2 id="thong-diep">{t('Thông điệp nhà trường', 'Message from the school')}</h2>
-      <p><Can noi={t('viết lại từ trang "Thông điệp nhà trường" cũ, chủ trường xác nhận', 'rewritten from the old "Message from the school" page, confirmed by the owner')} /></p>
+  <section class="phan phan--phu phan--sat" aria-labelledby="doi-ngu">
+    <div class="khung">
+      <div class="phan__dau">
+        <h2 id="doi-ngu">{t('Đội ngũ giáo viên và nhân viên', 'Our teachers and staff')}</h2>
+        <p>{t('Những người đồng hành cùng con mỗi ngày, để mỗi bé được lắng nghe, tôn trọng và phát triển theo nhịp độ riêng.', 'The people who are with your child every day, so that every child is heard, respected and grows at their own pace.')}</p>
+      </div>
+      <div class="luoi luoi--2">
+        {DOI_NGU.map((d) => (
+          <div class="the">
+            <h3>{d.ten}</h3>
+            <p class="the__mo-ta">{d.noi}</p>
+          </div>
+        ))}
+      </div>
+      <div class="noi-dung sau-luoi">
+        <h3>{t('Đào tạo và phát triển chuyên môn', 'Training and professional development')}</h3>
+        <p>{t('Nội dung bồi dưỡng chuyên môn cho đội ngũ tập trung vào:', 'Professional development for our team focuses on:')}</p>
+        <ul>{DAO_TAO.map((d) => <li>{d}</li>)}</ul>
+      </div>
+    </div>
+  </section>
 
-      <h2 id="gia-tri">{t('Giá trị cốt lõi', 'Core values')}</h2>
-      <p><Can noi={t('viết lại từ trang "Giá trị cốt lõi" cũ', 'rewritten from the old "Core values" page')} /></p>
+  <section class="phan phan--sat" aria-labelledby="an-toan">
+    <div class="khung">
+      <div class="phan__dau">
+        <h2 id="an-toan">{t('An toàn và chăm sóc trẻ', 'Safety and care')}</h2>
+        <p>{t('Sự an tâm của ba mẹ bắt đầu từ những điều rất nhỏ: một lớp học được chuẩn bị chu đáo, một bữa ăn đầy đủ, sự quan sát tận tình của giáo viên.', 'Parents’ peace of mind starts with small things: a carefully prepared classroom, a good meal, and teachers who pay close attention.')}</p>
+      </div>
+      <div class="luoi">
+        {AN_TOAN.map((a) => (
+          <div class="the">
+            <h3>{a.ten}</h3>
+            <p class="the__mo-ta">{a.noi}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-      <h2 id="doi-ngu">{t('Đội ngũ', 'Our team')}</h2>
-      <p><Can noi={t('thông tin đội ngũ được phép đăng (phiếu câu 16)', 'team information approved for publication (form question 16)')} /></p>
-
+  <section class="phan phan--phu phan--sat" aria-labelledby="chuong-trinh">
+    <div class="khung noi-dung">
       <h2 id="chuong-trinh">{t('Chương trình học', 'Our programmes')}</h2>
-      <p>{t('Nhà trẻ cho bé từ 15 tháng; mẫu giáo 3–6 tuổi theo khung Cambridge Early Years; hai hệ quốc tế và song ngữ.', 'Nursery from 15 months; kindergarten for ages 3–6 based on the Cambridge Early Years framework; international and bilingual tracks.')}</p>
+      <p>{t('Nhà trẻ 15–36 tháng theo định hướng Montessori; mẫu giáo 3–6 tuổi theo khung Cambridge Early Years, gồm lớp tiền tiểu học; hai hệ quốc tế và song ngữ.', 'Nursery for 15–36 months guided by Montessori principles; kindergarten for ages 3–6 based on the Cambridge Early Years framework, including a pre-primary class; international and bilingual tracks.')}</p>
       <p><a href={url('programmes', lang)}>{t('Xem chương trình học', 'See our programmes')}</a></p>
     </div>
   </section>

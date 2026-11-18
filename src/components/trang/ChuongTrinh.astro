@@ -2,6 +2,7 @@
 // Chương trình: tổng quan theo tuổi, so sánh hai hệ (góc riêng của trang), một ngày ở Casa.
 import Base from '../../layouts/Base.astro';
 import KhoiCta from '../KhoiCta.astro';
+import MotNgay from '../MotNgay.astro';
 import BangLop from '../BangLop.astro';
 import type { Lang } from '../../data/co-so';
 import { url, taoT } from '../../i18n/routes';
@@ -22,7 +23,7 @@ const duongDan = [
 
   <section class="dau-trang-con">
     <div class="khung">
-      <h1>{t('Chương trình học tại Casa dei Bambini', 'Programmes at Casa dei Bambini')}</h1>
+      <h1>{t('Chương trình học tại Casa Preschool', 'Programmes at Casa Preschool')}</h1>
       <p class="dau-trang__phu">{t('Chọn theo tuổi của bé, rồi chọn hệ học phù hợp với gia đình.', "Start with your child's age, then choose the track that suits your family.")}</p>
     </div>
   </section>
@@ -90,13 +91,8 @@ const duongDan = [
       <div class="phan__dau">
         <h2 id="mot-ngay">{t('Một ngày ở Casa', 'A day at Casa')}</h2>
       </div>
-      <ul class="o-so-lieu">
-        <li><strong>7h30–17h30</strong>{t('Thứ Hai đến thứ Sáu', 'Monday to Friday')}</li>
-        <li><strong>{t('Trông muộn đến 18h30', 'Late care until 18:30')}</strong>{t('Khi ba mẹ cần đón muộn', 'When parents need to pick up later')}</li>
-        <li><strong>{t('4 bữa mỗi ngày', '4 meals a day')}</strong>{t('Bếp của trường tự nấu', "Cooked in the school's own kitchen")}</li>
-        <li><strong>{t('Hè vẫn học', 'Open in summer')}</strong>{t('Trường chỉ nghỉ 1 tuần theo lịch', 'Closed for only one week')}</li>
-      </ul>
-      <p class="sau-luoi">{t('Hoạt động ngoại khoá và trại hè theo đăng ký, thu phí riêng.', 'Extracurricular activities and summer camp are optional, with separate fees.')}</p>
+      <MotNgay lang={lang} />
+      <p class="sau-luoi">{t('Nhà trường tổ chức hoạt động ngoại khoá, dã ngoại và chương trình hè phù hợp với từng độ tuổi, theo đăng ký và thu phí riêng.', 'The school runs extracurricular activities, outings and summer programmes suited to each age group, on registration and with separate fees.')}</p>
     </div>
   </section>
 

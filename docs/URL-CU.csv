@@ -38,7 +38,7 @@ url_cu,ngon_ngu,loai,tieu_de,dich_moi,noi_dung,ghi_chu,sitemap,sua_lan_cuoi
 /class/,vi,lop,,/co-so/,bỏ,"Trang lớp 2022 (tên thành phố), chỉ có bản EN",class,2022-07-05
 /class_category-sitemap.xml,vi,sitemap,,/sitemap.xml,bỏ,Sitemap cũ trỏ về sitemap mới,sitemap_index,
 /co-nen-cho-con-hoc-truong-mam-non-quoc-te/,vi,bai-viet,,/tuyen-sinh/,bỏ,Bài về chọn trường / độ tuổi nhập học,post,2025-11-26
-/co-so-cau-giay/,vi,trang,,/co-so/,viết lại,"[CẦN: ""Cầu Giấy"" là cơ sở nào? Nếu là Chùa Láng thì đổi đích sang trang Chùa Láng]",page,2026-02-04
+/co-so-cau-giay/,vi,trang,,/co-so/chua-lang/,gộp vào trang Chùa Láng,"Cơ sở Cầu Giấy cũ là cơ sở Chùa Láng hiện nay (phiếu bổ sung, 18/11/2026)",page,2026-02-04
 /co-so-kim-ma/,vi,trang,,/co-so/kim-ma/,viết lại,,page,2026-02-04
 /co-so-my-dinh/,vi,trang,,/co-so/my-dinh/,viết lại,,page,2026-02-04
 /co-so/,vi,trang,,/co-so/,viết lại,"Giữ nguyên đường dẫn, không cần 301",page,2026-02-04
@@ -65,9 +65,9 @@ url_cu,ngon_ngu,loai,tieu_de,dich_moi,noi_dung,ghi_chu,sitemap,sua_lan_cuoi
 /en/author/le-thi-thu-sang/,en,tac-gia,,/en/news/,bỏ,"Trang tác giả; chỉ thấy trong hreflang, không có trong sitemap",author,
 /en/buoi-chia-se-triet-ly-giao-duc-som-tai-australia/,en,bai-viet,,/en/news/,viết lại nếu khớp,Ứng viên viết lại (QUYET-DINH Q8),post,2026-01-29
 /en/campus/,en,trang,,/en/campuses/,viết lại,,page,2026-01-30
-/en/cau-giay-campus/,en,trang,,/en/campuses/,viết lại,"[CẦN: ""Cầu Giấy"" là cơ sở nào? Nếu là Chùa Láng thì đổi đích sang trang Chùa Láng]",page,2026-01-29
+/en/cau-giay-campus/,en,trang,,/en/campuses/chua-lang/,gộp vào trang Chùa Láng,"Cơ sở Cầu Giấy cũ là cơ sở Chùa Láng hiện nay (phiếu bổ sung, 18/11/2026)",page,2026-01-29
 /en/choosing-a-school-for-your-child/,en,danh-muc,,/en/news/,bỏ,Danh mục bài viết cũ,category,2026-01-29
-/en/class-category/cau-giay-campus/,en,danh-muc-lop,,/en/campuses/,viết lại,"[CẦN: ""Cầu Giấy"" là cơ sở nào? Nếu là Chùa Láng thì đổi đích sang trang Chùa Láng]",class-category,
+/en/class-category/cau-giay-campus/,en,danh-muc-lop,,/en/campuses/chua-lang/,gộp vào trang Chùa Láng,"Cơ sở Cầu Giấy cũ là cơ sở Chùa Láng hiện nay (phiếu bổ sung, 18/11/2026)",class-category,
 /en/class-category/kim-ma-campus/,en,danh-muc-lop,,/en/campuses/kim-ma/,viết lại,,class-category,
 /en/class-category/my-dinh-campus/,en,danh-muc-lop,,/en/campuses/my-dinh/,viết lại,,class-category,
 /en/class/,en,lop,,/en/campuses/,bỏ,"Trang lớp 2022 (tên thành phố), chỉ có bản EN",class,2022-07-05
@@ -97,7 +97,7 @@ url_cu,ngon_ngu,loai,tieu_de,dich_moi,noi_dung,ghi_chu,sitemap,sua_lan_cuoi
 /en/new/,en,trang,,/en/news/,viết lại,,page,2026-01-29
 /en/photo-library/,en,trang,,/en/campuses/,bỏ,"Thư viện ảnh: có ảnh trẻ, chưa rõ đồng ý của phụ huynh",page,2022-03-29
 /en/photo/,en,album-anh,,/en/campuses/,bỏ,"Thư viện ảnh: có ảnh trẻ, chưa rõ đồng ý của phụ huynh",photo,2025-07-19
-/en/photo/photo-cau-giay-campus/,en,album-anh,,/en/campuses/,viết lại,"[CẦN: ""Cầu Giấy"" là cơ sở nào? Nếu là Chùa Láng thì đổi đích sang trang Chùa Láng]",photo,2025-07-19
+/en/photo/photo-cau-giay-campus/,en,album-anh,,/en/campuses/chua-lang/,gộp vào trang Chùa Láng,"Cơ sở Cầu Giấy cũ là cơ sở Chùa Láng hiện nay (phiếu bổ sung, 18/11/2026)",photo,2025-07-19
 /en/photo/photo-my-dinh-campus/,en,album-anh,,/en/campuses/my-dinh/,viết lại,,photo,2025-07-19
 /en/phuong-phap-la-gi/,en,bai-viet,,/en/news/,bỏ,Bài về phương pháp giáo dục; Montessori không còn là định vị chính,post,2026-01-29
 /en/pre-primary-school/,en,trang,,/en/programmes/kindergarten/,viết lại,Site cũ ghi 3–5 tuổi; nay là 3–6 tuổi,page,2025-07-19
@@ -158,7 +158,7 @@ url_cu,ngon_ngu,loai,tieu_de,dich_moi,noi_dung,ghi_chu,sitemap,sua_lan_cuoi
 /phat-trien-giac-quan-cho-tre/,vi,bai-viet,,/tin-tuc/,viết lại nếu khớp,Ứng viên viết lại (QUYET-DINH Q8),post,2026-04-06
 /photo-sitemap.xml,vi,sitemap,,/sitemap.xml,bỏ,Sitemap cũ trỏ về sitemap mới,sitemap_index,
 /photo/,vi,album-anh,,/co-so/,bỏ,"Thư viện ảnh: có ảnh trẻ, chưa rõ đồng ý của phụ huynh",photo,2025-07-19
-/photo/anh-co-so-cau-giay/,vi,album-anh,,/co-so/,viết lại,"[CẦN: ""Cầu Giấy"" là cơ sở nào? Nếu là Chùa Láng thì đổi đích sang trang Chùa Láng]",photo,2025-07-18
+/photo/anh-co-so-cau-giay/,vi,album-anh,,/co-so/chua-lang/,gộp vào trang Chùa Láng,"Cơ sở Cầu Giấy cũ là cơ sở Chùa Láng hiện nay (phiếu bổ sung, 18/11/2026)",photo,2025-07-18
 /phuong-phap-giao-duc-tre-mam-non/,vi,bai-viet,,/tin-tuc/,bỏ,Bài về phương pháp giáo dục; Montessori không còn là định vị chính,post,2025-11-21
 /phuong-phap-giao-duc/,vi,danh-muc,,/chuong-trinh/,viết lại,Site cũ dùng cùng đường dẫn cho cả trang và danh mục,category+page,2026-04-06
 /phuong-phap-glenn-doman/,vi,bai-viet,,/tin-tuc/,bỏ,Bài về phương pháp giáo dục; Montessori không còn là định vị chính,post,2025-11-09

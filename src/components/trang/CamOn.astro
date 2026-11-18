@@ -1,7 +1,6 @@
 ---
 // Trang cảm ơn sau khi gửi form. Không lập chỉ mục, không thanh đáy.
 import Base from '../../layouts/Base.astro';
-import Can from '../Can.astro';
 import type { Lang } from '../../data/co-so';
 import { LIEN_HE } from '../../data/lien-he';
 import { url, taoT } from '../../i18n/routes';
@@ -15,7 +14,7 @@ const t = taoT(lang);
   <section class="phan">
     <div class="khung noi-dung">
       <h1>{t('Cảm ơn anh/chị, nhà trường đã nhận đăng ký', 'Thank you, we have received your request')}</h1>
-      <p class="dau-trang__phu">{t('Bộ phận tuyển sinh sẽ gọi lại để hẹn lịch tham quan.', 'Our admissions team will call you to arrange a visit.')} <Can noi={t('trong bao lâu', 'how soon')} /></p>
+      <p class="dau-trang__phu">{t('Bộ phận tuyển sinh sẽ gọi lại trong ngày làm việc để hẹn lịch tham quan. Đăng ký gửi ngoài giờ hành chính, cuối tuần hoặc ngày nghỉ sẽ được phản hồi vào ngày làm việc tiếp theo.', 'Our admissions team will call you within the working day to arrange a visit. Requests sent outside office hours, at weekends or on holidays are answered on the next working day.')}</p>
       <p>{t('Cần gấp? Gọi', 'Need us sooner? Call')} <a href={LIEN_HE.tel}>{lang === 'en' ? LIEN_HE.hotlineQuocTe : LIEN_HE.hotline}</a>.</p>
       <h2>{t('Trong lúc chờ', 'While you wait')}</h2>
       <ul>

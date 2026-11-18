@@ -1,6 +1,6 @@
 # Hệ thống thiết kế
 
-Lập ngày 15/11/2026. Mã nguồn: `src/styles/global.css` (token ở `:root`, thành phần bên dưới). Trang áp dụng mẫu: trang chủ (`src/components/trang/TrangChu.astro`).
+Lập ngày 15/11/2026, cập nhật 18/11/2026 theo bộ nhận diện của trường (phiếu câu 1–3). Mã nguồn: `src/styles/global.css` (token ở `:root`, thành phần bên dưới). Trang áp dụng mẫu: trang chủ (`src/components/trang/TrangChu.astro`).
 
 **Đầu vào**
 
@@ -8,48 +8,49 @@ Lập ngày 15/11/2026. Mã nguồn: `src/styles/global.css` (token ở `:root`,
 |---|---|
 | Trang áp dụng | Mọi trang trong `docs/KIEN-TRUC-THONG-TIN.md` |
 | Thuộc tính thương hiệu | Ấm áp, đáng tin, rõ ràng, chăm chút; hợp phụ huynh có con nhỏ, không trẻ con hoá |
-| Màu hiện có | **Chưa nhận được** (phiếu câu 1–2). Bảng màu dưới đây là **màu tạm** |
-| Chữ | Be Vietnam Pro: phông thiết kế cho tiếng Việt, đủ dấu, đọc tốt ở cỡ nhỏ; lưu trên máy chủ của trường, không gọi Google Fonts |
+| Màu hiện có | Theo bộ nhận diện (phiếu câu 2): navy `#23265A`, đỏ san hô `#E54041`, xanh pastel `#8EB7E1`, xám đậm `#51535A`, trắng |
+| Chữ | Barlow 400/600/700 (thay cho DIN của bộ nhận diện, xem QUYET-DINH Q17): đủ dấu tiếng Việt, lưu trên máy chủ của trường, không gọi Google Fonts. Anja Eliane chỉ có trong logo (SVG), không dùng cho chữ trên trang |
 | Ràng buộc | Không tạo hay sửa logo; site tĩnh, không JS phía trình duyệt; đạt tương phản WCAG AA; nhanh trên điện thoại |
 
-**Về logo:** chưa có tệp logo nên đầu trang dùng **chữ tên trường** ("Casa dei Bambini", font hệ thống) làm chỗ giữ tạm. Đây không phải logo và không vẽ lại logo. Khi có tệp gốc, thay đúng tệp, không chỉnh màu hay tỉ lệ. Bộ nhận diện ghi "Casa Preschool", nên cần hỏi trường dùng tên nào (`docs/NGUON-SU-THAT.md`).
+**Về logo:** dùng tệp gốc của trường (PDF "Các dạng logo"), chuyển sang SVG ở `public/thuong-hieu/` (bản màu cho đầu trang, bản trắng cho chân trang, logomark làm favicon). Không chỉnh màu hay tỉ lệ. Tên hiển thị "Casa Preschool" (phiếu câu 3); logo ghi "Casa dei Bambini – Montessori Preschool", chờ chủ trường xác nhận (QUYET-DINH Q18).
 
 ## 1. Token màu (ngữ nghĩa)
 
-Màu tạm, chọn từ hai ý: xanh mòng két đậm cho sự tin cậy, đất nung cho hành động. Khi có màu nhận diện, chỉ đổi giá trị ở `:root`, giữ nguyên tên token.
+Giá trị gốc nằm ở nhóm `--brand-*`; các token ngữ nghĩa trỏ về nhóm này. Tên token giữ nguyên từ bản màu tạm.
 
-| Token | Giá trị tạm | Dùng cho |
+| Token | Giá trị | Dùng cho |
 |---|---|---|
-| `--mau-nen` | `#fbf8f3` | Nền trang (kem) |
-| `--mau-be-mat` | `#ffffff` | Thẻ, form, bảng |
-| `--mau-be-mat-phu` | `#f3eee6` | Nền phần xen kẽ |
-| `--mau-vien` | `#ddd5c8` | Viền thẻ, đường kẻ |
-| `--mau-vien-o-nhap` | `#6f7b82` | Viền ô nhập (≥ 3:1 với nền trắng) |
-| `--mau-chu` | `#1d2b33` | Chữ chính, tiêu đề |
-| `--mau-chu-phu` | `#4b5a63` | Chữ phụ, gợi ý |
-| `--mau-chinh` / `-dam` / `-nhat` | `#1e5a6b` / `#164756` / `#e2eef0` | Liên kết, nhãn phần, nút phụ, nền khối hành động |
-| `--mau-hanh-dong` / `-dam` / `-nhat` | `#b5442a` / `#943520` / `#fbe9e2` | **Chỉ** nút hành động chính và huy hiệu "Sắp khai trương" |
-| `--mau-vang`, `--mau-xanh-la` | `#f2c14e`, `#8fb996` | Trang trí trong hình minh hoạ; không dùng cho chữ |
+| `--brand-navy`, `--brand-do`, `--brand-pastel`, `--brand-xam` | `#23265a`, `#e54041`, `#8eb7e1`, `#51535a` | Màu gốc của bộ nhận diện |
+| `--mau-nen`, `--mau-be-mat` | `#ffffff` | Nền trang, thẻ, form, bảng |
+| `--mau-be-mat-phu` | `#eef4fb` | Nền phần xen kẽ (xanh pastel rất nhạt) |
+| `--mau-vien` | `#d6deea` | Viền thẻ, đường kẻ |
+| `--mau-vien-o-nhap` | `#6f7480` | Viền ô nhập (≥ 3:1 với nền trắng) |
+| `--mau-chu` | `#2b2d3a` | Chữ thân |
+| `--mau-chu-phu` | xám đậm | Chữ phụ, gợi ý |
+| `--mau-chinh` / `-dam` / `-nhat` | navy / `#171a42` / `#e3ecf8` | Tiêu đề, liên kết, nút phụ, nút menu |
+| `--mau-hanh-dong` / `-dam` / `-nhat` | đỏ san hô / `#c6302f` / `#fde8e8` | **Chỉ** nút hành động chính và huy hiệu "Sắp khai trương" |
+| `--mau-vang`, `--mau-xanh-la` | xanh pastel | Trang trí; không dùng cho chữ |
 | `--mau-loi`, `--mau-thanh-cong` | `#b3261e`, `#2e6b3f` | Lỗi form, xác nhận |
 | `--mau-can-nen`, `--mau-can-vien` | `#fff4cc`, `#a8841a` | Đánh dấu `[CẦN: …]` trong bản xem trước |
-| `--mau-toi-nen`, `--mau-toi-chu`, `--mau-toi-chu-phu` | `#163f4b`, `#f4efe8`, `#c9d6da` | Chân trang (bề mặt tối) |
-| `--mau-tieu-diem`, `--mau-tieu-diem-tren-toi` | `#1e5a6b`, `#ffd166` | Viền tiêu điểm bàn phím trên nền sáng / tối |
+| `--mau-toi-nen`, `--mau-toi-chu`, `--mau-toi-chu-phu` | navy, `#ffffff`, `#d9ddea` | Chân trang (bề mặt tối) |
+| `--mau-tieu-diem`, `--mau-tieu-diem-tren-toi` | navy, xanh pastel | Viền tiêu điểm bàn phím trên nền sáng / tối |
 
-**Tương phản** (đã tính theo công thức WCAG 2.x):
+**Tương phản** (công thức WCAG 2.x, tính lại 18/11/2026):
 
 | Cặp màu | Tỉ lệ | Mức |
 |---|---|---|
-| Chữ chính / nền | 13.71 | AAA |
-| Chữ phụ / nền; chữ phụ / nền phụ | 6.74; 6.18 | AA |
-| Liên kết / nền; liên kết / trắng | 7.26; 7.69 | AAA |
-| Chữ trắng / nút hành động; khi rê chuột | 5.49; 7.53 | AA; AAA |
-| Chữ trắng / nút menu (xanh chính) | 7.69 | AAA |
-| Viền ô nhập / trắng | 4.35 | Đạt yêu cầu 3:1 cho thành phần giao diện |
-| Chữ / nền chân trang; chữ phụ / nền chân trang | 9.94; 7.64 | AAA |
-| Viền tiêu điểm vàng / nền chân trang | 7.89 | Đạt |
+| Chữ thân / trắng; / nền phụ | 13.64; 12.32 | AAA |
+| Tiêu đề, liên kết (navy) / trắng; / nền phụ | 14.03; 12.68 | AAA |
+| Chữ phụ (xám) / trắng; / nền phụ | 7.68; 6.94 | AAA; AA |
+| Chữ trắng / nút hành động (đỏ san hô) | 4.08 | **Chỉ đạt AA cho chữ lớn**: nút chính bắt buộc chữ ≥ 19px, đậm 700 |
+| Chữ trắng / nút hành động khi rê chuột | 5.43 | AA |
+| Chữ huy hiệu "Sắp khai trương" / nền huy hiệu | 4.63 | AA |
+| Viền ô nhập / trắng | 4.68 | Đạt 3:1 cho thành phần giao diện |
+| Chữ / chân trang; chữ phụ / chân trang | 14.03; 10.35 | AAA |
+| Viền tiêu điểm pastel / chân trang | 6.69 | Đạt |
 | Chữ lỗi / trắng | 6.54 | AA |
 
-**Sáng và tối:** site dùng giao diện sáng (`color-scheme: light`), vì phụ huynh xem ban ngày và màu nhận diện chưa có. Bề mặt tối duy nhất là chân trang: dùng nhóm token `--mau-toi-*` và viền tiêu điểm vàng. Chưa làm chế độ tối toàn site. Nếu làm sau, chỉ cần định nghĩa lại nhóm token trong `@media (prefers-color-scheme: dark)`.
+**Sáng và tối:** site dùng giao diện sáng (`color-scheme: light`), vì phụ huynh xem ban ngày và bộ nhận diện dùng nền trắng. Bề mặt tối duy nhất là chân trang: dùng nhóm token `--mau-toi-*` và viền tiêu điểm xanh pastel. Chưa làm chế độ tối toàn site. Nếu làm sau, chỉ cần định nghĩa lại nhóm token trong `@media (prefers-color-scheme: dark)`.
 
 ## 2. Chữ
 
@@ -119,12 +120,12 @@ Màu tạm, chọn từ hai ý: xanh mòng két đậm cho sự tin cậy, đấ
 7. **Về Casa:** một đoạn và liên kết.
 8. **Khối hành động** và chân trang tối.
 
-## 6. Cần đổi ở nơi khác khi có tài sản thật
+## 6. Tài sản thật (cập nhật 18/11/2026)
 
-- **Logo:** thay chữ tên trường trong `src/components/DauWeb.astro` bằng tệp logo gốc (SVG). Giữ nguyên chữ thay thế "Casa dei Bambini".
-- **Màu nhận diện:** đổi giá trị token ở `:root`. Sau đó chạy lại bảng tương phản trên; nếu màu hành động mới không đạt 4.5:1 với chữ trắng, dùng sắc đậm hơn của chính màu đó.
-- **Ảnh:** thay `.anh-cho` bằng ảnh thật qua thành phần ảnh của Astro (tự xuất AVIF/WebP, có kích thước cố định). Chỉ ảnh đầu trang được tải ngay.
-- **Favicon:** đang là chữ "C" trên nền màu chính (`public/favicon.svg`), sẽ thay bằng biểu tượng cắt từ logo.
+- **Logo:** đã thay bằng tệp gốc (SVG) trong `src/components/DauWeb.astro` và `ChanWeb.astro`; dữ liệu ở `src/data/thuong-hieu.ts`.
+- **Màu nhận diện:** đã đổi ở `:root`. Đỏ san hô không đạt 4.5:1 với chữ trắng nên giữ nguyên màu và dùng chữ lớn, đậm cho nút chính; không tự làm sẫm màu thương hiệu.
+- **Ảnh:** dùng `<Picture>` của Astro (AVIF/WebP, kích thước cố định, nhiều độ rộng). Ảnh gốc ở `src/assets/anh/`, chỉ là phần cắt không thấy mặt bé (QUYET-DINH Q19). Chỉ ảnh đầu trang chủ tải ngay (`fetchpriority="high"`).
+- **Favicon:** logomark (`public/favicon.svg`).
 
 ## 7. Danh sách triển khai
 

@@ -34,6 +34,8 @@ Không tự bịa con số, bằng cấp, giải thưởng, sĩ số, học phí
   - Hotline: 0989 059 838 (+84 989 059 838)
   - Email: tuyensinh@cdb.edu.vn
   - Facebook: facebook.com/CasadeiBambiniSchools
+  - Zalo: 0989 059 838; Zalo OA: https://zalo.me/3250239571046935262 (phiếu câu 25)
+- **Tên hiển thị trên site**: "Casa Preschool" (phiếu câu 3, 18/11/2026); tên cũ "Casa dei Bambini" giữ ở logo, Facebook và `alternateName` trong schema.
 - **Tách khỏi app casa-mamnon**: không đọc, không gọi, không sửa gì của app hay dữ liệu của app. App ở `app.casadeibambini.edu.vn`, site ở `casadeibambini.edu.vn` và `www`. Trên máy chủ, site có thư mục riêng, khối cấu hình máy chủ web riêng (Caddy, xem dưới), dịch vụ form riêng, dữ liệu form riêng.
 - Giao diện và thông báo lỗi bằng tiếng Việt, dễ hiểu với phụ huynh không rành máy tính.
 
@@ -111,7 +113,7 @@ Mỗi giai đoạn kết thúc bằng một báo cáo ngắn và chờ người 
 Liệt kê lại trong mỗi báo cáo nếu chặn việc. Câu hỏi chi tiết nằm trong `docs/PHIEU-BO-SUNG-THONG-TIN.docx`.
 
 - Quyền vào nơi quản lý DNS của casadeibambini.edu.vn (nơi mua tên miền).
-- Tệp logo gốc, màu nhận diện; ảnh cơ sở vật chất và giáo viên (đã có đồng ý nếu có trẻ trong ảnh).
-- Địa chỉ đúng của cơ sở Chùa Láng; tên gọi thống nhất cho từng cơ sở; số nhà, tên tòa ở Ciputra (khi có).
+- Ảnh cơ sở vật chất và giáo viên theo từng cơ sở; đồng ý bằng văn bản cho ảnh có mặt trẻ. (Logo và màu nhận diện đã có từ 18/11/2026.)
+- Số nhà, tên tòa ở Ciputra (khi có). (Địa chỉ Chùa Láng và tên từng cơ sở đã có từ phiếu 18/11/2026.)
 - Pháp nhân ghi ở chân trang site mới.
 - (Bản thử đã chạy ở `casa-website-thu.duckdns.org` từ 15/11/2026; VPS IP `103.195.238.114`.)

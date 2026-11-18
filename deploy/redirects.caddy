@@ -26,8 +26,11 @@ redir @cu_chinh_sach_bao_ve_du_lieu /chinh-sach-bao-ve-du-lieu/ 301
 @cu_chuong_trinh_nha_tre path /chuong-trinh-hoc-cho-tre-18-36-thang/ /chuong-trinh-hoc-cho-tre-18-36-thang /tre-18-36-thang-version-2/ /tre-18-36-thang-version-2
 redir @cu_chuong_trinh_nha_tre /chuong-trinh/nha-tre/ 301
 
-@cu_co_so path /class/ /class /co-so-cau-giay/ /co-so-cau-giay /photo/ /photo /photo/anh-co-so-cau-giay/ /photo/anh-co-so-cau-giay /thu-vien-anh/ /thu-vien-anh /truong-mam-non-ha-noi/ /truong-mam-non-ha-noi /truong-mam-non-montessori/ /truong-mam-non-montessori /truong-mam-non-quoc-te-ha-noi/ /truong-mam-non-quoc-te-ha-noi /truong-mam-non-song-ngu-ha-noi/ /truong-mam-non-song-ngu-ha-noi /truong-mam-non-tu-thuc-ha-noi/ /truong-mam-non-tu-thuc-ha-noi
+@cu_co_so path /class/ /class /photo/ /photo /thu-vien-anh/ /thu-vien-anh /truong-mam-non-ha-noi/ /truong-mam-non-ha-noi /truong-mam-non-montessori/ /truong-mam-non-montessori /truong-mam-non-quoc-te-ha-noi/ /truong-mam-non-quoc-te-ha-noi /truong-mam-non-song-ngu-ha-noi/ /truong-mam-non-song-ngu-ha-noi /truong-mam-non-tu-thuc-ha-noi/ /truong-mam-non-tu-thuc-ha-noi
 redir @cu_co_so /co-so/ 301
+
+@cu_co_so_chua_lang path /co-so-cau-giay/ /co-so-cau-giay /photo/anh-co-so-cau-giay/ /photo/anh-co-so-cau-giay /truong-mam-non-o-quan-dong-da/ /truong-mam-non-o-quan-dong-da
+redir @cu_co_so_chua_lang /co-so/chua-lang/ 301
 
 @cu_co_so_kim_ma path /co-so-kim-ma/ /co-so-kim-ma /truong-mam-non-o-ba-dinh/ /truong-mam-non-o-ba-dinh
 redir @cu_co_so_kim_ma /co-so/kim-ma/ 301
@@ -44,8 +47,11 @@ redir @cu_en_news /en/news/ 301
 @cu_en_about path /en/about-casa/ /en/about-casa /en/core-values/ /en/core-values /en/electronic-communication-system/ /en/electronic-communication-system /en/message-school/ /en/message-school /en/reasons-for-choosing-casa/ /en/reasons-for-choosing-casa /en/teacher/ /en/teacher /en/teacher/mrs-phung-thanh-xuan/ /en/teacher/mrs-phung-thanh-xuan /en/teacher/mrs-zenny-copy/ /en/teacher/mrs-zenny-copy /en/teacher/mrs-zenny/ /en/teacher/mrs-zenny /en/teacher/ms-fray-2/ /en/teacher/ms-fray-2 /en/teacher/ms-fray-3/ /en/teacher/ms-fray-3 /en/teacher/ms-fray-4/ /en/teacher/ms-fray-4 /en/teacher/ms-fray-5/ /en/teacher/ms-fray-5 /en/teacher/ms-fray/ /en/teacher/ms-fray /en/teachers/ /en/teachers
 redir @cu_en_about /en/about/ 301
 
-@cu_en_campuses path /en/campus/ /en/campus /en/cau-giay-campus/ /en/cau-giay-campus /en/class-category/cau-giay-campus/ /en/class-category/cau-giay-campus /en/class/ /en/class /en/class/berlin-class/ /en/class/berlin-class /en/class/canberra-class/ /en/class/canberra-class /en/class/capetown-class/ /en/class/capetown-class /en/class/london-class/ /en/class/london-class /en/class/newyork-class/ /en/class/newyork-class /en/class/paris-class/ /en/class/paris-class /en/class/reception-club-2/ /en/class/reception-club-2 /en/class/reception-club/ /en/class/reception-club /en/class/rome-class/ /en/class/rome-class /en/class/seoul-class/ /en/class/seoul-class /en/class/tokyo-class/ /en/class/tokyo-class /en/photo-library/ /en/photo-library /en/photo/ /en/photo /en/photo/photo-cau-giay-campus/ /en/photo/photo-cau-giay-campus
+@cu_en_campuses path /en/campus/ /en/campus /en/class/ /en/class /en/class/berlin-class/ /en/class/berlin-class /en/class/canberra-class/ /en/class/canberra-class /en/class/capetown-class/ /en/class/capetown-class /en/class/london-class/ /en/class/london-class /en/class/newyork-class/ /en/class/newyork-class /en/class/paris-class/ /en/class/paris-class /en/class/reception-club-2/ /en/class/reception-club-2 /en/class/reception-club/ /en/class/reception-club /en/class/rome-class/ /en/class/rome-class /en/class/seoul-class/ /en/class/seoul-class /en/class/tokyo-class/ /en/class/tokyo-class /en/photo-library/ /en/photo-library /en/photo/ /en/photo
 redir @cu_en_campuses /en/campuses/ 301
+
+@cu_en_campuses_chua_lang path /en/cau-giay-campus/ /en/cau-giay-campus /en/class-category/cau-giay-campus/ /en/class-category/cau-giay-campus /en/photo/photo-cau-giay-campus/ /en/photo/photo-cau-giay-campus
+redir @cu_en_campuses_chua_lang /en/campuses/chua-lang/ 301
 
 @cu_en_campuses_kim_ma path /en/class-category/kim-ma-campus/ /en/class-category/kim-ma-campus /en/kim-ma-campus/ /en/kim-ma-campus
 redir @cu_en_campuses_kim_ma /en/campuses/kim-ma/ 301
@@ -64,9 +70,6 @@ redir @cu_en_admissions /en/admissions/ 301
 
 @cu_goc path /kham-pha-nngoi-truong-mam-non-so-1-trong-long-to-nhe-casa-dei-bambini/ /kham-pha-nngoi-truong-mam-non-so-1-trong-long-to-nhe-casa-dei-bambini
 redir @cu_goc / 301
-
-@cu_co_so_chua_lang path /truong-mam-non-o-quan-dong-da/ /truong-mam-non-o-quan-dong-da
-redir @cu_co_so_chua_lang /co-so/chua-lang/ 301
 
 @cu_lien_he path /tuyen-dung/ /tuyen-dung
 redir @cu_lien_he /lien-he/ 301

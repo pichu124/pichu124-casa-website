@@ -10,7 +10,9 @@ export const LIEN_HE = {
   facebook: 'https://www.facebook.com/CasadeiBambiniSchools',
   facebookHienThi: 'facebook.com/CasadeiBambiniSchools',
   // Chưa có: để null thì giao diện hiện [CẦN: …]
-  zalo: null as string | null,
+  // Zalo: phiếu câu 25 (18/11/2026)
+  zalo: 'https://zalo.me/3250239571046935262' as string | null,
+  zaloSo: '0989 059 838',
   phapNhan: null as string | null,
 };
 

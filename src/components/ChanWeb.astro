@@ -3,6 +3,7 @@ import Can from './Can.astro';
 import { CO_SO, type Lang } from '../data/co-so';
 import { LIEN_HE } from '../data/lien-he';
 import { url, taoT, FORM_ANCHOR } from '../i18n/routes';
+import { LOGO, KHAU_HIEU, TEN } from '../data/thuong-hieu';
 interface Props { lang: Lang; routeKey?: string }
 const { lang, routeKey } = Astro.props;
 const t = taoT(lang);
@@ -11,6 +12,8 @@ const nam = new Date().getFullYear();
 ---
 <footer class="chan-web">
   <div class="khung">
+    <img class="chan-web__logo" src={LOGO.ngangTrang.src} width={LOGO.ngangTrang.rong} height={LOGO.ngangTrang.cao} alt={LOGO.alt} loading="lazy" />
+    <p class="chan-web__khau-hieu">{KHAU_HIEU[lang]}</p>
     <div class="chan-web__luoi">
       <section aria-labelledby="chan-co-so">
         <h2 id="chan-co-so">{t('Các cơ sở', 'Campuses')}</h2>
@@ -51,12 +54,12 @@ const nam = new Date().getFullYear();
           <li>{t('Hotline', 'Hotline')}: <a href={LIEN_HE.tel}>{lang === 'en' ? LIEN_HE.hotlineQuocTe : LIEN_HE.hotline}</a></li>
           <li>Email: <a href={`mailto:${LIEN_HE.email}`}>{LIEN_HE.email}</a></li>
           <li><a href={LIEN_HE.facebook} rel="noopener">Facebook</a></li>
-          <li>Zalo: {LIEN_HE.zalo ? <a href={LIEN_HE.zalo} rel="noopener">Zalo</a> : <Can noi={t('nếu có', 'if any')} />}</li>
+          <li>Zalo: {LIEN_HE.zalo ? <a href={LIEN_HE.zalo} rel="noopener">{LIEN_HE.zaloSo}</a> : <Can noi={t('nếu có', 'if any')} />}</li>
         </ul>
       </section>
     </div>
     <div class="chan-web__day">
-      <p>{LIEN_HE.phapNhan ?? <Can noi={t('tên đơn vị (pháp nhân)', 'legal entity name')} />} · © {nam} Casa dei Bambini</p>
+      <p>{LIEN_HE.phapNhan ?? <Can noi={t('tên đơn vị (pháp nhân)', 'legal entity name')} />} · © {nam} {TEN}</p>
       <p><a href={routeKey ? url(routeKey, khac) : url('home', khac)} hreflang={khac} lang={khac}>{khac === 'en' ? 'English' : 'Tiếng Việt'}</a></p>
     </div>
   </div>

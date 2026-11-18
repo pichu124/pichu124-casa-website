@@ -5,6 +5,7 @@ import Icon from './Icon.astro';
 import { CO_SO, type Lang } from '../data/co-so';
 import { LIEN_HE } from '../data/lien-he';
 import { url, taoT, FORM_ANCHOR } from '../i18n/routes';
+import { LOGO, TEN } from '../data/thuong-hieu';
 
 interface Props { lang: Lang; routeKey?: string }
 const { lang, routeKey } = Astro.props;
@@ -35,9 +36,9 @@ const dangKy = url('admissions', lang) + FORM_ANCHOR;
 ---
 <header class="dau-web">
   <div class="khung dau-web__trong">
-    <a class="chu-logo" href={url('home', lang)} aria-label={t('Casa dei Bambini, về trang chủ', 'Casa dei Bambini, home')}>
-      <span class="chu-logo__ten">Casa dei Bambini</span>
-      <span class="chu-logo__phu">{t('Hệ thống mầm non tại Hà Nội', 'Preschools in Hanoi')}</span>
+    <a class="chu-logo" href={url('home', lang)}>
+      <img src={LOGO.ngang.src} width={LOGO.ngang.rong} height={LOGO.ngang.cao} alt={LOGO.alt} />
+      <span class="chi-doc-man-hinh">{t(`${TEN}, về trang chủ`, `${TEN}, home`)}</span>
     </a>
 
     <nav class="menu-rong" aria-label={t('Menu chính', 'Main menu')}>

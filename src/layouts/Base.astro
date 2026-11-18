@@ -9,6 +9,7 @@ import Icon from '../components/Icon.astro';
 import type { Lang } from '../data/co-so';
 import { LIEN_HE, SITE } from '../data/lien-he';
 import { url, taoT, FORM_ANCHOR } from '../i18n/routes';
+import { TEN } from '../data/thuong-hieu';
 
 interface Props {
   lang: Lang;
@@ -16,7 +17,7 @@ interface Props {
   routeKey?: string;
   tieuDe: string;
   moTa: string;
-  /** Tiêu đề đã đầy đủ, không nối " | Casa dei Bambini" (trang chủ) */
+  /** Tiêu đề đã đầy đủ, không nối " | Casa Preschool" (trang chủ) */
   tieuDeDayDu?: boolean;
   khongLapChiMuc?: boolean;
   schema?: object[];
@@ -25,7 +26,7 @@ interface Props {
 }
 const { lang, routeKey, tieuDe, moTa, tieuDeDayDu = false, khongLapChiMuc = false, schema = [], duongDan, thanhDay = true } = Astro.props;
 const t = taoT(lang);
-const title = tieuDeDayDu ? tieuDe : `${tieuDe} | Casa dei Bambini`;
+const title = tieuDeDayDu ? tieuDe : `${tieuDe} | ${TEN}`;
 const canonical = routeKey ? SITE + url(routeKey, lang) : undefined;
 
 const schemaDuongDan = duongDan && duongDan.length > 1 ? [{
@@ -52,12 +53,12 @@ const tatCaSchema = [...schema, ...schemaDuongDan];
       </>
     )}
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Casa dei Bambini" />
+    <meta property="og:site_name" content={TEN} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={moTa} />
     <meta property="og:locale" content={lang === 'en' ? 'en_GB' : 'vi_VN'} />
     {canonical && <meta property="og:url" content={canonical} />}
-    <meta name="theme-color" content="#fbf8f3" />
+    <meta name="theme-color" content="#23265a" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     {tatCaSchema.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
   </head>

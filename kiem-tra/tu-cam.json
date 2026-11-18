@@ -18,6 +18,10 @@
     { "mau": "\\blicen[cs]ed\\b", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Bản tiếng Anh: tương đương 'đã được cấp phép'" },
     { "mau": "Cambridge (pre)?school", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Bản tiếng Anh: tương đương 'trường Cambridge'" },
     { "mau": "international (pre)?school", "kieu": "regex", "pham_vi": "tieu-de", "ly_do": "Bản tiếng Anh: tương đương 'trường mầm non quốc tế' trong tiêu đề" },
+    { "mau": "từ\\s*12\\s*tháng", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Phiếu 18/11/2026: độ tuổi nhận theo chương trình từng cơ sở, không viết 12 tháng" },
+    { "mau": "\\b(from|aged)\\s+12\\s*months?\\b", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Bản tiếng Anh: tương đương 'từ 12 tháng'" },
+    { "mau": "tự nấu", "kieu": "chu", "pham_vi": "toan-trang", "ly_do": "Chưa xác nhận mô hình bếp từng cơ sở" },
+    { "mau": "own kitchen", "kieu": "chu", "pham_vi": "toan-trang", "ly_do": "Bản tiếng Anh: chưa xác nhận mô hình bếp" },
     { "mau": "18\\s*months?", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Bản tiếng Anh: nhận trẻ từ 15 tháng" }
   ]
 }

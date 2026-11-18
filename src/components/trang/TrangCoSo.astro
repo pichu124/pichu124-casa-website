@@ -28,7 +28,7 @@ const schema = c.schema ? [{
   '@context': 'https://schema.org',
   '@type': ['Preschool', 'ChildCare'],
   '@id': `${SITE}${url(key, 'vi')}#coso`,
-  name: `Casa dei Bambini ${c.ten.vi}`,
+  name: `Casa Preschool ${c.ten.vi}`,
   url: SITE + url(key, lang),
   parentOrganization: { '@id': `${SITE}/#truong` },
   telephone: LIEN_HE.telSchema,
@@ -43,6 +43,8 @@ const hoiDapCiputra = [
     dap: t('Dự kiến quý 4/2027. Gia đình đăng ký sớm sẽ được báo lịch tham quan khi cơ sở hoàn thiện.', 'It is expected to open in Q4 2027. Families who register early will be told the visit schedule once the campus is ready.') },
   { hoi: t('Cơ sở Ciputra ở đâu?', 'Where is the Ciputra campus?'),
     dap: t('Tầng 3, tầng 4 và sân thượng của một tòa nhà 4 tầng trong khu đô thị Ciputra, phường Phú Thượng, Hà Nội. Tên tòa nhà sẽ được cập nhật.', 'On the 3rd and 4th floors and rooftop of a four-storey building in the Ciputra urban area, Phú Thượng ward, Hanoi. The building name will be added later.') },
+  { hoi: t('Trường ở tầng cao thì đón trả và an toàn ra sao?', 'The campus is on upper floors: how do drop-off and safety work?'),
+    dap: t('Các phương án an toàn liên quan đến thang máy, tầng học, sân thượng, lối thoát hiểm và khu vực đưa đón sẽ được công bố sau khi cơ sở hoàn thiện và được xác nhận đầy đủ. Phụ huynh đón trả bé tại sảnh tòa nhà (dự kiến).', 'Safety arrangements for the lifts, classroom floors, rooftop, emergency exits and drop-off area will be published once the campus is complete and fully confirmed. Parents are expected to drop off and pick up children at the building lobby (planned).') },
   { hoi: t('Học phí ở cơ sở Ciputra là bao nhiêu?', 'What are the fees at the Ciputra campus?'),
     dap: t('Biểu phí năm học 2027–2028 đang được hoàn thiện. Gia đình đăng ký nhận thông tin sẽ được gửi biểu phí đầu tiên.', 'The fee schedule for the 2027–2028 school year is being finalised. Families who register will be the first to receive it.') },
 ];
@@ -52,13 +54,19 @@ const schemaHoiDap = laCiputra ? [{
 }] : [];
 
 const tieuDe = laCiputra
-  ? t('Casa dei Bambini Ciputra: mầm non theo khung Cambridge Early Years', 'Casa dei Bambini Ciputra: preschool based on Cambridge Early Years')
-  : t(`Mầm non ${c.ten.vi} – Casa dei Bambini`, `${c.ten.en} preschool – Casa dei Bambini`) + (c.diaChiNgan ? ` (${c.diaChiNgan[lang]})` : '');
+  ? t('Casa Preschool – Ciputra: mầm non theo khung Cambridge Early Years', 'Casa Preschool – Ciputra: preschool based on Cambridge Early Years')
+  : t(`Mầm non ${c.ten.vi} – Casa Preschool`, `${c.ten.en} preschool – Casa Preschool`) + (c.diaChiNgan ? ` (${c.diaChiNgan[lang]})` : '');
 const moTa = laCiputra
-  ? t('Mầm non Casa dei Bambini tại Ciputra (Phú Thượng): khung Cambridge Early Years cho trẻ 3–6 tuổi, nhận bé từ 15 tháng. Dự kiến khai trương quý 4/2027.',
-      'Casa dei Bambini at Ciputra (Phú Thượng): Cambridge Early Years framework for ages 3–6, children from 15 months. Expected to open in Q4 2027.')
-  : t(`Casa dei Bambini cơ sở ${c.ten.vi}: địa chỉ, bản đồ, lớp học và đăng ký tham quan. Cơ sở đang tuyển sinh. Hotline ${LIEN_HE.hotline}.`,
-      `Casa dei Bambini ${c.ten.en} campus: address, map, classes and visit booking. Now enrolling. Hotline ${LIEN_HE.hotlineQuocTe}.`);
+  ? t('Mầm non Casa Preschool tại Ciputra (Phú Thượng): khung Cambridge Early Years cho trẻ 3–6 tuổi, nhận bé từ 15 tháng. Dự kiến khai trương quý 4/2027.',
+      'Casa Preschool at Ciputra (Phú Thượng): Cambridge Early Years framework for ages 3–6, children from 15 months. Expected to open in Q4 2027.')
+  : t(`Casa Preschool cơ sở ${c.ten.vi}: địa chỉ, bản đồ, lớp học và đăng ký tham quan. Cơ sở đang tuyển sinh. Hotline ${LIEN_HE.hotline}.`,
+      `Casa Preschool ${c.ten.en} campus: address, map, classes and visit booking. Now enrolling. Hotline ${LIEN_HE.hotlineQuocTe}.`);
+const lopCoSo = [
+  c.lop.nhaTre === 'co' && t('Nhà trẻ 15–36 tháng, theo định hướng Montessori', 'Nursery for 15–36 months, guided by Montessori principles'),
+  c.lop.songNgu === 'co' && t('Mẫu giáo 3–6 tuổi, hệ song ngữ', 'Kindergarten for ages 3–6, bilingual track'),
+  c.lop.quocTe === 'co' && t('Mẫu giáo 3–6 tuổi, hệ quốc tế: mỗi lớp có giáo viên nước ngoài', 'Kindergarten for ages 3–6, international track: a foreign teacher in every class'),
+  c.lop.tienTieuHoc === 'co' && t('Lớp tiền tiểu học 5–6 tuổi', 'Pre-primary class for ages 5–6'),
+].filter(Boolean) as string[];
 const khac = CO_SO.filter((x) => x.slug !== slug && x.trangThai === 'dang-tuyen-sinh');
 ---
 <Base lang={lang} routeKey={key} duongDan={duongDan} tieuDe={tieuDe} tieuDeDayDu moTa={moTa} schema={[...schema, ...schemaHoiDap]}>
@@ -68,10 +76,10 @@ const khac = CO_SO.filter((x) => x.slug !== slug && x.trangThai === 'dang-tuyen-
       {laCiputra
         ? <span class="huy-hieu huy-hieu--sap">{t('Dự kiến khai trương quý 4/2027', 'Expected to open in Q4 2027')}</span>
         : <span class="huy-hieu">{t('Đang tuyển sinh', 'Enrolling now')}</span>}
-      <h1>{laCiputra ? 'Casa dei Bambini Ciputra' : t(`Casa dei Bambini cơ sở ${c.ten.vi}`, `Casa dei Bambini ${c.ten.en} campus`)}</h1>
+      <h1>{laCiputra ? 'Casa Preschool – Ciputra' : t(`Casa Preschool – ${c.ten.vi}`, `Casa Preschool – ${c.ten.en}`)}</h1>
       {laCiputra
         ? <p class="dau-trang__phu">{t('Chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi. Lớp trộn tuổi theo tinh thần Montessori cho bé từ 15 tháng. Dự kiến khai trương quý 4/2027.', 'A programme based on the Cambridge Early Years framework for children aged 3–6. Mixed-age classes in the spirit of Montessori for children from 15 months. Expected to open in Q4 2027.')}</p>
-        : <p class="dau-trang__phu">{t('Cơ sở đang tuyển sinh của hệ thống mầm non Casa dei Bambini.', 'A Casa dei Bambini campus that is enrolling now.')}</p>}
+        : <p class="dau-trang__phu">{t('Cơ sở đang tuyển sinh của hệ thống mầm non Casa Preschool.', 'A Casa Preschool campus that is enrolling now.')}</p>}
     </div>
   </section>
 
@@ -118,7 +126,10 @@ const khac = CO_SO.filter((x) => x.slug !== slug && x.trangThai === 'dang-tuyen-
     <section class="phan phan--phu phan--sat" aria-labelledby="lop-hoc">
       <div class="khung">
         <h2 id="lop-hoc">{t(`Lớp học tại cơ sở ${c.ten.vi}`, `Classes at the ${c.ten.en} campus`)}</h2>
-        <BangLop lang={lang} tieuDe={t('Lớp và hệ học ở các cơ sở', 'Classes and tracks across campuses')} />
+        <ul class="danh-sach-dau">
+          {lopCoSo.map((l) => <li>{l}</li>)}
+        </ul>
+        <BangLop lang={lang} tieuDe={t('So sánh lớp và hệ học ở các cơ sở', 'Classes and tracks across campuses')} />
         <p>
           <a href={url('nursery', lang)}>{t('Nhà trẻ 15–36 tháng', 'Nursery, 15–36 months')}</a> ·
           <a href={url('kindergarten', lang)}>{t('Mẫu giáo 3–6 tuổi', 'Kindergarten, 3–6 years')}</a> ·

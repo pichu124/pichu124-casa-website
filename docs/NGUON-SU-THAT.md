@@ -1,28 +1,40 @@
 # Nguồn sự thật: bản chép làm việc
 
-Bản chép ngày 15/11/2026 (đối chiếu Casa facts bản rev 37 cùng ngày) của mục 1–2 trong "Nguồn sự thật" (`CLAUDE.md`): quyết định của chủ trường và Casa facts (https://claude.ai/artifact/3tsvDG2LQaGt2UB6dqtdgy).
+Bản chép ngày 15/11/2026 (đối chiếu Casa facts bản rev 37 cùng ngày), bổ sung ngày 18/11/2026 theo phiếu bổ sung thông tin do nhà trường điền (người điền: bộ phận Marketing) của mục 1–2 trong "Nguồn sự thật" (`CLAUDE.md`): quyết định của chủ trường và Casa facts (https://claude.ai/artifact/3tsvDG2LQaGt2UB6dqtdgy).
 
 Khi lệch, **Casa facts thắng**: sửa bản chép này, không sửa ngược. Mỗi lần sửa thì ghi ngày chép mới ở dòng trên.
 
-**Phạm vi:** Casa facts lập cho cơ sở Ciputra. Các dòng về chương trình, lớp, đội ngũ là **mô hình của Ciputra**. Chương trình ở ba cơ sở cũ chưa được xác nhận (phiếu bổ sung thông tin, câu 9–11), nên website không suy ra từ Ciputra.
+**Phạm vi:** Casa facts lập cho cơ sở Ciputra. Lớp và hệ ở ba cơ sở cũ lấy từ phiếu câu 10–11 (18/11/2026). Dòng ghi "(phiếu câu N)" là sự thật do nhà trường cung cấp qua phiếu.
 
 ## Thương hiệu
 
-- Casa dei Bambini (website, Facebook, chân trang). Hệ thống xuyên suốt hơn 10 năm. **Đã chốt.**
-- Bộ nhận diện ghi "Casa Preschool". `[CẦN: chủ trường cho biết website dùng tên nào ở logo]`.
-- Pháp nhân ghi ở chân trang site cũ: Công ty cổ phần giáo dục quốc tế MERIDIAN. Chân trang site mới ghi gì: `[CẦN: hỏi trong phiếu]`.
-- Câu định vị đang chờ duyệt (trong Casa facts) có vế "Cambridge" và "chưa bằng một nửa trường quốc tế": **chưa được dùng**.
+- **Tên hiển thị trên website: Casa Preschool** (phiếu câu 3). Tên từng cơ sở: "Casa Preschool – Kim Mã / Chùa Láng / Mỹ Đình / Ciputra" (câu 4, 9). Tên cũ "Casa dei Bambini" vẫn ở logo, Facebook và schema (`alternateName`). Hệ thống xuyên suốt hơn 10 năm. **Đã chốt.**
+- Logo: bộ tệp PDF "Các dạng logo" (thư mục Drive của trường), chuyển sang SVG ở `public/thuong-hieu/`. Logo ghi "Casa dei Bambini – Montessori Preschool": `[CẦN: chủ trường xác nhận dùng logo này cùng tên hiển thị "Casa Preschool"]`.
+- Màu (câu 2): navy `#23265A` (chủ đạo), đỏ san hô `#E54041` (nhấn), xanh pastel `#8EB7E1` (bổ trợ), xám đậm `#51535A` (phụ), trắng. Phông: Anja Eliane (logo), DIN (văn bản). **Đã chốt.**
+- Khẩu hiệu: "Em bé hạnh phúc, Ba mẹ yên tâm" / "Happy children, carefree parents" (bộ nhận diện). Ý nghĩa hình cây: 3 lá đỏ là bố, mẹ, nhà trường; 7 lá là 7 giá trị cốt lõi. Tên 7 giá trị: `[CẦN]`.
+- Pháp nhân ghi ở chân trang: site cũ ghi Công ty cổ phần giáo dục quốc tế MERIDIAN; site mới `[CẦN: phiếu câu 17 còn trống]`.
+- Câu định vị đang chờ duyệt (trong Casa facts) có vế "Cambridge" và "chưa bằng một nửa trường quốc tế": **chưa được dùng**. Nội dung Marketing đề xuất trong bảng tính "CONTENT WEBSITE MỚI" (Learner profile, kết quả phát triển, CASA LOVE…) ghi "chờ duyệt": **chưa dùng**.
 
 ## Độ tuổi
 
-- Nhận trẻ từ 15 tháng đến 6 tuổi. **Đã chốt.**
-- Có thể nhận từ 12 tháng nếu bé đạt yêu cầu của trường. **Đã chốt.**
+- Nhận trẻ từ 15 tháng đến 6 tuổi, theo chương trình và điều kiện tuyển sinh của từng cơ sở. **Đã chốt** (phiếu câu 12).
+- Trẻ 12 đến dưới 15 tháng: nhà trường xem xét riêng, **không công bố** là độ tuổi nhận chính thức (phiếu câu 12; thay dòng "có thể nhận từ 12 tháng" của Casa facts). Bộ canh chặn "từ 12 tháng".
 
-## Chương trình (mô hình Ciputra)
+## Chương trình
 
 - 3–6 tuổi: theo khung Cambridge Early Years. Lớp tiền tiểu học học theo Cambridge Early Years 3, bổ sung kỹ năng chuẩn bị vào lớp 1. **Đã chốt.**
 - 15 tháng–3 tuổi: lớp trộn tuổi, theo tinh thần Montessori, làm quen tiếng Anh. **Đã chốt.**
-- Chương trình từng cơ sở cũ: `[CẦN: phiếu câu 10–11]`.
+- Nhà trẻ 15–36 tháng ở các cơ sở: theo định hướng giáo dục Montessori (tự lập, giác quan, vận động, ngôn ngữ, kỹ năng thực hành cuộc sống), làm quen tiếng Anh qua bài hát, trò chơi, kể chuyện (phiếu câu 11).
+- Lớp và hệ từng cơ sở (phiếu câu 10):
+
+| Cơ sở | Nhà trẻ | Hệ song ngữ | Hệ quốc tế | Tiền tiểu học |
+|---|---|---|---|---|
+| Kim Mã | Có | Có | Không | Có |
+| Chùa Láng | Có | Không | Có | Có |
+| Mỹ Đình | Có | Không | Có | Có |
+| Ciputra | Có (dự kiến) | Có (dự kiến) | Có (dự kiến) | Có (dự kiến) |
+
+- 3–6 tuổi ở ba cơ sở cũ theo khung Cambridge Early Years: phiếu không hỏi thẳng, suy ra từ câu 16 (đào tạo giáo viên theo Cambridge Early Years). `[CẦN: chủ trường xác nhận]`.
 
 ## Hai hệ (lớp 3–6 tuổi)
 
@@ -30,29 +42,42 @@ Khi lệch, **Casa facts thắng**: sửa bản chép này, không sửa ngượ
 - **Hệ song ngữ:** 1 giáo viên chủ nhiệm, 2 trợ giảng (ít nhất 1 người nói tiếng Anh tốt); giáo viên nước ngoài dạy theo tiết. **Đã chốt.**
 - Tỷ lệ lớp song ngữ / quốc tế, số lớp, sĩ số: **chưa chốt, không viết.**
 
-## Giờ học và sinh hoạt
+## Giờ học và sinh hoạt (đúng cho các cơ sở, phiếu câu 12)
 
-- 7h30–17h30, thứ Hai đến thứ Sáu; trông muộn đến 18h30. **Đã chốt.**
-- Hè vẫn hoạt động, nghỉ 1 tuần theo lịch trường. **Đã chốt.**
-- 4 bữa mỗi ngày, bếp của trường tự nấu. **Đã chốt.**
-- Ngoại khoá, trại hè theo đăng ký, thu phí riêng. **Đã chốt.**
-- Áp dụng cho cả bốn cơ sở hay chỉ Ciputra: `[CẦN: phiếu câu 12]`.
+- 7h30–17h30, thứ Hai đến thứ Sáu. **Đã chốt.**
+- Trông muộn đến 18h30, có tính phí từ 17h30 (tính vào học phí quý liền kề; website chỉ viết "có tính phí"). **Đã chốt.**
+- Hè vẫn học, nghỉ 1 tuần theo lịch năm học. **Đã chốt.**
+- 4 bữa mỗi ngày theo thực đơn của nhà trường. **Đã chốt.** "Bếp trường tự nấu": **chưa công bố** cho tới khi xác nhận mô hình bếp từng cơ sở; bộ canh chặn "tự nấu".
+- Ngoại khoá, dã ngoại, chương trình hè phù hợp từng độ tuổi, theo đăng ký, thu phí riêng. **Đã chốt.**
+
+## Tuyển sinh (phiếu câu 13–14)
+
+- 5 bước: tiếp nhận thông tin → tư vấn và đặt lịch tham quan → tham quan 30–45 phút → học thử và đăng ký nhập học → đồng hành thời gian đầu.
+- Gọi lại trong ngày làm việc với đăng ký gửi trong giờ hành chính.
+
+## An toàn và đội ngũ (phiếu câu 15–16)
+
+- Đã đưa lên trang Về Casa: camera, app liên lạc, quy trình đón trả, y tế, đào tạo giáo viên (chủ đề đào tạo theo câu 16). Không nêu số lượng, bằng cấp cụ thể.
+- Ciputra: phương án thang máy, tầng học, sân thượng, lối thoát hiểm, đưa đón **sẽ công bố sau khi hoàn thiện**.
 
 ## Cơ sở
 
 | Cơ sở | Địa chỉ | Trạng thái |
 |---|---|---|
 | Ciputra | Khu đô thị Ciputra, phường Phú Thượng, Hà Nội; tầng 3, tầng 4 và sân thượng của một tòa nhà 4 tầng | Địa điểm **đã chốt**; khai trương **dự kiến quý 4/2027**; số nhà, tên tòa **chưa có** |
-| Mỹ Đình | Tầng 3 tòa FLC, 36 Phạm Hùng | Đang hoạt động |
-| Kim Mã | 23 ngõ 294 Kim Mã | Đang hoạt động |
-| Chùa Láng | `[CẦN: chủ trường chốt một địa chỉ]`: hồ sơ dự án ghi tầng 2 tòa Hongkong Tower, 243A Đê La Thành; site cũ ghi tầng 1–2, sảnh A1, 185 Huỳnh Thúc Kháng | Đang hoạt động |
+| Mỹ Đình | Tầng 3, tòa FLC Complex, số 36 Phạm Hùng, Hà Nội (câu 7) | Đang hoạt động |
+| Kim Mã | Số 23, ngõ 294 Kim Mã, Hà Nội (câu 7) | Đang hoạt động |
+| Chùa Láng | Tầng 1–2, sảnh A1, tòa HongKong Tower, 185 Huỳnh Thúc Kháng, phường Láng, Hà Nội (câu 6) | Đang hoạt động |
 
 - Đón trả ở Ciputra: trước sảnh tòa nhà, dừng xe không quá 10 phút; lên lớp bằng thang máy. **Dự kiến** (chỉ viết kèm chữ "dự kiến").
-- Site cũ còn gọi các cơ sở là "Cầu Giấy", "Phạm Hùng": `[CẦN: chủ trường thống nhất một tên cho mỗi cơ sở]`.
+- "Cầu Giấy" trên site cũ là cơ sở Chùa Láng (câu 5); "Phạm Hùng" là Mỹ Đình (câu 4). Ciputra: số nhà, tên tòa **chưa chốt** (câu 8).
 
 ## Liên hệ
 
-- Hotline 0989 059 838 (+84 989 059 838). Email tuyensinh@cdb.edu.vn. Facebook facebook.com/CasadeiBambiniSchools. **Đã chốt.**
+- Hotline 0989 059 838 (+84 989 059 838). Email tuyensinh@cdb.edu.vn. Facebook facebook.com/CasadeiBambiniSchools. **Đã chốt** (câu 24).
+- Zalo tuyển sinh: 0989 059 838; Zalo OA: https://zalo.me/3250239571046935262 (câu 25).
+- Email nhận yêu cầu về dữ liệu cá nhân và hộp thư gửi thông báo form: tuyensinh@cdb.edu.vn (câu 20, 21).
+- Dữ liệu form: lưu tối đa 12 tháng (câu 19, **đề xuất**, chờ ban lãnh đạo và pháp lý duyệt); người được xem theo câu 18.
 - Mã site cũ còn trỏ tới facebook.com/casadeibambini.hanoi: site mới chỉ dùng CasadeiBambiniSchools.
 
 ## Không dùng trên website dù đã chốt
@@ -63,5 +88,5 @@ Khi lệch, **Casa facts thắng**: sửa bản chép này, không sửa ngượ
 ## Schema
 
 - `Organization` cho hệ thống ở trang chủ, `@id` `https://casadeibambini.edu.vn/#truong`.
-- Mỗi cơ sở một `Preschool` + `ChildCare` có `parentOrganization`, **chỉ khi đã có địa chỉ đầy đủ** (nên Ciputra và Chùa Láng chưa có).
+- Mỗi cơ sở một `Preschool` + `ChildCare` có `parentOrganization`, **chỉ khi đã có địa chỉ đầy đủ** (Ciputra chưa có; Chùa Láng đã có từ 18/11/2026).
 - Giờ mở cửa thứ Hai–thứ Sáu 07:30–17:30. Không có `priceRange`.
