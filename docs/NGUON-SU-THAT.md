@@ -2,6 +2,8 @@
 
 Bản chép ngày 15/11/2026 (đối chiếu Casa facts bản rev 37 cùng ngày), bổ sung ngày 18/11/2026 theo phiếu bổ sung thông tin do nhà trường điền (người điền: bộ phận Marketing) của mục 1–2 trong "Nguồn sự thật" (`CLAUDE.md`): quyết định của chủ trường và Casa facts (https://claude.ai/artifact/3tsvDG2LQaGt2UB6dqtdgy).
 
+**Lưu ý 18/11/2026:** phiếu do bộ phận Marketing điền. Bảng theo dõi của Marketing ("CONTENT WEBSITE MỚI", tab 02 và 05) ghi các câu trả lời là dự thảo, đang chờ Ban giám hiệu xác nhận, và có chỗ lệch với phiếu (câu 3: bảng ghi "Casa dei Bambini", phiếu ghi "Casa Preschool"; câu 5: bảng ghi "chưa xác định", phiếu ghi "Chùa Láng"). Các dòng ghi "(phiếu câu N)" bên dưới chỉ là **đã có câu trả lời**, chưa phải đã được chủ trường xác nhận; phải được xác nhận trước khi đăng chính thức.
+
 Khi lệch, **Casa facts thắng**: sửa bản chép này, không sửa ngược. Mỗi lần sửa thì ghi ngày chép mới ở dòng trên.
 
 **Phạm vi:** Casa facts lập cho cơ sở Ciputra. Lớp và hệ ở ba cơ sở cũ lấy từ phiếu câu 10–11 (18/11/2026). Dòng ghi "(phiếu câu N)" là sự thật do nhà trường cung cấp qua phiếu.
