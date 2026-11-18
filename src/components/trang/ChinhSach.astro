@@ -24,7 +24,12 @@ const duongDan = [
       <p><Can noi={t('chủ trường và người có chuyên môn pháp lý rà soát toàn văn trước khi đăng', 'review of the full text by the owner and a legal adviser before publication')} /></p>
 
       <h2>{t('1. Bên kiểm soát dữ liệu', '1. Data controller')}</h2>
-      <p>{LIEN_HE.phapNhan ?? <Can noi={t('tên đơn vị, mã số doanh nghiệp, địa chỉ trụ sở', 'entity name, business registration number, registered address')} />}</p>
+      <p>{LIEN_HE.donVi ? LIEN_HE.donVi[lang] : <Can noi={t('tên đơn vị', 'entity name')} />}</p>
+      <ul>
+        <li>{t('Địa chỉ', 'Address')}: {LIEN_HE.diaChiDonVi[lang]}</li>
+        <li>Email: <a href={`mailto:${LIEN_HE.email}`}>{LIEN_HE.email}</a></li>
+        <li>{t('Điện thoại', 'Phone')}: <a href={LIEN_HE.tel}>{lang === 'en' ? LIEN_HE.hotlineQuocTe : LIEN_HE.hotline}</a></li>
+      </ul>
 
       <h2>{t('2. Thông tin chúng tôi thu', '2. Information we collect')}</h2>
       <p>{t('Qua form đăng ký tham quan, chúng tôi chỉ thu:', 'Through the visit form we collect only:')}</p>
@@ -43,12 +48,12 @@ const duongDan = [
 
       <h2>{t('5. Ai được xem thông tin', '5. Who can see the information')}</h2>
       <ul>
-        <li>{t('Bộ phận tuyển sinh: tiếp nhận đăng ký, liên hệ tư vấn, đặt lịch tham quan.', 'Admissions team: receives requests, contacts you and arranges visits.')}</li>
-        <li>{t('Quản lý cơ sở: chỉ thông tin của gia đình quan tâm tới cơ sở mình phụ trách, để phối hợp tư vấn và tổ chức tham quan.', 'Campus managers: only information about families interested in their own campus, to help advise and host visits.')}</li>
-        <li>{t('Ban lãnh đạo hoặc người phụ trách tuyển sinh toàn hệ thống: dữ liệu cần thiết để quản lý và phân công.', 'School leadership or the person in charge of admissions across all campuses: the data needed to manage and assign follow-up.')}</li>
-        <li>{t('Nhân sự kỹ thuật được ủy quyền: chỉ trong phạm vi cần thiết để vận hành, bảo trì và xử lý sự cố hệ thống.', 'Authorised technical staff: only as needed to run, maintain and fix the system.')}</li>
+        <li>{t('Bộ phận tuyển sinh: nhận thông tin qua hộp thư tuyển sinh, liên hệ tư vấn, nhập vào hệ thống quản lý tuyển sinh nội bộ của nhà trường và chuyển cho cơ sở gia đình quan tâm.', 'Admissions team: receives your request in the admissions mailbox, contacts you, records it in the school’s internal admissions system and passes it to the campus you are interested in.')}</li>
+        <li>{t('Cơ sở gia đình quan tâm: chăm sóc, tư vấn và tổ chức buổi tham quan.', 'The campus you are interested in: follows up, advises you and hosts your visit.')}</li>
+        <li>{t('Ban lãnh đạo nhà trường: nhận báo cáo tổng hợp về tuyển sinh.', 'School leadership: receives summary admissions reports.')}</li>
+        <li>{t('Người vận hành kỹ thuật website: chỉ khi cần để vận hành, bảo trì và xử lý sự cố.', 'The website’s technical operator: only when needed to run, maintain and fix the website.')}</li>
       </ul>
-      <p>{t('Thông tin được gửi về hộp thư tuyển sinh của trường (dịch vụ Google Workspace) và lưu trên máy chủ của trường.', "Information is sent to the school's admissions mailbox (Google Workspace) and stored on the school's server.")}</p>
+      <p>{t('Thông tin được gửi về hộp thư tuyển sinh của trường (dịch vụ Google Workspace), lưu trên máy chủ của website và trong hệ thống quản lý tuyển sinh nội bộ của nhà trường.', "Information is sent to the school's admissions mailbox (Google Workspace) and stored on the website's server and in the school's internal admissions system.")}</p>
 
       <h2>{t('6. Thời gian lưu', '6. How long we keep it')}</h2>
       <p>{t('Thông tin đăng ký được lưu tối đa 12 tháng kể từ ngày anh/chị gửi, chỉ cho mục đích tư vấn, hẹn lịch tham quan và theo dõi nhu cầu tuyển sinh. Hết thời hạn, hoặc khi không còn cần cho mục đích này, dữ liệu được rà soát và xoá, trừ trường hợp pháp luật yêu cầu lưu giữ. Anh/chị có thể yêu cầu xoá sớm hơn bất cứ lúc nào.', 'Your request is kept for at most 12 months from the day you send it, only to advise you, arrange a visit and follow up on admissions. After that, or when it is no longer needed for this purpose, the data is reviewed and deleted unless the law requires us to keep it. You can ask us to delete it sooner at any time.')}</p>

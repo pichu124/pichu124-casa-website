@@ -63,11 +63,11 @@ export const CO_SO: CoSo[] = [
     ten: { vi: 'Ciputra', en: 'Ciputra' },
     trangThai: 'sap-khai-truong',
     diaChi: {
-      vi: 'Tầng 3, tầng 4 và sân thượng của một tòa nhà 4 tầng, khu đô thị Ciputra, phường Phú Thượng, Hà Nội',
-      en: '3rd and 4th floors and rooftop of a four-storey building, Ciputra urban area, Phú Thượng ward, Hanoi',
+      vi: 'Tầng 3, tầng 4 và sân thượng tòa CC1 (tên gọi tạm thời), khu đô thị Ciputra, phường Phú Thượng, Hà Nội',
+      en: '3rd and 4th floors and rooftop of building CC1 (provisional name), Ciputra urban area, Phú Thượng ward, Hanoi',
     },
     diaChiNgan: { vi: 'Khu đô thị Ciputra, phường Phú Thượng', en: 'Ciputra urban area, Phú Thượng ward' },
-    banDo: null, // chưa có số nhà, tên tòa (phiếu câu 8: chưa chốt)
+    banDo: null, // tòa CC1 là tên tạm, chưa có số nhà (xác nhận 18/11/2026)
     schema: null, // Casa facts: chỉ gắn schema khi có địa chỉ đầy đủ
     lop: { nhaTre: 'du-kien', songNgu: 'du-kien', quocTe: 'du-kien', tienTieuHoc: 'du-kien' },
   },

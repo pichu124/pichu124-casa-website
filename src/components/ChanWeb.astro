@@ -3,7 +3,7 @@ import Can from './Can.astro';
 import { CO_SO, type Lang } from '../data/co-so';
 import { LIEN_HE } from '../data/lien-he';
 import { url, taoT, FORM_ANCHOR } from '../i18n/routes';
-import { LOGO, KHAU_HIEU, TEN } from '../data/thuong-hieu';
+import { LOGO, KHAU_HIEU } from '../data/thuong-hieu';
 interface Props { lang: Lang; routeKey?: string }
 const { lang, routeKey } = Astro.props;
 const t = taoT(lang);
@@ -59,7 +59,7 @@ const nam = new Date().getFullYear();
       </section>
     </div>
     <div class="chan-web__day">
-      <p>{LIEN_HE.phapNhan ?? <Can noi={t('tên đơn vị (pháp nhân)', 'legal entity name')} />} · © {nam} {TEN}</p>
+      <p>© {nam} {LIEN_HE.donVi ? LIEN_HE.donVi[lang] : <Can noi={t('tên đơn vị', 'entity name')} />}. {t('Địa chỉ liên hệ', 'Contact address')}: {LIEN_HE.diaChiDonVi[lang]}.</p>
       <p><a href={routeKey ? url(routeKey, khac) : url('home', khac)} hreflang={khac} lang={khac}>{khac === 'en' ? 'English' : 'Tiếng Việt'}</a></p>
     </div>
   </div>

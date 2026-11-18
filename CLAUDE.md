@@ -112,8 +112,8 @@ Mỗi giai đoạn kết thúc bằng một báo cáo ngắn và chờ người 
 
 Liệt kê lại trong mỗi báo cáo nếu chặn việc. Câu hỏi chi tiết nằm trong `docs/PHIEU-BO-SUNG-THONG-TIN.docx`.
 
-- Quyền vào nơi quản lý DNS của casadeibambini.edu.vn (nơi mua tên miền).
+- Quyền DNS: người phụ trách dự án có tài khoản quản trị tên miền (phiếu câu 28); chỉ cần ở Giai đoạn 6.
 - Ảnh cơ sở vật chất và giáo viên theo từng cơ sở; đồng ý bằng văn bản cho ảnh có mặt trẻ. (Logo và màu nhận diện đã có từ 18/11/2026.)
-- Số nhà, tên tòa ở Ciputra (khi có). (Địa chỉ Chùa Láng và tên từng cơ sở đã có từ phiếu 18/11/2026.)
-- Pháp nhân ghi ở chân trang site mới.
+- Số nhà và tên chính thức tòa nhà ở Ciputra (đang tạm gọi tòa CC1).
+- Duyệt thời hạn lưu dữ liệu 12 tháng và rà pháp lý Chính sách dữ liệu. (Chân trang ghi "Trường mầm non Casa Preschool" theo phiếu câu 17.)
 - (Bản thử đã chạy ở `casa-website-thu.duckdns.org` từ 15/11/2026; VPS IP `103.195.238.114`.)

@@ -2,7 +2,7 @@
 
 Bản chép ngày 15/11/2026 (đối chiếu Casa facts bản rev 37 cùng ngày), bổ sung ngày 18/11/2026 theo phiếu bổ sung thông tin do nhà trường điền (người điền: bộ phận Marketing) của mục 1–2 trong "Nguồn sự thật" (`CLAUDE.md`): quyết định của chủ trường và Casa facts (https://claude.ai/artifact/3tsvDG2LQaGt2UB6dqtdgy).
 
-**Lưu ý 18/11/2026:** phiếu do bộ phận Marketing điền. Bảng theo dõi của Marketing ("CONTENT WEBSITE MỚI", tab 02 và 05) ghi các câu trả lời là dự thảo, đang chờ Ban giám hiệu xác nhận, và có chỗ lệch với phiếu (câu 3: bảng ghi "Casa dei Bambini", phiếu ghi "Casa Preschool"; câu 5: bảng ghi "chưa xác định", phiếu ghi "Chùa Láng"). Các dòng ghi "(phiếu câu N)" bên dưới chỉ là **đã có câu trả lời**, chưa phải đã được chủ trường xác nhận; phải được xác nhận trước khi đăng chính thức.
+**Lưu ý 18/11/2026:** phiếu do bộ phận Marketing điền; bảng theo dõi của Marketing ghi là dự thảo. Chiều 18/11 người phụ trách dự án chuyển xác nhận của nhà trường cho: tên "Casa Preschool" (dùng tạm logo cũ), Cambridge Early Years ở ba cơ sở cũ, bếp một chiều tự nấu, tòa CC1 ở Ciputra; phiếu được bổ sung câu 17, 18, 19, 23, 26, 27, 28. Các dòng còn lại ghi "(phiếu câu N)" là đã có câu trả lời; chủ trường vẫn duyệt toàn bộ nội dung trên bản thử trước khi đăng chính thức.
 
 Khi lệch, **Casa facts thắng**: sửa bản chép này, không sửa ngược. Mỗi lần sửa thì ghi ngày chép mới ở dòng trên.
 
@@ -10,11 +10,11 @@ Khi lệch, **Casa facts thắng**: sửa bản chép này, không sửa ngượ
 
 ## Thương hiệu
 
-- **Tên hiển thị trên website: Casa Preschool** (phiếu câu 3). Tên từng cơ sở: "Casa Preschool – Kim Mã / Chùa Láng / Mỹ Đình / Ciputra" (câu 4, 9). Tên cũ "Casa dei Bambini" vẫn ở logo, Facebook và schema (`alternateName`). Hệ thống xuyên suốt hơn 10 năm. **Đã chốt.**
-- Logo: bộ tệp PDF "Các dạng logo" (thư mục Drive của trường), chuyển sang SVG ở `public/thuong-hieu/`. Logo ghi "Casa dei Bambini – Montessori Preschool": `[CẦN: chủ trường xác nhận dùng logo này cùng tên hiển thị "Casa Preschool"]`.
+- **Tên hiển thị trên website: Casa Preschool** (phiếu câu 3; nhà trường xác nhận 18/11/2026). Tên từng cơ sở: "Casa Preschool – Kim Mã / Chùa Láng / Mỹ Đình / Ciputra" (câu 4, 9). Tên cũ "Casa dei Bambini" vẫn ở logo, Facebook và schema (`alternateName`). Hệ thống xuyên suốt hơn 10 năm. **Đã chốt.**
+- Logo: bộ tệp PDF "Các dạng logo" (thư mục Drive của trường), chuyển sang SVG ở `public/thuong-hieu/`. Logo ghi "Casa dei Bambini – Montessori Preschool": **dùng tạm**, nhà trường sẽ đổi logo sau (xác nhận 18/11/2026).
 - Màu (câu 2): navy `#23265A` (chủ đạo), đỏ san hô `#E54041` (nhấn), xanh pastel `#8EB7E1` (bổ trợ), xám đậm `#51535A` (phụ), trắng. Phông: Anja Eliane (logo), DIN (văn bản). **Đã chốt.**
 - Khẩu hiệu: "Em bé hạnh phúc, Ba mẹ yên tâm" / "Happy children, carefree parents" (bộ nhận diện). Ý nghĩa hình cây: 3 lá đỏ là bố, mẹ, nhà trường; 7 lá là 7 giá trị cốt lõi. Tên 7 giá trị: `[CẦN]`.
-- Pháp nhân ghi ở chân trang: site cũ ghi Công ty cổ phần giáo dục quốc tế MERIDIAN; site mới `[CẦN: phiếu câu 17 còn trống]`.
+- Đơn vị ghi ở chân trang và trong Chính sách dữ liệu (phiếu câu 17): **Trường mầm non Casa Preschool**, địa chỉ Tầng 1–2, sảnh A1, tòa HongKong Tower, 185 Huỳnh Thúc Kháng, phường Láng, Hà Nội. Web chỉ thể hiện tên truyền thông, không ghi pháp nhân.
 - Câu định vị đang chờ duyệt (trong Casa facts) có vế "Cambridge" và "chưa bằng một nửa trường quốc tế": **chưa được dùng**. Nội dung Marketing đề xuất trong bảng tính "CONTENT WEBSITE MỚI" (Learner profile, kết quả phát triển, CASA LOVE…) ghi "chờ duyệt": **chưa dùng**.
 
 ## Độ tuổi
@@ -36,7 +36,7 @@ Khi lệch, **Casa facts thắng**: sửa bản chép này, không sửa ngượ
 | Mỹ Đình | Có | Không | Có | Có |
 | Ciputra | Có (dự kiến) | Có (dự kiến) | Có (dự kiến) | Có (dự kiến) |
 
-- 3–6 tuổi ở ba cơ sở cũ theo khung Cambridge Early Years: phiếu không hỏi thẳng, suy ra từ câu 16 (đào tạo giáo viên theo Cambridge Early Years). `[CẦN: chủ trường xác nhận]`.
+- 3–6 tuổi ở cả ba cơ sở cũ theo khung Cambridge Early Years. **Đã chốt** (xác nhận 18/11/2026).
 
 ## Hai hệ (lớp 3–6 tuổi)
 
@@ -49,7 +49,7 @@ Khi lệch, **Casa facts thắng**: sửa bản chép này, không sửa ngượ
 - 7h30–17h30, thứ Hai đến thứ Sáu. **Đã chốt.**
 - Trông muộn đến 18h30, có tính phí từ 17h30 (tính vào học phí quý liền kề; website chỉ viết "có tính phí"). **Đã chốt.**
 - Hè vẫn học, nghỉ 1 tuần theo lịch năm học. **Đã chốt.**
-- 4 bữa mỗi ngày theo thực đơn của nhà trường. **Đã chốt.** "Bếp trường tự nấu": **chưa công bố** cho tới khi xác nhận mô hình bếp từng cơ sở; bộ canh chặn "tự nấu".
+- 4 bữa mỗi ngày; bếp một chiều, trường tự nấu toàn bộ, kể cả bánh. **Đã chốt** (xác nhận 18/11/2026).
 - Ngoại khoá, dã ngoại, chương trình hè phù hợp từng độ tuổi, theo đăng ký, thu phí riêng. **Đã chốt.**
 
 ## Tuyển sinh (phiếu câu 13–14)
@@ -72,14 +72,17 @@ Khi lệch, **Casa facts thắng**: sửa bản chép này, không sửa ngượ
 | Chùa Láng | Tầng 1–2, sảnh A1, tòa HongKong Tower, 185 Huỳnh Thúc Kháng, phường Láng, Hà Nội (câu 6) | Đang hoạt động |
 
 - Đón trả ở Ciputra: trước sảnh tòa nhà, dừng xe không quá 10 phút; lên lớp bằng thang máy. **Dự kiến** (chỉ viết kèm chữ "dự kiến").
-- "Cầu Giấy" trên site cũ là cơ sở Chùa Láng (câu 5); "Phạm Hùng" là Mỹ Đình (câu 4). Ciputra: số nhà, tên tòa **chưa chốt** (câu 8).
+- "Cầu Giấy" trên site cũ là cơ sở Chùa Láng (câu 5); "Phạm Hùng" là Mỹ Đình (câu 4). Ciputra: đang tạm gọi là **tòa CC1** (viết kèm "tên gọi tạm thời"); số nhà **chưa có** (xác nhận 18/11/2026).
 
 ## Liên hệ
 
 - Hotline 0989 059 838 (+84 989 059 838). Email tuyensinh@cdb.edu.vn. Facebook facebook.com/CasadeiBambiniSchools. **Đã chốt** (câu 24).
 - Zalo tuyển sinh: 0989 059 838; Zalo OA: https://zalo.me/3250239571046935262 (câu 25).
 - Email nhận yêu cầu về dữ liệu cá nhân và hộp thư gửi thông báo form: tuyensinh@cdb.edu.vn (câu 20, 21).
-- Dữ liệu form: lưu tối đa 12 tháng (câu 19, **đề xuất**, chờ ban lãnh đạo và pháp lý duyệt); người được xem theo câu 18.
+- Dữ liệu form: lưu tối đa 12 tháng (câu 19 đã chọn, nhưng phiếu vẫn ghi cần Ban lãnh đạo và pháp lý phê duyệt).
+- Luồng dữ liệu form (câu 18): về hộp thư tuyensinh@cdb.edu.vn → bộ phận tuyển sinh nhập vào hệ thống quản lý tuyển sinh nội bộ ("Casa sale", không ghi tên lên site) → chia về cơ sở chăm sóc → báo cáo tổng hợp cho lãnh đạo.
+- Ảnh (câu 23): trường đánh dấu có ảnh cơ sở vật chất, ảnh giáo viên (đã đồng ý) và ảnh trẻ đã có đồng ý bằng văn bản, nhưng chưa ghi ảnh nào, lưu ở đâu. 8 ảnh bìa trong thư mục Drive: `[CẦN: xác nhận từng ảnh nằm trong diện đã có đồng ý]`.
+- Không đăng lên site: hiện website cũ gần như không tạo đăng ký, kênh chính là Facebook (câu 26); trường cần 1–4 bài mỗi tháng (câu 27); người phụ trách dự án có tài khoản quản trị tên miền (câu 28).
 - Mã site cũ còn trỏ tới facebook.com/casadeibambini.hanoi: site mới chỉ dùng CasadeiBambiniSchools.
 
 ## Không dùng trên website dù đã chốt

@@ -63,8 +63,8 @@ const moTa = laCiputra
       `Casa Preschool ${c.ten.en} campus: address, map, classes and visit booking. Now enrolling. Hotline ${LIEN_HE.hotlineQuocTe}.`);
 const lopCoSo = [
   c.lop.nhaTre === 'co' && t('Nhà trẻ 15–36 tháng, theo định hướng Montessori', 'Nursery for 15–36 months, guided by Montessori principles'),
-  c.lop.songNgu === 'co' && t('Mẫu giáo 3–6 tuổi, hệ song ngữ', 'Kindergarten for ages 3–6, bilingual track'),
-  c.lop.quocTe === 'co' && t('Mẫu giáo 3–6 tuổi, hệ quốc tế: mỗi lớp có giáo viên nước ngoài', 'Kindergarten for ages 3–6, international track: a foreign teacher in every class'),
+  c.lop.songNgu === 'co' && t('Mẫu giáo 3–6 tuổi theo khung Cambridge Early Years, hệ song ngữ', 'Kindergarten for ages 3–6 based on the Cambridge Early Years framework, bilingual track'),
+  c.lop.quocTe === 'co' && t('Mẫu giáo 3–6 tuổi theo khung Cambridge Early Years, hệ quốc tế: mỗi lớp có giáo viên nước ngoài', 'Kindergarten for ages 3–6 based on the Cambridge Early Years framework, international track: a foreign teacher in every class'),
   c.lop.tienTieuHoc === 'co' && t('Lớp tiền tiểu học 5–6 tuổi', 'Pre-primary class for ages 5–6'),
 ].filter(Boolean) as string[];
 const khac = CO_SO.filter((x) => x.slug !== slug && x.trangThai === 'dang-tuyen-sinh');
@@ -90,7 +90,7 @@ const khac = CO_SO.filter((x) => x.slug !== slug && x.trangThai === 'dang-tuyen-
         <p>{c.diaChi ? c.diaChi[lang] : <Can noi={t('địa chỉ đã chốt', 'confirmed address')} />}</p>
         {laCiputra && (
           <>
-            <p><Can noi={t('tên tòa nhà, số nhà', 'building name and number')} /></p>
+            <p>{t('Số nhà và tên chính thức của tòa nhà sẽ được cập nhật khi có.', 'The street number and official building name will be added when available.')}</p>
             <p>{t('Phụ huynh đón trả bé tại sảnh tòa nhà (dự kiến).', 'Parents drop off and pick up children at the building lobby (planned).')}</p>
           </>
         )}
