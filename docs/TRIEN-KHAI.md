@@ -185,6 +185,21 @@ Nếu cấu hình Caddy gây lỗi: chép lại bản sao lưu, kiểm tra, nạ
 sudo cp -a /etc/caddy/Caddyfile.truoc-casa-website /etc/caddy/Caddyfile && sudo caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile && sudo systemctl reload caddy
 ```
 
+## Bản ghi DNS của casadeibambini.edu.vn (kiểm tra 19/11/2026)
+
+DNS quản lý tại ZoneDNS.vn (người phụ trách dự án có tài khoản). Tám bản ghi đang có:
+
+| Host | Loại | Giá trị | TTL | Dùng cho | Ngày chuyển tên miền |
+|---|---|---|---|---|---|
+| `@` | A | `125.212.243.110` | 300 | Site WordPress cũ | **Đổi** sang `103.195.238.114` (chủ trường làm) |
+| `www` | CNAME | `casadeibambini.edu.vn.` | 300 | `www` đi theo tên miền gốc | Giữ nguyên (tự đi theo bản ghi `@`) |
+| `mail` | CNAME | `ghs.googlehosted.com.` | 3600 | Đường dẫn vào Gmail của Google Workspace | Giữ nguyên |
+| `@` | MX ×5 | `ASPMX.L.GOOGLE.COM.` và 4 máy dự phòng `ALT1–4` | 3600 | Nhận email `@casadeibambini.edu.vn` qua Google | **Không động vào** |
+
+- TTL của bản ghi `@` đã là 300 giây, nên bước "hạ TTL trước 24 giờ" của Giai đoạn 6 không cần làm.
+- Chưa có bản ghi TXT nào: chưa có mã xác minh Search Console, chưa có SPF/DKIM/DMARC cho email của tên miền này.
+- Tên miền phụ cho bản thử: thêm bản ghi `A` host `moi` → `103.195.238.114`, rồi thêm `moi.casadeibambini.edu.vn` vào dòng đầu khối trong `/etc/caddy/sites/casa-website.caddy`.
+
 ## Ghi chú
 
 - Bản thử chưa có dịch vụ nhận form (Giai đoạn 4): form hiện dòng đánh dấu `[CẦN]` và gửi sẽ báo lỗi. Khi Giai đoạn 4 xong, bỏ dấu `#` trước dòng `reverse_proxy /api/* 127.0.0.1:3100` trong tệp Caddy của site.
