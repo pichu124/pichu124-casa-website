@@ -5,6 +5,10 @@ import FormDangKy from '../FormDangKy.astro';
 import HoiDap from '../HoiDap.astro';
 import BangLop from '../BangLop.astro';
 import AnhCho from '../AnhCho.astro';
+import BoAnh from '../BoAnh.astro';
+import KhungVideo from '../KhungVideo.astro';
+import { Picture } from 'astro:assets';
+import { ANH_CO_SO } from '../../data/anh';
 import Can from '../Can.astro';
 import Icon from '../Icon.astro';
 import { CO_SO, coSoTheoSlug, linkBanDo, type Lang } from '../../data/co-so';
@@ -61,6 +65,9 @@ const moTa = laCiputra
       'Casa Preschool at Ciputra (Phú Thượng): Cambridge Early Years framework for ages 3–6, children from 15 months. Expected to open in Q4 2027.')
   : t(`Casa Preschool cơ sở ${c.ten.vi}: địa chỉ, bản đồ, lớp học và đăng ký tham quan. Cơ sở đang tuyển sinh. Hotline ${LIEN_HE.hotline}.`,
       `Casa Preschool ${c.ten.en} campus: address, map, classes and visit booking. Now enrolling. Hotline ${LIEN_HE.hotlineQuocTe}.`);
+const anhCoSo = ANH_CO_SO[slug] ?? [];
+const anhChinh = anhCoSo[0];
+const boAnh = anhCoSo.slice(1);
 const lopCoSo = [
   c.lop.nhaTre === 'co' && t('Nhà trẻ 15–36 tháng, theo định hướng Montessori', 'Nursery for 15–36 months, guided by Montessori principles'),
   c.lop.songNgu === 'co' && t('Mẫu giáo 3–6 tuổi theo khung Cambridge Early Years, hệ song ngữ', 'Kindergarten for ages 3–6 based on the Cambridge Early Years framework, bilingual track'),
@@ -99,7 +106,9 @@ const khac = CO_SO.filter((x) => x.slug !== slug && x.trangThai === 'dang-tuyen-
           <li><a class="nut nut--phu" href={LIEN_HE.tel}><Icon ten="dien-thoai" />{t(`Gọi ${LIEN_HE.hotline}`, `Call ${LIEN_HE.hotlineQuocTe}`)}</a></li>
         </ul>
       </div>
-      <AnhCho mo_ta={laCiputra ? t('phối cảnh hoặc mặt tiền tòa nhà Ciputra', 'Ciputra building render or front') : t(`cơ sở vật chất ${c.ten.vi} (không thấy mặt bé)`, `${c.ten.en} campus facilities (no children’s faces)`)} />
+      {anhChinh
+        ? <Picture class="anh-co-so" src={anhChinh.src} alt={anhChinh.alt[lang]} formats={['avif', 'webp']} widths={[480, 720, 1000]} sizes="(min-width: 56rem) 45vw, 92vw" loading="lazy" />
+        : <AnhCho mo_ta={laCiputra ? t('phối cảnh hoặc mặt tiền tòa nhà Ciputra', 'Ciputra building render or front') : t(`cơ sở vật chất ${c.ten.vi} (không thấy mặt bé)`, `${c.ten.en} campus facilities (no children’s faces)`)} />}
     </div>
   </section>
 
@@ -135,6 +144,26 @@ const khac = CO_SO.filter((x) => x.slug !== slug && x.trangThai === 'dang-tuyen-
           <a href={url('kindergarten', lang)}>{t('Mẫu giáo 3–6 tuổi', 'Kindergarten, 3–6 years')}</a> ·
           <a href={url('programmes', lang) + '#mot-ngay'}>{t('Giờ học, bữa ăn, mùa hè', 'School hours, meals, summer')}</a>
         </p>
+      </div>
+    </section>
+  )}
+
+  {boAnh.length > 0 && (
+    <section class="phan phan--sat" aria-labelledby="hinh-anh">
+      <div class="khung">
+        <h2 id="hinh-anh">{t(`Hình ảnh cơ sở ${c.ten.vi}`, `Photos of the ${c.ten.en} campus`)}</h2>
+        <BoAnh anh={boAnh.map((a) => ({ src: a.src, alt: a.alt[lang] }))} nhan={t(`Ảnh cơ sở ${c.ten.vi}`, `${c.ten.en} campus photos`)} />
+      </div>
+    </section>
+  )}
+
+  {slug === 'kim-ma' && (
+    <section class="phan phan--phu phan--sat" aria-labelledby="video-mot-ngay">
+      <div class="khung khung-chu">
+        <h2 id="video-mot-ngay">{t('Một ngày của bé ở cơ sở Kim Mã', 'A day at the Kim Mã campus')}</h2>
+        <KhungVideo lang={lang} src="/video/mot-ngay-o-casa-kim-ma.mp4" poster="/video/mot-ngay-o-casa-kim-ma.webp" rong={960} cao={540}
+          tieuDe={t('Video 2 phút 17 giây.', 'Video, 2 min 17 s.')}
+          moTa={t('Từ lúc đến lớp, ăn sáng, giờ học Montessori, chơi ngoài trời, ăn trưa, ngủ trưa, học tiếng Anh, giờ khoa học đến lúc tạm biệt cô. Lời và phụ đề tiếng Việt.', 'From arrival, breakfast, Montessori time, outdoor play, lunch, nap, English, science time to saying goodbye. Vietnamese narration and subtitles.')} />
       </div>
     </section>
   )}

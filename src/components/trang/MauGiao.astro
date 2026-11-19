@@ -4,6 +4,8 @@
 import Base from '../../layouts/Base.astro';
 import KhoiCta from '../KhoiCta.astro';
 import BangLop from '../BangLop.astro';
+import BoAnh from '../BoAnh.astro';
+import { ANH } from '../../data/anh';
 import type { Lang } from '../../data/co-so';
 import { url, taoT } from '../../i18n/routes';
 interface Props { lang: Lang }
@@ -61,6 +63,8 @@ const LINH_VUC = [
       <h2 id="tieu-de-tien-tieu-hoc">{t('Lớp tiền tiểu học (5–6 tuổi)', 'Pre-primary class (ages 5–6)')}</h2>
       <p>{t('Năm cuối mẫu giáo là lớp Early Years 3. Bên cạnh chương trình theo khung Cambridge Early Years, bé được bổ sung kỹ năng chuẩn bị vào lớp 1.', 'The final kindergarten year is Early Years 3. Alongside the programme based on the Cambridge Early Years framework, children build extra skills to prepare for Grade 1.')}</p>
       <p>{t('Lớp tiền tiểu học có ở cả ba cơ sở đang tuyển sinh: Kim Mã, Chùa Láng, Mỹ Đình.', 'The pre-primary class is offered at all three enrolling campuses: Kim Mã, Chùa Láng and Mỹ Đình.')}</p>
+      <BoAnh nhan={t('Ảnh lớp mẫu giáo', 'Kindergarten class photos')}
+        anh={[ANH.tienTieuHoc, ANH.lopHocTron, ANH.gioHocBan].map((x) => ({ src: x.src, alt: x.alt[lang] }))} />
     </div>
   </section>
 

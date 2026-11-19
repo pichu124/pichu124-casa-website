@@ -20,9 +20,10 @@ Phiếu bổ sung lần 2 và xác nhận qua người phụ trách dự án ng�
 | Ưu tiên | Thông tin | Câu trong phiếu | Chặn việc gì |
 |---|---|---|---|
 | 1 | Ban lãnh đạo và pháp lý duyệt thời hạn lưu dữ liệu 12 tháng; người có chuyên môn pháp lý rà toàn văn Chính sách dữ liệu (kể cả việc ghi tên truyền thông thay pháp nhân); ngày hiệu lực | 17, 19 | Chính sách dữ liệu, mở form |
-| 2 | 8 ảnh bìa có nằm trong diện đã có đồng ý bằng văn bản của phụ huynh không; ảnh cơ sở vật chất, giáo viên của từng cơ sở (gửi tệp hoặc nơi lưu) | 23 | Ảnh đầy đủ ở trang chủ, ảnh 4 trang cơ sở |
-| 3 | Bản xuất WordPress; thông điệp và tên 7 giá trị cốt lõi | 22 | Trang Về Casa |
-| 4 | Ciputra: số nhà, tên chính thức của tòa (đang tạm gọi CC1) | 8 | Bản đồ, schema Ciputra |
+| 2 | Bản xuất WordPress; thông điệp và tên 7 giá trị cốt lõi | 22 | Trang Về Casa |
+| 3 | Ciputra: số nhà, tên chính thức của tòa (đang tạm gọi CC1) | 8 | Bản đồ, schema Ciputra |
+
+Video "Tiếng Anh tại Casa" dùng được nếu Marketing sửa hai câu phụ đề "trẻ từ 0 đến 6 tuổi" và "100% giáo viên nước ngoài" (QUYET-DINH Q26).
 
 Nội dung Marketing đề xuất trong bảng tính "CONTENT WEBSITE MỚI" (Learner profile, kết quả phát triển…) đang ghi "chờ duyệt": chưa đưa lên site.
 

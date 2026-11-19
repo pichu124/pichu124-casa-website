@@ -4,8 +4,8 @@ import Base from '../../layouts/Base.astro';
 import Icon from '../Icon.astro';
 import Can from '../Can.astro';
 import { Picture } from 'astro:assets';
-import anhLopHoc from '../../assets/anh/lop-hoc-ke-hoc-cu.jpg';
-import anhBanTay from '../../assets/anh/ban-tay-co-va-be.jpg';
+import KhungVideo from '../KhungVideo.astro';
+import { ANH } from '../../data/anh';
 import KhoiCta from '../KhoiCta.astro';
 import MotNgay from '../MotNgay.astro';
 import { CO_SO, type Lang } from '../../data/co-so';
@@ -55,9 +55,9 @@ const schema = [{
           <a class="nut nut--phu nut--lon" href={LIEN_HE.tel}><Icon ten="dien-thoai" />{t(`Gọi ${LIEN_HE.hotline}`, `Call ${LIEN_HE.hotlineQuocTe}`)}</a>
         </div>
       </div>
-      <Picture class="dau-trang__anh" src={anhLopHoc} formats={['avif', 'webp']} widths={[480, 720, 1000, 1400]}
+      <Picture class="dau-trang__anh" src={ANH.dauTrang.src} formats={['avif', 'webp']} widths={[480, 720, 1000, 1400]}
         sizes="(min-width: 56rem) 42vw, 100vw" loading="eager" fetchpriority="high"
-        alt={t('Góc lớp học với kệ gỗ đựng học cụ, chậu cây xanh và cửa kính nhiều ánh sáng', 'A classroom corner with wooden shelves of learning materials, a potted plant and bright glass windows')} />
+        alt={ANH.dauTrang.alt[lang]} />
     </div>
   </section>
 
@@ -149,14 +149,19 @@ const schema = [{
         <h2 id="mot-ngay">{t('Một ngày ở Casa', 'A day at Casa')}</h2>
       </div>
       <MotNgay lang={lang} />
+      <div class="khoi-video">
+        <KhungVideo lang={lang} src="/video/mot-ngay-o-casa-kim-ma.mp4" poster="/video/mot-ngay-o-casa-kim-ma.webp" rong={960} cao={540}
+          tieuDe={t('Xem một ngày của bé ở cơ sở Kim Mã', 'Watch a day at the Kim Mã campus')}
+          moTa={t('(2 phút 17 giây, lời và phụ đề tiếng Việt)', '(2 min 17 s, Vietnamese narration and subtitles)')} />
+      </div>
     </div>
   </section>
 
   <section class="phan" aria-labelledby="ve-casa">
     <div class="khung khoi-anh-chu">
-      <Picture class="khoi-anh-chu__anh" src={anhBanTay} formats={['avif', 'webp']} widths={[400, 640, 900]}
+      <Picture class="khoi-anh-chu__anh" src={ANH.banTay.src} formats={['avif', 'webp']} widths={[400, 640, 900]}
         sizes="(min-width: 56rem) 40vw, 100vw" loading="lazy"
-        alt={t('Bàn tay của cô giáo và các bé đặt chồng lên nhau', "A teacher's hand and the children's hands stacked together")} />
+        alt={ANH.banTay.alt[lang]} />
       <div>
         <h2 id="ve-casa">{t('Về Casa Preschool', 'About Casa Preschool')}</h2>
         <p class="nhan-phan">{KHAU_HIEU[lang]}</p>

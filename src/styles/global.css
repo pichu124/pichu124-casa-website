@@ -459,3 +459,7 @@ body.co-thanh-day { padding-bottom: calc(var(--cao-thanh-day) + env(safe-area-in
 .khung-video--doc { max-width: 24rem; }
 .khung-video figcaption { margin-top: var(--k-2); color: var(--mau-chu-phu); font-size: var(--co-nho); }
 .khung-video figcaption strong { color: var(--brand-navy); }
+.anh-co-so { display: block; width: 100%; height: auto; border-radius: var(--bo-the); }
+.khoi-video { margin-top: var(--k-6); max-width: 48rem; }
+.noi-dung .bo-anh, .khung-chu .bo-anh { margin-top: var(--k-4); }
+@media (min-width: 56rem) { .khoi-anh-chu--video { grid-template-columns: minmax(16rem, 22rem) 1fr; } }

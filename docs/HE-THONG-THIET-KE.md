@@ -124,7 +124,7 @@ Giá trị gốc nằm ở nhóm `--brand-*`; các token ngữ nghĩa trỏ về
 
 - **Logo:** đã thay bằng tệp gốc (SVG) trong `src/components/DauWeb.astro` và `ChanWeb.astro`; dữ liệu ở `src/data/thuong-hieu.ts`.
 - **Màu nhận diện:** đã đổi ở `:root`. Đỏ san hô không đạt 4.5:1 với chữ trắng nên giữ nguyên màu và dùng chữ lớn, đậm cho nút chính; không tự làm sẫm màu thương hiệu.
-- **Ảnh:** dùng `<Picture>` của Astro (AVIF/WebP, kích thước cố định, nhiều độ rộng). Ảnh gốc ở `src/assets/anh/`, chỉ là phần cắt không thấy mặt bé (QUYET-DINH Q19). Chỉ ảnh đầu trang chủ tải ngay (`fetchpriority="high"`).
+- **Ảnh:** dùng `<Picture>` của Astro (AVIF/WebP, kích thước cố định, nhiều độ rộng). Ảnh gốc ở `src/assets/anh/` (thu về cạnh dài 1800px, bỏ EXIF), danh sách và chữ thay thế ở `src/data/anh.ts` (QUYET-DINH Q25). Bộ ảnh dùng `BoAnh.astro`; video dùng `KhungVideo.astro`, tệp ở `public/video/` (QUYET-DINH Q26). Chỉ ảnh đầu trang chủ tải ngay (`fetchpriority="high"`).
 - **Favicon:** logomark (`public/favicon.svg`).
 
 ## 7. Danh sách triển khai

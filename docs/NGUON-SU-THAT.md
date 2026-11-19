@@ -81,7 +81,8 @@ Khi lệch, **Casa facts thắng**: sửa bản chép này, không sửa ngượ
 - Email nhận yêu cầu về dữ liệu cá nhân và hộp thư gửi thông báo form: tuyensinh@cdb.edu.vn (câu 20, 21).
 - Dữ liệu form: lưu tối đa 12 tháng (câu 19 đã chọn, nhưng phiếu vẫn ghi cần Ban lãnh đạo và pháp lý phê duyệt).
 - Luồng dữ liệu form (câu 18): về hộp thư tuyensinh@cdb.edu.vn → bộ phận tuyển sinh nhập vào hệ thống quản lý tuyển sinh nội bộ ("Casa sale", không ghi tên lên site) → chia về cơ sở chăm sóc → báo cáo tổng hợp cho lãnh đạo.
-- Ảnh (câu 23): trường đánh dấu có ảnh cơ sở vật chất, ảnh giáo viên (đã đồng ý) và ảnh trẻ đã có đồng ý bằng văn bản, nhưng chưa ghi ảnh nào, lưu ở đâu. 8 ảnh bìa trong thư mục Drive: `[CẦN: xác nhận từng ảnh nằm trong diện đã có đồng ý]`.
+- Ảnh (câu 23): mọi ảnh trong thư mục Drive "Ảnh cho web" (ảnh bìa và ảnh 3 cơ sở) đã có đồng ý; người phụ trách dự án chuyển xác nhận ngày 19/11/2026. Không ghi tên bé trên site.
+- Video trong thư mục "Video cho Web": video "Tiếng Anh tại Casa" có phụ đề "trẻ từ 0 đến 6 tuổi" và "100% giáo viên nước ngoài" (lệch thông tin đã chốt); khung cuối video "Một ngày của Cá Kim Mã" ghi hotline 093 469 03 90 (khác hotline chính thức). Xem QUYET-DINH Q26.
 - Không đăng lên site: hiện website cũ gần như không tạo đăng ký, kênh chính là Facebook (câu 26); trường cần 1–4 bài mỗi tháng (câu 27); người phụ trách dự án có tài khoản quản trị tên miền (câu 28).
 - Mã site cũ còn trỏ tới facebook.com/casadeibambini.hanoi: site mới chỉ dùng CasadeiBambiniSchools.
 

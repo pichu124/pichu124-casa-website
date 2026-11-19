@@ -6,6 +6,9 @@
 import Base from '../../layouts/Base.astro';
 import KhoiCta from '../KhoiCta.astro';
 import Can from '../Can.astro';
+import BoAnh from '../BoAnh.astro';
+import KhungVideo from '../KhungVideo.astro';
+import { ANH } from '../../data/anh';
 import type { Lang } from '../../data/co-so';
 import { TEN, KHAU_HIEU, LOGO } from '../../data/thuong-hieu';
 import { url, taoT } from '../../i18n/routes';
@@ -108,6 +111,10 @@ const AN_TOAN = [
         <p>{t('Nội dung bồi dưỡng chuyên môn cho đội ngũ tập trung vào:', 'Professional development for our team focuses on:')}</p>
         <ul>{DAO_TAO.map((d) => <li>{d}</li>)}</ul>
       </div>
+      <div class="sau-luoi">
+        <BoAnh nhan={t('Ảnh giáo viên cùng các bé', 'Photos of teachers with children')}
+          anh={[ANH.giaoVien1, ANH.giaoVien2, ANH.donTre].map((a) => ({ src: a.src, alt: a.alt[lang] }))} />
+      </div>
     </div>
   </section>
 
@@ -128,7 +135,19 @@ const AN_TOAN = [
     </div>
   </section>
 
-  <section class="phan phan--phu phan--sat" aria-labelledby="chuong-trinh">
+  <section class="phan phan--phu phan--sat" aria-labelledby="su-kien">
+    <div class="khung khoi-anh-chu khoi-anh-chu--video">
+      <KhungVideo lang={lang} src="/video/family-day-2026.mp4" poster="/video/family-day-2026.webp" rong={540} cao={960}
+        tieuDe={t('Family Day 2026 "Growing Together".', 'Family Day 2026 "Growing Together".')}
+        moTa={t('Video 58 giây.', 'Video, 58 s.')} />
+      <div>
+        <h2 id="su-kien">{t('Ngày hội gia đình', 'Family Day')}</h2>
+        <p>{t('Mỗi năm, nhà trường tổ chức ngày hội để ba mẹ và các con cùng vận động, chơi trò chơi theo đội và gắn kết với thầy cô. Video ghi lại Family Day 2026 với chủ đề "Growing Together".', 'Each year the school holds a family day where parents and children play team games, get active together and connect with teachers. The video shows Family Day 2026, themed "Growing Together".')}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="phan phan--sat" aria-labelledby="chuong-trinh">
     <div class="khung noi-dung">
       <h2 id="chuong-trinh">{t('Chương trình học', 'Our programmes')}</h2>
       <p>{t('Nhà trẻ 15–36 tháng theo định hướng Montessori; mẫu giáo 3–6 tuổi theo khung Cambridge Early Years, gồm lớp tiền tiểu học; hai hệ quốc tế và song ngữ.', 'Nursery for 15–36 months guided by Montessori principles; kindergarten for ages 3–6 based on the Cambridge Early Years framework, including a pre-primary class; international and bilingual tracks.')}</p>
