@@ -463,3 +463,9 @@ body.co-thanh-day { padding-bottom: calc(var(--cao-thanh-day) + env(safe-area-in
 .khoi-video { margin-top: var(--k-6); max-width: 48rem; }
 .noi-dung .bo-anh, .khung-chu .bo-anh { margin-top: var(--k-4); }
 @media (min-width: 56rem) { .khoi-anh-chu--video { grid-template-columns: minmax(16rem, 22rem) 1fr; } }
+
+/* Về Casa: thông điệp và giá trị cốt lõi */
+.trich-dan { font-size: var(--co-lon); font-weight: 600; color: var(--brand-navy); border-left: 4px solid var(--brand-do); padding-left: var(--k-4); }
+.gia-tri__chu { display: inline-block; font-weight: 700; font-size: 1.5rem; color: var(--brand-do); letter-spacing: .04em; margin-bottom: var(--k-1); }
+.gia-tri__en { font-weight: 400; color: var(--mau-chu-phu); font-size: var(--co-nho); }
+.gia-tri > li:last-child { grid-column: 1 / -1; }

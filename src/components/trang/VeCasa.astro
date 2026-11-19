@@ -2,10 +2,10 @@
 // Về Casa. Nguồn: bộ nhận diện (khẩu hiệu, ý nghĩa logo), phiếu bổ sung thông tin
 // câu 15 (an toàn và chăm sóc) và câu 16 (đội ngũ), 18/11/2026. Chỉ dùng các ý trường
 // đã viết là đang làm; các mục trường ghi "cần xác nhận bổ sung" chưa đăng.
-// Thông điệp nhà trường, 7 giá trị cốt lõi: chờ bản xuất WordPress hoặc nhà trường cung cấp.
+// Thông điệp nhà trường và 5 giá trị cốt lõi CASA LOVE: người phụ trách dự án chuyển ngày 19/11/2026
+// (dùng tạm). Câu "môi trường giáo dục Montessori chuẩn quốc tế" đã viết lại theo quy tắc tên gọi (QUYET-DINH Q27).
 import Base from '../../layouts/Base.astro';
 import KhoiCta from '../KhoiCta.astro';
-import Can from '../Can.astro';
 import BoAnh from '../BoAnh.astro';
 import KhungVideo from '../KhungVideo.astro';
 import { ANH } from '../../data/anh';
@@ -15,6 +15,18 @@ import { url, taoT } from '../../i18n/routes';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = taoT(lang);
+const GIA_TRI = [
+  { chu: 'C', ten: t('Lòng trắc ẩn', 'Compassion'), en: 'Compassion',
+    noi: t('Chúng tôi dạy trẻ yêu thương và tôn trọng, biết sẻ chia và đồng cảm với người khác, và trân quý cả thiên nhiên quanh mình.', 'We teach children to love and respect, to share and empathise with others, and to cherish the nature around them.') },
+  { chu: 'A', ten: t('Tính tự chủ', 'Autonomy'), en: 'Autonomy',
+    noi: t('Mỗi em bé đều có quyền lựa chọn, được khuyến khích tự làm, tự quyết định và tự tin vào khả năng của bản thân.', 'Every child has the right to choose, and is encouraged to do things for themselves, make their own decisions and believe in their own abilities.') },
+  { chu: 'S', ten: t('Kiên cường', 'Steadfastness'), en: 'Steadfastness',
+    noi: t('Chúng tôi đồng hành để trẻ dám thử điều mới, kiên trì khi khó khăn và mạnh mẽ hơn sau mỗi lần vấp ngã.', 'We stand by children so they dare to try new things, keep going when it is hard and grow stronger after every stumble.') },
+  { chu: 'A', ten: t('Trách nhiệm', 'Accountability'), en: 'Accountability',
+    noi: t('Trẻ học cách chăm sóc bản thân, quan tâm đến người khác và hoàn thành công việc với tinh thần tự giác.', 'Children learn to look after themselves, care about others and finish their tasks on their own initiative.') },
+  { chu: 'LOVE', ten: t('Tình yêu thương', 'Love'), en: 'Love',
+    noi: t('Tình yêu thương bao trùm mọi điều chúng tôi làm: yêu thương cá tính riêng của mỗi trẻ, chấp nhận sự khác biệt và chăm sóc tận tâm từng bữa ăn, giấc ngủ, giờ chơi, giờ học.', 'Love runs through everything we do: loving each child’s own personality, accepting differences, and caring wholeheartedly for every meal, nap, playtime and lesson.') },
+];
 const duongDan = [
   { ten: t('Trang chủ', 'Home'), href: url('home', lang) },
   { ten: t('Về Casa', 'About Casa'), href: url('about', lang) },
@@ -77,22 +89,42 @@ const AN_TOAN = [
       <div class="noi-dung">
         <h2 id="y-nghia">{t('Ý nghĩa hình cây trong logo', 'The tree in our logo')}</h2>
         <p>{t('Lấy hình ảnh cây làm chủ đạo, Casa nhấn mạnh quá trình nuôi dưỡng sự trưởng thành của các bé. Từ những hạt giống nhỏ, các bé sẽ trở thành những cây xanh đầy sức sống để vươn cao trong tương lai.', 'The tree at the heart of our logo stands for nurturing children as they grow. From small seeds, children become strong, lively trees that reach high in the future.')}</p>
-        <ul>
-          <li>{t('3 chiếc lá đỏ tượng trưng cho bố, mẹ và nhà trường: mối quan hệ gắn kết giữa trẻ em, gia đình và nhà trường.', 'The 3 red leaves stand for father, mother and school: the bond between children, families and the school.')}</li>
-          <li>{t('7 chiếc lá của cây tượng trưng cho 7 giá trị cốt lõi mà Casa luôn hướng đến.', 'The 7 leaves of the tree stand for the 7 core values Casa always works towards.')}</li>
-        </ul>
+        <p>{t('3 chiếc lá đỏ tượng trưng cho bố, mẹ và nhà trường: mối quan hệ gắn kết giữa trẻ em, gia đình và nhà trường.', 'The 3 red leaves stand for father, mother and school: the bond between children, families and the school.')}</p>
       </div>
     </div>
   </section>
 
   <section class="phan phan--sat" aria-labelledby="thong-diep">
     <div class="khung noi-dung">
-      <h2 id="thong-diep">{t('Thông điệp và giá trị cốt lõi', 'Our message and core values')}</h2>
-      <p><Can noi={t('thông điệp nhà trường và tên 7 giá trị cốt lõi (từ trang cũ hoặc nhà trường cung cấp)', 'the school’s message and the names of the 7 core values (from the old site or provided by the school)')} /></p>
+      <h2 id="thong-diep">{t('Thông điệp của nhà trường', 'Our message')}</h2>
+      <p class="trich-dan">{t('Mỗi đứa trẻ đều xứng đáng lớn lên trong yêu thương, được tôn trọng và phát triển theo cách riêng của mình.', 'Every child deserves to grow up loved, to be respected and to develop in their own way.')}</p>
+      <p>{t('Tại Casa, chúng tôi tin rằng những năm đầu đời là nền tảng quan trọng nhất cho sự phát triển toàn diện của trẻ. Vì vậy, chúng tôi mang đến một môi trường giáo dục nơi trẻ được khơi dậy sự tò mò, nuôi dưỡng niềm đam mê học tập và được đồng hành bằng tình yêu thương chân thành: lớp nhà trẻ theo định hướng Montessori, và chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi.', 'At Casa, we believe the early years are the most important foundation for a child’s all-round development. So we offer a learning environment where children’s curiosity is sparked, their love of learning is nurtured and they are supported with genuine love: nursery classes guided by Montessori principles, and a programme based on the Cambridge Early Years framework for children aged 3–6.')}</p>
+      <p>{t('Mỗi em nhỏ bước vào Casa là một thế giới riêng biệt, và chúng tôi tôn trọng nhịp độ phát triển độc đáo ấy. Trẻ được lựa chọn, được lắng nghe và được là chính mình, trong một không gian an toàn, thân thiện và đầy cảm hứng.', 'Every child who comes to Casa is a world of their own, and we respect their unique pace of development. Children are free to choose, are listened to and can be themselves, in a space that is safe, friendly and inspiring.')}</p>
+      <p>{t('Chúng tôi không chỉ giáo dục tri thức mà còn ươm mầm nhân cách. Từ những hành động nhỏ hằng ngày, như tự dọn đồ chơi, nhẹ nhàng xin lỗi bạn hay chia sẻ món ăn yêu thích, trẻ học cách sống tử tế, kiên cường và đầy lòng trắc ẩn.', 'We nurture character as well as knowledge. Through small everyday actions, such as tidying up their toys, gently saying sorry to a friend or sharing a favourite snack, children learn to be kind, resilient and compassionate.')}</p>
+      <p>{t('Đội ngũ giáo viên và nhân viên tại Casa đều mang trong mình một sứ mệnh: đồng hành cùng phụ huynh trong hành trình ươm mầm thế hệ tương lai. Chúng tôi biết rằng khi trẻ cảm thấy được yêu thương và tin tưởng, các em sẽ phát triển hết tiềm năng và tỏa sáng theo cách riêng của mình.', 'Our teachers and staff share one mission: to walk alongside parents in raising the next generation. We know that when children feel loved and trusted, they reach their full potential and shine in their own way.')}</p>
     </div>
   </section>
 
-  <section class="phan phan--phu phan--sat" aria-labelledby="doi-ngu">
+  <section class="phan phan--phu phan--sat" aria-labelledby="gia-tri">
+    <div class="khung">
+      <div class="phan__dau">
+        <h2 id="gia-tri">{t('5 giá trị cốt lõi: CASA LOVE', 'Our 5 core values: CASA LOVE')}</h2>
+        <p>{t('CASA LOVE không chỉ là một cụm từ, mà là hơi thở và nhịp sống của ngôi trường. Đó là nơi mỗi em bé được nuôi dưỡng bằng tình yêu thương, sự tôn trọng, tự do và trí tuệ, để lớn lên hạnh phúc, tự tin và là chính mình.', 'CASA LOVE is more than a phrase: it is the heartbeat of our school. It is where every child is nurtured with love, respect, freedom and wisdom, to grow up happy, confident and true to themselves.')}</p>
+      </div>
+      <ul class="luoi danh-sach-tron gia-tri" role="list">
+        {GIA_TRI.map((g) => (
+          <li class="the">
+            <span class="gia-tri__chu" aria-hidden="true">{g.chu}</span>
+            <h3>{g.ten}{lang === 'vi' && <span class="gia-tri__en" lang="en"> ({g.en})</span>}</h3>
+            <p class="the__mo-ta">{g.noi}</p>
+          </li>
+        ))}
+      </ul>
+      <p class="sau-luoi trich-dan">{t('CASA LOVE chính là lời hứa của chúng tôi: mỗi ngày con đến trường, con sẽ cảm nhận được yêu thương ở khắp nơi, để lớn lên an yên và vững vàng.', 'CASA LOVE is our promise: every day your child comes to school, they will feel loved everywhere they go, so they grow up calm and secure.')}</p>
+    </div>
+  </section>
+
+  <section class="phan phan--sat" aria-labelledby="doi-ngu">
     <div class="khung">
       <div class="phan__dau">
         <h2 id="doi-ngu">{t('Đội ngũ giáo viên và nhân viên', 'Our teachers and staff')}</h2>
@@ -118,7 +150,7 @@ const AN_TOAN = [
     </div>
   </section>
 
-  <section class="phan phan--sat" aria-labelledby="an-toan">
+  <section class="phan phan--phu phan--sat" aria-labelledby="an-toan">
     <div class="khung">
       <div class="phan__dau">
         <h2 id="an-toan">{t('An toàn và chăm sóc trẻ', 'Safety and care')}</h2>
@@ -135,7 +167,7 @@ const AN_TOAN = [
     </div>
   </section>
 
-  <section class="phan phan--phu phan--sat" aria-labelledby="su-kien">
+  <section class="phan phan--sat" aria-labelledby="su-kien">
     <div class="khung khoi-anh-chu khoi-anh-chu--video">
       <KhungVideo lang={lang} src="/video/family-day-2026.mp4" poster="/video/family-day-2026.webp" rong={540} cao={960}
         tieuDe={t('Family Day 2026 "Growing Together".', 'Family Day 2026 "Growing Together".')}
@@ -147,7 +179,7 @@ const AN_TOAN = [
     </div>
   </section>
 
-  <section class="phan phan--sat" aria-labelledby="chuong-trinh">
+  <section class="phan phan--phu phan--sat" aria-labelledby="chuong-trinh">
     <div class="khung noi-dung">
       <h2 id="chuong-trinh">{t('Chương trình học', 'Our programmes')}</h2>
       <p>{t('Nhà trẻ 15–36 tháng theo định hướng Montessori; mẫu giáo 3–6 tuổi theo khung Cambridge Early Years, gồm lớp tiền tiểu học; hai hệ quốc tế và song ngữ.', 'Nursery for 15–36 months guided by Montessori principles; kindergarten for ages 3–6 based on the Cambridge Early Years framework, including a pre-primary class; international and bilingual tracks.')}</p>

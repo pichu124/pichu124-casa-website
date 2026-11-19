@@ -20,7 +20,7 @@ Phiếu bổ sung lần 2 và xác nhận qua người phụ trách dự án ng�
 | Ưu tiên | Thông tin | Câu trong phiếu | Chặn việc gì |
 |---|---|---|---|
 | 1 | Ban lãnh đạo và pháp lý duyệt thời hạn lưu dữ liệu 12 tháng (ai phụ trách xoá định kỳ ở hộp thư, Casa sale, máy chủ); người có chuyên môn pháp lý rà toàn văn Chính sách dữ liệu (kể cả việc ghi tên truyền thông thay pháp nhân); ngày hiệu lực. **Người phụ trách dự án để lại làm sau (19/11/2026)** | 17, 19 | Chính sách dữ liệu, mở form (không chặn bản thử) |
-| 2 | Bản xuất WordPress; thông điệp và tên 7 giá trị cốt lõi | 22 | Trang Về Casa |
+| 2 | Bản xuất WordPress (để lấy bài viết cũ; thông điệp và giá trị cốt lõi đã có từ 19/11/2026, dùng tạm) | 22 | Mục Tin tức và bài viết |
 | 3 | Ciputra: số nhà, tên chính thức của tòa (đang tạm gọi CC1) | 8 | Bản đồ, schema Ciputra |
 
 Video "Tiếng Anh tại Casa" dùng được nếu Marketing sửa hai câu phụ đề "trẻ từ 0 đến 6 tuổi" và "100% giáo viên nước ngoài" (QUYET-DINH Q26).
