@@ -1,0 +1,17 @@
+---
+// Video tự lưu trên máy chủ của site: không tải trước (preload="none"), chỉ tải khi bấm phát.
+// Không dùng YouTube/Facebook nhúng để không đặt cookie theo dõi (QUYET-DINH Q5).
+interface Props {
+  src: string; poster: string; rong: number; cao: number;
+  tieuDe: string; moTa: string; lang: 'vi' | 'en';
+}
+const { src, poster, rong, cao, tieuDe, moTa, lang } = Astro.props;
+const doc = cao > rong;
+---
+<figure class:list={['khung-video', { 'khung-video--doc': doc }]}>
+  <video controls preload="none" playsinline poster={poster} width={rong} height={cao} aria-label={tieuDe}>
+    <source src={src} type="video/mp4" />
+    <a href={src}>{lang === 'en' ? 'Download the video' : 'Tải video'}</a>
+  </video>
+  <figcaption><strong>{tieuDe}</strong> {moTa}</figcaption>
+</figure>

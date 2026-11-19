@@ -449,3 +449,13 @@ body.co-thanh-day { padding-bottom: calc(var(--cao-thanh-day) + env(safe-area-in
 .khoi-anh-chu { display: grid; gap: var(--k-6); align-items: center; }
 @media (min-width: 56rem) { .khoi-anh-chu { grid-template-columns: 0.8fr 1.2fr; } }
 .danh-sach-tron:has(> .the--sap) { max-width: 40rem; }
+
+/* Bộ ảnh và video */
+.bo-anh { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--k-3); grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr)); }
+.bo-anh li { margin: 0; }
+.bo-anh img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--bo-the); }
+.khung-video { margin: 0; }
+.khung-video video { display: block; width: 100%; height: auto; border-radius: var(--bo-the); background: var(--brand-navy); }
+.khung-video--doc { max-width: 24rem; }
+.khung-video figcaption { margin-top: var(--k-2); color: var(--mau-chu-phu); font-size: var(--co-nho); }
+.khung-video figcaption strong { color: var(--brand-navy); }

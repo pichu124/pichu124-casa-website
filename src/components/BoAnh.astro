@@ -1,0 +1,17 @@
+---
+// Bộ ảnh dạng lưới: ảnh tải chậm (lazy), AVIF/WebP, kích thước cố định để không xô trang.
+// Ảnh có trẻ: chủ trường xác nhận đã có đồng ý bằng văn bản của phụ huynh (QUYET-DINH Q25).
+import { Picture } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+interface Anh { src: ImageMetadata; alt: string }
+interface Props { anh: Anh[]; nhan: string }
+const { anh, nhan } = Astro.props;
+---
+<ul class="bo-anh" role="list" aria-label={nhan}>
+  {anh.map((a) => (
+    <li>
+      <Picture src={a.src} alt={a.alt} formats={['avif', 'webp']} widths={[360, 540, 800]}
+        sizes="(min-width: 64rem) 30vw, (min-width: 40rem) 45vw, 92vw" loading="lazy" />
+    </li>
+  ))}
+</ul>
