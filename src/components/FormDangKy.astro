@@ -1,7 +1,7 @@
 ---
 // Form đăng ký tham quan. Chỉ thu 4 thông tin + ô đồng ý (CLAUDE.md, Giai đoạn 4).
 // Gửi bằng HTML thường tới dịch vụ form trên máy chủ; không cần JS.
-// TRẠNG THÁI: giao diện xong; dịch vụ nhận form CHƯA CÓ (Giai đoạn 4).
+// Dịch vụ nhận form: thư mục form/ (Node, 127.0.0.1:3100), Caddy chuyển /api/* tới đó.
 import Can from './Can.astro';
 import { CO_SO, type Lang } from '../data/co-so';
 import { FORM_ACTION, FORM_DA_HOAT_DONG, LIEN_HE } from '../data/lien-he';

@@ -10,7 +10,8 @@
     "preview": "astro preview",
     "check": "node scripts/kiem-tra/index.mjs",
     "check:truoc-khi-dang": "node scripts/kiem-tra/index.mjs --truoc-khi-dang",
-    "redirects": "node scripts/tao-redirects.mjs"
+    "redirects": "node scripts/tao-redirects.mjs",
+    "test:form": "node --test form/test/*.test.mjs"
   },
   "engines": {
     "node": ">=20"

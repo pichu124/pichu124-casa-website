@@ -37,3 +37,13 @@ mv -T "${GOC_WEB}/current.moi" "${GOC_WEB}/current"
 echo "✔ Đã phát hành: ${GOC_WEB}/current → releases/${BAN}"
 echo "  Các bản có trên máy:"
 ls -1 "${GOC_WEB}/releases" | tail -n 5
+
+# Dịch vụ form chạy từ bản chép riêng (/opt/casa-website-form, chỉ root sửa được).
+# Mã mới chỉ có hiệu lực sau khi chạy kịch bản cài bằng sudo.
+if [ ! -d /opt/casa-website-form ]; then
+  echo "ℹ Dịch vụ form chưa cài. Xem docs/TRIEN-KHAI.md, mục \"Dịch vụ nhận form\"."
+elif ! diff -rq "$MA_NGUON/form/src" /opt/casa-website-form/src >/dev/null 2>&1 \
+  || ! diff -rq "$MA_NGUON/form/scripts" /opt/casa-website-form/scripts >/dev/null 2>&1; then
+  echo "⚠ Mã dịch vụ form đã thay đổi. Chạy thêm (bằng user có sudo):"
+  echo "    sudo bash $MA_NGUON/deploy/cai-dich-vu-form.sh"
+fi

@@ -1,0 +1,12 @@
+{
+  "name": "casa-website-form",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Dịch vụ nhận form đăng ký tham quan của website Casa Preschool. Không dùng thư viện ngoài.",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node src/server.mjs",
+    "test": "node --test test/*.test.mjs"
+  }
+}

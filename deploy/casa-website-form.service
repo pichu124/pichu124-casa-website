@@ -1,0 +1,40 @@
+# Dịch vụ nhận form đăng ký tham quan của website (Giai đoạn 4).
+# Cài bằng: sudo bash /opt/casa-website/src/deploy/cai-dich-vu-form.sh
+[Unit]
+Description=Casa Preschool - dich vu nhan form dang ky tham quan
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=casa-form
+Group=casa-form
+EnvironmentFile=/etc/casa-website/form.env
+WorkingDirectory=/opt/casa-website-form
+ExecStart=/usr/bin/node /opt/casa-website-form/src/server.mjs
+Restart=on-failure
+RestartSec=5
+
+# Dữ liệu form: /var/lib/casa-website (chỉ user casa-form đọc được)
+StateDirectory=casa-website
+StateDirectoryMode=0700
+UMask=0077
+
+# Khoá chặt quyền: không đọc thư mục người dùng, không ghi ngoài thư mục dữ liệu
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+RestrictNamespaces=yes
+LockPersonality=yes
+RestrictRealtime=yes
+SystemCallArchitectures=native
+CapabilityBoundingSet=
+
+[Install]
+WantedBy=multi-user.target

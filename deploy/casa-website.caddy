@@ -6,6 +6,8 @@
 # Tên miền bản thử: casa-website-thu.duckdns.org (DuckDNS, chọn ngày 15/11/2026).
 # Thay một chỗ trước khi dùng:
 #   MA_BAM_MAT_KHAU   → kết quả của lệnh `caddy hash-password` (không phải mật khẩu gốc)
+# Khi tệp mẫu này thay đổi, áp dụng lên máy bằng: sudo bash /opt/casa-website/src/deploy/cap-nhat-caddy.sh
+# (kịch bản giữ nguyên tên miền và mật khẩu đang dùng trên máy)
 
 casa-website-thu.duckdns.org {
 	root * /var/www/casa-website/current
@@ -32,10 +34,16 @@ casa-website-thu.duckdns.org {
 	@html path *.html */
 	header @html Cache-Control "no-cache"
 
-	# Dịch vụ form (Giai đoạn 4) sẽ nghe ở 127.0.0.1:3100; chưa bật ở bản thử
-	# reverse_proxy /api/* 127.0.0.1:3100
+	# Dịch vụ nhận form đăng ký tham quan (Giai đoạn 4), chỉ nghe trong máy
+	reverse_proxy /api/* 127.0.0.1:3100
 
 	file_server
+
+	# Dịch vụ form không trả lời: báo phụ huynh gọi hotline thay vì trang trắng
+	handle_errors 502 503 504 {
+		header Content-Type "text/plain; charset=utf-8"
+		respond "Hệ thống nhận đăng ký đang tạm dừng. Xin gọi 0989 059 838 để nhà trường hẹn lịch tham quan. / Our booking system is temporarily unavailable. Please call +84 989 059 838." 503
+	}
 
 	handle_errors 404 {
 		@en path /en/*

@@ -185,6 +185,106 @@ Nếu cấu hình Caddy gây lỗi: chép lại bản sao lưu, kiểm tra, nạ
 sudo cp -a /etc/caddy/Caddyfile.truoc-casa-website /etc/caddy/Caddyfile && sudo caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile && sudo systemctl reload caddy
 ```
 
+## Dịch vụ nhận form đăng ký tham quan (Giai đoạn 4)
+
+Form trên site gửi tới `/api/dang-ky`. Caddy chuyển yêu cầu đó tới một dịch vụ Node nhỏ chỉ nghe ở `127.0.0.1:3100`. Dịch vụ kiểm tra dữ liệu, gửi email về `tuyensinh@cdb.edu.vn` qua máy chủ gửi thư của Google, ghi thêm một dòng vào `/var/lib/casa-website/dang-ky.jsonl`, rồi đưa phụ huynh sang trang Cảm ơn.
+
+| Thành phần | Ở đâu trên VPS | Ai sửa được |
+|---|---|---|
+| Mã dịch vụ | `/opt/casa-website-form` (chép từ `form/` trong repo) | Chỉ root |
+| Cấu hình, mật khẩu ứng dụng | `/etc/casa-website/form.env` | Chỉ root; user `casa-form` chỉ đọc |
+| Dữ liệu đăng ký | `/var/lib/casa-website/dang-ky.jsonl` | Chỉ user `casa-form` |
+| Dịch vụ chạy nền | `casa-website-form.service` (user `casa-form`) | systemd |
+| Xoá đăng ký quá 12 tháng | `casa-website-form-don.timer`, 2h30 sáng mỗi ngày | systemd |
+
+Dịch vụ không dùng thư viện ngoài, không đọc hay ghi gì của app casa-mamnon.
+
+### Bước F1. Lấy mã mới về VPS
+
+```bash
+sudo -H -u casa-website /opt/casa-website/src/deploy/cap-nhat-ban-thu.sh
+```
+
+### Bước F2. Tạo mật khẩu ứng dụng Google (chủ tài khoản tuyensinh@cdb.edu.vn tự làm)
+
+Mật khẩu ứng dụng là một mật khẩu riêng 16 ký tự, chỉ dùng cho website gửi thư; không phải mật khẩu đăng nhập Gmail. Không gửi mật khẩu này qua chat hay email.
+
+1. Đăng nhập Google bằng `tuyensinh@cdb.edu.vn`.
+2. Bật **Xác minh 2 bước** nếu chưa bật: [myaccount.google.com/security](https://myaccount.google.com/security).
+3. Mở [myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords), đặt tên `Website Casa`, bấm **Tạo**. Google hiện 16 ký tự.
+4. Nếu trang báo không dùng được mật khẩu ứng dụng: người quản trị Google Workspace của trường cần cho phép xác minh 2 bước (Bảng quản trị → Bảo mật → Xác thực → Xác minh 2 bước).
+
+### Bước F3. Cài dịch vụ
+
+```bash
+sudo bash /opt/casa-website/src/deploy/cai-dich-vu-form.sh
+```
+
+Lần đầu, kịch bản tạo user `casa-form`, tạo tệp cấu hình từ mẫu rồi dừng lại, báo chưa có mật khẩu ứng dụng. Mở tệp cấu hình:
+
+```bash
+sudo nano /etc/casa-website/form.env
+```
+
+Thay `DIEN_MAT_KHAU_UNG_DUNG` bằng 16 ký tự vừa tạo (viết liền, không dấu cách). Lưu bằng Ctrl+O, Enter, thoát bằng Ctrl+X. Rồi chạy lại kịch bản cài:
+
+```bash
+sudo bash /opt/casa-website/src/deploy/cai-dich-vu-form.sh
+```
+
+Kết quả đúng: dòng `✔ Dịch vụ form đang chạy ở 127.0.0.1:3100.`
+
+### Bước F4. Cho Caddy chuyển form tới dịch vụ
+
+Kịch bản dưới áp dụng tệp mẫu `deploy/casa-website.caddy` mới (thêm `reverse_proxy /api/*` và trang báo lỗi khi dịch vụ dừng), giữ nguyên tên miền và mật khẩu xem đang dùng. Cấu hình sai thì tự khôi phục bản cũ.
+
+```bash
+sudo bash /opt/casa-website/src/deploy/cap-nhat-caddy.sh
+```
+
+### Bước F5. Gửi thử
+
+Gửi thử thẳng tới dịch vụ trên VPS. Kết quả đúng: `303 /tuyen-sinh/cam-on/`, và vài giây sau hộp thư `tuyensinh@cdb.edu.vn` nhận được thư "[Website] Đăng ký tham quan: Thử nghiệm website – Kim Mã".
+
+```bash
+curl -s -o /dev/null -w "%{http_code} %{redirect_url}\n" --data-urlencode "ten_phu_huynh=Thử nghiệm website" -d "ngon_ngu=vi&so_dien_thoai=0900000000&thang_sinh=5&nam_sinh=2023&co_so=kim-ma&dong_y=co" http://127.0.0.1:3100/api/dang-ky
+```
+
+Sau đó mở bản thử trên điện thoại, điền form ở trang Tuyển sinh, kiểm tra trang Cảm ơn hiện ra và thư về đúng hộp thư.
+
+### Xem đăng ký và nhật ký
+
+Danh sách đăng ký đã lưu (mỗi dòng một đăng ký):
+
+```bash
+sudo cat /var/lib/casa-website/dang-ky.jsonl
+```
+
+Nhật ký dịch vụ (không ghi tên hay số điện thoại phụ huynh):
+
+```bash
+sudo journalctl -u casa-website-form -n 30 --no-pager
+```
+
+### Khi có lỗi
+
+| Dấu hiệu | Nguyên nhân thường gặp | Cách xử lý |
+|---|---|---|
+| Nhật ký có `từ chối ở bước mật khẩu: 535` | Mật khẩu ứng dụng sai, hoặc chưa bật xác minh 2 bước | Tạo mật khẩu ứng dụng mới (Bước F2), sửa `form.env`, chạy lại kịch bản cài |
+| Phụ huynh thấy trang "Hệ thống đang gặp sự cố" kèm hotline | Gửi email lỗi. Đăng ký vẫn được lưu, đánh dấu `"email":"loi"` | Xem nhật ký; gọi lại phụ huynh theo dòng đó trong tệp dữ liệu |
+| Phụ huynh thấy chữ "Hệ thống nhận đăng ký đang tạm dừng…" | Dịch vụ không chạy | `sudo systemctl status casa-website-form`, rồi chạy lại kịch bản cài |
+| Lệnh cập nhật bản thử báo "Mã dịch vụ form đã thay đổi" | Có bản dịch vụ mới | Chạy lại `sudo bash /opt/casa-website/src/deploy/cai-dich-vu-form.sh` |
+
+Tạm dừng nhận form (site vẫn chạy, form sẽ báo gọi hotline):
+
+```bash
+sudo systemctl stop casa-website-form
+```
+
+### Trước khi mở form cho phụ huynh thật
+
+Bản thử có mật khẩu nên chỉ người được mời mới gửi được. Trước ngày chuyển tên miền chính, Chính sách bảo vệ dữ liệu phải được duyệt (thời hạn lưu 12 tháng, rà soát pháp lý), và `npm run check:truoc-khi-dang` phải không còn chỗ `[CẦN]`.
+
 ## Bản ghi DNS của casadeibambini.edu.vn (kiểm tra 19/11/2026)
 
 DNS quản lý tại ZoneDNS.vn (người phụ trách dự án có tài khoản). Tám bản ghi đang có:

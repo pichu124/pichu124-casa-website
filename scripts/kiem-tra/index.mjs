@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // npm run check — kiểm tra trước mỗi commit (CLAUDE.md, mục "Kiểm tra trước mỗi commit").
 // npm run check:truoc-khi-dang — thêm: báo đỏ nếu còn [CẦN: …] trên trang.
+// Mục 10 chạy kiểm thử của dịch vụ nhận form (thư mục form/).
 // Không nới bộ canh để cho code qua. Đỏ thì sửa nội dung.
 
 import { spawnSync } from 'node:child_process';
@@ -216,6 +217,12 @@ for (const [p, { doc }] of TRANG) {
   else console.log(`   · ${p}: ${n} chỗ`);
 }
 console.log(`   Tổng: ${tongCan} chỗ [CẦN] trên ${TRANG.size} trang`);
+
+// ---------------------------------------------------------------- 10. Dịch vụ nhận form (Giai đoạn 4)
+tieuDe('10. Dịch vụ nhận form: kiểm thử tự động');
+const kiemThuForm = spawnSync(process.execPath, ['--test', '--test-reporter=dot', ...readdirSync(join(GOC, 'form/test')).filter((f) => f.endsWith('.test.mjs')).map((f) => join(GOC, 'form/test', f))], { encoding: 'utf8' });
+if (kiemThuForm.status === 0) dat('Các bài kiểm thử dịch vụ form đều đạt');
+else { loi('Kiểm thử dịch vụ form', 'có bài không đạt'); console.log((kiemThuForm.stdout + kiemThuForm.stderr).split('\n').slice(-40).join('\n')); }
 
 finish();
 function finish() {

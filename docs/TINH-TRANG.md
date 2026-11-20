@@ -1,6 +1,6 @@
 # Tình trạng dự án và kế hoạch
 
-Cập nhật 18/11/2026 (sau khi nhận phiếu đã điền, logo và ảnh trong thư mục Drive của trường). Tài liệu ngắn nhất để nắm dự án đang ở đâu. Chi tiết nằm ở các tài liệu được dẫn trong từng mục.
+Cập nhật 20/11/2026 (sau khi nhận phiếu đã điền, logo và ảnh trong thư mục Drive của trường). Tài liệu ngắn nhất để nắm dự án đang ở đâu. Chi tiết nằm ở các tài liệu được dẫn trong từng mục.
 
 ## Đang ở đâu
 
@@ -9,8 +9,8 @@ Cập nhật 18/11/2026 (sau khi nhận phiếu đã điền, logo và ảnh tro
 | 1. Kiểm kê site cũ | **Xong** | 226 URL cũ có đích mới (`docs/URL-CU.csv`) |
 | 2. Cấu trúc, công nghệ, thiết kế | **Xong** (logo, màu, phông thật từ 18/11) | Astro, 15 trang × 2 thứ tiếng, `npm run check` 8 mục, rà mobile/UX/truy cập/SEO/hiệu năng (`docs/BAO-CAO-RA-SOAT.md`) |
 | 3. Dựng nội dung | **Đang làm** | Đã áp dụng phiếu: địa chỉ, lớp và hệ từng cơ sở, giờ học, tuyển sinh 5 bước, an toàn, đội ngũ, Zalo, chính sách dữ liệu. Còn 26 chỗ `[CẦN]` (gồm cả bản tiếng Anh) |
-| 4. Form đăng ký tham quan | **Chưa làm, đủ thông tin để làm** | Hộp thư gửi: tuyensinh@cdb.edu.vn (phiếu câu 21); mật khẩu ứng dụng do người quản trị tự đặt trên máy |
-| 5. Bản thử trên VPS | **Đang chạy** | `https://casa-website-thu.duckdns.org`, có mật khẩu, `noindex`. Chưa có form. Cập nhật bằng `deploy/cap-nhat-ban-thu.sh`; đổi mật khẩu bằng `deploy/doi-mat-khau.sh` (`docs/TRIEN-KHAI.md`) |
+| 4. Form đăng ký tham quan | **Đã dựng, chờ cài trên VPS** | Dịch vụ ở `form/` (25 bài kiểm thử), cài theo `docs/TRIEN-KHAI.md` mục "Dịch vụ nhận form". Cần mật khẩu ứng dụng Google của tuyensinh@cdb.edu.vn (người giữ tài khoản tự đặt trên máy chủ). Chỉ mở cho phụ huynh thật sau khi Chính sách dữ liệu được duyệt |
+| 5. Bản thử trên VPS | **Đang chạy** | `https://casa-website-thu.duckdns.org`, có mật khẩu, `noindex`. Form: chờ cài dịch vụ (Giai đoạn 4). Cập nhật bằng `deploy/cap-nhat-ban-thu.sh`; đổi mật khẩu bằng `deploy/doi-mat-khau.sh` (`docs/TRIEN-KHAI.md`) |
 | 6. Chuyển tên miền chính | **Chưa làm** | Cần quyền DNS của `casadeibambini.edu.vn` và nội dung đã được chủ trường xác nhận |
 
 ## Cần trường phản hồi

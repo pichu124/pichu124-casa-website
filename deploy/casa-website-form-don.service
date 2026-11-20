@@ -1,0 +1,18 @@
+# Xoá đăng ký đã lưu quá thời hạn (LUU_TOI_DA_NGAY). Chạy bởi casa-website-form-don.timer.
+[Unit]
+Description=Casa Preschool - xoa dang ky qua thoi han luu
+
+[Service]
+Type=oneshot
+User=casa-form
+Group=casa-form
+EnvironmentFile=/etc/casa-website/form.env
+ExecStart=/usr/bin/node /opt/casa-website-form/scripts/don-du-lieu.mjs
+StateDirectory=casa-website
+StateDirectoryMode=0700
+UMask=0077
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateNetwork=yes

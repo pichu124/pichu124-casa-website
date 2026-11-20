@@ -24,4 +24,4 @@ export const LIEN_HE = {
 // Form đăng ký tham quan (Giai đoạn 4). Khi dịch vụ form chạy thật trên máy chủ,
 // đổi FORM_DA_HOAT_DONG thành true để bỏ dòng cảnh báo trong bản xem trước.
 export const FORM_ACTION = '/api/dang-ky';
-export const FORM_DA_HOAT_DONG = false;
+export const FORM_DA_HOAT_DONG = true; // dịch vụ form có trong form/ (Giai đoạn 4, 20/11/2026)
