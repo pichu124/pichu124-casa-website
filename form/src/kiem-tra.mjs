@@ -44,8 +44,9 @@ export function chuanHoaSdt(s) {
   let so = String(s ?? '').replace(/[\s.\-()]/g, '');
   if (so.startsWith('+84')) so = '0' + so.slice(3);
   else if (so.startsWith('84') && so.length >= 11) so = '0' + so.slice(2);
-  // Di động: 10 số (0 + 9 số). Số bàn: 11 số (0 + mã vùng 2 số + 8 số).
-  return /^0[1-9]\d{8,9}$/.test(so) ? so : null;
+  // Di động hiện hành: 10 số, đầu 03, 05, 07, 08, 09 (đầu 01x cũ đã đổi từ 2018).
+  // Số bàn: 11 số, đầu 02 (mã vùng sau năm 2017, ví dụ 024 Hà Nội).
+  return /^0[35789]\d{8}$/.test(so) || /^02\d{9}$/.test(so) ? so : null;
 }
 
 /**

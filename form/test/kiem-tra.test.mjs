@@ -21,7 +21,13 @@ test('số điện thoại', () => {
   assert.equal(chuanHoaSdt('84912345678'), '0912345678');
   assert.equal(chuanHoaSdt('024.3765.4321'), '02437654321');
   assert.equal(chuanHoaSdt('0912-345-678'), '0912345678');
-  for (const sai of ['', '12345', '0012345678', '09123456789012', 'abc0912345678', '0912 345 67']) assert.equal(chuanHoaSdt(sai), null, sai);
+  assert.equal(chuanHoaSdt('0387654321'), '0387654321');
+  assert.equal(chuanHoaSdt('0563456789'), '0563456789');
+  assert.equal(chuanHoaSdt('0701234567'), '0701234567');
+  assert.equal(chuanHoaSdt('0812345678'), '0812345678');
+  // Đầu số 01x cũ (đổi năm 2018), đầu 04/06, số bàn thiếu số, số di động thừa số
+  for (const sai of ['', '12345', '0012345678', '09123456789012', 'abc0912345678', '0912 345 67',
+    '0123456789', '01234567890', '0412345678', '0612345678', '0243765432', '09123456789']) assert.equal(chuanHoaSdt(sai), null, sai);
 });
 
 test('báo đủ các lỗi', () => {
