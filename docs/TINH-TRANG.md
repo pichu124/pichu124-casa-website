@@ -9,8 +9,8 @@ Cập nhật 20/11/2026 (sau khi nhận phiếu đã điền, logo và ảnh tro
 | 1. Kiểm kê site cũ | **Xong** | 226 URL cũ có đích mới (`docs/URL-CU.csv`) |
 | 2. Cấu trúc, công nghệ, thiết kế | **Xong** (logo, màu, phông thật từ 18/11) | Astro, 15 trang × 2 thứ tiếng, `npm run check` 8 mục, rà mobile/UX/truy cập/SEO/hiệu năng (`docs/BAO-CAO-RA-SOAT.md`) |
 | 3. Dựng nội dung | **Đang làm** | Đã áp dụng phiếu: địa chỉ, lớp và hệ từng cơ sở, giờ học, tuyển sinh 5 bước, an toàn, đội ngũ, Zalo, chính sách dữ liệu. Còn 26 chỗ `[CẦN]` (gồm cả bản tiếng Anh) |
-| 4. Form đăng ký tham quan | **Đã dựng, chờ cài trên VPS** | Dịch vụ ở `form/` (25 bài kiểm thử), cài theo `docs/TRIEN-KHAI.md` mục "Dịch vụ nhận form". Cần mật khẩu ứng dụng Google của tuyensinh@cdb.edu.vn (người giữ tài khoản tự đặt trên máy chủ). Chỉ mở cho phụ huynh thật sau khi Chính sách dữ liệu được duyệt |
-| 5. Bản thử trên VPS | **Đang chạy** | `https://casa-website-thu.duckdns.org`, có mật khẩu, `noindex`. Form: chờ cài dịch vụ (Giai đoạn 4). Cập nhật bằng `deploy/cap-nhat-ban-thu.sh`; đổi mật khẩu bằng `deploy/doi-mat-khau.sh` (`docs/TRIEN-KHAI.md`) |
+| 4. Form đăng ký tham quan | **Đang chạy trên bản thử** (20/11/2026) | Dịch vụ `casa-website-form` đã cài trên VPS; gửi thử thành công, thư về tuyensinh@cdb.edu.vn, dữ liệu ghi vào `/var/lib/casa-website/`. Chỉ mở cho phụ huynh thật sau khi Chính sách dữ liệu được duyệt |
+| 5. Bản thử trên VPS | **Đang chạy** | `https://casa-website-thu.duckdns.org`, có mật khẩu, `noindex`. Form đăng ký đã chạy (20/11/2026). Cập nhật bằng `deploy/cap-nhat-ban-thu.sh`; đổi mật khẩu bằng `deploy/doi-mat-khau.sh` (`docs/TRIEN-KHAI.md`) |
 | 6. Chuyển tên miền chính | **Chưa làm** | Cần quyền DNS của `casadeibambini.edu.vn` và nội dung đã được chủ trường xác nhận |
 
 ## Cần trường phản hồi

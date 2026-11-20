@@ -187,6 +187,8 @@ sudo cp -a /etc/caddy/Caddyfile.truoc-casa-website /etc/caddy/Caddyfile && sudo 
 
 ## Dịch vụ nhận form đăng ký tham quan (Giai đoạn 4)
 
+**Trạng thái:** đã cài trên VPS và gửi thử thành công ngày 20/11/2026 (Node v22.23.5 ở `/usr/bin/node`; Caddy đã bật `reverse_proxy /api/*`).
+
 Form trên site gửi tới `/api/dang-ky`. Caddy chuyển yêu cầu đó tới một dịch vụ Node nhỏ chỉ nghe ở `127.0.0.1:3100`. Dịch vụ kiểm tra dữ liệu, gửi email về `tuyensinh@cdb.edu.vn` qua máy chủ gửi thư của Google, ghi thêm một dòng vào `/var/lib/casa-website/dang-ky.jsonl`, rồi đưa phụ huynh sang trang Cảm ơn.
 
 | Thành phần | Ở đâu trên VPS | Ai sửa được |
