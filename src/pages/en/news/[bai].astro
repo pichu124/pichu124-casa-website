@@ -1,0 +1,10 @@
+---
+// Bài viết dạng tệp, bản tiếng Anh: /en/news/<duongDan>/ (src/bai-viet/<mã-bài>/en.md)
+import BaiViet from '../../../components/trang/BaiViet.astro';
+import { BAI_VIET } from '../../../data/bai-viet';
+export function getStaticPaths() {
+  return BAI_VIET.map((b) => ({ params: { bai: b.en.duongDan }, props: { ma: b.ma } }));
+}
+const { ma } = Astro.props;
+---
+<BaiViet lang="en" ma={ma} />

@@ -1,0 +1,63 @@
+---
+// Khung chung cho bài viết dạng tệp (src/bai-viet/<mã-bài>/vi.md, en.md; QUYET-DINH Q32).
+// Thân bài lấy từ Markdown; tiêu đề, mô tả, ngày, trang dẫn về lấy từ phần đầu tệp.
+// Cuối mỗi bài luôn có lời mời đăng ký tham quan và liên kết về trang "danVe" (docs/SEO-KE-HOACH.md, mục 2).
+import Base from '../../layouts/Base.astro';
+import { BAI_VIET, khoaBai } from '../../data/bai-viet';
+import type { Lang } from '../../data/co-so';
+import { LIEN_HE, SITE } from '../../data/lien-he';
+import { url, taoT, FORM_ANCHOR } from '../../i18n/routes';
+interface Props { lang: Lang; ma: string }
+const { lang, ma } = Astro.props;
+const t = taoT(lang);
+const bai = BAI_VIET.find((b) => b.ma === ma)!;
+const tt = bai[lang];
+const tepBai = import.meta.glob<{ Content: any }>('../../bai-viet/*/*.md', { eager: true });
+const { Content } = tepBai[`../../bai-viet/${ma}/${lang}.md`];
+const khoa = khoaBai(ma);
+const TEN_DAN_VE: Record<string, [string, string]> = {
+  admissions: ['Xem tuyển sinh và đăng ký tham quan', 'See admissions and book a visit'],
+  nursery: ['Xem chương trình nhà trẻ 15–36 tháng', 'See the nursery programme for 15–36 months'],
+  kindergarten: ['Xem chương trình mẫu giáo 3–6 tuổi', 'See the kindergarten programme for ages 3–6'],
+  programmes: ['Xem chương trình học và hai hệ học', 'See our programmes and two tracks'],
+  campuses: ['Xem các cơ sở', 'See our campuses'],
+};
+const tenDanVe = TEN_DAN_VE[tt.danVe] ?? ['Xem thêm', 'Read more'];
+const [n, th, ng] = tt.ngay.split('-');
+const ngayHien = lang === 'vi' ? `${ng}/${th}/${n}` : new Date(`${tt.ngay}T00:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const duongDan = [
+  { ten: t('Trang chủ', 'Home'), href: url('home', lang) },
+  { ten: t('Bài viết', 'Articles'), href: url('articles', lang) },
+  { ten: tt.h1, href: url(khoa, lang) },
+];
+const schema = [{
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: tt.h1, inLanguage: lang, datePublished: tt.ngay,
+  mainEntityOfPage: SITE + url(khoa, lang),
+  author: { '@id': `${SITE}/#truong` }, publisher: { '@id': `${SITE}/#truong` },
+}];
+---
+<Base lang={lang} routeKey={khoa} duongDan={duongDan} schema={schema} tieuDeDayDu tieuDe={tt.tieuDe} moTa={tt.moTa}>
+  <article class="phan phan--sat">
+    <div class="khung bai-viet">
+      <h1>{tt.h1}</h1>
+      <p class="bai-viet__ngay"><time datetime={tt.ngay}>{t(`Ngày đăng ${ngayHien}`, `Published ${ngayHien}`)}</time></p>
+      <Content />
+
+      <h2>{t('Đến xem lớp học cùng con', 'Come and see the classrooms with your child')}</h2>
+      <p>{t('Đến tận nơi xem lớp và trò chuyện với cô giáo giúp ba mẹ chọn trường dễ hơn.', 'Visiting in person, seeing the classrooms and talking with the teachers makes choosing a school easier.')}</p>
+      <div class="cum">
+        <a class="nut nut--chinh" href={url('admissions', lang) + FORM_ANCHOR}>{t('Đăng ký tham quan', 'Book a visit')}</a>
+        <a class="nut nut--phu" href={LIEN_HE.tel}>{t(`Gọi ${LIEN_HE.hotline}`, `Call ${LIEN_HE.hotlineQuocTe}`)}</a>
+      </div>
+      <p class="sau-luoi"><a href={url(tt.danVe, lang)}>{t(tenDanVe[0], tenDanVe[1])}</a></p>
+
+      {tt.nguon && tt.nguon.length > 0 && (
+        <p class="bai-viet__nguon">
+          {t('Nguồn tham khảo:', 'Sources:')}{' '}
+          {tt.nguon.map((x, i) => <>{i > 0 && '; '}<a href={x.url} rel="noopener">{x.ten}</a></>)}.
+        </p>
+      )}
+    </div>
+  </article>
+</Base>

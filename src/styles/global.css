@@ -419,6 +419,7 @@ body.co-thanh-day { padding-bottom: calc(var(--cao-thanh-day) + env(safe-area-in
 .bai-viet h2 { margin-top: var(--k-7); }
 .bai-viet h3 { margin-top: var(--k-5); }
 .bai-viet__nguon { font-size: var(--co-nho); color: var(--mau-chu-phu); border-top: 1px solid var(--mau-vien); padding-top: var(--k-4); margin-top: var(--k-6); }
+.bai-viet__ngay { font-size: var(--co-nho); color: var(--mau-chu-phu); margin-top: calc(-1 * var(--k-3)); }
 
 /* ------------------------------------------------------------ In ấn */
 @media print {

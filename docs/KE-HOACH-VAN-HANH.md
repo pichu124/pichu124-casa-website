@@ -65,7 +65,7 @@ Nguyên tắc giữ đúng tài liệu SEO của Project Casa: agent soạn, age
 
 | # | Việc | Ai | Tình trạng |
 |---|---|---|---|
-| S1 | Chuyển bài viết sang dạng Markdown, mỗi bài một tệp. Có ô `ciputra: true` để bài về Ciputra tự ẩn khi công tắc tắt. Để agent soạn bài mà không phải sửa mã | C | Chưa làm. Nên làm ngay sau A3 |
+| S1 | Chuyển bài viết sang dạng Markdown, mỗi bài một tệp. Có ô `ciputra: true` để bài về Ciputra tự ẩn khi công tắc tắt. Hướng dẫn: `docs/MAU-BAI-VIET.md` | C | **Xong 23/11** |
 | S2 | Lịch bài cho 3 cơ sở (bảng dưới) | C soạn, CT duyệt | Lịch đề xuất |
 | S3 | Ba tác vụ tự chạy theo lịch. Mỗi tác vụ bật riêng, cần PT đồng ý (xem dưới) | C tạo khi PT đồng ý | Chờ |
 | S4 | Hồ sơ Google Maps của 3 cơ sở:<br>• kiểm tra ai giữ quyền, gom về một tài khoản của trường;<br>• tên, địa chỉ, số điện thoại giống hệt website;<br>• ô website trỏ về đúng trang cơ sở (ví dụ `…/co-so/kim-ma/`) | NT | Chờ |

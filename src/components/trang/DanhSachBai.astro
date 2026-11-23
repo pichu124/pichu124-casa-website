@@ -1,8 +1,10 @@
 ---
-// Bài viết: danh sách bài giải thích cho phụ huynh. Thêm bài: thêm vào BAI, đủ hai thứ tiếng (QUYET-DINH Q15).
+// Bài viết: danh sách bài giải thích cho phụ huynh. Bài mới: thêm thư mục src/bai-viet/<mã-bài>/ (docs/MAU-BAI-VIET.md);
+// danh sách tự cập nhật, mới nhất trước. Bài nền Cambridge Early Years luôn đứng cuối.
 import Base from '../../layouts/Base.astro';
 import KhoiCta from '../KhoiCta.astro';
 import type { Lang } from '../../data/co-so';
+import { BAI_VIET, khoaBai } from '../../data/bai-viet';
 import { url, taoT } from '../../i18n/routes';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -12,6 +14,7 @@ const duongDan = [
   { ten: t('Bài viết', 'Articles'), href: url('articles', lang) },
 ];
 const BAI = [
+  ...BAI_VIET.map((b) => ({ key: khoaBai(b.ma), ten: b[lang].h1, tom: b[lang].tom })),
   { key: 'article-cey',
     ten: t('Cambridge Early Years là gì? Giải thích cho phụ huynh có con 3–6 tuổi', 'What is Cambridge Early Years? A guide for parents of children aged 3–6'),
     tom: t('Ba lớp theo độ tuổi, sáu lĩnh vực phát triển và cách trẻ học qua chơi.', 'Three year groups, six areas of development and how children learn through play.') },

@@ -2,6 +2,7 @@
 // Mỗi trang tiếng Việt có đúng một trang tiếng Anh tương ứng.
 import type { Lang } from '../data/co-so';
 import { CO_SO } from '../data/co-so';
+import { BAI_VIET, khoaBai } from '../data/bai-viet';
 
 const coSo = Object.fromEntries(
   CO_SO.map((c) => [`co-so-${c.slug}`, { vi: `/co-so/${c.slug}/`, en: `/en/campuses/${c.slug}/` }]),
@@ -21,6 +22,7 @@ export const ROUTES = {
   contact: { vi: '/lien-he/', en: '/en/contact/' },
   privacy: { vi: '/chinh-sach-bao-ve-du-lieu/', en: '/en/privacy-policy/' },
   ...coSo,
+  ...Object.fromEntries(BAI_VIET.map((b) => [khoaBai(b.ma), { vi: `/tin-tuc/${b.vi.duongDan}/`, en: `/en/news/${b.en.duongDan}/` }])),
 } as Record<string, { vi: string; en: string }>;
 
 export type RouteKey = keyof typeof ROUTES;
