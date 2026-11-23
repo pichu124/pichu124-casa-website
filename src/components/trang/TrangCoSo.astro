@@ -58,11 +58,11 @@ const schemaHoiDap = laCiputra ? [{
 }] : [];
 
 const tieuDe = laCiputra
-  ? t('Casa Preschool – Ciputra: mầm non theo khung Cambridge Early Years', 'Casa Preschool – Ciputra: preschool based on Cambridge Early Years')
+  ? t('Mầm non Ciputra (Phú Thượng) – Casa Preschool, nhận bé từ 15 tháng', 'Preschool at Ciputra, Hanoi – Casa Preschool, children from 15 months')
   : t(`Mầm non ${c.ten.vi} – Casa Preschool`, `${c.ten.en} preschool – Casa Preschool`) + (c.diaChiNgan ? ` (${c.diaChiNgan[lang]})` : '');
 const moTa = laCiputra
-  ? t('Mầm non Casa Preschool tại Ciputra (Phú Thượng): khung Cambridge Early Years cho trẻ 3–6 tuổi, nhận bé từ 15 tháng. Dự kiến khai trương quý 4/2027.',
-      'Casa Preschool at Ciputra (Phú Thượng): Cambridge Early Years framework for ages 3–6, children from 15 months. Expected to open in Q4 2027.')
+  ? t('Mầm non Casa Preschool tại Ciputra (Phú Thượng, Hà Nội): nhận bé từ 15 tháng; trẻ 3–6 tuổi học theo khung Cambridge Early Years. Dự kiến khai trương quý 4/2027.',
+      'Casa Preschool at Ciputra (Phú Thượng, Hanoi): children from 15 months; ages 3–6 follow the Cambridge Early Years framework. Expected to open in Q4 2027.')
   : t(`Casa Preschool cơ sở ${c.ten.vi}: địa chỉ, bản đồ, lớp học và đăng ký tham quan. Cơ sở đang tuyển sinh. Hotline ${LIEN_HE.hotline}.`,
       `Casa Preschool ${c.ten.en} campus: address, map, classes and visit booking. Now enrolling. Hotline ${LIEN_HE.hotlineQuocTe}.`);
 const anhCoSo = ANH_CO_SO[slug] ?? [];
