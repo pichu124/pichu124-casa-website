@@ -3,7 +3,7 @@
 import Base from '../../layouts/Base.astro';
 import FormDangKy from '../FormDangKy.astro';
 import HoiDap from '../HoiDap.astro';
-import type { Lang } from '../../data/co-so';
+import { CIPUTRA_CONG_KHAI, type Lang } from '../../data/co-so';
 import { LIEN_HE } from '../../data/lien-he';
 import { url, taoT } from '../../i18n/routes';
 interface Props { lang: Lang }
@@ -72,7 +72,7 @@ const schema = [{
     <div class="khung noi-dung">
       <h2 id="hoi-dap-tieu-de">{t('Câu hỏi thường gặp', 'Frequently asked questions')}</h2>
       <HoiDap cau={hoiDap} id="hoi-dap" />
-      <p class="sau-luoi">{t('Câu hỏi riêng về cơ sở mới:', 'Questions about the new campus:')} <a href={url('co-so-ciputra', lang)}>{t('xem trang Ciputra', 'see the Ciputra page')}</a>.</p>
+      {CIPUTRA_CONG_KHAI && <p class="sau-luoi">{t('Câu hỏi riêng về cơ sở mới:', 'Questions about the new campus:')} <a href={url('co-so-ciputra', lang)}>{t('xem trang Ciputra', 'see the Ciputra page')}</a>.</p>}
     </div>
   </section>
 

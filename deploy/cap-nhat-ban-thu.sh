@@ -3,6 +3,8 @@
 # chép bản build vào releases/<ngày-giờ>, rồi trỏ liên kết "current" sang bản mới.
 # Chạy bằng user casa-website:
 #   sudo -H -u casa-website /opt/casa-website/src/deploy/cap-nhat-ban-thu.sh
+# Xem trước bản có cơ sở Ciputra (chỉ trên bản thử):
+#   sudo -H -u casa-website env CASA_CIPUTRA=1 /opt/casa-website/src/deploy/cap-nhat-ban-thu.sh
 # Không xoá bản cũ nào; quay lui xem docs/TRIEN-KHAI.md, mục "Quay lui".
 set -euo pipefail
 
@@ -20,6 +22,12 @@ echo "  commit: $(git log -1 --format='%h %s')"
 
 echo "▶ Cài thư viện"
 npm ci --no-audit --no-fund
+
+if [ "${CASA_CIPUTRA:-}" = "1" ]; then
+  echo "▶ Chế độ XEM TRƯỚC CÓ CIPUTRA (CASA_CIPUTRA=1): chỉ dùng cho bản thử, không dùng cho tên miền chính"
+else
+  echo "▶ Chế độ theo công tắc trong src/data/co-so.ts (mặc định: 3 cơ sở, chưa có Ciputra)"
+fi
 
 echo "▶ Build và kiểm tra (npm run check)"
 if ! npm run check; then

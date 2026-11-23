@@ -4,7 +4,7 @@
 import Base from '../../layouts/Base.astro';
 import Can from '../Can.astro';
 import Icon from '../Icon.astro';
-import { CO_SO, type Lang } from '../../data/co-so';
+import { CO_SO, CIPUTRA_CONG_KHAI, type Lang } from '../../data/co-so';
 import { LIEN_HE } from '../../data/lien-he';
 import { url, taoT, FORM_ANCHOR } from '../../i18n/routes';
 interface Props { lang: Lang }
@@ -18,7 +18,7 @@ const hotline = lang === 'en' ? LIEN_HE.hotlineQuocTe : LIEN_HE.hotline;
 ---
 <Base lang={lang} routeKey="contact" duongDan={duongDan}
   tieuDe={t('Liên hệ: hotline, email, Facebook', 'Contact: hotline, email, Facebook')}
-  moTa={t(`Liên hệ Casa Preschool: hotline ${LIEN_HE.hotline}, email ${LIEN_HE.email}, Facebook. Đăng ký tham quan một trong bốn cơ sở.`, `Contact Casa Preschool: hotline ${LIEN_HE.hotlineQuocTe}, email ${LIEN_HE.email}, Facebook. Book a visit to one of our four campuses.`)}>
+  moTa={t(`Liên hệ Casa Preschool: hotline ${LIEN_HE.hotline}, email ${LIEN_HE.email}, Facebook. Đăng ký tham quan một trong ${CIPUTRA_CONG_KHAI ? 'bốn' : 'ba'} cơ sở.`, `Contact Casa Preschool: hotline ${LIEN_HE.hotlineQuocTe}, email ${LIEN_HE.email}, Facebook. Book a visit to one of our ${CIPUTRA_CONG_KHAI ? 'four' : 'three'} campuses.`)}>
   <section class="dau-trang-con">
     <div class="khung">
       <h1>{t('Liên hệ Casa Preschool', 'Contact Casa Preschool')}</h1>
@@ -54,7 +54,7 @@ const hotline = lang === 'en' ? LIEN_HE.hotlineQuocTe : LIEN_HE.hotline;
   </section>
   <section class="phan phan--phu phan--sat" aria-labelledby="co-so">
     <div class="khung">
-      <h2 id="co-so">{t('Bốn cơ sở', 'Our four campuses')}</h2>
+      <h2 id="co-so">{CIPUTRA_CONG_KHAI ? t('Bốn cơ sở', 'Our four campuses') : t('Ba cơ sở', 'Our three campuses')}</h2>
       <p>{t('Địa chỉ, bản đồ và lớp học nằm ở trang từng cơ sở.', 'Addresses, maps and classes are on each campus page.')}</p>
       <ul class="cum danh-sach-tron" role="list">
         {CO_SO.map((c) => <li><a class="nut nut--phu" href={url(`co-so-${c.slug}`, lang)}>{t(`Cơ sở ${c.ten.vi}`, `${c.ten.en} campus`)}</a></li>)}

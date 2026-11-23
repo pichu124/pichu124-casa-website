@@ -6,7 +6,7 @@ import KhoiCta from '../KhoiCta.astro';
 import BangLop from '../BangLop.astro';
 import BoAnh from '../BoAnh.astro';
 import { ANH } from '../../data/anh';
-import type { Lang } from '../../data/co-so';
+import { CIPUTRA_CONG_KHAI, type Lang } from '../../data/co-so';
 import { url, taoT } from '../../i18n/routes';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -46,6 +46,7 @@ const duongDan = [
       <BoAnh nhan={t('Ảnh lớp nhà trẻ', 'Nursery class photos')}
         anh={[ANH.nhaTreCoVaBe, ANH.nhaTreChamCay].map((a) => ({ src: a.src, alt: a.alt[lang] }))} />
 
+      {CIPUTRA_CONG_KHAI && <>
       <h2 id="ciputra">{t('Lớp trộn tuổi tại cơ sở Ciputra', 'Mixed-age classes at the Ciputra campus')}</h2>
       <p>{t('Ở cơ sở Ciputra (dự kiến khai trương quý 4/2027), bé từ 15 tháng đến 3 tuổi học lớp trộn tuổi theo tinh thần Montessori:', 'At the Ciputra campus (expected to open in Q4 2027), children from 15 months to 3 years learn in mixed-age classes in the spirit of Montessori:')}</p>
       <ul>
@@ -54,6 +55,7 @@ const duongDan = [
         <li>{t('Bé làm quen tiếng Anh mỗi ngày.', 'They are introduced to English every day.')}</li>
       </ul>
       <p><a href={url('co-so-ciputra', lang)}>{t('Xem cơ sở Ciputra', 'See the Ciputra campus')}</a></p>
+      </>}
 
       <p>{t('Lớp nhà trẻ có ở cả ba cơ sở đang tuyển sinh: Kim Mã, Chùa Láng, Mỹ Đình.', 'Nursery classes are offered at all three campuses enrolling now: Kim Mã, Chùa Láng and Mỹ Đình.')}</p>
     </div>

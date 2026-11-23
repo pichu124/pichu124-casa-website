@@ -2,7 +2,7 @@
 // Bài 1 "Cambridge Early Years là gì" — nội dung từ Docs (https://claude.ai/artifact/FrJdSXt17WaoqnNQJSWpb9).
 // Phần "Phụ huynh nên hỏi gì khi trường nói dạy Cambridge?" CHƯA đăng: chỉ thêm khi Casa hoàn tất đăng ký Cambridge.
 import Base from '../../layouts/Base.astro';
-import type { Lang } from '../../data/co-so';
+import { CIPUTRA_CONG_KHAI, type Lang } from '../../data/co-so';
 import { LIEN_HE, SITE } from '../../data/lien-he';
 import { url, taoT, FORM_ANCHOR } from '../../i18n/routes';
 interface Props { lang: Lang }
@@ -86,6 +86,7 @@ const LINH_VUC = [
       <p>{t('Chương trình đi theo kiểu', 'The programme is')} <strong>{t('xoắn ốc', 'spiral')}</strong>{t(': một kỹ năng không chỉ học một lần rồi thôi, mà quay lại nhiều lần, mỗi lần ở mức cao hơn. Ví dụ, ở Early Years 1 trẻ đếm đồ vật trong phạm vi nhỏ; đến Early Years 3, trẻ dùng việc đếm để so sánh, thêm bớt và giải một bài toán nhỏ trong tình huống thật.', ': a skill is not learned once and left behind, but revisited many times, each time at a higher level. For example, in Early Years 1 children count a small number of objects; by Early Years 3 they use counting to compare, add and take away, and solve a small problem in a real situation.')}</p>
       <p>{t('Một buổi học có thể bắt đầu từ một câu chuyện về khu chợ. Sau đó trẻ dựng quầy hàng (biểu đạt sáng tạo), đếm và trả "tiền" (toán), mời bạn mua hàng bằng tiếng Anh (ngôn ngữ), và thay phiên nhau làm người bán (kỹ năng xã hội). Một trò chơi chạm tới nhiều lĩnh vực cùng lúc.', 'A lesson might start with a story about a market. Children then build stalls (creative expression), count and pay with "money" (maths), invite friends to buy in English (language), and take turns being the seller (social skills). One game touches many areas at once.')}</p>
 
+      {CIPUTRA_CONG_KHAI ? <>
       <h2>{t('Cambridge Early Years tại Casa Preschool – Ciputra', 'Cambridge Early Years at Casa Preschool – Ciputra')}</h2>
       <p>{t('Casa Preschool – Ciputra áp dụng chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi, gồm lớp tiền tiểu học theo Early Years 3 có bổ sung kỹ năng chuẩn bị vào lớp 1. Bé từ 15 tháng đến 3 tuổi học lớp trộn tuổi theo tinh thần Montessori, làm quen tiếng Anh mỗi ngày.', 'Casa Preschool – Ciputra follows a programme based on the Cambridge Early Years framework for children aged 3–6, including a pre-primary class following Early Years 3 with added skills to prepare for Grade 1. Children from 15 months to 3 years learn in mixed-age classes in the spirit of Montessori and are introduced to English every day.')}</p>
       <p>{t('Cơ sở mới của hệ thống Casa Preschool nằm trong khu đô thị Ciputra, phường Phú Thượng, Hà Nội, và dự kiến khai trương quý 4/2027.', 'The new Casa Preschool campus is in the Ciputra urban area, Phú Thượng ward, Hanoi, and is expected to open in Q4 2027.')} <a href={url('co-so-ciputra', lang)}>{t('Xem giới thiệu cơ sở Ciputra', 'See the Ciputra campus')}</a>.</p>
@@ -94,6 +95,15 @@ const LINH_VUC = [
         <a class="nut nut--chinh" href={url('co-so-ciputra', lang) + FORM_ANCHOR}>{t('Đăng ký nhận thông tin sớm', 'Get early updates')}</a>
         <a class="nut nut--phu" href={LIEN_HE.tel}>{t(`Gọi ${LIEN_HE.hotline}`, `Call ${LIEN_HE.hotlineQuocTe}`)}</a>
       </div>
+      </> : <>
+      <h2>{t('Chương trình theo khung Cambridge Early Years tại Casa Preschool', 'The Cambridge Early Years framework at Casa Preschool')}</h2>
+      <p>{t('Ba cơ sở Kim Mã, Chùa Láng, Mỹ Đình áp dụng chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi, gồm lớp tiền tiểu học theo Early Years 3 có bổ sung kỹ năng chuẩn bị vào lớp 1.', 'Our Kim Mã, Chùa Láng and Mỹ Đình campuses follow a programme based on the Cambridge Early Years framework for children aged 3–6, including a pre-primary class following Early Years 3 with added skills to prepare for Grade 1.')} <a href={url('campuses', lang)}>{t('Xem các cơ sở', 'See our campuses')}</a>.</p>
+      <p><strong>{t('Đăng ký tham quan', 'Book a visit')}</strong> {t('để xem lớp học và trao đổi trực tiếp với nhà trường:', 'to see the classrooms and talk with the school in person:')}</p>
+      <div class="cum">
+        <a class="nut nut--chinh" href={url('admissions', lang) + FORM_ANCHOR}>{t('Đăng ký tham quan', 'Book a visit')}</a>
+        <a class="nut nut--phu" href={LIEN_HE.tel}>{t(`Gọi ${LIEN_HE.hotline}`, `Call ${LIEN_HE.hotlineQuocTe}`)}</a>
+      </div>
+      </>}
       <p class="sau-luoi"><a href={url('kindergarten', lang)}>{t('Xem chương trình mẫu giáo 3–6 tuổi ở các cơ sở', 'See the kindergarten programme across our campuses')}</a></p>
 
       <p class="bai-viet__nguon">

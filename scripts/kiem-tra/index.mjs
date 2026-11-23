@@ -224,6 +224,27 @@ const kiemThuForm = spawnSync(process.execPath, ['--test', '--test-reporter=dot'
 if (kiemThuForm.status === 0) dat('Các bài kiểm thử dịch vụ form đều đạt');
 else { loi('Kiểm thử dịch vụ form', 'có bài không đạt'); console.log((kiemThuForm.stdout + kiemThuForm.stderr).split('\n').slice(-40).join('\n')); }
 
+// ---------------------------------------------------------------- 11. Công tắc Ciputra (QUYET-DINH Q30)
+// Công tắc tắt: bản dựng không được có trang, liên kết hay chữ nào lộ cơ sở Ciputra.
+// Công tắc bật: trang Ciputra phải có ở cả hai thứ tiếng.
+const nguonCoSo = readFileSync(join(GOC, 'src/data/co-so.ts'), 'utf8');
+const congTac = nguonCoSo.match(/CIPUTRA_CONG_KHAI: boolean = (true|false)/)?.[1];
+const coCiputra = congTac === 'true' || process.env.CASA_CIPUTRA === '1';
+tieuDe(`11. Công tắc Ciputra: ${coCiputra ? 'BẬT (bản có Ciputra)' : 'tắt (bản 3 cơ sở)'}`);
+const truocLoi11 = soLoi;
+if (!congTac) loi('Công tắc Ciputra', 'không đọc được CIPUTRA_CONG_KHAI trong src/data/co-so.ts');
+if (coCiputra) {
+  for (const p of ['/co-so/ciputra/', '/en/campuses/ciputra/']) if (!TRANG.has(p)) loi('Thiếu trang Ciputra', p);
+  if (soLoi === truocLoi11) dat('Trang Ciputra có ở cả hai thứ tiếng');
+} else {
+  const DAU_VET = /ciputra|phú thượng|phu thuong|block 1\b|quý 4\/2027|q4 2027/i;
+  for (const f of tatCaTep.filter((x) => /\.(html|xml|txt|json|webmanifest)$/.test(x))) {
+    const m = readFileSync(f, 'utf8').normalize('NFC').match(DAU_VET);
+    if (m) loi('Lộ Ciputra khi công tắc tắt', `${duongDanCua(f)}: "${m[0]}"`);
+  }
+  if (soLoi === truocLoi11) dat('Không trang nào nhắc tới Ciputra');
+}
+
 finish();
 function finish() {
   console.log(soLoi ? `\n✘ ${soLoi} lỗi. Sửa nội dung rồi chạy lại; không nới bộ canh.` : '\n✔ Tất cả kiểm tra đạt.');

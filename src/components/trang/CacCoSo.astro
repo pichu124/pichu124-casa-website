@@ -5,7 +5,7 @@ import KhoiCta from '../KhoiCta.astro';
 import BangLop from '../BangLop.astro';
 import Can from '../Can.astro';
 import Icon from '../Icon.astro';
-import { CO_SO, linkBanDo, type Lang } from '../../data/co-so';
+import { CO_SO, CIPUTRA_CONG_KHAI, linkBanDo, type Lang } from '../../data/co-so';
 import { url, taoT } from '../../i18n/routes';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -16,16 +16,19 @@ const duongDan = [
 ];
 ---
 <Base lang={lang} routeKey="campuses" duongDan={duongDan}
-  tieuDe={t('Các cơ sở: Kim Mã, Chùa Láng, Mỹ Đình, Ciputra', 'Campuses: Kim Mã, Chùa Láng, Mỹ Đình, Ciputra')}
-  moTa={t(
+  tieuDe={CIPUTRA_CONG_KHAI ? t('Các cơ sở: Kim Mã, Chùa Láng, Mỹ Đình, Ciputra', 'Campuses: Kim Mã, Chùa Láng, Mỹ Đình, Ciputra') : t('Các cơ sở: Kim Mã, Chùa Láng, Mỹ Đình', 'Campuses: Kim Mã, Chùa Láng, Mỹ Đình')}
+  moTa={CIPUTRA_CONG_KHAI ? t(
     'Bốn cơ sở Casa Preschool tại Hà Nội: Kim Mã, Chùa Láng, Mỹ Đình đang tuyển sinh; Ciputra dự kiến khai trương quý 4/2027. Địa chỉ, bản đồ, lớp học.',
     'Four Casa Preschool campuses in Hanoi: Kim Mã, Chùa Láng and Mỹ Đình are enrolling; Ciputra is expected to open in Q4 2027. Addresses, maps, classes.',
+  ) : t(
+    'Ba cơ sở Casa Preschool tại Hà Nội đang tuyển sinh: Kim Mã, Chùa Láng, Mỹ Đình. Địa chỉ, bản đồ, lớp học và hệ học ở từng cơ sở.',
+    'Three Casa Preschool campuses in Hanoi, all enrolling: Kim Mã, Chùa Láng and Mỹ Đình. Addresses, maps, classes and tracks at each campus.',
   )}>
 
   <section class="dau-trang-con">
     <div class="khung">
       <h1>{t('Các cơ sở Casa Preschool', 'Casa Preschool campuses')}</h1>
-      <p class="dau-trang__phu">{t('Ba cơ sở đang tuyển sinh và một cơ sở mới tại khu đô thị Ciputra.', 'Three campuses enrolling now and a new campus in the Ciputra urban area.')}</p>
+      <p class="dau-trang__phu">{CIPUTRA_CONG_KHAI ? t('Ba cơ sở đang tuyển sinh và một cơ sở mới tại khu đô thị Ciputra.', 'Three campuses enrolling now and a new campus in the Ciputra urban area.') : t('Ba cơ sở đang tuyển sinh tại Hà Nội.', 'Three campuses in Hanoi, all enrolling now.')}</p>
     </div>
   </section>
 

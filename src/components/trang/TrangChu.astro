@@ -8,7 +8,7 @@ import KhungVideo from '../KhungVideo.astro';
 import { ANH } from '../../data/anh';
 import KhoiCta from '../KhoiCta.astro';
 import MotNgay from '../MotNgay.astro';
-import { CO_SO, type Lang } from '../../data/co-so';
+import { CO_SO, CIPUTRA_CONG_KHAI, type Lang } from '../../data/co-so';
 import { LIEN_HE, SITE } from '../../data/lien-he';
 import { url, taoT, FORM_ANCHOR } from '../../i18n/routes';
 import { TEN_CU, KHAU_HIEU } from '../../data/thuong-hieu';
@@ -36,9 +36,12 @@ const schema = [{
 ---
 <Base lang={lang} routeKey="home" tieuDeDayDu schema={schema}
   tieuDe={t('Mầm non Casa Preschool Hà Nội: nhận bé 15 tháng–6 tuổi', 'Casa Preschool preschools in Hanoi, ages 15 months to 6')}
-  moTa={t(
+  moTa={CIPUTRA_CONG_KHAI ? t(
     'Hệ thống mầm non hơn 10 năm tại Hà Nội. Ba cơ sở Kim Mã, Chùa Láng, Mỹ Đình đang tuyển sinh; cơ sở Ciputra dự kiến khai trương quý 4/2027.',
     'A preschool group in Hanoi for over 10 years. Kim Mã, Chùa Láng and Mỹ Đình are enrolling; the Ciputra campus is expected to open in Q4 2027.',
+  ) : t(
+    'Hệ thống mầm non hơn 10 năm tại Hà Nội, nhận bé từ 15 tháng đến 6 tuổi. Ba cơ sở Kim Mã, Chùa Láng, Mỹ Đình đang tuyển sinh.',
+    'A preschool group in Hanoi for over 10 years, for children from 15 months to 6. Our Kim Mã, Chùa Láng and Mỹ Đình campuses are enrolling.',
   )}>
 
   <section class="dau-trang">
@@ -46,9 +49,12 @@ const schema = [{
       <div>
         <p class="nhan-phan">{KHAU_HIEU[lang]}</p>
         <h1>{t('Mầm non Casa Preschool cho bé từ 15 tháng đến 6 tuổi', 'Casa Preschool preschools for children from 15 months to 6 years')}</h1>
-        <p class="dau-trang__phu">{t(
+        <p class="dau-trang__phu">{CIPUTRA_CONG_KHAI ? t(
           'Hơn 10 năm chăm sóc và giáo dục trẻ tại Hà Nội. Ba cơ sở Kim Mã, Chùa Láng, Mỹ Đình đang tuyển sinh; cơ sở Ciputra dự kiến khai trương quý 4/2027.',
           'Over 10 years of caring for and teaching young children in Hanoi. Our Kim Mã, Chùa Láng and Mỹ Đình campuses are enrolling now; the Ciputra campus is expected to open in Q4 2027.',
+        ) : t(
+          'Hơn 10 năm chăm sóc và giáo dục trẻ tại Hà Nội. Ba cơ sở Kim Mã, Chùa Láng, Mỹ Đình đang tuyển sinh.',
+          'Over 10 years of caring for and teaching young children in Hanoi. Our Kim Mã, Chùa Láng and Mỹ Đình campuses are enrolling now.',
         )}</p>
         <div class="cum">
           <a class="nut nut--chinh nut--lon" href={url('admissions', lang) + FORM_ANCHOR}>{t('Đăng ký tham quan', 'Book a visit')}</a>
@@ -78,8 +84,8 @@ const schema = [{
           </li>
         ))}
       </ul>
-      <h3 class="nhom-tieu-de">{t('Sắp khai trương', 'Opening soon')}</h3>
-      <ul class="luoi danh-sach-tron" role="list">
+      {sapMo.length > 0 && <h3 class="nhom-tieu-de">{t('Sắp khai trương', 'Opening soon')}</h3>}
+      {sapMo.length > 0 && <ul class="luoi danh-sach-tron" role="list">
         {sapMo.map((c) => (
           <li class="the the--lien-ket the--sap">
             <span class="huy-hieu huy-hieu--sap">{t('Dự kiến quý 4/2027', 'Expected Q4 2027')}</span>
@@ -88,7 +94,7 @@ const schema = [{
             <span class="the__chan" aria-hidden="true">{t('Xem cơ sở', 'See campus')} →</span>
           </li>
         ))}
-      </ul>
+      </ul>}
     </div>
   </section>
 

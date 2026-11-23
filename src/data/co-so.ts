@@ -23,7 +23,15 @@ export interface CoSo {
   lop: { nhaTre: GiaTriLop; songNgu: GiaTriLop; quocTe: GiaTriLop; tienTieuHoc: GiaTriLop };
 }
 
-export const CO_SO: CoSo[] = [
+/**
+ * Công tắc công bố cơ sở Ciputra (QUYET-DINH Q30).
+ * false: bản dựng không có trang, liên kết hay chữ "Ciputra" nào (npm run check báo đỏ nếu sót).
+ * Chỉ đổi thành true khi người phụ trách dự án báo chạy chính thức.
+ * Xem trước bản có Ciputra mà không đổi tệp: CASA_CIPUTRA=1 npm run build
+ */
+export const CIPUTRA_CONG_KHAI: boolean = false || process.env.CASA_CIPUTRA === '1';
+
+const TAT_CA_CO_SO: CoSo[] = [
   // Địa chỉ, lớp và hệ: phiếu bổ sung thông tin câu 6, 7, 10 (18/11/2026)
   {
     slug: 'kim-ma',
@@ -72,6 +80,9 @@ export const CO_SO: CoSo[] = [
     lop: { nhaTre: 'du-kien', songNgu: 'du-kien', quocTe: 'du-kien', tienTieuHoc: 'du-kien' },
   },
 ];
+
+/** Các cơ sở được công bố trên bản dựng này. */
+export const CO_SO: CoSo[] = TAT_CA_CO_SO.filter((c) => c.slug !== 'ciputra' || CIPUTRA_CONG_KHAI);
 
 export const coSoTheoSlug = (slug: string) => CO_SO.find((c) => c.slug === slug);
 

@@ -9,7 +9,7 @@ import KhoiCta from '../KhoiCta.astro';
 import BoAnh from '../BoAnh.astro';
 import KhungVideo from '../KhungVideo.astro';
 import { ANH } from '../../data/anh';
-import type { Lang } from '../../data/co-so';
+import { CIPUTRA_CONG_KHAI, type Lang } from '../../data/co-so';
 import { TEN, KHAU_HIEU, LOGO } from '../../data/thuong-hieu';
 import { url, taoT } from '../../i18n/routes';
 interface Props { lang: Lang }
@@ -78,7 +78,9 @@ const AN_TOAN = [
     <div class="khung">
       <p class="nhan-phan">{KHAU_HIEU[lang]}</p>
       <h1>{t(`Về ${TEN}`, `About ${TEN}`)}</h1>
-      <p class="dau-trang__phu">{t('Hệ thống mầm non xuyên suốt hơn 10 năm tại Hà Nội. Ba cơ sở Kim Mã, Chùa Láng, Mỹ Đình đang tuyển sinh; cơ sở Ciputra dự kiến khai trương quý 4/2027.', 'A preschool group running in Hanoi for over 10 years. Kim Mã, Chùa Láng and Mỹ Đình are enrolling now; the Ciputra campus is expected to open in Q4 2027.')}</p>
+      <p class="dau-trang__phu">{CIPUTRA_CONG_KHAI
+        ? t('Hệ thống mầm non xuyên suốt hơn 10 năm tại Hà Nội. Ba cơ sở Kim Mã, Chùa Láng, Mỹ Đình đang tuyển sinh; cơ sở Ciputra dự kiến khai trương quý 4/2027.', 'A preschool group running in Hanoi for over 10 years. Kim Mã, Chùa Láng and Mỹ Đình are enrolling now; the Ciputra campus is expected to open in Q4 2027.')
+        : t('Hệ thống mầm non xuyên suốt hơn 10 năm tại Hà Nội. Ba cơ sở Kim Mã, Chùa Láng, Mỹ Đình đang tuyển sinh.', 'A preschool group running in Hanoi for over 10 years. Kim Mã, Chùa Láng and Mỹ Đình are enrolling now.')}</p>
       <p><a href={url('campuses', lang)}>{t('Xem các cơ sở', 'See our campuses')}</a></p>
     </div>
   </section>

@@ -6,6 +6,7 @@ Repo này là website mới của hệ thống trường mầm non Casa dei Bamb
 
 - Casa dei Bambini là một hệ thống xuyên suốt hơn 10 năm. Hiện có ba cơ sở: Kim Mã, Chùa Láng, Mỹ Đình. Cơ sở mới tại khu đô thị Ciputra (phường Phú Thượng; tầng 2, tầng 3 và sân thượng tòa Block 1, theo Casa facts 21/11/2026) dự kiến khai trương quý 4/2027.
 - Ba cơ sở cũ vẫn hoạt động và vẫn tuyển sinh. Site phải phục vụ cả bốn cơ sở, không chỉ Ciputra.
+- Lên site theo hai bước (người phụ trách dự án quyết 23/11/2026, QUYET-DINH Q30): bản 3 cơ sở cũ chạy chính thức trước; nội dung và SEO Ciputra làm song song nhưng nằm sau công tắc `CIPUTRA_CONG_KHAI` trong `src/data/co-so.ts`, chỉ bật khi người phụ trách dự án báo. Khi công tắc tắt, `npm run check` báo đỏ nếu bản dựng còn chữ "Ciputra"; sửa nội dung Ciputra thì chạy thêm `npm run check:ciputra`.
 - Kế hoạch đóng cơ sở cũ và việc Ciputra là pháp nhân riêng là thông tin nội bộ: **không bao giờ viết lên site**.
 
 ## Nguồn sự thật (nguồn trên thắng nguồn dưới)
