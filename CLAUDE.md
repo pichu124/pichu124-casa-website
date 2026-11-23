@@ -4,7 +4,7 @@ Repo này là website mới của hệ thống trường mầm non Casa dei Bamb
 
 ## Bối cảnh
 
-- Casa dei Bambini là một hệ thống xuyên suốt hơn 10 năm. Hiện có ba cơ sở: Kim Mã, Chùa Láng, Mỹ Đình. Cơ sở mới tại khu đô thị Ciputra (phường Phú Thượng; tầng 3, tầng 4, sân thượng) dự kiến khai trương quý 4/2027.
+- Casa dei Bambini là một hệ thống xuyên suốt hơn 10 năm. Hiện có ba cơ sở: Kim Mã, Chùa Láng, Mỹ Đình. Cơ sở mới tại khu đô thị Ciputra (phường Phú Thượng; tầng 2, tầng 3 và sân thượng tòa Block 1, theo Casa facts 21/11/2026) dự kiến khai trương quý 4/2027.
 - Ba cơ sở cũ vẫn hoạt động và vẫn tuyển sinh. Site phải phục vụ cả bốn cơ sở, không chỉ Ciputra.
 - Kế hoạch đóng cơ sở cũ và việc Ciputra là pháp nhân riêng là thông tin nội bộ: **không bao giờ viết lên site**.
 
@@ -114,6 +114,6 @@ Liệt kê lại trong mỗi báo cáo nếu chặn việc. Câu hỏi chi tiế
 
 - Quyền DNS: người phụ trách dự án có tài khoản quản trị tên miền (phiếu câu 28); chỉ cần ở Giai đoạn 6.
 - Ảnh cho Ciputra (phối cảnh, mặt tiền) khi có. (Ảnh 3 cơ sở cũ đã có và đã được đồng ý từ 19/11/2026; logo, màu nhận diện có từ 18/11/2026.)
-- Số nhà và tên chính thức tòa nhà ở Ciputra (đang tạm gọi tòa CC1).
+- Số nhà của tòa Block 1 ở Ciputra.
 - Duyệt thời hạn lưu dữ liệu 12 tháng và rà pháp lý Chính sách dữ liệu. (Chân trang ghi "Trường mầm non Casa Preschool" theo phiếu câu 17.)
 - (Bản thử đã chạy ở `casa-website-thu.duckdns.org` từ 15/11/2026; VPS IP `103.195.238.114`.)

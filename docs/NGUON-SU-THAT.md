@@ -67,13 +67,13 @@ Khi lệch, **Casa facts thắng**: sửa bản chép này, không sửa ngượ
 
 | Cơ sở | Địa chỉ | Trạng thái |
 |---|---|---|
-| Ciputra | Khu đô thị Ciputra, phường Phú Thượng, Hà Nội; tầng 3, tầng 4 và sân thượng của một tòa nhà 4 tầng | Địa điểm **đã chốt**; khai trương **dự kiến quý 4/2027**; số nhà, tên tòa **chưa có** |
+| Ciputra | Khu đô thị Ciputra, phường Phú Thượng, Hà Nội; tầng 2, tầng 3 và sân thượng của tòa Block 1 (Casa facts: chủ trường đổi ngày 21/11/2026) | Địa điểm **đã chốt**; khai trương **dự kiến quý 4/2027**; số nhà, tên tòa **chưa có** |
 | Mỹ Đình | Tầng 3, tòa FLC Complex, số 36 Phạm Hùng, Hà Nội (câu 7) | Đang hoạt động |
 | Kim Mã | Số 23, ngõ 294 Kim Mã, Hà Nội (câu 7) | Đang hoạt động |
 | Chùa Láng | Tầng 1–2, sảnh A1, tòa HongKong Tower, 185 Huỳnh Thúc Kháng, phường Láng, Hà Nội (câu 6) | Đang hoạt động |
 
 - Đón trả ở Ciputra: trước sảnh tòa nhà, dừng xe không quá 10 phút; lên lớp bằng thang máy. **Dự kiến** (chỉ viết kèm chữ "dự kiến").
-- "Cầu Giấy" trên site cũ là cơ sở Chùa Láng (câu 5); "Phạm Hùng" là Mỹ Đình (câu 4). Ciputra: đang tạm gọi là **tòa CC1** (viết kèm "tên gọi tạm thời"); số nhà **chưa có** (xác nhận 18/11/2026).
+- "Cầu Giấy" trên site cũ là cơ sở Chùa Láng (câu 5); "Phạm Hùng" là Mỹ Đình (câu 4). Ciputra: tòa **Block 1**, tầng 2, tầng 3 và sân thượng (Casa facts, 21/11/2026; thay cho "tòa CC1, tầng 3–4" ngày 18/11); số nhà **chưa có**.
 
 ## Liên hệ
 
