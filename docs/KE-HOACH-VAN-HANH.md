@@ -66,9 +66,9 @@ Nguyên tắc giữ đúng tài liệu SEO của Project Casa: agent soạn, age
 | # | Việc | Ai | Tình trạng |
 |---|---|---|---|
 | S1 | Chuyển bài viết sang dạng Markdown, mỗi bài một tệp. Có ô `ciputra: true` để bài về Ciputra tự ẩn khi công tắc tắt. Hướng dẫn: `docs/MAU-BAI-VIET.md` | C | **Xong 23/11** |
-| S2 | Lịch bài cho 3 cơ sở (bảng dưới) | C soạn, CT duyệt | Lịch đề xuất |
+| S2 | Lịch bài cho 3 cơ sở (bảng dưới) | C soạn, CT duyệt | Bài 2 và 4 đã viết 23/11 (chờ CT duyệt cùng A6) |
 | S3 | Ba tác vụ tự chạy theo lịch. Mỗi tác vụ bật riêng, cần PT đồng ý (xem dưới) | C tạo khi PT đồng ý | Chờ |
-| S4 | Hồ sơ Google Maps của 3 cơ sở:<br>• kiểm tra ai giữ quyền, gom về một tài khoản của trường;<br>• tên, địa chỉ, số điện thoại giống hệt website;<br>• ô website trỏ về đúng trang cơ sở (ví dụ `…/co-so/kim-ma/`) | NT | Chờ |
+| S4 | Hồ sơ Google Maps của 3 cơ sở (bộ việc soạn sẵn: https://claude.ai/artifact/Vxnn923uJft68MmUCyMCJn):<br>• kiểm tra ai giữ quyền, gom về một tài khoản của trường;<br>• tên, địa chỉ, số điện thoại giống hệt website;<br>• ô website trỏ về đúng trang cơ sở (ví dụ `…/co-so/kim-ma/`) | NT | Chờ |
 | S5 | Xin review từ phụ huynh hiện tại (mã QR ở cổng, tin nhắn Zalo nhóm lớp). Không tặng quà đổi review, không viết review hộ | NT | Chờ |
 
 **Lịch bài cho 3 cơ sở** (mỗi tuần một bài, bắt đầu sau ngày chuyển tên miền). Lấy từ lịch của Project Casa, bỏ các bài chỉ nói về Ciputra:
