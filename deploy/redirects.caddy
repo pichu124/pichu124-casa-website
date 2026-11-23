@@ -89,8 +89,11 @@ redir @cu_trang_en /en/news/ 301
 redir @cu_trang /tin-tuc/ 301
 @cu_q_lang query lang=en
 redir @cu_q_lang /en/ 301
-@cu_q_p query p=* page_id=*
+# Hai matcher riêng: "query p=* page_id=*" trong một matcher nghĩa là phải có cả hai tham số
+@cu_q_p query p=*
 redir @cu_q_p / 301
+@cu_q_page_id query page_id=*
+redir @cu_q_page_id / 301
 
 # URL WordPress không còn dùng: trả 410 (đã gỡ)
 @cu_wp path_regexp ^/(wp-admin|wp-login\.php|xmlrpc\.php|wp-json|wp-content|wp-includes)(/|$)

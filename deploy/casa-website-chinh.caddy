@@ -1,0 +1,52 @@
+# Khối Caddy của website Casa Preschool — TÊN MIỀN CHÍNH (Giai đoạn 6).
+# KHÔNG tự chép tệp này. Cài bằng kịch bản (kiểm tra DNS, kiểm tra cấu hình, tự khôi phục nếu lỗi):
+#   sudo bash /opt/casa-website/src/deploy/bat-ten-mien-chinh.sh
+# Kịch bản đặt tệp tại /etc/caddy/sites/casa-website-chinh.caddy. Không sửa khối của app casa-mamnon
+# (app ở app.casadeibambini.edu.vn, khối riêng, không bị đụng tới).
+#
+# Khác bản thử: không mật khẩu, không "noindex", đọc thư mục "current".
+
+www.casadeibambini.edu.vn {
+	# Một địa chỉ duy nhất cho Google: www chuyển hẳn về tên miền gốc, giữ nguyên đường dẫn
+	redir https://casadeibambini.edu.vn{uri} 301
+}
+
+casadeibambini.edu.vn {
+	root * /var/www/casa-website/current
+	encode zstd gzip
+
+	header {
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		-Server
+	}
+
+	# Bảng chuyển hướng 301 từ URL của site WordPress cũ (sinh từ docs/URL-CU.csv)
+	import /etc/caddy/casa-website/redirects.caddy
+
+	# Tệp trong /_astro/ có mã băm trong tên: lưu cache lâu dài
+	@tep_bam path /_astro/*
+	header @tep_bam Cache-Control "public, max-age=31536000, immutable"
+
+	# Trang HTML: luôn kiểm tra bản mới
+	@html path *.html */
+	header @html Cache-Control "no-cache"
+
+	# Dịch vụ nhận form đăng ký tham quan, chỉ nghe trong máy
+	reverse_proxy /api/* 127.0.0.1:3100
+
+	file_server
+
+	# Dịch vụ form không trả lời: báo phụ huynh gọi hotline thay vì trang trắng
+	handle_errors 502 503 504 {
+		header Content-Type "text/plain; charset=utf-8"
+		respond "Hệ thống nhận đăng ký đang tạm dừng. Xin gọi 0989 059 838 để nhà trường hẹn lịch tham quan. / Our booking system is temporarily unavailable. Please call +84 989 059 838." 503
+	}
+
+	handle_errors 404 {
+		@en path /en/*
+		rewrite @en /en/404/index.html
+		rewrite * /404.html
+		file_server
+	}
+}

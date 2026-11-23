@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
-# Cập nhật bản thử trên VPS: lấy mã mới, chạy npm run check (build + kiểm tra),
-# chép bản build vào releases/<ngày-giờ>, rồi trỏ liên kết "current" sang bản mới.
+# Cập nhật website trên VPS: lấy mã mới, chạy npm run check (build + kiểm tra),
+# chép bản build vào releases/<ngày-giờ>, rồi trỏ liên kết sang bản mới:
+#   - "current"   : tên miền chính đọc thư mục này (sau Giai đoạn 6)
+#   - "xem-truoc" : bản thử đọc thư mục này
+# Mặc định trỏ cả hai. Bản xem trước có Ciputra (CASA_CIPUTRA=1) CHỈ trỏ "xem-truoc",
+# để tên miền chính không bao giờ hiện Ciputra trước ngày người phụ trách dự án báo.
 # Chạy bằng user casa-website:
 #   sudo -H -u casa-website /opt/casa-website/src/deploy/cap-nhat-ban-thu.sh
 # Xem trước bản có cơ sở Ciputra (chỉ trên bản thử):
@@ -39,10 +43,16 @@ echo "▶ Phát hành ${BAN}"
 mkdir -p "${GOC_WEB}/releases/${BAN}"
 cp -a dist/. "${GOC_WEB}/releases/${BAN}/"
 echo "$(git log -1 --format='%H')" > "${GOC_WEB}/releases/${BAN}/.commit"
-ln -sfn "releases/${BAN}" "${GOC_WEB}/current.moi"
-mv -T "${GOC_WEB}/current.moi" "${GOC_WEB}/current"
-
-echo "✔ Đã phát hành: ${GOC_WEB}/current → releases/${BAN}"
+tro() { ln -sfn "releases/${BAN}" "${GOC_WEB}/$1.moi"; mv -T "${GOC_WEB}/$1.moi" "${GOC_WEB}/$1"; }
+tro xem-truoc
+if [ "${CASA_CIPUTRA:-}" = "1" ]; then
+  echo "✔ Bản xem trước có Ciputra: ${GOC_WEB}/xem-truoc → releases/${BAN}"
+  echo "  Tên miền chính (current) giữ nguyên: $(readlink "${GOC_WEB}/current" 2>/dev/null || echo 'chưa có')"
+  echo "  Xem xong, chạy lại lệnh này không có CASA_CIPUTRA=1 để bản thử về bản 3 cơ sở."
+else
+  tro current
+  echo "✔ Đã phát hành: current và xem-truoc → releases/${BAN}"
+fi
 echo "  Các bản có trên máy:"
 ls -1 "${GOC_WEB}/releases" | tail -n 5
 

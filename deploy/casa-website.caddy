@@ -7,10 +7,14 @@
 # Thay một chỗ trước khi dùng:
 #   MA_BAM_MAT_KHAU   → kết quả của lệnh `caddy hash-password` (không phải mật khẩu gốc)
 # Khi tệp mẫu này thay đổi, áp dụng lên máy bằng: sudo bash /opt/casa-website/src/deploy/cap-nhat-caddy.sh
-# (kịch bản giữ nguyên tên miền và mật khẩu đang dùng trên máy)
+# (kịch bản giữ nguyên tên miền và mật khẩu đang dùng trên máy, chép bảng chuyển hướng vào
+#  /etc/caddy/casa-website/redirects.caddy)
+#
+# Bản thử đọc thư mục "xem-truoc", tên miền chính đọc "current" (deploy/casa-website-chinh.caddy).
+# Bản xem trước có Ciputra (CASA_CIPUTRA=1) chỉ được trỏ vào "xem-truoc", không bao giờ vào "current".
 
 casa-website-thu.duckdns.org {
-	root * /var/www/casa-website/current
+	root * /var/www/casa-website/xem-truoc
 	encode zstd gzip
 
 	# Bản thử: chỉ người có mật khẩu mới xem được
@@ -25,6 +29,10 @@ casa-website-thu.duckdns.org {
 		Referrer-Policy "strict-origin-when-cross-origin"
 		-Server
 	}
+
+	# Bảng chuyển hướng URL cũ (sinh từ docs/URL-CU.csv): bật cả trên bản thử để kiểm
+	# đủ 226 URL trước ngày chuyển tên miền (scripts/kiem-tra-chuyen-huong.mjs)
+	import /etc/caddy/casa-website/redirects.caddy
 
 	# Tệp trong /_astro/ có mã băm trong tên: lưu cache lâu dài
 	@tep_bam path /_astro/*

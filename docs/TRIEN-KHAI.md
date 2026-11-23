@@ -97,6 +97,12 @@ Chép tệp cấu hình của site vào thư mục riêng:
 sudo mkdir -p /etc/caddy/sites && sudo cp /opt/casa-website/src/deploy/casa-website.caddy /etc/caddy/sites/casa-website.caddy
 ```
 
+Chép bảng chuyển hướng URL cũ vào thư mục riêng (khối của site nạp tệp này; **không** đặt trong `/etc/caddy/sites/`, vì Caddyfile nạp mọi tệp `.caddy` ở đó như một site):
+
+```bash
+sudo install -D -m 644 /opt/casa-website/src/deploy/redirects.caddy /etc/caddy/casa-website/redirects.caddy
+```
+
 Mở tệp để thay **một chỗ**: `MA_BAM_MAT_KHAU` thành chuỗi `$2a$...` ở bước 4 (tên miền đã điền sẵn):
 
 ```bash
@@ -153,7 +159,21 @@ Mỗi khi Claude đẩy thay đổi lên nhánh, người quản trị chạy l�
 sudo -H -u casa-website /opt/casa-website/src/deploy/cap-nhat-ban-thu.sh
 ```
 
-Không cần nạp lại Caddy khi chỉ cập nhật nội dung.
+Không cần nạp lại Caddy khi chỉ cập nhật nội dung. Lệnh này cập nhật cả bản thử (`xem-truoc`) lẫn tên miền chính (`current`).
+
+Khi tệp mẫu Caddy hoặc bảng chuyển hướng (`deploy/redirects.caddy`) thay đổi, chạy thêm:
+
+```bash
+sudo bash /opt/casa-website/src/deploy/cap-nhat-caddy.sh
+```
+
+**Xem trước bản có cơ sở Ciputra** (chỉ trên bản thử; tên miền chính không đổi):
+
+```bash
+sudo -H -u casa-website env CASA_CIPUTRA=1 /opt/casa-website/src/deploy/cap-nhat-ban-thu.sh
+```
+
+Xem xong, chạy lại lệnh cập nhật thường (không có `CASA_CIPUTRA=1`) để bản thử về bản 3 cơ sở.
 
 ## Đổi mật khẩu xem
 
@@ -173,10 +193,14 @@ Xem các bản đang có (mới nhất ở cuối):
 ls -1 /var/www/casa-website/releases/
 ```
 
-Trỏ `current` về bản trước, thay `<NGÀY-GIỜ>` bằng tên bản muốn dùng:
+Trỏ về bản trước, thay `<NGÀY-GIỜ>` bằng tên bản muốn dùng. `current` là tên miền chính, `xem-truoc` là bản thử:
 
 ```bash
 sudo -H -u casa-website ln -sfn releases/<NGÀY-GIỜ> /var/www/casa-website/current
+```
+
+```bash
+sudo -H -u casa-website ln -sfn releases/<NGÀY-GIỜ> /var/www/casa-website/xem-truoc
 ```
 
 Nếu cấu hình Caddy gây lỗi: chép lại bản sao lưu, kiểm tra, nạp lại:
@@ -306,4 +330,64 @@ DNS quản lý tại ZoneDNS.vn (người phụ trách dự án có tài khoản
 
 - Bản thử chưa có dịch vụ nhận form (Giai đoạn 4): form hiện dòng đánh dấu `[CẦN]` và gửi sẽ báo lỗi. Khi Giai đoạn 4 xong, bỏ dấu `#` trước dòng `reverse_proxy /api/* 127.0.0.1:3100` trong tệp Caddy của site.
 - Các bản cũ trong `releases/` không tự xoá. Muốn dọn thì hỏi người phụ trách dự án trước (`CLAUDE.md`: xoá trên máy chủ phải được xác nhận).
-- Chuyển hướng URL cũ (`deploy/redirects.caddy`) chỉ dùng ở Giai đoạn 6, trong khối của tên miền chính, không dùng cho bản thử.
+- Bảng chuyển hướng URL cũ (`deploy/redirects.caddy`) nằm ở `/etc/caddy/casa-website/redirects.caddy`, được cả khối bản thử và khối tên miền chính nạp. Bật trên bản thử để kiểm đủ URL cũ trước ngày chuyển (từ 23/11/2026).
+- Bản thử đọc `/var/www/casa-website/xem-truoc`, tên miền chính đọc `/var/www/casa-website/current` (từ 23/11/2026, QUYET-DINH Q31).
+
+## Giai đoạn 6: chuyển tên miền chính
+
+Chỉ làm khi chủ trường đã duyệt Chính sách dữ liệu, xác nhận nội dung và chọn ngày (kế hoạch: `docs/KE-HOACH-VAN-HANH.md`). Cả buổi khoảng 1 giờ.
+
+### Trước ngày chuyển (làm sớm, bao nhiêu lần cũng được)
+
+1. Cập nhật website và cấu hình Caddy (lần đầu sau 23/11/2026 là bắt buộc, để bản thử nạp bảng chuyển hướng):
+
+```bash
+sudo -H -u casa-website /opt/casa-website/src/deploy/cap-nhat-ban-thu.sh
+```
+
+```bash
+sudo bash /opt/casa-website/src/deploy/cap-nhat-caddy.sh
+```
+
+2. Kiểm tra toàn bộ URL cũ trên bản thử. Mật khẩu xem gõ vào không hiện ra và không được lưu:
+
+```bash
+read -rsp "Mật khẩu xem bản thử: " CASA_MK; echo; export CASA_MK
+```
+
+```bash
+node /opt/casa-website/src/scripts/kiem-tra-chuyen-huong.mjs https://casa-website-thu.duckdns.org; unset CASA_MK
+```
+
+Phải thấy `✔ Đạt: 451 đường dẫn đúng…`. Có dòng `✘` thì gửi cả kết quả cho Claude, chưa chuyển.
+
+### Ngày chuyển
+
+1. **Đổi DNS** (người có tài khoản ZoneDNS): bản ghi `@` loại A, từ `125.212.243.110` thành `103.195.238.114`. Không sửa bản ghi nào khác; MX giữ nguyên nên email không ảnh hưởng.
+2. **Chờ 5–10 phút**, rồi bật khối Caddy của tên miền chính. Kịch bản tự kiểm tra DNS đã trỏ về VPS chưa (chưa thì từ chối, chưa đổi gì), kiểm tra cấu hình, nạp lại Caddy và chờ HTTPS:
+
+```bash
+sudo bash /opt/casa-website/src/deploy/bat-ten-mien-chinh.sh
+```
+
+3. **Kiểm tra toàn bộ URL cũ trên tên miền thật** (không cần mật khẩu). Ngoài bảng chuyển hướng, kịch bản còn kiểm `www` → tên miền gốc, `http` → `https`, không còn `noindex`, `robots.txt` không chặn:
+
+```bash
+node /opt/casa-website/src/scripts/kiem-tra-chuyen-huong.mjs https://casadeibambini.edu.vn --chinh
+```
+
+4. Mở `https://casadeibambini.edu.vn` trên điện thoại, gửi thử một đăng ký tham quan; mở app `app.casadeibambini.edu.vn` xem vẫn chạy bình thường.
+5. Người phụ trách dự án gửi `https://casadeibambini.edu.vn/sitemap.xml` trên Search Console.
+
+Từ khi DNS đổi tới khi bước 2 xong (vài phút), một số người mở site có thể gặp lỗi HTTPS. Caddy chỉ xin được chứng chỉ khi DNS đã trỏ về VPS, nên không làm bước 2 trước bước 1.
+
+### Quay lui
+
+Gỡ khối tên miền chính (bản thử và app không bị ảnh hưởng):
+
+```bash
+sudo bash /opt/casa-website/src/deploy/bat-ten-mien-chinh.sh --tat
+```
+
+Rồi đổi bản ghi A `@` về `125.212.243.110`. Site WordPress cũ chạy lại sau khoảng 5 phút (TTL 300 giây).
+

@@ -23,7 +23,7 @@ Ký hiệu người làm: **C** = Claude · **QT** = người quản trị VPS �
 |---|---|---|---|---|
 | A1 | Công tắc Ciputra; bản 3 cơ sở không còn dấu vết Ciputra; `npm run check` canh tự động | C | **Xong 23/11** | — |
 | A2 | Cập nhật bản thử sang bản 3 cơ sở; cài lại dịch vụ form (bản sửa kiểm tra số điện thoại 21/11) | QT | Chờ | Có |
-| A3 | Bộ chuyển tên miền:<br>• khối Caddy cho `casadeibambini.edu.vn` và `www` (gắn bảng 301, bỏ mật khẩu và `noindex`, nối form `/api/`);<br>• kịch bản kiểm tra 226 URL cũ trả 301 đúng đích, chạy được trước ngày chuyển bằng cách trỏ thẳng vào IP VPS;<br>• kịch bản quay lui | C | Chưa làm | Có |
+| A3 | Bộ chuyển tên miền:<br>• khối Caddy cho tên miền chính;<br>• kịch bản bật/gỡ;<br>• kịch bản kiểm tra 451 đường dẫn cũ (chạy được trên bản thử trước ngày chuyển) | C | **Xong 23/11** (chạy thử bằng Caddy trên máy dựng: đạt) | Có |
 | A4 | Đo lại tốc độ (Lighthouse trên điện thoại) sau khi thêm ảnh và video; sửa nếu dưới 90 điểm | C | Chưa làm | Không (nên xong trước) |
 | A5 | Chính sách bảo vệ dữ liệu: còn 3 chỗ `[CẦN]` (rà pháp lý toàn văn; duyệt thời hạn lưu 12 tháng; ngày hiệu lực). Form thu dữ liệu nên **không chạy chính thức khi chính sách chưa xong** | CT | Chờ (đã hoãn 19/11) | **Có** |
 | A6 | Chủ trường xác nhận nội dung bản 3 cơ sở đúng sự thật (xem trên bản thử) | CT | Chờ | **Có** |
@@ -40,14 +40,19 @@ Ký hiệu người làm: **C** = Claude · **QT** = người quản trị VPS �
 
 ### 1C. Ngày chuyển (khoảng 1 giờ)
 
-1. **QT** chạy kịch bản kiểm tra (A3) trỏ thẳng vào IP VPS. Mọi URL cũ phải đạt.
-2. **QT** thêm khối Caddy của tên miền chính rồi nạp lại Caddy. App casa-mamnon không bị đụng tới.
-3. **PT** (hoặc CT) vào ZoneDNS và chỉ đổi bản ghi `@` loại A từ `125.212.243.110` sang `103.195.238.114`.
+Lệnh chi tiết: `docs/TRIEN-KHAI.md`, mục "Giai đoạn 6".
+
+1. **Trước ngày chuyển:** QT kiểm 451 đường dẫn cũ trên bản thử bằng `scripts/kiem-tra-chuyen-huong.mjs`. Mọi đường dẫn phải đạt.
+2. **PT** (hoặc CT) vào ZoneDNS và chỉ đổi bản ghi `@` loại A từ `125.212.243.110` sang `103.195.238.114`.
    - `www` là CNAME nên tự theo.
    - MX và `mail` không đổi, nên email không ảnh hưởng.
-4. Sau 5–10 phút, **QT** chạy lại kịch bản kiểm tra trên tên miền thật và gửi thử một đăng ký tham quan.
+3. **Sau 5–10 phút, QT** chạy `deploy/bat-ten-mien-chinh.sh`.
+   - Kịch bản từ chối chạy nếu DNS chưa trỏ về VPS.
+   - Nếu chạy được, nó bật khối Caddy và chờ HTTPS.
+   - App casa-mamnon không bị đụng tới.
+4. **QT** chạy lại kịch bản kiểm tra trên tên miền thật (`--chinh`) và gửi thử một đăng ký tham quan.
 5. **PT** gửi `sitemap.xml` trên Search Console.
-6. **Nếu hỏng:** đổi bản ghi A về `125.212.243.110`. Site cũ chạy lại sau khoảng 5 phút.
+6. **Nếu hỏng:** QT chạy `bat-ten-mien-chinh.sh --tat`, rồi đổi bản ghi A về `125.212.243.110`. Site cũ chạy lại sau khoảng 5 phút.
 
 ### 1D. Bốn tuần sau ngày chuyển
 
