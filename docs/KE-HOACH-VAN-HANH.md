@@ -24,7 +24,7 @@ Ký hiệu người làm: **C** = Claude · **QT** = người quản trị VPS �
 | A1 | Công tắc Ciputra; bản 3 cơ sở không còn dấu vết Ciputra; `npm run check` canh tự động | C | **Xong 23/11** | — |
 | A2 | Cập nhật bản thử sang bản 3 cơ sở; cài lại dịch vụ form (bản sửa kiểm tra số điện thoại 21/11) | QT | Chờ | Có |
 | A3 | Bộ chuyển tên miền:<br>• khối Caddy cho tên miền chính;<br>• kịch bản bật/gỡ;<br>• kịch bản kiểm tra 451 đường dẫn cũ (chạy được trên bản thử trước ngày chuyển) | C | **Xong 23/11** (chạy thử bằng Caddy trên máy dựng: đạt) | Có |
-| A4 | Đo lại tốc độ (Lighthouse trên điện thoại) sau khi thêm ảnh và video; sửa nếu dưới 90 điểm | C | Chưa làm | Không (nên xong trước) |
+| A4 | Đo lại tốc độ (Lighthouse trên điện thoại) sau khi thêm ảnh và video; sửa nếu dưới 90 điểm | C | **Xong 23/11**: 98–100 điểm, LCP 1,6–2,4 giây (`docs/HIEU-NANG.md`) | Không (nên xong trước) |
 | A5 | Chính sách bảo vệ dữ liệu: còn 3 chỗ `[CẦN]` (rà pháp lý toàn văn; duyệt thời hạn lưu 12 tháng; ngày hiệu lực). Form thu dữ liệu nên **không chạy chính thức khi chính sách chưa xong** | CT | Chờ (đã hoãn 19/11) | **Có** |
 | A6 | Chủ trường xác nhận nội dung bản 3 cơ sở đúng sự thật (xem trên bản thử) | CT | Chờ | **Có** |
 | A7 | Nhánh chính: gộp nhánh làm việc vào `main`; bản chính thức chỉ lấy mã từ `main` | PT xác nhận, C làm | Chưa làm | Có |

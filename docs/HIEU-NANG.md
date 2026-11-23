@@ -88,3 +88,17 @@ npm run build && npx astro preview --port 4321
 ```bash
 npx lighthouse http://127.0.0.1:4321/ --only-categories=performance --view
 ```
+
+## Đo lại 23/11/2026 (bản 3 cơ sở, sau khi thêm ảnh và video)
+
+Lighthouse 12.6 chế độ điện thoại (mô phỏng mạng chậm), máy chủ thử tại chỗ (`astro preview`, chưa nén như Caddy). Thứ tự điểm: Hiệu năng / Truy cập / Thực hành tốt / SEO.
+
+| Trang | Điểm | LCP | CLS | TBT |
+|---|---|---|---|---|
+| `/` | 100 / 100 / 100 / 100 | 1,7 s | 0 | 0 ms |
+| `/co-so/kim-ma/` | 98 / 100 / 100 / 100 | 2,4 s | 0,033 | 0 ms |
+| `/chuong-trinh/nha-tre/` | 99 / 100 / 100 / 100 | 1,6 s | 0,013 | 0 ms |
+| `/ve-casa/` (có video) | 99 / 100 / 100 / 100 | 1,8 s | 0 | 0 ms |
+| `/en/` | 99 / 100 / 100 / 100 | 1,9 s | 0,055 | 0 ms |
+
+Đạt mục tiêu: từ 90 điểm, ảnh đầu trang dưới 2,5 giây. Trang Kim Mã sát ngưỡng (2,4 s). Đo lại bằng PageSpeed trên tên miền thật trong tuần đầu sau ngày chuyển; nếu LCP vượt 2,5 s thì giảm kích thước ảnh đầu trang cơ sở.
