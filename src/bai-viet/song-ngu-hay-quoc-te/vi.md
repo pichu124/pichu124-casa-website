@@ -4,7 +4,7 @@ tieuDe: "Song ngữ hay quốc tế: chọn hệ mầm non nào cho con?"
 moTa: "Hệ quốc tế và hệ song ngữ ở bậc mầm non khác nhau ở đâu, và năm điều ba mẹ nên cân nhắc khi chọn hệ cho con 3–6 tuổi."
 h1: "Song ngữ hay quốc tế: chọn hệ nào cho con?"
 tom: "Hai hệ khác nhau ở người trong lớp; năm câu hỏi giúp ba mẹ chọn hệ hợp với gia đình."
-ngay: "2026-11-23"
+ngay: "2026-11-25"
 danVe: programmes
 ---
 

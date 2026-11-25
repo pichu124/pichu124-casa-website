@@ -60,7 +60,7 @@ Chép dòng vừa in ra (bắt đầu bằng `ssh-ed25519`). Đây là khoá **c
 Lấy mã về:
 
 ```bash
-sudo -H -u casa-website bash -c 'ssh-keyscan github.com >> /opt/casa-website/.ssh/known_hosts && git clone --branch claude/hopeful-hopper-ahu1by git@github.com:pichu124/pichu124-casa-website.git /opt/casa-website/src'
+sudo -H -u casa-website bash -c 'ssh-keyscan github.com >> /opt/casa-website/.ssh/known_hosts && git clone --branch main git@github.com:pichu124/pichu124-casa-website.git /opt/casa-website/src'
 ```
 
 ## Bước 3. Build và phát hành lần đầu
@@ -160,6 +160,14 @@ sudo -H -u casa-website /opt/casa-website/src/deploy/cap-nhat-ban-thu.sh
 ```
 
 Không cần nạp lại Caddy khi chỉ cập nhật nội dung. Lệnh này cập nhật cả bản thử (`xem-truoc`) lẫn tên miền chính (`current`).
+
+**Từ 25/11/2026 site lấy mã từ nhánh `main`** (A7). Máy chủ đang giữ bản kịch bản cũ, mặc định lấy nhánh làm việc, nên **lần cập nhật đầu tiên sau ngày này** chạy kèm `NHANH=main`:
+
+```bash
+sudo -H -u casa-website env NHANH=main /opt/casa-website/src/deploy/cap-nhat-ban-thu.sh
+```
+
+Từ lần sau chạy lệnh thường như trên. Claude chỉ gộp vào `main` khi người phụ trách dự án xác nhận; thay đổi chưa gộp chỉ nằm ở nhánh làm việc và không lên site.
 
 Khi tệp mẫu Caddy hoặc bảng chuyển hướng (`deploy/redirects.caddy`) thay đổi, chạy thêm:
 

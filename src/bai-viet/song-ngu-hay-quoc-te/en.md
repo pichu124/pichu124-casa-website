@@ -4,7 +4,7 @@ tieuDe: "Bilingual or international: which preschool track?"
 moTa: "How the international and bilingual preschool tracks differ, and five things parents should weigh when choosing a track for a child aged 3–6."
 h1: "Bilingual or international: which track suits your child?"
 tom: "The two tracks differ in who is in the class; five questions help you choose the one that fits your family."
-ngay: "2026-11-23"
+ngay: "2026-11-25"
 danVe: programmes
 ---
 

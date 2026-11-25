@@ -29,7 +29,7 @@ Ký hiệu người làm: **C** = Claude · **QT** = người quản trị VPS �
 | A4 | Đo lại tốc độ (Lighthouse trên điện thoại) sau khi thêm ảnh và video; sửa nếu dưới 90 điểm | C | **Xong 23/11**: 98–100 điểm, LCP 1,6–2,4 giây (`docs/HIEU-NANG.md`) | Không (nên xong trước) |
 | A5 | Chính sách bảo vệ dữ liệu. **CT tạm đồng ý 25/11** (cả thời hạn lưu 12 tháng); đã gỡ 2 chỗ `[CẦN]`, còn ngày hiệu lực điền vào ngày chuyển tên miền. C đọc lại khi: có người rà pháp lý, form đổi, có hướng dẫn mới của Luật 91/2025, hoặc trước khi bật Ciputra (QUYET-DINH Q37) | CT | Xong (tạm) | **Có** |
 | A6 | Chủ trường xác nhận nội dung bản 3 cơ sở đúng sự thật. **Xong 25/11:** phản hồi đã sửa (số bữa theo cơ sở, tiền tiểu học ở Kim Mã học buổi chiều, CASA LOVE giữ nguyên tới khi có thương hiệu mới; Q37); phần còn lại và 4 bài viết CT không góp ý, coi là đồng ý | CT | Xong | **Có** |
-| A7 | Nhánh chính: gộp nhánh làm việc vào `main`; bản chính thức chỉ lấy mã từ `main` | PT xác nhận, C làm | Chưa làm | Có |
+| A7 | Nhánh chính: gộp nhánh làm việc vào `main`; bản chính thức chỉ lấy mã từ `main`. **Xong 25/11:** tạo `main` từ nhánh làm việc; `deploy/cap-nhat-ban-thu.sh` mặc định lấy `main`. Lần cập nhật đầu tiên trên VPS chạy kèm `NHANH=main` (xem `docs/TRIEN-KHAI.md`) | PT xác nhận, C làm | Xong | Có |
 
 ### 1B. Chuẩn bị chuyển tên miền
 

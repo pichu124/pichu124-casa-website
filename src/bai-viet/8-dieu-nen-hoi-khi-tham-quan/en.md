@@ -4,7 +4,7 @@ tieuDe: "8 questions to ask when you visit a preschool"
 moTa: "8 questions to bring on a preschool visit: your child's day, the adults in each class, meals, safety, settling in and what the fees include."
 h1: "8 questions to ask when you visit a preschool"
 tom: "Bring these 8 questions so a short visit still gives you enough to decide."
-ngay: "2026-11-23"
+ngay: "2026-11-25"
 danVe: admissions
 ---
 

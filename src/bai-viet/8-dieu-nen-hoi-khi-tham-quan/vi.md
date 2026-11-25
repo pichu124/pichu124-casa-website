@@ -4,7 +4,7 @@ tieuDe: "8 điều nên hỏi khi đi tham quan trường mầm non"
 moTa: "8 câu hỏi ba mẹ nên mang theo khi đi tham quan trường mầm non: một ngày của bé, người trong lớp, bữa ăn, an toàn, làm quen và học phí."
 h1: "8 điều nên hỏi khi đi tham quan trường mầm non"
 tom: "Mang theo 8 câu hỏi này để buổi tham quan ngắn vẫn cho ba mẹ đủ thông tin trước khi quyết định."
-ngay: "2026-11-23"
+ngay: "2026-11-25"
 danVe: admissions
 ---
 

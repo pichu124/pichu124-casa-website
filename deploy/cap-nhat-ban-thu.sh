@@ -12,7 +12,8 @@
 # Không xoá bản cũ nào; quay lui xem docs/TRIEN-KHAI.md, mục "Quay lui".
 set -euo pipefail
 
-NHANH="${NHANH:-claude/hopeful-hopper-ahu1by}"
+# Bản chính thức chỉ lấy mã từ main (A7, 25/11/2026).
+NHANH="${NHANH:-main}"
 MA_NGUON="${MA_NGUON:-/opt/casa-website/src}"
 GOC_WEB="${GOC_WEB:-/var/www/casa-website}"
 BAN="$(date +%Y%m%d-%H%M%S)"
