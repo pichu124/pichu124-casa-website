@@ -2,6 +2,8 @@
 
 Lập 23/11/2026, theo yêu cầu của người phụ trách dự án (QUYET-DINH Q30).
 
+**Theo dõi tiến độ ở bản Docs** (bản theo dõi chính từ 25/11/2026): https://claude.ai/artifact/1C6u1C2z8UL8rYRgdANMeo. Tệp này giữ phần kỹ thuật; trạng thái từng việc cập nhật ở bản Docs.
+
 - **Bước 1, ưu tiên:** website với **3 cơ sở đang tuyển sinh** (Kim Mã, Chùa Láng, Mỹ Đình) chạy chính thức trên VPS mới ở tên miền casadeibambini.edu.vn, kèm SEO tự động.
 - **Bước 2, làm song song:** thêm cơ sở **Ciputra** và SEO cho Ciputra. Phần này chỉ chạy chính thức khi người phụ trách dự án báo.
 
