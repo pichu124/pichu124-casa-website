@@ -46,6 +46,6 @@ A child who joins mid-year may need some time to fit into a group of friends who
 
 ## Getting to know Casa
 
-Casa welcomes children from 15 months to 6 years, according to the programme and admission conditions at each campus. [CẦN: school to confirm mid-year admission when a class has places, then state it clearly here] All three campuses, Kim Mã, Chùa Láng and Mỹ Đình, welcome parents to visit. Children attend from 7:30 to 17:30, Monday to Friday, with late care until 18:30 (fees apply), and school continues through the summer.
+Casa welcomes children from 15 months to 6 years, according to the programme and admission conditions at each campus. The school accepts children in the middle of the school year when a class has places. All three campuses, Kim Mã, Chùa Láng and Mỹ Đình, welcome parents to visit. Children attend from 7:30 to 17:30, Monday to Friday, with late care until 18:30 (fees apply), and school continues through the summer.
 
 Admissions follow five steps: the school receives your details, gives advice and books a visit, your family visits for about 30–45 minutes, your child can have a trial if you wish, then enrols, then the school supports your family through the first weeks. To find out which campus has a place for your child's age, please contact the school or register on the [Admissions](/en/admissions/) page. Registrations sent during office hours receive a call back the same working day.

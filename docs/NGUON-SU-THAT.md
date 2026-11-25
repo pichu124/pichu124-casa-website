@@ -59,6 +59,7 @@ Khi lệch, **Casa facts thắng**: sửa bản chép này, không sửa ngượ
 
 - 5 bước: tiếp nhận thông tin → tư vấn và đặt lịch tham quan → tham quan 30–45 phút → học thử và đăng ký nhập học → đồng hành thời gian đầu.
 - Gọi lại trong ngày làm việc với đăng ký gửi trong giờ hành chính.
+- Nhận bé vào giữa năm học khi lớp còn chỗ. **Đã chốt** (người phụ trách dự án chuyển xác nhận của nhà trường, 25/11/2026).
 
 ## An toàn và đội ngũ (phiếu câu 15–16)
 

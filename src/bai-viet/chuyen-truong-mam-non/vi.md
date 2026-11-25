@@ -46,6 +46,6 @@ Bé vào giữa năm có thể cần thời gian để hòa vào nhóm bạn đ�
 
 ## Tìm hiểu Casa
 
-Casa nhận bé từ 15 tháng đến 6 tuổi, theo chương trình và điều kiện tuyển sinh của từng cơ sở. [CẦN: nhà trường xác nhận có nhận bé vào giữa năm học khi lớp còn chỗ, rồi viết thành một câu rõ ràng ở đây] Ba cơ sở Kim Mã, Chùa Láng và Mỹ Đình đều đón ba mẹ đến tham quan. Bé học từ 7h30 đến 17h30, thứ Hai đến thứ Sáu, có trông muộn đến 18h30 (có tính phí), và mùa hè vẫn học.
+Casa nhận bé từ 15 tháng đến 6 tuổi, theo chương trình và điều kiện tuyển sinh của từng cơ sở. Trường nhận bé vào giữa năm học khi lớp còn chỗ. Ba cơ sở Kim Mã, Chùa Láng và Mỹ Đình đều đón ba mẹ đến tham quan. Bé học từ 7h30 đến 17h30, thứ Hai đến thứ Sáu, có trông muộn đến 18h30 (có tính phí), và mùa hè vẫn học.
 
 Quy trình tuyển sinh gồm năm bước: nhà trường tiếp nhận thông tin, tư vấn và đặt lịch tham quan, gia đình đến tham quan trong khoảng 30–45 phút, bé học thử (nếu gia đình có nhu cầu) và đăng ký nhập học, rồi nhà trường đồng hành cùng gia đình trong thời gian đầu. Ba mẹ muốn biết lớp còn chỗ cho độ tuổi của con ở cơ sở nào, xin liên hệ nhà trường hoặc đăng ký ở trang [Tuyển sinh](/tuyen-sinh/). Đăng ký gửi trong giờ hành chính được gọi lại trong ngày làm việc.

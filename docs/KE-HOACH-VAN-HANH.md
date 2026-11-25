@@ -86,7 +86,7 @@ Nguyên tắc giữ đúng tài liệu SEO của Project Casa: agent soạn, age
 | 7 | (Nháp 25/11) Cho bé làm quen tiếng Anh từ mầm non | `/chuong-trinh/` |
 | 8 | Nên chọn trường mầm non trước bao lâu? Mốc cho năm học 2027–2028 | `/tuyen-sinh/` |
 | 9 | (Nháp 25/11) Bé đi nhà trẻ hay khóc: vì sao và ba mẹ làm gì (thêm 25/11 theo bản nghiên cứu của marketing) | `/chuong-trinh/nha-tre/` |
-| 10 | (Nháp 25/11, đăng sau bài 9; chờ nhà trường xác nhận có nhận bé giữa năm) Chuyển trường mầm non giữa năm: khi nào nên chuyển, chuẩn bị gì cho con (thêm 25/11 theo bản nghiên cứu của marketing) | `/tuyen-sinh/` |
+| 10 | (Nháp 25/11, đăng sau bài 9) Chuyển trường mầm non giữa năm: khi nào nên chuyển, chuẩn bị gì cho con (thêm 25/11 theo bản nghiên cứu của marketing) | `/tuyen-sinh/` |
 
 **Ba tác vụ tự chạy:**
 
