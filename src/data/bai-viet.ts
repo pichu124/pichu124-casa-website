@@ -21,6 +21,8 @@ export interface ThongTinBai {
   danVe: string;
   /** true = bài về Ciputra: chỉ dựng khi công tắc Ciputra bật */
   ciputra?: boolean;
+  /** true = bản nháp: không dựng lên site (QUYET-DINH Q38). Đăng = bỏ dòng này và đặt ngày thật */
+  nhap?: boolean;
   /** Nguồn tham khảo (tuỳ chọn) */
   nguon?: { ten: string; url: string }[];
 }
@@ -61,6 +63,7 @@ for (const [duong, fm] of Object.entries(tep)) {
 const TAT_CA: Bai[] = [...theoMa].map(([ma, ds]) => {
   const vi = kiemTra(ma, 'vi', ds.vi), en = kiemTra(ma, 'en', ds.en);
   if (Boolean(vi.ciputra) !== Boolean(en.ciputra)) throw new Error(`Bài "${ma}": mục "ciputra" ở vi.md và en.md phải giống nhau`);
+  if (Boolean(vi.nhap) !== Boolean(en.nhap)) throw new Error(`Bài "${ma}": mục "nhap" ở vi.md và en.md phải giống nhau`);
   if (vi.danVe !== en.danVe) throw new Error(`Bài "${ma}": mục "danVe" ở vi.md và en.md phải giống nhau`);
   if (vi.danVe === 'co-so-ciputra' && !vi.ciputra) throw new Error(`Bài "${ma}": dẫn về trang Ciputra thì phải có "ciputra: true"`);
   return { ma, vi, en };
@@ -74,9 +77,13 @@ for (const lang of ['vi', 'en'] as const) {
   }
 }
 
-/** Bài được dựng trên bản này, mới nhất trước. Bài Ciputra chỉ có khi công tắc bật. */
+/** Dựng cả bản nháp, chỉ để kiểm tra (npm run check:nhap). Không bao giờ bật trên máy chủ. */
+const DUNG_NHAP = process.env.CASA_NHAP === '1';
+
+/** Bài được dựng trên bản này, mới nhất trước. Bài Ciputra chỉ có khi công tắc bật; bản nháp không dựng. */
 export const BAI_VIET: Bai[] = TAT_CA
   .filter((b) => CIPUTRA_CONG_KHAI || !b.vi.ciputra)
+  .filter((b) => DUNG_NHAP || !b.vi.nhap)
   .sort((a, b) => b.vi.ngay.localeCompare(a.vi.ngay));
 
 export const khoaBai = (ma: string) => `bai-${ma}`;

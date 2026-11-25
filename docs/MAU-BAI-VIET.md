@@ -38,6 +38,7 @@ Nội dung…
 | `ngay` | Có | `"YYYY-MM-DD"` |
 | `danVe` | Có | Trang bài dẫn về: `admissions`, `nursery`, `kindergarten`, `programmes` hoặc `campuses`. Bài Ciputra dùng `co-so-ciputra` (bắt buộc có `ciputra: true`); cuối bài khi đó mời "Đăng ký nhận thông tin" thay cho "Đăng ký tham quan" |
 | `ciputra` | Không | `true` nếu bài nói về Ciputra. Bài chỉ hiện khi công tắc Ciputra bật |
+| `nhap` | Không | `true` = bản nháp, không dựng lên site. Kiểm tra bài nháp bằng `npm run check:nhap`. Đăng bài: bỏ dòng `nhap`, đặt `ngay` là ngày đăng, chạy `npm run check`, gộp vào `main` khi người phụ trách dự án đồng ý |
 | `nguon` | Không | Danh sách `{ ten, url }`, ví dụ trang của Cambridge International |
 
 Thiếu mục, mục quá dài hay thiếu bản tiếng Anh thì build dừng và báo lỗi tiếng Việt. Danh sách bài, sitemap và `hreflang` tự cập nhật.

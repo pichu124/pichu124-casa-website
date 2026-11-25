@@ -12,7 +12,8 @@
     "check:truoc-khi-dang": "node scripts/kiem-tra/index.mjs --truoc-khi-dang",
     "redirects": "node scripts/tao-redirects.mjs",
     "test:form": "node --test form/test/*.test.mjs",
-    "check:ciputra": "CASA_CIPUTRA=1 node scripts/kiem-tra/index.mjs"
+    "check:ciputra": "CASA_CIPUTRA=1 node scripts/kiem-tra/index.mjs",
+    "check:nhap": "CASA_NHAP=1 node scripts/kiem-tra/index.mjs"
   },
   "engines": {
     "node": ">=20"

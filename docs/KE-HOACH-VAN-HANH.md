@@ -68,7 +68,7 @@ Nguyên tắc giữ đúng tài liệu SEO của Project Casa: agent soạn, age
 | # | Việc | Ai | Tình trạng |
 |---|---|---|---|
 | S1 | Chuyển bài viết sang dạng Markdown, mỗi bài một tệp. Có ô `ciputra: true` để bài về Ciputra tự ẩn khi công tắc tắt. Hướng dẫn: `docs/MAU-BAI-VIET.md` | C | **Xong 23/11** |
-| S2 | Lịch bài cho 3 cơ sở (bảng dưới) | C soạn, CT duyệt | Bài 2 và 4 đã viết 23/11; bài 3 và 5 viết 25/11 (chờ CT duyệt cùng A6) |
+| S2 | Lịch bài cho 3 cơ sở (bảng dưới) | C soạn, CT duyệt | Bài 2–5 đã đăng (gộp `main` 25/11). Bài 6, 7, 9, 10 viết sẵn 25/11 dạng nháp (`nhap: true`); mỗi tuần sau ngày chuyển PT duyệt một bài thì C bỏ dòng nháp, đặt ngày và gộp. Bài 8 chờ lịch tuyển sinh năm học 2027–2028 |
 | S3 | Ba tác vụ tự chạy theo lịch. Mỗi tác vụ bật riêng, cần PT đồng ý (xem dưới) | C tạo khi PT đồng ý | Chờ |
 | S4 | Hồ sơ Google Maps của 3 cơ sở (bộ việc soạn sẵn: https://claude.ai/artifact/Vxnn923uJft68MmUCyMCJn):<br>• kiểm tra ai giữ quyền, gom về một tài khoản của trường;<br>• tên, địa chỉ, số điện thoại giống hệt website;<br>• ô website trỏ về đúng trang cơ sở (ví dụ `…/co-so/kim-ma/`) | NT | Chờ |
 | S5 | Xin review từ phụ huynh hiện tại (mã QR ở cổng, tin nhắn Zalo nhóm lớp). Không tặng quà đổi review, không viết review hộ | NT | Chờ |
@@ -82,11 +82,11 @@ Nguyên tắc giữ đúng tài liệu SEO của Project Casa: agent soạn, age
 | 3 | Bé 15 tháng đi nhà trẻ: dấu hiệu sẵn sàng và cách chuẩn bị | `/chuong-trinh/nha-tre/` |
 | 4 | Song ngữ hay quốc tế: chọn hệ nào cho con? (Kim Mã có hệ song ngữ; Chùa Láng, Mỹ Đình có hệ quốc tế) | `/chuong-trinh/` |
 | 5 | Chuẩn bị cho con vào lớp 1: lớp tiền tiểu học nên học gì | `/chuong-trinh/mau-giao/#tien-tieu-hoc` |
-| 6 | Một ngày của bé ở trường mầm non: giờ giấc, 4 bữa ăn, giấc ngủ trưa | trang 3 cơ sở |
-| 7 | Cho bé làm quen tiếng Anh từ mầm non | `/chuong-trinh/` |
+| 6 | (Nháp 25/11) Một ngày của bé ở trường mầm non: giờ giấc, bữa ăn, giấc ngủ trưa | `/chuong-trinh/` |
+| 7 | (Nháp 25/11) Cho bé làm quen tiếng Anh từ mầm non | `/chuong-trinh/` |
 | 8 | Nên chọn trường mầm non trước bao lâu? Mốc cho năm học 2027–2028 | `/tuyen-sinh/` |
-| 9 | Bé đi nhà trẻ hay khóc: vì sao và ba mẹ làm gì (thêm 25/11 theo bản nghiên cứu của marketing) | `/chuong-trinh/nha-tre/` |
-| 10 | Chuyển trường mầm non giữa năm: khi nào nên chuyển, chuẩn bị gì cho con (thêm 25/11 theo bản nghiên cứu của marketing) | `/tuyen-sinh/` |
+| 9 | (Nháp 25/11) Bé đi nhà trẻ hay khóc: vì sao và ba mẹ làm gì (thêm 25/11 theo bản nghiên cứu của marketing) | `/chuong-trinh/nha-tre/` |
+| 10 | (Nháp 25/11, đăng sau bài 9) Chuyển trường mầm non giữa năm: khi nào nên chuyển, chuẩn bị gì cho con (thêm 25/11 theo bản nghiên cứu của marketing) | `/tuyen-sinh/` |
 
 **Ba tác vụ tự chạy:**
 
