@@ -17,7 +17,7 @@ export interface ThongTinBai {
   tom: string;
   /** Ngày đăng YYYY-MM-DD */
   ngay: string;
-  /** Khoá trang mà bài dẫn về ở cuối bài (ví dụ admissions, nursery, kindergarten, programmes, campuses) */
+  /** Khoá trang mà bài dẫn về ở cuối bài (admissions, nursery, kindergarten, programmes, campuses; bài Ciputra dùng co-so-ciputra) */
   danVe: string;
   /** true = bài về Ciputra: chỉ dựng khi công tắc Ciputra bật */
   ciputra?: boolean;
@@ -62,6 +62,7 @@ const TAT_CA: Bai[] = [...theoMa].map(([ma, ds]) => {
   const vi = kiemTra(ma, 'vi', ds.vi), en = kiemTra(ma, 'en', ds.en);
   if (Boolean(vi.ciputra) !== Boolean(en.ciputra)) throw new Error(`Bài "${ma}": mục "ciputra" ở vi.md và en.md phải giống nhau`);
   if (vi.danVe !== en.danVe) throw new Error(`Bài "${ma}": mục "danVe" ở vi.md và en.md phải giống nhau`);
+  if (vi.danVe === 'co-so-ciputra' && !vi.ciputra) throw new Error(`Bài "${ma}": dẫn về trang Ciputra thì phải có "ciputra: true"`);
   return { ma, vi, en };
 });
 for (const lang of ['vi', 'en'] as const) {

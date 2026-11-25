@@ -68,7 +68,7 @@ Nguyên tắc giữ đúng tài liệu SEO của Project Casa: agent soạn, age
 | # | Việc | Ai | Tình trạng |
 |---|---|---|---|
 | S1 | Chuyển bài viết sang dạng Markdown, mỗi bài một tệp. Có ô `ciputra: true` để bài về Ciputra tự ẩn khi công tắc tắt. Hướng dẫn: `docs/MAU-BAI-VIET.md` | C | **Xong 23/11** |
-| S2 | Lịch bài cho 3 cơ sở (bảng dưới) | C soạn, CT duyệt | Bài 2 và 4 đã viết 23/11 (chờ CT duyệt cùng A6) |
+| S2 | Lịch bài cho 3 cơ sở (bảng dưới) | C soạn, CT duyệt | Bài 2 và 4 đã viết 23/11; bài 3 và 5 viết 25/11 (chờ CT duyệt cùng A6) |
 | S3 | Ba tác vụ tự chạy theo lịch. Mỗi tác vụ bật riêng, cần PT đồng ý (xem dưới) | C tạo khi PT đồng ý | Chờ |
 | S4 | Hồ sơ Google Maps của 3 cơ sở (bộ việc soạn sẵn: https://claude.ai/artifact/Vxnn923uJft68MmUCyMCJn):<br>• kiểm tra ai giữ quyền, gom về một tài khoản của trường;<br>• tên, địa chỉ, số điện thoại giống hệt website;<br>• ô website trỏ về đúng trang cơ sở (ví dụ `…/co-so/kim-ma/`) | NT | Chờ |
 | S5 | Xin review từ phụ huynh hiện tại (mã QR ở cổng, tin nhắn Zalo nhóm lớp). Không tặng quà đổi review, không viết review hộ | NT | Chờ |
@@ -85,6 +85,8 @@ Nguyên tắc giữ đúng tài liệu SEO của Project Casa: agent soạn, age
 | 6 | Một ngày của bé ở trường mầm non: giờ giấc, 4 bữa ăn, giấc ngủ trưa | trang 3 cơ sở |
 | 7 | Cho bé làm quen tiếng Anh từ mầm non | `/chuong-trinh/` |
 | 8 | Nên chọn trường mầm non trước bao lâu? Mốc cho năm học 2027–2028 | `/tuyen-sinh/` |
+| 9 | Bé đi nhà trẻ hay khóc: vì sao và ba mẹ làm gì (thêm 25/11 theo bản nghiên cứu của marketing) | `/chuong-trinh/nha-tre/` |
+| 10 | Chuyển trường mầm non giữa năm: khi nào nên chuyển, chuẩn bị gì cho con (thêm 25/11 theo bản nghiên cứu của marketing) | `/tuyen-sinh/` |
 
 **Ba tác vụ tự chạy:**
 
@@ -116,7 +118,7 @@ Nguyên tắc giữ đúng tài liệu SEO của Project Casa: agent soạn, age
 | C2 | Xem trước bản có Ciputra trên bản thử: `CASA_CIPUTRA=1` (thay tạm bản thử 3 cơ sở). Nếu cần xem song song hai bản, thêm một tên miền phụ thứ hai | QT | Khi CT cần duyệt |
 | C3 | Ảnh phối cảnh hoặc mặt tiền; số nhà; tên tòa và tên trên biển hiệu; tên hiển thị (ví dụ "Casa Preschool Ciputra") | NT | Chờ |
 | C4 | Cách gọi tên Cambridge (sau khi hỏi văn phòng Cambridge Việt Nam); câu về nhận bé từ 12 tháng; học phí hay giữ "liên hệ để nhận biểu phí"; thời điểm công bố đội ngũ chuyển sang; quyết định thành lập | CT | Chờ |
-| C5 | Gói SEO Ciputra soạn sẵn, nằm ẩn sau công tắc:<br>• các bài "8 điều nên hỏi khi tham quan quanh Ciputra", "Lớp trộn tuổi là gì", "Một ngày ở trường bán trú Ciputra", "Cập nhật cơ sở Ciputra", "Hỏi đáp tuyển sinh Ciputra";<br>• schema `Preschool` khi có địa chỉ đầy đủ;<br>• nội dung hồ sơ Google Maps | C | Sau S1 |
+| C5 | Gói SEO Ciputra soạn sẵn, nằm ẩn sau công tắc:<br>• 5 bài `src/bai-viet/ciputra-*` (chọn trường quanh Ciputra, lớp trộn tuổi, một ngày ở trường bán trú, cập nhật cơ sở, hỏi đáp tuyển sinh);<br>• schema `Preschool` khi có địa chỉ đầy đủ;<br>• nội dung hồ sơ Google Maps: `docs/GOOGLE-MAPS-CIPUTRA.md` | C | Bài và Maps xong 25/11; schema chờ số nhà (C3) |
 | C6 | Hồ sơ Google Maps mới cho Ciputra, xác minh khi đã có biển hiệu, cùng tài khoản với 3 hồ sơ cũ | NT | Khi có biển hiệu |
 
 **Ngày PT báo bật Ciputra:**

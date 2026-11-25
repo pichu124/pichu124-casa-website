@@ -36,7 +36,7 @@ Nội dung…
 | `h1` | Có | Tiêu đề lớn trên trang |
 | `tom` | Có | Một câu, hiện ở danh sách bài |
 | `ngay` | Có | `"YYYY-MM-DD"` |
-| `danVe` | Có | Trang bài dẫn về: `admissions`, `nursery`, `kindergarten`, `programmes` hoặc `campuses` |
+| `danVe` | Có | Trang bài dẫn về: `admissions`, `nursery`, `kindergarten`, `programmes` hoặc `campuses`. Bài Ciputra dùng `co-so-ciputra` (bắt buộc có `ciputra: true`); cuối bài khi đó mời "Đăng ký nhận thông tin" thay cho "Đăng ký tham quan" |
 | `ciputra` | Không | `true` nếu bài nói về Ciputra. Bài chỉ hiện khi công tắc Ciputra bật |
 | `nguon` | Không | Danh sách `{ ten, url }`, ví dụ trang của Cambridge International |
 
