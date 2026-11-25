@@ -22,6 +22,20 @@ const sapMo = CO_SO.filter((c) => c.trangThai === 'sap-khai-truong');
 // Hệ nào có ở cơ sở nào: sinh từ bảng cơ sở, không gõ tay
 const coHe = (k: 'quocTe' | 'songNgu') => dangTuyen.filter((c) => c.lop[k] === 'co').map((c) => c.ten[lang]).join(', ');
 
+// Khối "Vì sao chọn Casa": mỗi ý là một sự thật đã chốt, không so sánh với trường khác
+const LY_DO = [
+  { ten: t('Hơn 10 năm ở Hà Nội', 'Over 10 years in Hanoi'),
+    noi: t('Hệ thống mầm non xuyên suốt hơn 10 năm, với ba cơ sở đang tuyển sinh: Kim Mã, Chùa Láng, Mỹ Đình.', 'A preschool group running for over 10 years, with three campuses enrolling now: Kim Mã, Chùa Láng and Mỹ Đình.') },
+  { ten: t('Từ 15 tháng đến 6 tuổi', 'From 15 months to 6 years'),
+    noi: t('Nhà trẻ, mẫu giáo và lớp tiền tiểu học trong cùng một trường, con không phải đổi môi trường giữa chừng.', 'Nursery, kindergarten and a pre-primary class in one school, so your child does not need to change schools along the way.') },
+  { ten: t('Bếp trường tự nấu 4 bữa', 'Four meals cooked in our own kitchen'),
+    noi: t('Bếp một chiều của trường nấu toàn bộ 4 bữa mỗi ngày, kể cả bánh và đồ ăn nhẹ.', 'The school’s one-way kitchen cooks all four daily meals, including cakes and snacks.') },
+  { ten: t('Giáo viên nước ngoài ở cả hai hệ', 'Foreign teachers in both tracks'),
+    noi: t('Hệ quốc tế: mỗi lớp có giáo viên nước ngoài. Hệ song ngữ: giáo viên nước ngoài dạy theo tiết.', 'International track: a foreign teacher in every class. Bilingual track: a foreign teacher teaches scheduled lessons.') },
+  { ten: t('Lịch hợp với ba mẹ đi làm', 'A schedule that suits working parents'),
+    noi: t('Học từ 7h30 đến 17h30, trông muộn đến 18h30 (có tính phí). Mùa hè trường vẫn học, chỉ nghỉ 1 tuần.', 'Classes from 7:30 to 17:30, late care until 18:30 (charged). School continues through the summer with just one week off.') },
+];
+
 const schema = [{
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -64,6 +78,23 @@ const schema = [{
       <Picture class="dau-trang__anh" src={ANH.dauTrang.src} formats={['avif', 'webp']} widths={[480, 720, 1000, 1400]}
         sizes="(min-width: 56rem) 42vw, 100vw" loading="eager" fetchpriority="high"
         alt={ANH.dauTrang.alt[lang]} />
+    </div>
+  </section>
+
+  <!-- Vì sao chọn Casa (QUYET-DINH Q34): chỉ thông tin đã chốt trong Casa facts và phiếu nhà trường -->
+  <section class="phan phan--phu" aria-labelledby="vi-sao">
+    <div class="khung">
+      <div class="phan__dau">
+        <h2 id="vi-sao">{t('Vì sao chọn Casa Preschool', 'Why Casa Preschool')}</h2>
+      </div>
+      <ul class="luoi luoi--3 danh-sach-tron" role="list">
+        {LY_DO.map((l) => (
+          <li class="the">
+            <h3>{l.ten}</h3>
+            <p class="the__mo-ta">{l.noi}</p>
+          </li>
+        ))}
+      </ul>
     </div>
   </section>
 
