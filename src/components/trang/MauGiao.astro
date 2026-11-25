@@ -24,8 +24,8 @@ const NAM = [
   { ten: 'Early Years 2', tuoi: t('4–5 tuổi', '4–5 years'),
     noi: t('Bé tiếp tục cả sáu lĩnh vực ở mức cao hơn. Kỹ năng đã học năm trước được quay lại, mở rộng và vận dụng trong nhiều hoạt động hơn.', 'Children continue all six areas at a higher level. Skills from the year before are revisited, extended and used in more activities.') },
   { ten: 'Early Years 3', tuoi: t('5–6 tuổi', '5–6 years'),
-    noi: t('Lớp tiền tiểu học. Bé dùng những gì đã học vào tình huống thật, ví dụ dùng việc đếm để so sánh, thêm bớt và giải bài toán nhỏ, đồng thời được bổ sung kỹ năng chuẩn bị vào lớp 1.', 'The pre-primary class. Children use what they have learned in real situations, for example using counting to compare, add and take away and solve small problems, while building extra skills to prepare for Grade 1.'),
-    lienKet: t('Xem lớp tiền tiểu học ↓', 'See the pre-primary class ↓') },
+    id: 'tien-tieu-hoc', phu: t('Lớp tiền tiểu học', 'Pre-primary class'),
+    noi: t('Năm cuối mẫu giáo. Bé dùng những gì đã học vào tình huống thật, ví dụ dùng việc đếm để so sánh, thêm bớt và giải bài toán nhỏ, đồng thời được bổ sung kỹ năng chuẩn bị vào lớp 1.', 'The final kindergarten year. Children use what they have learned in real situations, for example using counting to compare, add and take away and solve small problems, while building extra skills to prepare for Grade 1.') },
 ];
 const LINH_VUC = [
   t('Giao tiếp, ngôn ngữ và đọc viết', 'Communication, language and literacy'),
@@ -68,28 +68,20 @@ const LINH_VUC = [
       </div>
       <ol class="luoi luoi--3 danh-sach-tron" role="list">
         {NAM.map((n) => (
-          <li class="the the--nhan">
+          <li class="the the--nhan" id={n.id}>
             <span class="huy-hieu">{n.tuoi}</span>
-            <h3>{n.ten}</h3>
+            <h3>{n.ten}{n.phu && <>: {n.phu}</>}</h3>
             <p class="the__mo-ta">{n.noi}</p>
-            {n.lienKet && <p class="the__phu"><a href="#tien-tieu-hoc">{n.lienKet}</a></p>}
           </li>
         ))}
       </ol>
-    </div>
-  </section>
-
-  <section class="phan phan--phu phan--sat" id="tien-tieu-hoc" aria-labelledby="tieu-de-tien-tieu-hoc">
-    <div class="khung khung-chu">
-      <h2 id="tieu-de-tien-tieu-hoc">{t('Lớp tiền tiểu học (5–6 tuổi)', 'Pre-primary class (ages 5–6)')}</h2>
-      <p>{t('Năm cuối mẫu giáo là lớp Early Years 3. Bên cạnh chương trình theo khung Cambridge Early Years, bé được bổ sung kỹ năng chuẩn bị vào lớp 1.', 'The final kindergarten year is Early Years 3. Alongside the programme based on the Cambridge Early Years framework, children build extra skills to prepare for Grade 1.')}</p>
-      <p>{t('Lớp tiền tiểu học có ở cả ba cơ sở đang tuyển sinh: Kim Mã, Chùa Láng, Mỹ Đình.', 'The pre-primary class is offered at all three enrolling campuses: Kim Mã, Chùa Láng and Mỹ Đình.')}</p>
+      <p class="sau-luoi">{t('Cả ba lớp, kể cả lớp tiền tiểu học, có ở cả ba cơ sở đang tuyển sinh: Kim Mã, Chùa Láng, Mỹ Đình.', 'All three classes, including the pre-primary class, are offered at all three enrolling campuses: Kim Mã, Chùa Láng and Mỹ Đình.')}</p>
       <BoAnh nhan={t('Ảnh lớp mẫu giáo', 'Kindergarten class photos')}
         anh={[ANH.tienTieuHoc, ANH.lopHocTron, ANH.gioHocBan].map((x) => ({ src: x.src, alt: x.alt[lang] }))} />
     </div>
   </section>
 
-  <section class="phan phan--sat" aria-labelledby="he-hoc">
+  <section class="phan phan--phu phan--sat" aria-labelledby="he-hoc">
     <div class="khung">
       <div class="phan__dau">
         <h2 id="he-hoc">{t('Hai hệ học', 'Two tracks')}</h2>
