@@ -84,7 +84,7 @@ for i in $(seq 1 24); do
     echo "✔ https://${TEN_MIEN}/ đã mở được."
     echo ""
     echo "Bước tiếp theo: kiểm tra toàn bộ URL cũ:"
-    echo "    node ${MA_NGUON}/scripts/kiem-tra-chuyen-huong.mjs https://${TEN_MIEN} --chinh"
+    echo "    sudo -H -u casa-website node ${MA_NGUON}/scripts/kiem-tra-chuyen-huong.mjs https://${TEN_MIEN} --chinh"
     exit 0
   fi
   sleep 5

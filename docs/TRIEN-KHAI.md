@@ -349,14 +349,14 @@ sudo -H -u casa-website /opt/casa-website/src/deploy/cap-nhat-ban-thu.sh
 sudo bash /opt/casa-website/src/deploy/cap-nhat-caddy.sh
 ```
 
-2. Kiểm tra toàn bộ URL cũ trên bản thử. Mật khẩu xem gõ vào không hiện ra và không được lưu:
+2. Kiểm tra toàn bộ URL cũ trên bản thử. Kịch bản chạy bằng user `casa-website` (chỉ user này đọc được `/opt/casa-website`). Mật khẩu xem gõ vào không hiện ra, không được lưu và không ghi vào nhật ký của sudo:
 
 ```bash
 read -rsp "Mật khẩu xem bản thử: " CASA_MK; echo; export CASA_MK
 ```
 
 ```bash
-node /opt/casa-website/src/scripts/kiem-tra-chuyen-huong.mjs https://casa-website-thu.duckdns.org; unset CASA_MK
+sudo --preserve-env=CASA_MK -H -u casa-website node /opt/casa-website/src/scripts/kiem-tra-chuyen-huong.mjs https://casa-website-thu.duckdns.org; unset CASA_MK
 ```
 
 Phải thấy `✔ Đạt: 451 đường dẫn đúng…`. Có dòng `✘` thì gửi cả kết quả cho Claude, chưa chuyển.
@@ -373,7 +373,7 @@ sudo bash /opt/casa-website/src/deploy/bat-ten-mien-chinh.sh
 3. **Kiểm tra toàn bộ URL cũ trên tên miền thật** (không cần mật khẩu). Ngoài bảng chuyển hướng, kịch bản còn kiểm `www` → tên miền gốc, `http` → `https`, không còn `noindex`, `robots.txt` không chặn:
 
 ```bash
-node /opt/casa-website/src/scripts/kiem-tra-chuyen-huong.mjs https://casadeibambini.edu.vn --chinh
+sudo -H -u casa-website node /opt/casa-website/src/scripts/kiem-tra-chuyen-huong.mjs https://casadeibambini.edu.vn --chinh
 ```
 
 4. Mở `https://casadeibambini.edu.vn` trên điện thoại, gửi thử một đăng ký tham quan; mở app `app.casadeibambini.edu.vn` xem vẫn chạy bình thường.

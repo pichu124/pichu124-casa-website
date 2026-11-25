@@ -5,13 +5,13 @@
 //   - còn lại → phải trả 301 với Location đúng đích, và đích phải trả 200.
 // Thêm: các quy tắc chung (tag, feed, ?p=, ?lang=en, wp-*), trang 404, dịch vụ form.
 //
-// Cách chạy trên VPS:
-//   Bản thử (có mật khẩu xem; mật khẩu gõ vào, không hiện, không lưu):
+// Cách chạy trên VPS (bằng user casa-website: chỉ user này đọc được /opt/casa-website):
+//   Bản thử (có mật khẩu xem; mật khẩu gõ vào, không hiện, không lưu, không ghi vào nhật ký sudo):
 //     read -rsp "Mật khẩu xem bản thử: " CASA_MK; echo; export CASA_MK
-//     node /opt/casa-website/src/scripts/kiem-tra-chuyen-huong.mjs https://casa-website-thu.duckdns.org
+//     sudo --preserve-env=CASA_MK -H -u casa-website node /opt/casa-website/src/scripts/kiem-tra-chuyen-huong.mjs https://casa-website-thu.duckdns.org
 //     unset CASA_MK
 //   Tên miền chính (sau khi đổi DNS):
-//     node /opt/casa-website/src/scripts/kiem-tra-chuyen-huong.mjs https://casadeibambini.edu.vn --chinh
+//     sudo -H -u casa-website node /opt/casa-website/src/scripts/kiem-tra-chuyen-huong.mjs https://casadeibambini.edu.vn --chinh
 // Kết quả cuối: "✔ Đạt" (mã thoát 0) hoặc danh sách URL sai (mã thoát 1).
 
 import { readFileSync } from 'node:fs';
