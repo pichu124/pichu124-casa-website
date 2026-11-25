@@ -13,7 +13,7 @@ Sáng nào cũng vậy: đến cửa lớp là con ôm chặt ba mẹ và khóc.
 
 ## Vì sao con khóc?
 
-Ở tuổi nhà trẻ, bé đã gắn bó sâu với ba mẹ và người chăm sóc chính. Khi phải xa người thân ở một nơi lạ, bé lo lắng và khóc. Đó là phản ứng tự nhiên, cho thấy con có sự gắn bó lành mạnh với gia đình, không phải dấu hiệu con "hư" hay trường không tốt.
+Ở tuổi nhà trẻ, bé đã gắn bó sâu với ba mẹ và người chăm sóc chính. Khi phải xa người thân ở một nơi lạ, bé lo lắng và khóc. Đó là phản ứng tự nhiên, thường là dấu hiệu con gắn bó với gia đình, không phải dấu hiệu con "hư".
 
 Một vài điều khiến con khóc nhiều hơn:
 
@@ -50,8 +50,8 @@ Hãy trao đổi kỹ với cô giáo nếu sau một thời gian con vẫn khó
 
 ## Ở Casa, bé mới được giúp làm quen thế nào?
 
-Giáo viên phối hợp với ba mẹ giúp bé làm quen với môi trường mới và cập nhật tình hình thích nghi của con trong thời gian đầu. Cô quan sát cảm xúc, giúp bé nhận biết và bày tỏ nhu cầu của mình. Trợ giảng cùng giáo viên phụ trách lớp quan sát nhu cầu của từng bé, đặc biệt với các bé mới nhập học hoặc đang trong giai đoạn thích nghi.
+Giáo viên phối hợp với ba mẹ giúp bé làm quen với môi trường mới và cập nhật tình hình thích nghi của con trong thời gian đầu. Cô quan sát cảm xúc, giúp bé nhận biết và bày tỏ nhu cầu của mình. Đội ngũ trợ giảng phối hợp cùng giáo viên phụ trách lớp quan sát nhu cầu của từng bé, đặc biệt với các bé mới nhập học hoặc đang trong giai đoạn thích nghi.
 
-Ba mẹ theo dõi ngày của con qua ứng dụng liên lạc điện tử của trường và trao đổi trực tiếp với cô giáo. Quy trình tuyển sinh có bước học thử trước khi nhập học, và nhà trường đồng hành cùng gia đình trong thời gian đầu. Các bước chi tiết ở trang [Tuyển sinh](/tuyen-sinh/).
+Ba mẹ theo dõi ngày của con qua ứng dụng liên lạc điện tử của trường và trao đổi trực tiếp với cô giáo. Quy trình tuyển sinh có bước học thử trước khi nhập học (nếu gia đình có nhu cầu), và nhà trường đồng hành cùng gia đình trong thời gian đầu. Các bước chi tiết ở trang [Tuyển sinh](/tuyen-sinh/).
 
 Nếu con sắp bắt đầu đi nhà trẻ, bài [Bé 15 tháng đi nhà trẻ: dấu hiệu sẵn sàng và cách chuẩn bị](/tin-tuc/be-15-thang-di-nha-tre/) có thêm gợi ý chuẩn bị ở nhà. Xem lớp nhà trẻ của Casa ở trang [Nhà trẻ 15–36 tháng](/chuong-trinh/nha-tre/).

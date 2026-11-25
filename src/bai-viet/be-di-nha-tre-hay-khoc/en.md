@@ -13,7 +13,7 @@ Every morning it is the same: at the classroom door, your child clings to you an
 
 ## Why does my child cry?
 
-At nursery age, children are deeply attached to their parents and main carers. When they have to be apart from them in an unfamiliar place, they feel anxious and cry. This is a natural reaction that shows a healthy bond with the family, not a sign that your child is "naughty" or that the school is not good.
+At nursery age, children are deeply attached to their parents and main carers. When they have to be apart from them in an unfamiliar place, they feel anxious and cry. This is a natural reaction and usually a sign of your child's bond with the family, not a sign that your child is "naughty".
 
 A few things make children cry more:
 
@@ -50,8 +50,8 @@ Talk in more detail with the teacher if, after some time, your child still cries
 
 ## How are new children helped to settle at Casa?
 
-Teachers work with parents to help children get used to the new environment and keep them updated on how their child is settling in during the first weeks. Teachers observe children's emotions and help them recognise and express their needs. Teaching assistants work with the class teacher to observe each child's needs, especially for children who are new or still settling in.
+Teachers work with parents to help children get used to the new environment and keep them updated on how their child is settling in during the first weeks. Teachers observe children's emotions and help them recognise and express their needs. The teaching assistant team works with the class teacher to observe each child's needs, especially for children who are new or still settling in.
 
-Parents follow their child's day through the school's communication app and talk directly with the teacher. The admissions process includes a trial day before enrolment, and the school supports families through the first weeks. The detailed steps are on the [Admissions](/en/admissions/) page.
+Parents follow their child's day through the school's communication app and talk directly with the teacher. The admissions process includes a trial before enrolment (if your family wishes), and the school supports families through the first weeks. The detailed steps are on the [Admissions](/en/admissions/) page.
 
 If your child is about to start nursery, the article [Starting nursery at 15 months: readiness signs and how to prepare](/en/news/starting-nursery-at-15-months/) has more suggestions for preparing at home. See Casa's nursery classes on the [Nursery, 15–36 months](/en/programmes/nursery/) page.

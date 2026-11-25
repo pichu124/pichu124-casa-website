@@ -32,14 +32,14 @@ Ba mẹ không cần nói tiếng Anh giỏi mới giúp được con:
 - **Đọc sách tranh song ngữ** trước giờ ngủ. Chỉ vào hình và gọi tên đồ vật.
 - **Dùng vài câu quen thuộc mỗi ngày**: "Good morning", "Thank you", "Let's go", "All done".
 - **Khen sự cố gắng, không sửa lỗi gay gắt.** Khi con nói sai, ba mẹ nhắc lại câu đúng một cách tự nhiên là đủ.
-- **Giữ tiếng Việt ở nhà.** Bé vẫn cần tiếng mẹ đẻ vững để diễn đạt cảm xúc và suy nghĩ.
+- **Giữ tiếng mẹ đẻ ở nhà.** Bé vẫn cần tiếng mẹ đẻ vững để diễn đạt cảm xúc và suy nghĩ.
 
 ## Khi chọn trường, nên hỏi gì?
 
 Tên chương trình hay tên hệ học thường nghe giống nhau giữa các trường. Hãy hỏi cụ thể:
 
 1. Bé làm quen tiếng Anh qua những hoạt động nào trong ngày?
-2. Trong lớp có những ai nói tiếng Anh, giáo viên nước ngoài có mặt trong lớp hằng ngày hay dạy theo tiết?
+2. Trong lớp có những ai nói tiếng Anh, giáo viên nước ngoài ở trong lớp hay dạy theo tiết?
 3. Trường trao đổi với ba mẹ về sự tiến bộ tiếng Anh của con thế nào?
 4. Bé có được dùng tiếng Anh trong sinh hoạt hằng ngày, hay chỉ trong giờ học tiếng Anh?
 
@@ -48,14 +48,14 @@ Bài [Song ngữ hay quốc tế: chọn hệ nào cho con?](/tin-tuc/song-ngu-h
 ## Tiếng Anh ở Casa
 
 - **Nhà trẻ 15–36 tháng:** bé làm quen tiếng Anh một cách tự nhiên qua bài hát, trò chơi, kể chuyện và giao tiếp hằng ngày.
-- **Mẫu giáo 3–6 tuổi:** bé học chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi, trong đó giao tiếp, ngôn ngữ và đọc viết là một trong sáu lĩnh vực phát triển. Qua trò chuyện, kể chuyện, trò chơi và khám phá, bé có cơ hội nghe, hiểu và dùng tiếng Anh trong những tình huống phù hợp với độ tuổi.
+- **Mẫu giáo 3–6 tuổi:** bé học chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi. Giáo viên nước ngoài tham gia các hoạt động tiếng Anh theo mô hình của từng hệ học. Qua trò chuyện, kể chuyện, trò chơi và khám phá, bé có cơ hội nghe, hiểu và dùng tiếng Anh trong những tình huống phù hợp với độ tuổi.
 
-Lớp 3–6 tuổi có hai hệ, mỗi cơ sở một hệ:
+Lớp 3–6 tuổi có hai hệ:
 
 | | Hệ quốc tế | Hệ song ngữ |
 | --- | --- | --- |
 | Trong lớp | 1 giáo viên chủ nhiệm, 1 trợ giảng (ưu tiên nói tiếng Anh tốt), 1 giáo viên nước ngoài | 1 giáo viên chủ nhiệm, 2 trợ giảng (ít nhất 1 người nói tiếng Anh tốt) |
-| Giáo viên nước ngoài | Có mặt trong lớp | Dạy theo tiết |
+| Giáo viên nước ngoài | 1 người, trong lớp | Dạy theo tiết |
 | Cơ sở | Chùa Láng, Mỹ Đình | Kim Mã |
 
 Xem thêm ở trang [Chương trình học](/chuong-trinh/#so-sanh-he).

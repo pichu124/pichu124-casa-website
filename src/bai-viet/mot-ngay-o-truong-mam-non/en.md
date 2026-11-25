@@ -1,7 +1,7 @@
 ---
 duongDan: a-day-at-preschool
 tieuDe: "A day at preschool: school hours, meals and nap time"
-moTa: "A day at Casa preschool: arrival and pick-up times, meals, learning and play, nap time, and how parents can follow their child's day."
+moTa: "A day at Casa Preschool: arrival and pick-up times, meals, learning and play, nap time, and how parents can follow their child's day."
 h1: "A day at preschool: school hours, meals and nap time"
 tom: "A walk through a child's day at Casa, from arrival to home time, and how you know how your child ate, slept and learned."
 ngay: "2026-11-25"
@@ -57,6 +57,6 @@ At the end of the day, a few minutes' chat with the teacher at pick-up also tell
 - **Keep a steady routine**, even at weekends: wake-up, meal and sleep times close to school times.
 - **Ask your child specific questions**: "What did you eat today?", "Who did you play with?" rather than "Did you have fun at school?".
 - **Put your child to bed early** after a long day at school, especially in the first weeks.
-- **Tell the teacher** when something changes at home: your child slept badly, has just recovered from illness, or there is a new baby. The better the teacher knows your child, the better they can care for them.
+- **Tell the teacher** when something changes at home: your child didn't sleep much, has just recovered from illness, or there is a new baby. The better the teacher knows your child, the better they can care for them.
 
 See school hours, meals and the summer programme on the [Programmes](/en/programmes/#mot-ngay) page.

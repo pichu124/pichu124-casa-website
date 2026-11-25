@@ -47,7 +47,7 @@ Phần cuối bài (lời mời đăng ký tham quan, nút gọi hotline, liên 
 
 ## 2. Thân bài
 
-- **Độ dài:** 700–1.200 chữ. Mở đầu 2–3 câu, rồi 3–6 mục `##`. Không dùng `#` (trang đã có tiêu đề lớn).
+- **Độ dài:** 700–1.200 chữ, tính theo bản tiếng Việt (bản tiếng Anh dịch đúng nghĩa nên thường ngắn hơn; không thêm ý để đủ chữ). Mở đầu 2–3 câu, rồi 3–6 mục `##`. Không dùng `#` (trang đã có tiêu đề lớn).
 - **Liên kết trong bài:** ít nhất 2 liên kết tới trang của site, viết đường dẫn bắt đầu bằng `/`. Bài tiếng Anh trỏ tới trang `/en/…`.
 - **Câu:** ngắn, dễ hiểu với phụ huynh không chuyên. Một ý một đoạn.
 - **Bản tiếng Anh** dịch đúng nghĩa bản tiếng Việt, không thêm thông tin.
