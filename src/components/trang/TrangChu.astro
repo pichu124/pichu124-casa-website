@@ -27,9 +27,9 @@ const LY_DO = [
   { ten: t('Hơn 10 năm ở Hà Nội', 'Over 10 years in Hanoi'),
     noi: t('Hệ thống mầm non xuyên suốt hơn 10 năm, với ba cơ sở đang tuyển sinh: Kim Mã, Chùa Láng, Mỹ Đình.', 'A preschool group running for over 10 years, with three campuses enrolling now: Kim Mã, Chùa Láng and Mỹ Đình.') },
   { ten: t('Từ 15 tháng đến 6 tuổi', 'From 15 months to 6 years'),
-    noi: t('Nhà trẻ, mẫu giáo và lớp tiền tiểu học trong cùng một trường, con không phải đổi môi trường giữa chừng.', 'Nursery, kindergarten and a pre-primary class in one school, so your child does not need to change schools along the way.') },
-  { ten: t('Bếp trường tự nấu 4 bữa', 'Four meals cooked in our own kitchen'),
-    noi: t('Bếp một chiều của trường nấu toàn bộ 4 bữa mỗi ngày, kể cả bánh và đồ ăn nhẹ.', 'The school’s one-way kitchen cooks all four daily meals, including cakes and snacks.') },
+    noi: t('Nhà trẻ, mẫu giáo và tiền tiểu học trong cùng một trường, con không phải đổi môi trường giữa chừng.', 'Nursery, kindergarten and pre-primary in one school, so your child does not need to change schools along the way.') },
+  { ten: t('Bếp trường tự nấu mọi bữa', 'Every meal cooked in our own kitchen'),
+    noi: t('Bếp một chiều của trường nấu toàn bộ 4–5 bữa mỗi ngày tùy cơ sở, kể cả bánh và đồ ăn nhẹ.', 'The school’s one-way kitchen cooks all 4–5 daily meals, depending on the campus, including cakes and snacks.') },
   { ten: t('Giáo viên nước ngoài ở cả hai hệ', 'Foreign teachers in both tracks'),
     noi: t('Hệ quốc tế: mỗi lớp có giáo viên nước ngoài. Hệ song ngữ: giáo viên nước ngoài dạy theo tiết.', 'International track: a foreign teacher in every class. Bilingual track: a foreign teacher teaches scheduled lessons.') },
   { ten: t('Lịch hợp với ba mẹ đi làm', 'A schedule that suits working parents'),
@@ -145,14 +145,14 @@ const schema = [{
         <article class="the the--nhan the--lien-ket">
           <span class="huy-hieu">{t('3 – 6 tuổi', '3 – 6 years')}</span>
           <h3><a class="the__lien-ket" href={url('kindergarten', lang)}>{t('Mẫu giáo', 'Kindergarten')}</a></h3>
-          <p class="the__mo-ta">{t('Chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi, có lớp tiền tiểu học chuẩn bị vào lớp 1.', 'A programme based on the Cambridge Early Years framework for children aged 3–6, including a pre-primary class that prepares them for Grade 1.')}</p>
+          <p class="the__mo-ta">{t('Chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi, có chương trình tiền tiểu học chuẩn bị vào lớp 1.', 'A programme based on the Cambridge Early Years framework for children aged 3–6, including a pre-primary programme that prepares them for Grade 1.')}</p>
           <span class="the__chan" aria-hidden="true">{t('Xem chương trình mẫu giáo', 'See the kindergarten programme')} →</span>
         </article>
         <article class="the the--nhan the--lien-ket">
           <span class="huy-hieu">{t('5 – 6 tuổi', '5 – 6 years')}</span>
-          <h3><a class="the__lien-ket" href={url('kindergarten', lang) + '#tien-tieu-hoc'}>{t('Lớp tiền tiểu học', 'Pre-primary class')}</a></h3>
-          <p class="the__mo-ta">{t('Năm cuối mẫu giáo, bé được chuẩn bị kỹ năng để tự tin vào lớp 1. Có ở cả ba cơ sở đang tuyển sinh.', 'In the final kindergarten year, children build the skills to start Grade 1 with confidence. Offered at all three enrolling campuses.')}</p>
-          <span class="the__chan" aria-hidden="true">{t('Xem lớp tiền tiểu học', 'See the pre-primary class')} →</span>
+          <h3><a class="the__lien-ket" href={url('kindergarten', lang) + '#tien-tieu-hoc'}>{t('Tiền tiểu học', 'Pre-primary')}</a></h3>
+          <p class="the__mo-ta">{t('Năm cuối mẫu giáo, bé được chuẩn bị kỹ năng để tự tin vào lớp 1. Có ở cả ba cơ sở: lớp riêng ở Chùa Láng, Mỹ Đình; học buổi chiều ở Kim Mã.', 'In the final kindergarten year, children build the skills to start Grade 1 with confidence. At all three campuses: a separate class at Chùa Láng and Mỹ Đình, afternoon sessions at Kim Mã.')}</p>
+          <span class="the__chan" aria-hidden="true">{t('Xem chương trình tiền tiểu học', 'See the pre-primary programme')} →</span>
         </article>
       </div>
     </div>

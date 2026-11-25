@@ -24,7 +24,7 @@ const NAM = [
   { ten: 'Early Years 2', tuoi: t('4–5 tuổi', '4–5 years'),
     noi: t('Bé tiếp tục cả sáu lĩnh vực ở mức cao hơn. Kỹ năng đã học năm trước được quay lại, mở rộng và vận dụng trong nhiều hoạt động hơn.', 'Children continue all six areas at a higher level. Skills from the year before are revisited, extended and used in more activities.') },
   { ten: 'Early Years 3', tuoi: t('5–6 tuổi', '5–6 years'),
-    id: 'tien-tieu-hoc', phu: t('Lớp tiền tiểu học', 'Pre-primary class'),
+    id: 'tien-tieu-hoc', phu: t('Tiền tiểu học', 'Pre-primary'),
     noi: t('Năm cuối mẫu giáo. Bé dùng những gì đã học vào tình huống thật, ví dụ dùng việc đếm để so sánh, thêm bớt và giải bài toán nhỏ, đồng thời được bổ sung kỹ năng chuẩn bị vào lớp 1.', 'The final kindergarten year. Children use what they have learned in real situations, for example using counting to compare, add and take away and solve small problems, while building extra skills to prepare for Grade 1.') },
 ];
 const LINH_VUC = [
@@ -39,8 +39,8 @@ const LINH_VUC = [
 <Base lang={lang} routeKey="kindergarten" duongDan={duongDan}
   tieuDe={t('Mẫu giáo 3–6 tuổi theo khung Cambridge Early Years', 'Kindergarten for ages 3–6, Cambridge Early Years framework')}
   moTa={t(
-    'Ba năm mẫu giáo theo khung Cambridge Early Years: Early Years 1, 2, 3; lớp tiền tiểu học bổ sung kỹ năng chuẩn bị vào lớp 1; hai hệ quốc tế và song ngữ.',
-    'Three kindergarten years based on the Cambridge Early Years framework: Early Years 1, 2 and 3, a pre-primary class preparing for Grade 1, and two tracks.',
+    'Ba năm mẫu giáo theo khung Cambridge Early Years: Early Years 1, 2, 3; tiền tiểu học bổ sung kỹ năng chuẩn bị vào lớp 1; hai hệ quốc tế và song ngữ.',
+    'Three kindergarten years based on the Cambridge Early Years framework: Early Years 1, 2 and 3, a pre-primary programme preparing for Grade 1, and two tracks.',
   )}>
 
   <section class="dau-trang-con">
@@ -64,7 +64,7 @@ const LINH_VUC = [
     <div class="khung">
       <div class="phan__dau">
         <h2 id="ba-lop">{t('Ba năm mẫu giáo, mỗi năm một bước', 'Three kindergarten years, one step at a time')}</h2>
-        <p>{t('Mỗi lớp ứng với một năm tuổi. Những gì con học năm trước được quay lại năm sau ở mức cao hơn.', 'Each class matches one year of age. What children learn one year is revisited the next, at a higher level.')}</p>
+        <p>{t('Mỗi năm ứng với một độ tuổi. Những gì con học năm trước được quay lại năm sau ở mức cao hơn.', 'Each year matches one age. What children learn one year is revisited the next, at a higher level.')}</p>
       </div>
       <ol class="luoi luoi--3 danh-sach-tron" role="list">
         {NAM.map((n) => (
@@ -75,7 +75,7 @@ const LINH_VUC = [
           </li>
         ))}
       </ol>
-      <p class="sau-luoi">{t('Cả ba lớp, kể cả lớp tiền tiểu học, có ở cả ba cơ sở đang tuyển sinh: Kim Mã, Chùa Láng, Mỹ Đình.', 'All three classes, including the pre-primary class, are offered at all three enrolling campuses: Kim Mã, Chùa Láng and Mỹ Đình.')}</p>
+      <p class="sau-luoi">{t('Cả ba cơ sở đang tuyển sinh đều dạy chương trình tiền tiểu học. Chùa Láng và Mỹ Đình có lớp tiền tiểu học riêng. Ở Kim Mã, bé 3–6 tuổi học chung lớp; buổi chiều, bé 5–6 tuổi học riêng chương trình tiền tiểu học.', 'All three enrolling campuses teach the pre-primary programme. Chùa Láng and Mỹ Đình have a separate pre-primary class. At Kim Mã, children aged 3–6 share one class; in the afternoons, 5–6-year-olds study the pre-primary programme separately.')}</p>
       <BoAnh nhan={t('Ảnh lớp mẫu giáo', 'Kindergarten class photos')}
         anh={[ANH.tienTieuHoc, ANH.lopHocTron, ANH.gioHocBan].map((x) => ({ src: x.src, alt: x.alt[lang] }))} />
     </div>

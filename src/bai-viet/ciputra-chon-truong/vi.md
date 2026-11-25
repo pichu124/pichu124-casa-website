@@ -60,6 +60,6 @@ Casa Preschool đang hoàn thiện cơ sở mới ngay trong khu đô thị Cipu
 - **Hai hệ học (dự kiến):** hệ quốc tế: mỗi lớp có giáo viên nước ngoài; hệ song ngữ: giáo viên nước ngoài dạy theo tiết.
 - **Đón trả:** phụ huynh đón trả bé trước sảnh tòa nhà, bé lên lớp bằng thang máy (dự kiến). Các phương án an toàn về thang máy, tầng học, sân thượng và lối thoát hiểm sẽ được công bố sau khi cơ sở hoàn thiện.
 
-Ở các cơ sở Casa đang hoạt động, bé học từ 7h30 đến 17h30, thứ Hai đến thứ Sáu, ăn 4 bữa mỗi ngày do bếp một chiều của trường tự nấu. Trong lúc chờ cơ sở mới, ba mẹ có thể đến một trong [ba cơ sở đang hoạt động](/co-so/) để xem cách Casa tổ chức lớp học.
+Ở các cơ sở Casa đang hoạt động, bé học từ 7h30 đến 17h30, thứ Hai đến thứ Sáu, ăn 4–5 bữa mỗi ngày tùy cơ sở, do bếp một chiều của trường tự nấu. Trong lúc chờ cơ sở mới, ba mẹ có thể đến một trong [ba cơ sở đang hoạt động](/co-so/) để xem cách Casa tổ chức lớp học.
 
 Thông tin đầy đủ về cơ sở mới có ở trang [Casa Preschool – Ciputra](/co-so/ciputra/).

@@ -5,8 +5,13 @@
 export type Lang = 'vi' | 'en';
 export type HaiNgu = { vi: string; en: string };
 
-/** Có / không / chưa biết. Với Ciputra: 'du-kien' = có, theo kế hoạch. */
-export type GiaTriLop = 'co' | 'khong' | 'du-kien' | null;
+/** Có / không / chưa biết. Với Ciputra: 'du-kien' = có, theo kế hoạch.
+ * 'buoi-chieu' (chỉ cho tiền tiểu học): không có lớp riêng, bé 5–6 tuổi học chương trình tiền tiểu học buổi chiều (A6, 25/11/2026). */
+export type GiaTriLop = 'co' | 'khong' | 'du-kien' | 'buoi-chieu' | null;
+
+// Bữa ăn theo cơ sở (chủ trường phản hồi A6, 25/11/2026). Mọi bữa do bếp một chiều của trường tự nấu.
+const BUA_4 = { so: 4, chiTiet: { vi: 'sáng, phụ sáng, trưa, phụ chiều', en: 'breakfast, morning snack, lunch, afternoon snack' } };
+const BUA_5 = { so: 5, chiTiet: { vi: 'sáng, phụ sáng, trưa, phụ chiều và bữa sữa tươi lúc 16h', en: 'breakfast, morning snack, lunch, afternoon snack and fresh milk at 16:00' } };
 
 export interface CoSo {
   slug: string;
@@ -21,6 +26,8 @@ export interface CoSo {
   /** Đủ để gắn schema Preschool (CLAUDE: chỉ khi có địa chỉ đầy đủ) */
   schema: { streetAddress: string; addressLocality: string } | null;
   lop: { nhaTre: GiaTriLop; songNgu: GiaTriLop; quocTe: GiaTriLop; tienTieuHoc: GiaTriLop };
+  /** Bữa ăn mỗi ngày (chủ trường, A6 25/11/2026); null = chưa chốt */
+  buaAn: { so: number; chiTiet: HaiNgu } | null;
 }
 
 /**
@@ -41,7 +48,8 @@ const TAT_CA_CO_SO: CoSo[] = [
     diaChiNgan: { vi: 'Số 23, ngõ 294 Kim Mã', en: 'No. 23, Lane 294 Kim Mã' },
     banDo: '23 ngõ 294 Kim Mã, Hà Nội',
     schema: { streetAddress: 'Số 23, ngõ 294 Kim Mã', addressLocality: 'Hà Nội' },
-    lop: { nhaTre: 'co', songNgu: 'co', quocTe: 'khong', tienTieuHoc: 'co' },
+    lop: { nhaTre: 'co', songNgu: 'co', quocTe: 'khong', tienTieuHoc: 'buoi-chieu' },
+    buaAn: BUA_4,
   },
   {
     slug: 'chua-lang',
@@ -55,6 +63,7 @@ const TAT_CA_CO_SO: CoSo[] = [
     banDo: 'HongKong Tower, 185 Huỳnh Thúc Kháng, Hà Nội',
     schema: { streetAddress: 'Tầng 1–2, sảnh A1, tòa HongKong Tower, 185 Huỳnh Thúc Kháng, phường Láng', addressLocality: 'Hà Nội' },
     lop: { nhaTre: 'co', songNgu: 'khong', quocTe: 'co', tienTieuHoc: 'co' },
+    buaAn: BUA_5,
   },
   {
     slug: 'my-dinh',
@@ -65,6 +74,7 @@ const TAT_CA_CO_SO: CoSo[] = [
     banDo: 'FLC Complex, 36 Phạm Hùng, Hà Nội',
     schema: { streetAddress: 'Tầng 3, tòa FLC Complex, số 36 Phạm Hùng', addressLocality: 'Hà Nội' },
     lop: { nhaTre: 'co', songNgu: 'khong', quocTe: 'co', tienTieuHoc: 'co' },
+    buaAn: BUA_5,
   },
   {
     slug: 'ciputra',
@@ -78,6 +88,7 @@ const TAT_CA_CO_SO: CoSo[] = [
     banDo: null, // Casa facts 21/11/2026: tầng 2, tầng 3, sân thượng tòa Block 1; chưa có số nhà
     schema: null, // Casa facts: chỉ gắn schema khi có địa chỉ đầy đủ
     lop: { nhaTre: 'du-kien', songNgu: 'du-kien', quocTe: 'du-kien', tienTieuHoc: 'du-kien' },
+    buaAn: null,
   },
 ];
 

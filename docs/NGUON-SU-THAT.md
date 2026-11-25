@@ -1,6 +1,6 @@
 # Nguồn sự thật: bản chép làm việc
 
-Bản chép ngày 15/11/2026 (đối chiếu Casa facts bản rev 37 cùng ngày), bổ sung ngày 18/11/2026 theo phiếu bổ sung thông tin do nhà trường điền (người điền: bộ phận Marketing) của mục 1–2 trong "Nguồn sự thật" (`CLAUDE.md`): quyết định của chủ trường và Casa facts (https://claude.ai/artifact/3tsvDG2LQaGt2UB6dqtdgy).
+Bản chép ngày 15/11/2026, bổ sung 25/11/2026 theo phản hồi A6 của chủ trường (đối chiếu Casa facts bản rev 37 cùng ngày), bổ sung ngày 18/11/2026 theo phiếu bổ sung thông tin do nhà trường điền (người điền: bộ phận Marketing) của mục 1–2 trong "Nguồn sự thật" (`CLAUDE.md`): quyết định của chủ trường và Casa facts (https://claude.ai/artifact/3tsvDG2LQaGt2UB6dqtdgy).
 
 **Lưu ý 18/11/2026:** phiếu do bộ phận Marketing điền; bảng theo dõi của Marketing ghi là dự thảo. Chiều 18/11 người phụ trách dự án chuyển xác nhận của nhà trường cho: tên "Casa Preschool" (dùng tạm logo cũ), Cambridge Early Years ở ba cơ sở cũ, bếp một chiều tự nấu, tòa CC1 ở Ciputra; phiếu được bổ sung câu 17, 18, 19, 23, 26, 27, 28. Các dòng còn lại ghi "(phiếu câu N)" là đã có câu trả lời; chủ trường vẫn duyệt toàn bộ nội dung trên bản thử trước khi đăng chính thức.
 
@@ -14,7 +14,7 @@ Khi lệch, **Casa facts thắng**: sửa bản chép này, không sửa ngượ
 - Logo: bộ tệp PDF "Các dạng logo" (thư mục Drive của trường), chuyển sang SVG ở `public/thuong-hieu/`. Logo ghi "Casa dei Bambini – Montessori Preschool": **dùng tạm**, nhà trường sẽ đổi logo sau (xác nhận 18/11/2026).
 - Màu (câu 2): navy `#23265A` (chủ đạo), đỏ san hô `#E54041` (nhấn), xanh pastel `#8EB7E1` (bổ trợ), xám đậm `#51535A` (phụ), trắng. Phông: Anja Eliane (logo), DIN (văn bản). **Đã chốt.**
 - Khẩu hiệu: "Em bé hạnh phúc, Ba mẹ yên tâm" / "Happy children, carefree parents" (bộ nhận diện). Ý nghĩa hình cây: 3 lá đỏ là bố, mẹ, nhà trường. (Bộ nhận diện cũ ghi 7 lá là 7 giá trị cốt lõi; nay nhà trường dùng 5 giá trị nên site bỏ ý 7 lá.)
-- **Thông điệp và 5 giá trị cốt lõi CASA LOVE** (người phụ trách dự án chuyển ngày 19/11/2026, dùng tạm): C – Compassion (Lòng trắc ẩn), A – Autonomy (Tính tự chủ), S – Steadfastness (Kiên cường), A – Accountability (Trách nhiệm), LOVE – Love (Tình yêu thương). Thông điệp mở đầu: "Mỗi đứa trẻ đều xứng đáng lớn lên trong yêu thương, được tôn trọng và phát triển theo cách riêng của mình." Câu "môi trường giáo dục Montessori chuẩn quốc tế" trong bản gốc không đăng nguyên văn (QUYET-DINH Q27).
+- **Thông điệp và 5 giá trị cốt lõi CASA LOVE** (người phụ trách dự án chuyển ngày 19/11/2026, dùng tạm): C – Compassion (Lòng trắc ẩn), A – Autonomy (Tính tự chủ), S – Steadfastness (Kiên cường), A – Accountability (Trách nhiệm), LOVE – Love (Tình yêu thương). Thông điệp mở đầu: "Mỗi đứa trẻ đều xứng đáng lớn lên trong yêu thương, được tôn trọng và phát triển theo cách riêng của mình." Câu "môi trường giáo dục Montessori chuẩn quốc tế" trong bản gốc không đăng nguyên văn (QUYET-DINH Q27). Chủ trường 25/11/2026 (A6): giữ CASA LOVE như hiện tại, đổi sau khi chốt thương hiệu mới.
 - Đơn vị ghi ở chân trang và trong Chính sách dữ liệu (phiếu câu 17): **Trường mầm non Casa Preschool**, địa chỉ Tầng 1–2, sảnh A1, tòa HongKong Tower, 185 Huỳnh Thúc Kháng, phường Láng, Hà Nội. Web chỉ thể hiện tên truyền thông, không ghi pháp nhân.
 - Câu định vị đang chờ duyệt (trong Casa facts) có vế "Cambridge" và "chưa bằng một nửa trường quốc tế": **chưa được dùng**. Nội dung Marketing đề xuất trong bảng tính "CONTENT WEBSITE MỚI" (Learner profile, kết quả phát triển, CASA LOVE…) ghi "chờ duyệt": **chưa dùng**.
 
@@ -32,12 +32,13 @@ Khi lệch, **Casa facts thắng**: sửa bản chép này, không sửa ngượ
 
 | Cơ sở | Nhà trẻ | Hệ song ngữ | Hệ quốc tế | Tiền tiểu học |
 |---|---|---|---|---|
-| Kim Mã | Có | Có | Không | Có |
+| Kim Mã | Có | Có | Không | Có, học buổi chiều (xem dưới) |
 | Chùa Láng | Có | Không | Có | Có |
 | Mỹ Đình | Có | Không | Có | Có |
 | Ciputra | Có (dự kiến) | Có (dự kiến) | Có (dự kiến) | Có (dự kiến) |
 
 - 3–6 tuổi ở cả ba cơ sở cũ theo khung Cambridge Early Years. **Đã chốt** (xác nhận 18/11/2026).
+- **Tiền tiểu học theo cơ sở** (chủ trường, phản hồi A6 25/11/2026): cả ba cơ sở đều dạy chương trình tiền tiểu học. Chùa Láng và Mỹ Đình có lớp tiền tiểu học riêng. Kim Mã: bé 3–6 tuổi học chung lớp, buổi chiều tách bé 5–6 tuổi ra học chương trình tiền tiểu học. **Đã chốt.**
 
 ## Hai hệ (lớp 3–6 tuổi)
 
@@ -48,9 +49,10 @@ Khi lệch, **Casa facts thắng**: sửa bản chép này, không sửa ngượ
 ## Giờ học và sinh hoạt (đúng cho các cơ sở, phiếu câu 12)
 
 - 7h30–17h30, thứ Hai đến thứ Sáu. **Đã chốt.**
-- Trông muộn đến 18h30, có tính phí từ 17h30 (tính vào học phí quý liền kề; website chỉ viết "có tính phí"). **Đã chốt.**
+- Trông muộn đến 18h30, có tính phí từ 17h30, theo khung giờ (chủ trường nhắc lại ở A6, 25/11/2026; tính vào học phí quý liền kề; website chỉ viết "có tính phí"). **Đã chốt.**
 - Hè vẫn học, nghỉ 1 tuần theo lịch năm học. **Đã chốt.**
-- 4 bữa mỗi ngày; bếp một chiều, trường tự nấu toàn bộ, kể cả bánh. **Đã chốt** (xác nhận 18/11/2026).
+- Bếp một chiều, trường tự nấu toàn bộ, kể cả bánh. **Đã chốt** (xác nhận 18/11/2026).
+- Số bữa theo cơ sở (chủ trường, phản hồi A6 25/11/2026; thay dòng "4 bữa mỗi ngày" cũ): **Kim Mã 4 bữa** (sáng, phụ sáng, trưa, phụ chiều); **Chùa Láng, Mỹ Đình 5 bữa** (thêm bữa sữa tươi lúc 16h). Viết chung cho cả hệ thống: "4–5 bữa mỗi ngày tùy cơ sở". Ciputra: **chưa có**. **Đã chốt.**
 - Ngoại khoá, dã ngoại, chương trình hè phù hợp từng độ tuổi, theo đăng ký, thu phí riêng. **Đã chốt.**
 
 ## Tuyển sinh (phiếu câu 13–14)

@@ -52,7 +52,7 @@ A day at school is much longer than a day at home, so your child may be tired in
 
 ## A day at Casa
 
-At Casa's current campuses, children attend from 7:30 to 17:30, Monday to Friday. They have 4 meals a day cooked by the school's own one-way kitchen, including cakes and snacks. Parents who need a later pick-up can register for late care until 18:30 (fees apply). Children keep learning in summer, with just 1 week off according to the school calendar.
+At Casa's current campuses, children attend from 7:30 to 17:30, Monday to Friday. They have 4–5 meals a day depending on the campus, cooked by the school's own one-way kitchen, including cakes and snacks. Parents who need a later pick-up can register for late care until 18:30 (fees apply). Children keep learning in summer, with just 1 week off according to the school calendar.
 
 The Casa Preschool – Ciputra campus is on the 2nd and 3rd floors and rooftop of Block 1 in the Ciputra urban area, and is expected to open in Q4 2027. Parents drop off and pick up children in front of the building lobby (planned). The detailed daily schedule at the new campus will be published once the campus is complete.
 

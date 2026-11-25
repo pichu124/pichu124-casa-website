@@ -24,7 +24,7 @@ Ask how many adults are in the class and what each one does: homeroom teacher, t
 
 Ask to see the weekly menu, how many meals children have a day, where the kitchen is and who cooks. If your child has allergies or is a fussy eater, ask how the school handles this at everyday meals.
 
-At Casa, children have 4 meals a day from a menu suited to preschool age. The school's one-way kitchen cooks everything itself, including cakes and snacks.
+At Casa, children have 4–5 meals a day depending on the campus (4 at Kim Mã; Chùa Láng and Mỹ Đình add fresh milk at 16:00), from a menu suited to preschool age. The school's one-way kitchen cooks everything itself, including cakes and snacks.
 
 ## 4. Which programme do children follow, and through what activities?
 

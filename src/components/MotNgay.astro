@@ -1,7 +1,7 @@
 ---
 // "Một ngày ở Casa": một nguồn dùng chung cho trang chủ và trang Chương trình.
 // Phiếu câu 12 (18/11/2026): trông muộn có tính phí. Bếp: bếp một chiều, trường tự nấu, cả bánh
-// (người phụ trách dự án chuyển xác nhận của nhà trường, 18/11/2026).
+// (người phụ trách dự án chuyển xác nhận của nhà trường, 18/11/2026). Số bữa theo cơ sở: chủ trường, A6 25/11/2026.
 import type { Lang } from '../data/co-so';
 import { taoT } from '../i18n/routes';
 interface Props { lang: Lang }
@@ -10,6 +10,6 @@ const t = taoT(Astro.props.lang);
 <ul class="o-so-lieu">
   <li><strong>7h30–17h30</strong>{t('Thứ Hai đến thứ Sáu', 'Monday to Friday')}</li>
   <li><strong>{t('Trông muộn đến 18h30', 'Late care until 18:30')}</strong>{t('Có tính phí, khi ba mẹ cần đón muộn', 'For a fee, when parents need to pick up later')}</li>
-  <li><strong>{t('4 bữa mỗi ngày', '4 meals a day')}</strong>{t('Bếp một chiều của trường tự nấu, kể cả bánh', 'Cooked in the school’s own one-way kitchen, cakes included')}</li>
+  <li><strong>{t('4–5 bữa mỗi ngày', '4–5 meals a day')}</strong>{t('Bếp một chiều của trường tự nấu, kể cả bánh. Kim Mã 4 bữa; Chùa Láng, Mỹ Đình thêm bữa sữa tươi lúc 16h', 'Cooked in the school’s own one-way kitchen, cakes included. 4 at Kim Mã; Chùa Láng and Mỹ Đình add fresh milk at 16:00')}</li>
   <li><strong>{t('Hè vẫn học', 'Open in summer')}</strong>{t('Nghỉ 1 tuần theo lịch năm học', 'Closed for one week, per the school calendar')}</li>
 </ul>

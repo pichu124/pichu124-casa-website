@@ -28,11 +28,11 @@ Vì vậy, chuẩn bị cho lớp 1 không có nghĩa là học trước chươn
 
 **5. Cảm xúc và quan hệ với bạn bè.** Con nói được mình đang vui, buồn hay lo; biết chờ lượt, chia sẻ, xin giúp đỡ khi cần; biết làm quen với bạn mới. Những kỹ năng này giúp con hòa nhập khi lớp học, thầy cô và bạn bè đều thay đổi cùng một lúc.
 
-## Lớp tiền tiểu học ở Casa
+## Tiền tiểu học ở Casa
 
 Ở Casa, trẻ 3–6 tuổi học chương trình theo khung Cambridge Early Years. Khung chương trình chia thành ba năm, Early Years 1, 2 và 3, với sáu lĩnh vực phát triển: giao tiếp, ngôn ngữ và đọc viết; biểu đạt sáng tạo; toán; phát triển cá nhân, xã hội và cảm xúc; phát triển thể chất; khám phá thế giới.
 
-Lớp tiền tiểu học là năm cuối, học theo Early Years 3. Bé dùng những gì đã học vào tình huống thật, ví dụ dùng việc đếm để so sánh, thêm bớt và giải bài toán nhỏ, đồng thời được bổ sung kỹ năng chuẩn bị vào lớp 1. Lớp tiền tiểu học có ở cả ba cơ sở Kim Mã, Chùa Láng và Mỹ Đình.
+Năm cuối là năm tiền tiểu học, học theo Early Years 3. Bé dùng những gì đã học vào tình huống thật, ví dụ dùng việc đếm để so sánh, thêm bớt và giải bài toán nhỏ, đồng thời được bổ sung kỹ năng chuẩn bị vào lớp 1. Cả ba cơ sở Kim Mã, Chùa Láng và Mỹ Đình đều dạy chương trình tiền tiểu học. Chùa Láng và Mỹ Đình có lớp tiền tiểu học riêng. Ở Kim Mã, bé 3–6 tuổi học chung lớp; buổi chiều, bé 5–6 tuổi học riêng chương trình tiền tiểu học.
 
 Xem ba năm mẫu giáo ở trang [Mẫu giáo 3–6 tuổi](/chuong-trinh/mau-giao/#tien-tieu-hoc). Bài [Cambridge Early Years là gì?](/tin-tuc/cambridge-early-years-la-gi/) giải thích rõ hơn về khung chương trình này.
 
@@ -50,4 +50,4 @@ Con chưa đọc trôi chảy hay chưa viết đẹp khi kết thúc mẫu giá
 
 Điều đáng để ý hơn là con có thích đi học không, có tự tin hỏi khi không hiểu không, có chơi được với bạn không. Nếu ba mẹ thấy con còn khó khăn ở điểm nào, hãy trao đổi với cô để cùng giúp con trong năm cuối mẫu giáo.
 
-Ba mẹ muốn xem lớp tiền tiểu học của Casa có thể đăng ký tham quan ở trang [Tuyển sinh](/tuyen-sinh/).
+Ba mẹ muốn xem lớp học của Casa có thể đăng ký tham quan ở trang [Tuyển sinh](/tuyen-sinh/).

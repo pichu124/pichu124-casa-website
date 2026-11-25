@@ -24,7 +24,7 @@ Hỏi trong lớp có bao nhiêu người lớn và vai trò của từng ngư�
 
 Xin xem thực đơn tuần, hỏi mỗi ngày bé ăn mấy bữa, bếp đặt ở đâu và ai nấu. Nếu con dị ứng hay kén ăn, hỏi trường xử lý thế nào trong bữa ăn hằng ngày.
 
-Ở Casa, bé ăn 4 bữa mỗi ngày theo thực đơn phù hợp lứa tuổi mầm non. Bếp một chiều của trường tự nấu toàn bộ, kể cả bánh và đồ ăn nhẹ.
+Ở Casa, bé ăn 4–5 bữa mỗi ngày tùy cơ sở (Kim Mã 4 bữa; Chùa Láng và Mỹ Đình thêm bữa sữa tươi lúc 16h), theo thực đơn phù hợp lứa tuổi mầm non. Bếp một chiều của trường tự nấu toàn bộ, kể cả bánh và đồ ăn nhẹ.
 
 ## 4. Con học theo chương trình nào, qua những hoạt động gì?
 

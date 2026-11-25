@@ -43,7 +43,7 @@ Parents drop off and pick up children in front of the building lobby, and childr
 
 ## What are the school hours and meals?
 
-At Casa's current campuses, children attend from 7:30 to 17:30, Monday to Friday, and have 4 meals a day cooked by the school's own one-way kitchen. The detailed daily schedule at the Ciputra campus will be published once the campus is complete.
+At Casa's current campuses, children attend from 7:30 to 17:30, Monday to Friday, and have 4–5 meals a day depending on the campus, cooked by the school's own one-way kitchen. The detailed daily schedule at the Ciputra campus will be published once the campus is complete.
 
 ## What are the fees?
 

@@ -49,7 +49,7 @@ Một vài điều giúp con dễ thích nghi hơn:
 
 Casa nhận bé từ 15 tháng, theo chương trình và điều kiện tuyển sinh của từng cơ sở. Lớp nhà trẻ có ở cả ba cơ sở Kim Mã, Chùa Láng và Mỹ Đình.
 
-Nhóm nhà trẻ 15–36 tháng được tổ chức theo định hướng giáo dục Montessori, chú trọng tính tự lập, giác quan, vận động, ngôn ngữ và kỹ năng thực hành cuộc sống. Bé làm quen tiếng Anh một cách tự nhiên qua bài hát, trò chơi, kể chuyện và giao tiếp hằng ngày. Mỗi ngày bé ăn 4 bữa do bếp một chiều của trường tự nấu.
+Nhóm nhà trẻ 15–36 tháng được tổ chức theo định hướng giáo dục Montessori, chú trọng tính tự lập, giác quan, vận động, ngôn ngữ và kỹ năng thực hành cuộc sống. Bé làm quen tiếng Anh một cách tự nhiên qua bài hát, trò chơi, kể chuyện và giao tiếp hằng ngày. Mỗi ngày bé ăn 4–5 bữa tùy cơ sở (Kim Mã 4 bữa; Chùa Láng và Mỹ Đình thêm bữa sữa tươi lúc 16h), do bếp một chiều của trường tự nấu.
 
 Xem thêm về lớp nhà trẻ ở trang [Nhà trẻ 15–36 tháng](/chuong-trinh/nha-tre/).
 

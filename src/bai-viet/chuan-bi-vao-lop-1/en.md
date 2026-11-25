@@ -28,11 +28,11 @@ So getting ready for Grade 1 does not mean learning the Grade 1 curriculum early
 
 **5. Emotions and friendships.** Your child can say whether they feel happy, sad or worried; can wait their turn, share and ask for help when needed; and can make new friends. These skills help children settle in when the class, the teachers and the other children all change at once.
 
-## The pre-primary class at Casa
+## Pre-primary at Casa
 
 At Casa, children aged 3–6 follow a programme based on the Cambridge Early Years framework. The framework is divided into three years, Early Years 1, 2 and 3, with six areas of development: communication, language and literacy; creative expression; mathematics; personal, social and emotional development; physical development; and understanding the world.
 
-The pre-primary class is the final year and follows Early Years 3. Children use what they have learned in real situations, for example using counting to compare, add and take away and solve small problems, while building extra skills to prepare for Grade 1. The pre-primary class is offered at all three campuses: Kim Mã, Chùa Láng and Mỹ Đình.
+The final year is the pre-primary year and follows Early Years 3. Children use what they have learned in real situations, for example using counting to compare, add and take away and solve small problems, while building extra skills to prepare for Grade 1. All three campuses, Kim Mã, Chùa Láng and Mỹ Đình, teach the pre-primary programme. Chùa Láng and Mỹ Đình have a separate pre-primary class. At Kim Mã, children aged 3–6 share one class; in the afternoons, 5–6-year-olds study the pre-primary programme separately.
 
 See the three kindergarten years on the [Kindergarten, 3–6 years](/en/programmes/kindergarten/#tien-tieu-hoc) page. The article [What is Cambridge Early Years?](/en/news/what-is-cambridge-early-years/) explains the framework in more detail.
 
@@ -50,4 +50,4 @@ It is normal for a child not to read fluently or write neatly by the end of kind
 
 What deserves more attention is whether your child enjoys going to school, feels confident to ask when they do not understand, and can play with other children. If you notice your child finding something difficult, talk to the teacher so you can help together during the last year of kindergarten.
 
-If you would like to see Casa's pre-primary class, you can book a visit on the [Admissions](/en/admissions/) page.
+If you would like to see Casa's classes, you can book a visit on the [Admissions](/en/admissions/) page.

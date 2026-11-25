@@ -60,6 +60,6 @@ Casa Preschool is completing a new campus inside the Ciputra urban area, Phú Th
 - **Two tracks (planned):** the international track, with a foreign teacher in every class; the bilingual track, where a foreign teacher teaches set lessons.
 - **Drop-off and pick-up:** parents drop off and pick up children in front of the building lobby, and children go up to class by lift (planned). Safety arrangements for the lifts, classroom floors, rooftop and emergency exits will be published once the campus is complete.
 
-At Casa's current campuses, children attend from 7:30 to 17:30, Monday to Friday, and have 4 meals a day cooked by the school's own one-way kitchen. While the new campus is being completed, you are welcome to visit one of our [three current campuses](/en/campuses/) to see how Casa runs its classes.
+At Casa's current campuses, children attend from 7:30 to 17:30, Monday to Friday, and have 4–5 meals a day depending on the campus, cooked by the school's own one-way kitchen. While the new campus is being completed, you are welcome to visit one of our [three current campuses](/en/campuses/) to see how Casa runs its classes.
 
 Full details about the new campus are on the [Casa Preschool – Ciputra](/en/campuses/ciputra/) page.

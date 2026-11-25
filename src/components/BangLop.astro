@@ -11,11 +11,11 @@ const TEN_COT = {
   nhaTre: t('Nhà trẻ (15–36 tháng)', 'Nursery (15–36 months)'),
   songNgu: t('Hệ song ngữ (3–6 tuổi)', 'Bilingual track (3–6 years)'),
   quocTe: t('Hệ quốc tế (3–6 tuổi)', 'International track (3–6 years)'),
-  tienTieuHoc: t('Lớp tiền tiểu học', 'Pre-primary class'),
+  tienTieuHoc: t('Tiền tiểu học (5–6 tuổi)', 'Pre-primary (5–6 years)'),
 };
 const tieuDe = Astro.props.tieuDe ?? t('Lớp và hệ học ở từng cơ sở', 'Classes and tracks at each campus');
 const hien = (v: GiaTriLop) =>
-  v === 'co' ? t('Có', 'Yes') : v === 'khong' ? t('Không', 'No') : v === 'du-kien' ? t('Có (dự kiến)', 'Yes (planned)') : null;
+  v === 'co' ? t('Có', 'Yes') : v === 'khong' ? t('Không', 'No') : v === 'du-kien' ? t('Có (dự kiến)', 'Yes (planned)') : v === 'buoi-chieu' ? t('Có (học buổi chiều)', 'Yes (afternoons)') : null;
 ---
 <div class="bang-cuon" role="region" aria-label={`${t('Bảng', 'Table')}: ${tieuDe}`} tabindex="0">
   <table class="bang--so-sanh">

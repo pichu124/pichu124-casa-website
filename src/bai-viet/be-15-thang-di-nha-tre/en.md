@@ -49,7 +49,7 @@ At Casa, teachers work with parents to help children get used to the new environ
 
 Casa welcomes children from 15 months, according to the programme and admission conditions at each campus. Nursery classes are offered at all three campuses: Kim Mã, Chùa Láng and Mỹ Đình.
 
-Nursery groups for 15–36 months are organised along Montessori principles, focusing on independence, the senses, movement, language and practical life skills. Children get used to English naturally through songs, games, stories and everyday conversation. Each day they have 4 meals cooked by the school's own one-way kitchen.
+Nursery groups for 15–36 months are organised along Montessori principles, focusing on independence, the senses, movement, language and practical life skills. Children get used to English naturally through songs, games, stories and everyday conversation. Each day they have 4–5 meals depending on the campus (4 at Kim Mã; Chùa Láng and Mỹ Đình add fresh milk at 16:00), cooked by the school's own one-way kitchen.
 
 Read more about nursery classes on the [Nursery, 15–36 months](/en/programmes/nursery/) page.
 

@@ -72,7 +72,9 @@ const lopCoSo = [
   c.lop.nhaTre === 'co' && t('Nhà trẻ 15–36 tháng, theo định hướng Montessori', 'Nursery for 15–36 months, guided by Montessori principles'),
   c.lop.songNgu === 'co' && t('Mẫu giáo 3–6 tuổi theo khung Cambridge Early Years, hệ song ngữ', 'Kindergarten for ages 3–6 based on the Cambridge Early Years framework, bilingual track'),
   c.lop.quocTe === 'co' && t('Mẫu giáo 3–6 tuổi theo khung Cambridge Early Years, hệ quốc tế: mỗi lớp có giáo viên nước ngoài', 'Kindergarten for ages 3–6 based on the Cambridge Early Years framework, international track: a foreign teacher in every class'),
-  c.lop.tienTieuHoc === 'co' && t('Lớp tiền tiểu học 5–6 tuổi', 'Pre-primary class for ages 5–6'),
+  c.lop.tienTieuHoc === 'co' && t('Lớp tiền tiểu học riêng cho bé 5–6 tuổi', 'A separate pre-primary class for ages 5–6'),
+  c.lop.tienTieuHoc === 'buoi-chieu' && t('Bé 3–6 tuổi học chung lớp; buổi chiều, bé 5–6 tuổi học riêng chương trình tiền tiểu học', 'Children aged 3–6 share one class; in the afternoons, 5–6-year-olds study the pre-primary programme separately'),
+  c.buaAn && t(`${c.buaAn.so} bữa mỗi ngày (${c.buaAn.chiTiet.vi}), do bếp một chiều của trường tự nấu`, `${c.buaAn.so} meals a day (${c.buaAn.chiTiet.en}), cooked in the school’s own one-way kitchen`),
 ].filter(Boolean) as string[];
 const khac = CO_SO.filter((x) => x.slug !== slug && x.trangThai === 'dang-tuyen-sinh');
 ---
@@ -134,7 +136,7 @@ const khac = CO_SO.filter((x) => x.slug !== slug && x.trangThai === 'dang-tuyen-
   ) : (
     <section class="phan phan--phu phan--sat" aria-labelledby="lop-hoc">
       <div class="khung">
-        <h2 id="lop-hoc">{t(`Lớp học tại cơ sở ${c.ten.vi}`, `Classes at the ${c.ten.en} campus`)}</h2>
+        <h2 id="lop-hoc">{t(`Lớp học và bữa ăn tại cơ sở ${c.ten.vi}`, `Classes and meals at the ${c.ten.en} campus`)}</h2>
         <ul class="danh-sach-dau">
           {lopCoSo.map((l) => <li>{l}</li>)}
         </ul>

@@ -52,7 +52,7 @@ Một ngày ở lớp dài hơn nhiều so với ở nhà, nên vài tuần đ�
 
 ## Một ngày ở Casa
 
-Ở các cơ sở Casa đang hoạt động, bé học từ 7h30 đến 17h30, thứ Hai đến thứ Sáu. Mỗi ngày bé ăn 4 bữa do bếp một chiều của trường tự nấu, kể cả bánh và đồ ăn nhẹ. Ba mẹ cần đón muộn có thể đăng ký trông muộn đến 18h30 (có tính phí). Mùa hè bé vẫn học, chỉ nghỉ 1 tuần theo lịch năm học.
+Ở các cơ sở Casa đang hoạt động, bé học từ 7h30 đến 17h30, thứ Hai đến thứ Sáu. Mỗi ngày bé ăn 4–5 bữa tùy cơ sở, do bếp một chiều của trường tự nấu, kể cả bánh và đồ ăn nhẹ. Ba mẹ cần đón muộn có thể đăng ký trông muộn đến 18h30 (có tính phí). Mùa hè bé vẫn học, chỉ nghỉ 1 tuần theo lịch năm học.
 
 Cơ sở Casa Preschool – Ciputra nằm ở tầng 2, tầng 3 và sân thượng của tòa Block 1 trong khu đô thị Ciputra, dự kiến khai trương quý 4/2027. Phụ huynh đón trả bé trước sảnh tòa nhà (dự kiến). Lịch sinh hoạt chi tiết ở cơ sở mới sẽ được công bố khi cơ sở hoàn thiện.
 

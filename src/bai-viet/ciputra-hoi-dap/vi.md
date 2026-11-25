@@ -43,7 +43,7 @@ Phụ huynh đón trả bé trước sảnh tòa nhà, bé lên lớp bằng tha
 
 ## Giờ học và bữa ăn thế nào?
 
-Ở các cơ sở Casa đang hoạt động, bé học từ 7h30 đến 17h30, thứ Hai đến thứ Sáu, ăn 4 bữa mỗi ngày do bếp một chiều của trường tự nấu. Lịch sinh hoạt chi tiết ở cơ sở Ciputra sẽ được công bố khi cơ sở hoàn thiện.
+Ở các cơ sở Casa đang hoạt động, bé học từ 7h30 đến 17h30, thứ Hai đến thứ Sáu, ăn 4–5 bữa mỗi ngày tùy cơ sở, do bếp một chiều của trường tự nấu. Lịch sinh hoạt chi tiết ở cơ sở Ciputra sẽ được công bố khi cơ sở hoàn thiện.
 
 ## Học phí bao nhiêu?
 
