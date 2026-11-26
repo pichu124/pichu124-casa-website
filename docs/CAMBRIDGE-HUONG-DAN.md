@@ -38,3 +38,35 @@ Chỉ cơ sở **đã đăng ký** được dùng logo. Website của cả hệ 
 ## Lưu ý cho bộ canh của website
 
 Bản mô tả dài của Cambridge có câu "the best start in life". Bộ canh chặn chữ "best" (không so sánh hơn nhất), nên website chỉ dùng **bản ngắn**, không dùng câu đó.
+
+## Cách dùng từ (theo mẫu thông cáo báo chí của Cambridge)
+
+Nguồn: mẫu "Press information" Cambridge gửi trung tâm mới (bản 14/03/2023), người phụ trách dự án gửi 26/11/2026. Mẫu có chỗ trống `[insert centre name]` để trường điền.
+
+**Cách Cambridge gọi trạng thái của trường:**
+- "[Centre] has been approved to offer the Cambridge Early Years programme."
+- "[Centre] has become a Cambridge Early Years Centre."
+- "Cambridge Early Years is the first stage of the Cambridge Pathway" (lộ trình từ 3 đến 19 tuổi).
+
+**Cách Cambridge mô tả chương trình** (dùng được khi mô tả bản thân chương trình, không biến thành lời hứa riêng của Casa):
+- giúp trẻ 3–6 tuổi phát triển kiến thức, hiểu biết và kỹ năng để đạt các mốc phát triển sớm quan trọng, tự tin trong và ngoài trường học (*develop the knowledge, understanding and skills they need to meet key early milestones and thrive in and outside of school*);
+- lấy trẻ làm trung tâm, học qua chơi, trẻ lớn lên theo nhịp riêng và gắn sự phát triển của mình với thế giới, con người xung quanh (*child-centred and play-based*);
+- chương trình toàn diện và cân bằng, có học liệu, cách đánh giá sự tiến bộ của trẻ và bồi dưỡng giáo viên;
+- chú trọng phát triển toàn diện, chuẩn bị cho trẻ chuyển lên tiểu học.
+
+**Không dùng trên website dù mẫu có:**
+- "world-class", "the best possible start in life": lời so sánh hơn nhất; bộ canh chặn "best", quy tắc cứng cấm "tốt nhất".
+- "We are part of the University of Cambridge": nói về Cambridge University Press & Assessment; viết lên site dễ làm phụ huynh hiểu Casa thuộc Đại học Cambridge (hướng dẫn logo cũng cấm gây nhầm lẫn). Bộ canh chặn "Đại học Cambridge" / "University of Cambridge".
+- Lời trích của Rod Smith: chỉ dùng trong thông cáo báo chí theo mẫu, không đặt thành lời quảng cáo trên site.
+- "brand-new": mẫu từ 2023, nay không còn mới.
+- "learners", "students": trên site gọi "bé", "trẻ", "con" ("children"), theo quy tắc cứng.
+
+**Cách viết đề xuất cho website** (chỉ dùng khi chủ trường đồng ý đổi quy tắc tên gọi Cambridge trong `CLAUDE.md`; Q1 trong bản Kế hoạch):
+
+| Chỗ dùng | Tiếng Việt | Tiếng Anh |
+| --- | --- | --- |
+| Câu trạng thái | Casa Preschool (Casa dei Bambini Preschool) là Trung tâm Cambridge Early Years được Cambridge chấp thuận, đăng ký giảng dạy chương trình Cambridge Early Years cho trẻ 3–6 tuổi. | Casa dei Bambini Preschool is an approved Cambridge Early Years Centre, registered to offer the early years programme from the Cambridge Pathway. |
+| Câu ngắn (chân trang, chữ ký email) | Casa dei Bambini Preschool là Trung tâm Cambridge Early Years. | Casa dei Bambini Preschool is a Cambridge Early Years Centre. |
+| Tên chương trình | chương trình Cambridge Early Years cho trẻ 3–6 tuổi | the Cambridge Early Years programme for children aged 3–6 |
+
+Tên trên chứng nhận là "Casa dei Bambini Preschool", nên câu trạng thái giữ đúng tên này (kèm tên hiển thị "Casa Preschool" ở bản tiếng Việt). Nếu chứng nhận không áp dụng cho cả ba cơ sở, câu trạng thái phải ghi rõ cơ sở nào.
