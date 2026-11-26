@@ -6,7 +6,6 @@ h1: "The Chùa Láng campus becomes a Cambridge Early Years Centre"
 tom: "The Chùa Láng campus has been approved by Cambridge as a Cambridge Early Years Centre. What it means and how children learn there."
 ngay: "2026-11-26"
 danVe: kindergarten
-nhap: true
 nguon:
   - ten: "Cambridge Early Years, Cambridge International Education"
     url: "https://www.cambridgeinternational.org/earlyyears"

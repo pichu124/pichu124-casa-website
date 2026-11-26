@@ -6,7 +6,6 @@ h1: "Cơ sở Chùa Láng trở thành Trung tâm Cambridge Early Years"
 tom: "Cơ sở Chùa Láng được Cambridge chấp thuận là Trung tâm Cambridge Early Years. Chứng nhận này nghĩa là gì và con học thế nào."
 ngay: "2026-11-26"
 danVe: kindergarten
-nhap: true
 nguon:
   - ten: "Cambridge Early Years, Cambridge International Education"
     url: "https://www.cambridgeinternational.org/earlyyears"
