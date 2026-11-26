@@ -13,9 +13,9 @@ Con nói chuyện líu lo ở nhà nhưng gặp người lạ là nép sau lưng
 
 ## Nhút nhát và chậm nói là hai chuyện khác nhau
 
-**Nhút nhát** là tính cách. Bé cần thời gian quan sát trước khi tham gia, ngại người lạ, nói ít ở chỗ đông nhưng nói nhiều khi ở với người quen. Đây không phải lỗi của con, cũng không phải điều cần "sửa". Nhiều bé nhút nhát lớn lên thành người biết lắng nghe và cẩn thận.
+**Nhút nhát** thường là một nét tính cách. Bé cần thời gian quan sát trước khi tham gia, ngại người lạ, nói ít ở chỗ đông nhưng nói nhiều khi ở với người quen. Đây không phải lỗi của con, cũng không phải điều cần "sửa". Nhiều bé nhút nhát lớn lên thành người biết lắng nghe và cẩn thận.
 
-**Chậm nói** là khi khả năng nói của con chậm hơn nhiều so với các bạn cùng tuổi, ở cả nhà lẫn ngoài đường. Mỗi bé có nhịp riêng nên chênh lệch một chút là bình thường. Nhưng nếu ba mẹ lo, đừng chỉ chờ. Hãy hỏi chuyên gia (xem mục cuối).
+**Chậm nói** là khi khả năng nói của con chậm hơn nhiều so với các bạn cùng tuổi, ở cả nhà lẫn ngoài đường. Mỗi bé có nhịp riêng nên chênh lệch một chút là chuyện thường gặp. Nhưng nếu ba mẹ lo, đừng chỉ chờ. Hãy hỏi chuyên gia (xem mục cuối).
 
 Có bé vừa nhút nhát vừa nói ít. Khi đó con thường cần thêm thời gian và cảm giác an toàn trước khi chịu mở lời.
 
@@ -24,7 +24,7 @@ Có bé vừa nhút nhát vừa nói ít. Khi đó con thường cần thêm th�
 - **Có lý do để nói.** Ở nhà, người lớn thường hiểu con trước khi con kịp nói. Ở lớp, con cần nói để xin đồ chơi, rủ bạn chơi, kể cho cô nghe. Mỗi nhu cầu nhỏ là một lần con tập nói.
 - **Nghe nhiều mỗi ngày.** Bài hát, câu chuyện, trò chuyện trong giờ ăn và giờ chơi giúp con có thêm từ ngữ, kể cả khi con chưa nói lại ngay.
 - **Có nhịp ổn định.** Một ngày có giờ giấc quen thuộc giúp bé nhút nhát biết điều gì sắp tới, nên bớt lo và dễ tham gia hơn.
-- **Có người lớn quan sát và đồng hành.** Cô để ý lúc con sẵn sàng, mời con vào hoạt động nhẹ nhàng, không ép con nói trước cả lớp khi con chưa muốn.
+- **Có người lớn quan sát và đồng hành.** Cô có thể để ý lúc con sẵn sàng và mời con vào hoạt động nhẹ nhàng, thay vì bắt con nói trước cả lớp.
 
 Lớp học không làm con thay đổi sau một đêm. Với bé nhút nhát, vài tuần đầu con có thể chỉ đứng nhìn. Đó vẫn là lúc con đang học.
 

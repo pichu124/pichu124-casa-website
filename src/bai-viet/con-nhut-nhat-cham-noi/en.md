@@ -1,7 +1,7 @@
 ---
 duongDan: shy-or-late-talking-child
 tieuDe: "Shy or late to talk: how can preschool help your child?"
-moTa: "Your child is shy with strangers or talks less than peers: how a preschool class helps, what you can do at home, and when to ask a specialist."
+moTa: "Your child is shy with strangers or is slower to talk than peers: how a preschool class helps, what you can do at home, and when to ask a specialist."
 h1: "Shy or late to talk: how can preschool help your child?"
 tom: "Why some children are shy or talk little, how a classroom helps them grow bolder, and when to ask a specialist."
 ngay: "2026-11-26"
@@ -13,9 +13,9 @@ Your child chatters away at home but hides behind you when meeting someone new. 
 
 ## Shyness and late talking are two different things
 
-**Shyness** is temperament. A shy child needs time to watch before joining in, is wary of strangers, and says little in a crowd but plenty with familiar people. It is not your child's fault and not something that needs "fixing". Many shy children grow up to be good listeners and careful thinkers.
+**Shyness** is usually a matter of temperament. A shy child needs time to watch before joining in, is wary of strangers, and says little in a crowd but plenty with familiar people. It is not your child's fault and not something that needs "fixing". Many shy children grow up to be good listeners and careful people.
 
-**Late talking** is when a child's speech is well behind others the same age, both at home and elsewhere. Every child has their own pace, so a small gap is normal. But if you are worried, do not just wait. Ask a specialist (see the last section).
+**Late talking** is when a child's speech is well behind others the same age, both at home and elsewhere. Every child has their own pace, so a small gap is common. But if you are worried, do not just wait. Ask a specialist (see the last section).
 
 Some children are both shy and quiet. They usually need extra time and a sense of safety before they start to speak up.
 
@@ -24,7 +24,7 @@ Some children are both shy and quiet. They usually need extra time and a sense o
 - **A reason to talk.** At home, adults often understand a child before they say anything. In class, children need words to ask for a toy, invite a friend to play, or tell the teacher something. Every small need is a chance to practise.
 - **Lots of listening every day.** Songs, stories and conversation at meals and playtime give children more words, even if they do not say them back straight away.
 - **A steady rhythm.** A familiar daily routine helps a shy child know what comes next, so they worry less and join in more easily.
-- **Adults who watch and guide.** The teacher notices when a child is ready, invites them gently into activities, and does not make them speak in front of the class before they want to.
+- **Adults who watch and guide.** The teacher can notice when a child is ready and invite them gently into activities, rather than making them speak in front of the class.
 
 A class will not change a child overnight. A shy child may spend the first few weeks just watching. That is still learning.
 
@@ -58,4 +58,4 @@ A preschool supports children through everyday activities, but it cannot replace
 - your child no longer says words they used to say;
 - you have a feeling something is not right, even if you cannot name it.
 
-Asking early does not mean something is wrong. If all is well, you can stop worrying. If your child needs extra support, starting early helps more.
+Asking early does not mean something is wrong. If all is well, you can feel more at ease. If your child needs extra support, starting early helps more.

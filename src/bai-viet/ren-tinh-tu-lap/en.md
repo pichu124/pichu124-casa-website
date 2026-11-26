@@ -54,13 +54,13 @@ Every child grows at their own pace. The list below is a starting point, not mil
 
 Many parents feel caught between two extremes: too soft and the child relies on others, too strict and the child becomes afraid. The middle way is to set clear routines and help your child follow them with patience.
 
-- **Say what will happen next.** "Play a little longer, then we'll put the toys away and have dinner." Children cooperate more easily when they are not surprised.
+- **Say what will happen next.** "Play a little longer, then we'll put the toys away and have our meal." Children cooperate more easily when they are not surprised.
 - **Offer choices within limits.** "Would you like the blue shirt or the red one?" rather than "what do you want to wear?". Your child gets to choose, and you keep the routine.
 - **Keep your voice gentle but firm.** When your child does not want to do something yet, repeat the request calmly and do the first step together, without shouting.
 
 ## How do children practise independence at Casa?
 
-At Casa, children aged 3–6 follow a programme based on the Cambridge Early Years framework. One of the framework's six areas of development is personal, social and emotional development, alongside physical development and the other areas. Alongside the programme based on the Cambridge Early Years framework, the school uses Montessori methods and materials to support children’s learning.
+At Casa, the programme for children aged 3–6, based on the Cambridge Early Years framework, has six areas of development, including personal, social and emotional development. Alongside the programme based on the Cambridge Early Years framework, the school uses Montessori methods and materials to support children’s learning.
 
 At mealtimes, teachers stay with the children and help them learn to serve themselves and keep clean. Autonomy is one of Casa's five core values: every child is encouraged to do things for themselves, make their own decisions and believe in their own abilities.
 

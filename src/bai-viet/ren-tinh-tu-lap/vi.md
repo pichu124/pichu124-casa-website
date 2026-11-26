@@ -60,7 +60,7 @@ Nhiều ba mẹ phân vân giữa hai cực: chiều con quá thì con ỷ lại
 
 ## Ở Casa, con tập tự lập thế nào?
 
-Ở Casa, trẻ 3–6 tuổi học chương trình theo khung Cambridge Early Years. Một trong sáu lĩnh vực phát triển của khung là phát triển cá nhân, xã hội và cảm xúc, bên cạnh phát triển thể chất và các lĩnh vực khác. Bên cạnh chương trình theo khung Cambridge Early Years, trường dùng phương pháp và giáo cụ Montessori để bổ trợ cho quá trình học tập của bé.
+Ở Casa, chương trình cho trẻ 3–6 tuổi theo khung Cambridge Early Years có sáu lĩnh vực phát triển, trong đó có phát triển cá nhân, xã hội và cảm xúc. Bên cạnh chương trình theo khung Cambridge Early Years, trường dùng phương pháp và giáo cụ Montessori để bổ trợ cho quá trình học tập của bé.
 
 Trong giờ ăn, giáo viên ở cùng các bé, hướng dẫn bé tự phục vụ và giữ vệ sinh cá nhân. Tính tự chủ là một trong năm giá trị cốt lõi của Casa: mỗi em bé được khuyến khích tự làm, tự quyết định và tự tin vào khả năng của bản thân.
 
