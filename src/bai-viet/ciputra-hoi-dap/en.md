@@ -21,11 +21,11 @@ On the 2nd and 3rd floors and rooftop of Block 1 in the Ciputra urban area, Phú
 
 ## From what age do you accept children?
 
-We welcome children from 15 months to 6 years, according to the campus programme and admission conditions. The school will discuss details with each family.
+We welcome children from 12 months to 6 years, according to the campus programme and admission conditions. The school will discuss details with each family.
 
 ## What programme will my child follow?
 
-- **15 months to 3 years:** mixed-age classes in the spirit of Montessori. Children choose their own activities, learn alongside older children and are introduced to English every day. See the article [What is a mixed-age class?](/en/news/what-is-a-mixed-age-class/).
+- **12 months to 3 years:** mixed-age classes in the spirit of Montessori. Children choose their own activities, learn alongside older children and are introduced to English every day. See the article [What is a mixed-age class?](/en/news/what-is-a-mixed-age-class/).
 - **3 to 6 years:** a programme based on the Cambridge Early Years framework for children aged 3–6, covering Early Years 1, 2 and 3. The final year is the pre-primary class, with added skills to prepare for Grade 1. See the [Kindergarten, 3–6 years](/en/programmes/kindergarten/) page.
 
 ## Which tracks will the campus offer?

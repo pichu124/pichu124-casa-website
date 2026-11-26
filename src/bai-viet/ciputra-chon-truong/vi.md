@@ -54,8 +54,8 @@ Những câu hỏi này không nhằm làm khó trường. Một trường chu�
 
 Casa Preschool đang hoàn thiện cơ sở mới ngay trong khu đô thị Ciputra, phường Phú Thượng, Hà Nội, ở tầng 2, tầng 3 và sân thượng của tòa Block 1. Cơ sở dự kiến khai trương quý 4/2027.
 
-- **Độ tuổi:** nhận bé từ 15 tháng.
-- **Bé từ 15 tháng đến 3 tuổi:** lớp trộn tuổi theo tinh thần Montessori, bé tự chọn hoạt động, học cùng anh chị lớn hơn và làm quen tiếng Anh mỗi ngày. Bài [Lớp trộn tuổi là gì?](/tin-tuc/lop-tron-tuoi-la-gi/) giải thích rõ hơn.
+- **Độ tuổi:** nhận bé từ 12 tháng.
+- **Bé từ 12 tháng đến 3 tuổi:** lớp trộn tuổi theo tinh thần Montessori, bé tự chọn hoạt động, học cùng anh chị lớn hơn và làm quen tiếng Anh mỗi ngày. Bài [Lớp trộn tuổi là gì?](/tin-tuc/lop-tron-tuoi-la-gi/) giải thích rõ hơn.
 - **Trẻ 3–6 tuổi:** chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi, năm cuối là lớp tiền tiểu học.
 - **Hai hệ học (dự kiến):** hệ quốc tế: mỗi lớp có giáo viên nước ngoài; hệ song ngữ: giáo viên nước ngoài dạy theo tiết.
 - **Đón trả:** phụ huynh đón trả bé trước sảnh tòa nhà, bé lên lớp bằng thang máy (dự kiến). Các phương án an toàn về thang máy, tầng học, sân thượng và lối thoát hiểm sẽ được công bố sau khi cơ sở hoàn thiện.

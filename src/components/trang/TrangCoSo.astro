@@ -59,11 +59,11 @@ const schemaHoiDap = laCiputra ? [{
 }] : [];
 
 const tieuDe = laCiputra
-  ? t('Mầm non Ciputra (Phú Thượng) – Casa Preschool, nhận bé từ 15 tháng', 'Preschool at Ciputra, Hanoi – Casa Preschool, children from 15 months')
+  ? t('Mầm non Ciputra (Phú Thượng) – Casa Preschool, nhận bé từ 12 tháng', 'Preschool at Ciputra, Hanoi – Casa Preschool, children from 12 months')
   : t(`Mầm non ${c.ten.vi} – Casa Preschool`, `${c.ten.en} preschool – Casa Preschool`) + (c.diaChiNgan ? ` (${c.diaChiNgan[lang]})` : '');
 const moTa = laCiputra
-  ? t('Mầm non Casa Preschool tại Ciputra (Phú Thượng, Hà Nội): nhận bé từ 15 tháng; trẻ 3–6 tuổi học theo khung Cambridge Early Years. Dự kiến khai trương quý 4/2027.',
-      'Casa Preschool at Ciputra (Phú Thượng, Hanoi): children from 15 months; ages 3–6 follow the Cambridge Early Years framework. Expected to open in Q4 2027.')
+  ? t('Mầm non Casa Preschool tại Ciputra (Phú Thượng, Hà Nội): nhận bé từ 12 tháng; trẻ 3–6 tuổi học theo khung Cambridge Early Years. Dự kiến khai trương quý 4/2027.',
+      'Casa Preschool at Ciputra (Phú Thượng, Hanoi): children from 12 months; ages 3–6 follow the Cambridge Early Years framework. Expected to open in Q4 2027.')
   : t(`Casa Preschool cơ sở ${c.ten.vi}: địa chỉ, bản đồ, lớp học và đăng ký tham quan. Cơ sở đang tuyển sinh. Hotline ${LIEN_HE.hotline}.`,
       `Casa Preschool ${c.ten.en} campus: address, map, classes and visit booking. Now enrolling. Hotline ${LIEN_HE.hotlineQuocTe}.`);
 const anhCoSo = ANH_CO_SO[slug] ?? [];
@@ -88,7 +88,7 @@ const khac = CO_SO.filter((x) => x.slug !== slug && x.trangThai === 'dang-tuyen-
         : <span class="huy-hieu">{t('Đang tuyển sinh', 'Enrolling now')}</span>}
       <h1>{laCiputra ? 'Casa Preschool – Ciputra' : t(`Casa Preschool – ${c.ten.vi}`, `Casa Preschool – ${c.ten.en}`)}</h1>
       {laCiputra
-        ? <p class="dau-trang__phu">{t('Chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi. Lớp trộn tuổi theo tinh thần Montessori cho bé từ 15 tháng. Dự kiến khai trương quý 4/2027.', 'A programme based on the Cambridge Early Years framework for children aged 3–6. Mixed-age classes in the spirit of Montessori for children from 15 months. Expected to open in Q4 2027.')}</p>
+        ? <p class="dau-trang__phu">{t('Chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi. Lớp trộn tuổi theo tinh thần Montessori cho bé từ 12 tháng. Dự kiến khai trương quý 4/2027.', 'A programme based on the Cambridge Early Years framework for children aged 3–6. Mixed-age classes in the spirit of Montessori for children from 12 months. Expected to open in Q4 2027.')}</p>
         : <p class="dau-trang__phu">{t('Cơ sở đang tuyển sinh của hệ thống mầm non Casa Preschool.', 'A Casa Preschool campus that is enrolling now.')}</p>}
     </div>
   </section>
@@ -137,7 +137,7 @@ const khac = CO_SO.filter((x) => x.slug !== slug && x.trangThai === 'dang-tuyen-
           <table>
             <thead><tr><th scope="col">{t('Lứa tuổi', 'Age')}</th><th scope="col">{t('Chương trình', 'Programme')}</th></tr></thead>
             <tbody>
-              <tr><th scope="row">{t('Từ 15 tháng đến 3 tuổi', '15 months to 3 years')}</th><td>{t('Lớp trộn tuổi theo tinh thần Montessori: bé tự chọn hoạt động, học cùng anh chị lớn hơn, làm quen tiếng Anh mỗi ngày.', 'Mixed-age classes in the spirit of Montessori: children choose activities, learn alongside older children and are introduced to English every day.')}</td></tr>
+              <tr><th scope="row">{t('Từ 12 tháng đến 3 tuổi', '12 months to 3 years')}</th><td>{t('Lớp trộn tuổi theo tinh thần Montessori: bé tự chọn hoạt động, học cùng anh chị lớn hơn, làm quen tiếng Anh mỗi ngày.', 'Mixed-age classes in the spirit of Montessori: children choose activities, learn alongside older children and are introduced to English every day.')}</td></tr>
               <tr><th scope="row">{t('3–4 tuổi (Early Years 1) và 4–5 tuổi (Early Years 2)', '3–4 years (Early Years 1) and 4–5 years (Early Years 2)')}</th><td>{t('Khung Cambridge Early Years: học qua chơi, lấy trẻ làm trung tâm, phát triển đều sáu lĩnh vực.', 'Cambridge Early Years framework: learning through play, child-centred, developing all six areas.')}</td></tr>
               <tr><th scope="row">{t('5–6 tuổi, lớp tiền tiểu học (Early Years 3)', '5–6 years, pre-primary class (Early Years 3)')}</th><td>{t('Cambridge Early Years 3, bổ sung kỹ năng chuẩn bị vào lớp 1.', 'Cambridge Early Years 3, with added skills to prepare for Grade 1.')}</td></tr>
             </tbody>

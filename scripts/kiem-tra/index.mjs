@@ -101,10 +101,23 @@ const chuCuaTrang = (doc) => {
   return (copy.textContent + ' ' + thuocTinh.join(' ')).normalize('NFC').replace(/\s+/g, ' ');
 };
 const truocLoi3 = soLoi;
+// Khối chữ (đoạn, mục, ô bảng, tiêu đề, mô tả) để kiểm những quy tắc phụ thuộc ngữ cảnh.
+const khoiChu = (doc) => doc.querySelectorAll('title, h1, h2, h3, h4, h5, h6, p, li, td, th, figcaption, dt, dd, blockquote')
+  .map((e) => e.textContent)
+  .concat(doc.querySelectorAll('meta[content]').map((e) => e.getAttribute('content')))
+  .map((s) => (s || '').normalize('NFC'));
 for (const [p, { doc }] of TRANG) {
   const toanTrang = chuCuaTrang(doc);
   const tieuDeTrang = ((doc.querySelector('title')?.textContent || '') + ' ' + doc.querySelectorAll('h1').map((h) => h.textContent).join(' ')).normalize('NFC');
   for (const q of quyTac) {
+    // "cho_phep_neu_cung_khoi": cụm chỉ được phép khi cùng khối chữ (hoặc đường dẫn trang) có từ này
+    if (q.cho_phep_neu_cung_khoi) {
+      const tu = q.cho_phep_neu_cung_khoi.toLowerCase();
+      if (p.toLowerCase().includes(tu)) continue;
+      const sai = khoiChu(doc).find((s) => q.re.test(s) && !s.toLowerCase().includes(tu));
+      if (sai) loi('Cụm cấm', `${p}: "${sai.match(q.re)[0]}" (${q.ly_do})`);
+      continue;
+    }
     const nguon = q.pham_vi === 'tieu-de' ? tieuDeTrang : toanTrang;
     const m = nguon.match(q.re);
     if (m) loi('Cụm cấm', `${p}: "${m[0]}" (${q.ly_do})`);

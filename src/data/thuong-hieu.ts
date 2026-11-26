@@ -22,3 +22,9 @@ export const CAMBRIDGE_CENTRE = {
     en: 'The Chùa Láng campus is an approved Cambridge Early Years Centre (centre number VN068), registered to offer the early years programme from the Cambridge Pathway.',
   },
 };
+
+/** Montessori là phần bổ trợ, chương trình chính là Cambridge Early Years (chủ trường, Q5 trong bản Kế hoạch, 26/11/2026; QUYET-DINH Q41). */
+export const MONTESSORI_BO_TRO = {
+  vi: 'Bên cạnh chương trình theo khung Cambridge Early Years, trường dùng phương pháp và giáo cụ Montessori để bổ trợ cho quá trình học tập của bé.',
+  en: 'Alongside the programme based on the Cambridge Early Years framework, the school uses Montessori methods and materials to support children’s learning.',
+};

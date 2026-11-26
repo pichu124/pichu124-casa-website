@@ -30,7 +30,7 @@ Khuôn giống bộ việc Google Maps của 3 cơ sở cũ (https://claude.ai/a
 
 Bản dùng **trước ngày khai trương**:
 
-> Casa Preschool (Casa dei Bambini) cơ sở Ciputra thuộc hệ thống mầm non hơn 10 năm tại Hà Nội, đặt tại tầng 2, tầng 3 và sân thượng tòa Block 1, khu đô thị Ciputra. Cơ sở dự kiến khai trương quý 4/2027 và nhận bé từ 15 tháng đến 6 tuổi. Bé từ 15 tháng đến 3 tuổi học lớp trộn tuổi theo tinh thần Montessori, làm quen tiếng Anh mỗi ngày. Trẻ 3–6 tuổi học chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi; năm cuối là lớp tiền tiểu học giúp bé chuẩn bị vào lớp 1. Ba mẹ đăng ký nhận thông tin sớm để được gửi chương trình, biểu phí và lịch tham quan ngay khi có.
+> Casa Preschool (Casa dei Bambini) cơ sở Ciputra thuộc hệ thống mầm non hơn 10 năm tại Hà Nội, đặt tại tầng 2, tầng 3 và sân thượng tòa Block 1, khu đô thị Ciputra. Cơ sở dự kiến khai trương quý 4/2027 và nhận bé từ 12 tháng đến 6 tuổi. Bé từ 12 tháng đến 3 tuổi học lớp trộn tuổi theo tinh thần Montessori, làm quen tiếng Anh mỗi ngày. Trẻ 3–6 tuổi học chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi; năm cuối là lớp tiền tiểu học giúp bé chuẩn bị vào lớp 1. Ba mẹ đăng ký nhận thông tin sớm để được gửi chương trình, biểu phí và lịch tham quan ngay khi có.
 
 Bản dùng **sau ngày khai trương** (sửa khi các dòng "dự kiến" đã thành "đã chốt"): bỏ "dự kiến khai trương quý 4/2027"; thêm hệ học, giờ học, bữa ăn theo đúng Casa facts lúc đó; câu cuối đổi thành "Ba mẹ có thể đăng ký tham quan để xem lớp học và trò chuyện với cô giáo trước khi quyết định cho con nhập học."
 
@@ -49,7 +49,7 @@ Mỗi bài dưới 1.500 ký tự, nút "Tìm hiểu thêm" trỏ về https://c
 | Tuần | Bài | Dẫn tới bài trên web |
 |---|---|---|
 | 1 | Casa Preschool sắp có cơ sở ngay trong khu đô thị Ciputra, dự kiến khai trương quý 4/2027. Đăng ký sớm để nhận thông tin chương trình, biểu phí và lịch tham quan. | `/tin-tuc/cap-nhat-co-so-casa-preschool-ciputra/` |
-| 2 | Bé từ 15 tháng đến 3 tuổi ở Casa Ciputra học lớp trộn tuổi theo tinh thần Montessori: bé tự chọn hoạt động, học cùng anh chị lớn hơn, làm quen tiếng Anh mỗi ngày. | `/tin-tuc/lop-tron-tuoi-la-gi/` |
+| 2 | Bé từ 12 tháng đến 3 tuổi ở Casa Ciputra học lớp trộn tuổi theo tinh thần Montessori: bé tự chọn hoạt động, học cùng anh chị lớn hơn, làm quen tiếng Anh mỗi ngày. | `/tin-tuc/lop-tron-tuoi-la-gi/` |
 | 3 | Chọn trường mầm non ở Ciputra, Phú Thượng: 7 điều ba mẹ nên cân nhắc, từ đường đưa đón, an toàn đến chương trình. | `/tin-tuc/chon-truong-mam-non-o-ciputra-phu-thuong/` |
 | 4 | Hỏi đáp tuyển sinh: khi nào khai trương, nhận bé mấy tuổi, đón trả và biểu phí. | `/tin-tuc/hoi-dap-tuyen-sinh-casa-preschool-ciputra/` |
 | 5 | Một ngày ở trường mầm non bán trú: ba mẹ nên hỏi gì về bữa ăn, giấc ngủ trưa và giờ đón. | `/tin-tuc/mot-ngay-o-truong-mam-non-ban-tru-ciputra/` |
@@ -62,7 +62,7 @@ Tự đăng câu hỏi và trả lời bằng tài khoản của trường. Lấ
 | Câu hỏi | Trả lời |
 |---|---|
 | Khi nào trường khai trương? | Dự kiến quý 4/2027. Ba mẹ đăng ký nhận thông tin ở website để được báo lịch tham quan. |
-| Trường nhận bé từ mấy tuổi? | Từ 15 tháng đến 6 tuổi, theo chương trình và điều kiện tuyển sinh của cơ sở. |
+| Trường nhận bé từ mấy tuổi? | Từ 12 tháng đến 6 tuổi, theo chương trình và điều kiện tuyển sinh của cơ sở. |
 | Học phí bao nhiêu? | Biểu phí năm học 2027–2028 đang được hoàn thiện. Ba mẹ liên hệ 0989 059 838 để nhận biểu phí khi có. |
 | Đón trả bé ở đâu? | Phụ huynh đón trả bé trước sảnh tòa nhà, bé lên lớp bằng thang máy (dự kiến). |
 
@@ -71,4 +71,4 @@ Tự đăng câu hỏi và trả lời bằng tài khoản của trường. Lấ
 - Học phí, sĩ số, "đã được cấp phép", "tốt nhất", "số 1", tên trường khác.
 - "Trường quốc tế", "trường Cambridge"; logo Cambridge.
 - Việc đội ngũ chuyển từ cơ sở khác sang; mọi thông tin về pháp nhân hay kế hoạch của các cơ sở cũ.
-- Nhận bé dưới 15 tháng.
+- Nhận bé dưới 12 tháng.

@@ -21,11 +21,11 @@ Cơ sở dự kiến khai trương quý 4/2027. Gia đình đăng ký sớm sẽ
 
 ## Trường nhận bé từ mấy tuổi?
 
-Trường nhận bé từ 15 tháng đến 6 tuổi, theo chương trình và điều kiện tuyển sinh của cơ sở. Nhà trường trao đổi cụ thể với từng gia đình.
+Trường nhận bé từ 12 tháng đến 6 tuổi, theo chương trình và điều kiện tuyển sinh của cơ sở. Nhà trường trao đổi cụ thể với từng gia đình.
 
 ## Con học chương trình gì?
 
-- **Từ 15 tháng đến 3 tuổi:** lớp trộn tuổi theo tinh thần Montessori. Bé tự chọn hoạt động, học cùng anh chị lớn hơn và làm quen tiếng Anh mỗi ngày. Xem bài [Lớp trộn tuổi là gì?](/tin-tuc/lop-tron-tuoi-la-gi/).
+- **Từ 12 tháng đến 3 tuổi:** lớp trộn tuổi theo tinh thần Montessori. Bé tự chọn hoạt động, học cùng anh chị lớn hơn và làm quen tiếng Anh mỗi ngày. Xem bài [Lớp trộn tuổi là gì?](/tin-tuc/lop-tron-tuoi-la-gi/).
 - **Từ 3 đến 6 tuổi:** chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi, gồm Early Years 1, 2 và 3. Năm cuối là lớp tiền tiểu học, bổ sung kỹ năng chuẩn bị vào lớp 1. Xem trang [Mẫu giáo 3–6 tuổi](/chuong-trinh/mau-giao/).
 
 ## Cơ sở có những hệ học nào?

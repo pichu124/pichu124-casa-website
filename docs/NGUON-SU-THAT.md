@@ -13,7 +13,7 @@ Khi lệch, **Casa facts thắng**: sửa bản chép này, không sửa ngượ
 - **Tên hiển thị trên website: Casa Preschool** (phiếu câu 3; nhà trường xác nhận 18/11/2026). Tên từng cơ sở: "Casa Preschool – Kim Mã / Chùa Láng / Mỹ Đình / Ciputra" (câu 4, 9). Tên cũ "Casa dei Bambini" vẫn ở logo, Facebook và schema (`alternateName`). Hệ thống xuyên suốt hơn 10 năm. **Đã chốt.**
 - Logo: bộ tệp PDF "Các dạng logo" (thư mục Drive của trường), chuyển sang SVG ở `public/thuong-hieu/`. Logo ghi "Casa dei Bambini – Montessori Preschool": **dùng tạm**, nhà trường sẽ đổi logo sau (xác nhận 18/11/2026).
 - Màu (câu 2): navy `#23265A` (chủ đạo), đỏ san hô `#E54041` (nhấn), xanh pastel `#8EB7E1` (bổ trợ), xám đậm `#51535A` (phụ), trắng. Phông: Anja Eliane (logo), DIN (văn bản). **Đã chốt.**
-- Khẩu hiệu: "Em bé hạnh phúc, Ba mẹ yên tâm" / "Happy children, carefree parents" (bộ nhận diện). Ý nghĩa hình cây: 3 lá đỏ là bố, mẹ, nhà trường. (Bộ nhận diện cũ ghi 7 lá là 7 giá trị cốt lõi; nay nhà trường dùng 5 giá trị nên site bỏ ý 7 lá.)
+- Khẩu hiệu (giữ tới khi có bộ nhận diện mới, chủ trường trả lời Q6, 26/11/2026): "Em bé hạnh phúc, Ba mẹ yên tâm" / "Happy children, carefree parents" (bộ nhận diện). Ý nghĩa hình cây: 3 lá đỏ là bố, mẹ, nhà trường. (Bộ nhận diện cũ ghi 7 lá là 7 giá trị cốt lõi; nay nhà trường dùng 5 giá trị nên site bỏ ý 7 lá.)
 - **Thông điệp và 5 giá trị cốt lõi CASA LOVE** (người phụ trách dự án chuyển ngày 19/11/2026, dùng tạm): C – Compassion (Lòng trắc ẩn), A – Autonomy (Tính tự chủ), S – Steadfastness (Kiên cường), A – Accountability (Trách nhiệm), LOVE – Love (Tình yêu thương). Thông điệp mở đầu: "Mỗi đứa trẻ đều xứng đáng lớn lên trong yêu thương, được tôn trọng và phát triển theo cách riêng của mình." Câu "môi trường giáo dục Montessori chuẩn quốc tế" trong bản gốc không đăng nguyên văn (QUYET-DINH Q27). Chủ trường 25/11/2026 (A6): giữ CASA LOVE như hiện tại, đổi sau khi chốt thương hiệu mới.
 - Đơn vị ghi ở chân trang và trong Chính sách dữ liệu (phiếu câu 17): **Trường mầm non Casa Preschool**, địa chỉ Tầng 1–2, sảnh A1, tòa HongKong Tower, 185 Huỳnh Thúc Kháng, phường Láng, Hà Nội. Web chỉ thể hiện tên truyền thông, không ghi pháp nhân.
 - Câu định vị đang chờ duyệt (trong Casa facts) có vế "Cambridge" và "chưa bằng một nửa trường quốc tế": **chưa được dùng**. Nội dung Marketing đề xuất trong bảng tính "CONTENT WEBSITE MỚI" (Learner profile, kết quả phát triển, CASA LOVE…) ghi "chờ duyệt": **chưa dùng**.
@@ -21,10 +21,12 @@ Khi lệch, **Casa facts thắng**: sửa bản chép này, không sửa ngượ
 ## Độ tuổi
 
 - Nhận trẻ từ 15 tháng đến 6 tuổi, theo chương trình và điều kiện tuyển sinh của từng cơ sở. **Đã chốt** (phiếu câu 12).
-- Trẻ 12 đến dưới 15 tháng: nhà trường xem xét riêng, **không công bố** là độ tuổi nhận chính thức (phiếu câu 12; thay dòng "có thể nhận từ 12 tháng" của Casa facts). Bộ canh chặn "từ 12 tháng".
+- Trẻ 12 đến dưới 15 tháng ở Kim Mã, Chùa Láng, Mỹ Đình: nhà trường xem xét riêng, **không công bố** là độ tuổi nhận chính thức (phiếu câu 12).
+- **Cơ sở Ciputra nhận bé từ 12 tháng** (chủ trường trả lời Q2, 26/11/2026; khớp dòng "có thể nhận từ 12 tháng" của Casa facts). Ba cơ sở cũ vẫn nhận từ 15 tháng. Bộ canh chặn "từ 12 tháng" trừ khi cùng câu hoặc cùng trang nói về Ciputra.
 
 ## Chương trình
 
+- Montessori là phần bổ trợ: "trường dùng phương pháp và giáo cụ Montessori để bổ trợ cho quá trình học tập"; chương trình chính là Cambridge Early Years (chủ trường trả lời Q5, 26/11/2026). **Đã chốt.**
 - 3–6 tuổi: theo khung Cambridge Early Years. Lớp tiền tiểu học học theo Cambridge Early Years 3, bổ sung kỹ năng chuẩn bị vào lớp 1. **Đã chốt.**
 - 15 tháng–3 tuổi: lớp trộn tuổi, theo tinh thần Montessori, làm quen tiếng Anh. **Đã chốt.**
 - Nhà trẻ 15–36 tháng ở các cơ sở: theo định hướng giáo dục Montessori (tự lập, giác quan, vận động, ngôn ngữ, kỹ năng thực hành cuộc sống), làm quen tiếng Anh qua bài hát, trò chơi, kể chuyện (phiếu câu 11).

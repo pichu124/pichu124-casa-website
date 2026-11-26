@@ -61,7 +61,7 @@ const TAT_CA_CO_SO: CoSo[] = [
       diemRieng: [
         { vi: 'Không gian yên tĩnh, gần gũi: trường nằm trong khu Vạn Phúc, tách khỏi sự ồn ào của trục đường lớn, giúp bé thấy nhẹ nhàng, thân thiện mỗi ngày tới lớp.', en: 'A quiet, homely setting: the school is in the Vạn Phúc area, away from the noise of the main road, so children feel calm and at ease each day.' },
         { vi: 'Chăm sóc sát sao: lớp học ấm cúng giúp cô theo sát nhịp sinh hoạt, bữa ăn, giấc ngủ và cảm xúc của từng bé.', en: 'Close care: cosy classes let teachers follow each child’s routine, meals, sleep and feelings closely.' },
-        { vi: 'Học qua trải nghiệm: hoạt động khám phá, ngôn ngữ và kỹ năng gần gũi với lứa tuổi mầm non; lớp nhà trẻ theo định hướng Montessori.', en: 'Learning through experience: exploration, language and skills activities suited to preschool age; nursery classes are guided by Montessori principles.' },
+        { vi: 'Học qua trải nghiệm: hoạt động khám phá, ngôn ngữ và kỹ năng gần gũi với lứa tuổi mầm non, có phương pháp và giáo cụ Montessori bổ trợ.', en: 'Learning through experience: exploration, language and skills activities suited to preschool age, supported by Montessori methods and materials.' },
       ],
     },
     buaAn: BUA_4,

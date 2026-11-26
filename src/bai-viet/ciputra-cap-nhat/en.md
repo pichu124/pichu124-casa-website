@@ -15,13 +15,13 @@ This article sums up what is confirmed about Casa's new campus in the Ciputra ar
 
 **Location.** The new campus is inside the Ciputra urban area, Phú Thượng ward, Hanoi, on the 2nd and 3rd floors and rooftop of Block 1.
 
-**Ages.** Children from 15 months to 6 years.
+**Ages.** Children from 12 months to 6 years.
 
 **Programmes by age:**
 
 | Age | Programme |
 | --- | --- |
-| 15 months to 3 years | Mixed-age classes in the spirit of Montessori: children choose activities, learn alongside older children and are introduced to English every day |
+| 12 months to 3 years | Mixed-age classes in the spirit of Montessori: children choose activities, learn alongside older children and are introduced to English every day |
 | 3–5 years (Early Years 1 and 2) | A programme based on the Cambridge Early Years framework for children aged 3–6: learning through play, developing all six areas |
 | 5–6 years (Early Years 3) | Pre-primary class, with added skills to prepare for Grade 1 |
 

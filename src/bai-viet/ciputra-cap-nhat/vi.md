@@ -15,13 +15,13 @@ Bài này tóm tắt những thông tin đã chốt về cơ sở mới của Ca
 
 **Địa điểm.** Cơ sở mới nằm ngay trong khu đô thị Ciputra, phường Phú Thượng, Hà Nội, ở tầng 2, tầng 3 và sân thượng của tòa Block 1.
 
-**Độ tuổi.** Nhận bé từ 15 tháng đến 6 tuổi.
+**Độ tuổi.** Nhận bé từ 12 tháng đến 6 tuổi.
 
 **Chương trình theo lứa tuổi:**
 
 | Lứa tuổi | Chương trình |
 | --- | --- |
-| Từ 15 tháng đến 3 tuổi | Lớp trộn tuổi theo tinh thần Montessori: bé tự chọn hoạt động, học cùng anh chị lớn hơn, làm quen tiếng Anh mỗi ngày |
+| Từ 12 tháng đến 3 tuổi | Lớp trộn tuổi theo tinh thần Montessori: bé tự chọn hoạt động, học cùng anh chị lớn hơn, làm quen tiếng Anh mỗi ngày |
 | 3–5 tuổi (Early Years 1 và 2) | Chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi: học qua chơi, phát triển đều sáu lĩnh vực |
 | 5–6 tuổi (Early Years 3) | Lớp tiền tiểu học, bổ sung kỹ năng chuẩn bị vào lớp 1 |
 

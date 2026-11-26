@@ -1,7 +1,7 @@
 ---
 duongDan: lop-tron-tuoi-la-gi
 tieuDe: "Lớp trộn tuổi là gì? Bé dưới 3 tuổi học cùng anh chị thế nào"
-moTa: "Lớp trộn tuổi là gì, bé từ 15 tháng đến 3 tuổi học cùng anh chị lớn hơn ra sao, và ba mẹ nên hỏi gì khi tìm hiểu một lớp trộn tuổi cho con."
+moTa: "Lớp trộn tuổi là gì, bé dưới 3 tuổi học cùng anh chị lớn hơn ra sao, và ba mẹ nên hỏi gì khi tìm hiểu một lớp trộn tuổi cho con."
 h1: "Lớp trộn tuổi là gì? Bé dưới 3 tuổi học cùng anh chị thế nào"
 tom: "Lớp trộn tuổi hoạt động ra sao, bé nhỏ và bé lớn cùng được gì, và ba mẹ nên hỏi gì khi tìm hiểu."
 ngay: "2026-11-25"
@@ -58,6 +58,6 @@ Lớp trộn tuổi khuyến khích bé tự làm, tự chọn. Ba mẹ có th�
 
 ## Lớp trộn tuổi ở Casa Preschool – Ciputra
 
-Ở cơ sở Ciputra (dự kiến khai trương quý 4/2027), bé từ 15 tháng đến 3 tuổi học lớp trộn tuổi theo tinh thần Montessori: bé tự chọn hoạt động, học cùng anh chị lớn hơn và làm quen tiếng Anh mỗi ngày.
+Ở cơ sở Ciputra (dự kiến khai trương quý 4/2027), bé từ 12 tháng đến 3 tuổi học lớp trộn tuổi theo tinh thần Montessori: bé tự chọn hoạt động, học cùng anh chị lớn hơn và làm quen tiếng Anh mỗi ngày.
 
 Từ 3 tuổi, bé học chương trình mẫu giáo theo khung Cambridge Early Years cho trẻ 3–6 tuổi. Xem thêm về nhóm nhà trẻ ở trang [Nhà trẻ 15–36 tháng](/chuong-trinh/nha-tre/) và về cơ sở mới ở trang [Casa Preschool – Ciputra](/co-so/ciputra/).

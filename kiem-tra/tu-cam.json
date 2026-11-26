@@ -1,28 +1,145 @@
 {
-  "ghi_chu": "Bộ canh sự thật cho npm run check. Chủ trường được thêm quy tắc; không xoá hay nới quy tắc để cho code qua (CLAUDE.md). kieu: 'chu' = khớp nguyên cụm, không phân biệt hoa thường; 'regex' = biểu thức chính quy (cờ i, u). pham_vi: 'toan-trang' = mọi chữ trên trang (gồm title, mô tả, alt, schema); 'tieu-de' = chỉ <title> và <h1>.",
+  "ghi_chu": "Bộ canh sự thật cho npm run check. Chủ trường được thêm quy tắc; không xoá hay nới quy tắc để cho code qua (CLAUDE.md). kieu: 'chu' = khớp nguyên cụm, không phân biệt hoa thường; 'regex' = biểu thức chính quy (cờ i, u). pham_vi: 'toan-trang' = mọi chữ trên trang (gồm title, mô tả, alt, schema); 'tieu-de' = chỉ <title> và <h1>. 'cho_phep_neu_cung_khoi': cụm chỉ được phép khi cùng khối chữ hoặc đường dẫn trang có từ này.",
   "quy_tac": [
-    { "mau": "trường Cambridge", "kieu": "chu", "pham_vi": "toan-trang", "ly_do": "Chỉ được viết 'chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi'" },
-    { "mau": "Cambridge International School", "kieu": "chu", "pham_vi": "toan-trang", "ly_do": "Danh xưng Cambridge chưa được phép" },
-    { "mau": "trường mầm non quốc tế", "kieu": "chu", "pham_vi": "tieu-de", "ly_do": "Không dùng làm tên hay tiêu đề" },
-    { "mau": "học sinh", "kieu": "chu", "pham_vi": "toan-trang", "ly_do": "Gọi 'bé', 'trẻ', 'con'" },
-    { "mau": "tốt nhất", "kieu": "chu", "pham_vi": "toan-trang", "ly_do": "Không so sánh hơn nhất" },
-    { "mau": "số\\s*(1|một)(?![0-9])", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Không viết 'số 1'" },
-    { "mau": "đã được cấp phép", "kieu": "chu", "pham_vi": "toan-trang", "ly_do": "Ciputra chưa có quyết định thành lập" },
-    { "mau": "tuyensinh@casadeibambini", "kieu": "chu", "pham_vi": "toan-trang", "ly_do": "Email đúng là tuyensinh@cdb.edu.vn" },
-    { "mau": "tháng 9/2027", "kieu": "chu", "pham_vi": "toan-trang", "ly_do": "Chỉ viết 'dự kiến quý 4/2027'" },
-    { "mau": "18\\s*tháng", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Nhận trẻ từ 15 tháng (số liệu cũ của site WordPress)" },
-    { "mau": "18\\s*[–-]\\s*(26|36)", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Nhóm tuổi cũ 18–36 tháng của site WordPress" },
-    { "mau": "\\d[\\d.,]*\\s*(triệu|VNĐ|VND)", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Đề phòng lộ học phí" },
-    { "mau": "\\b(best|number one|no\\.\\s*1)\\b", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Bản tiếng Anh: không so sánh hơn nhất" },
-    { "mau": "\\bstudents?\\b", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Bản tiếng Anh: gọi 'children'" },
-    { "mau": "\\blicen[cs]ed\\b", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Bản tiếng Anh: tương đương 'đã được cấp phép'" },
-    { "mau": "Cambridge (pre)?school", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Bản tiếng Anh: tương đương 'trường Cambridge'" },
-    { "mau": "international (pre)?school", "kieu": "regex", "pham_vi": "tieu-de", "ly_do": "Bản tiếng Anh: tương đương 'trường mầm non quốc tế' trong tiêu đề" },
-    { "mau": "từ\\s*12\\s*tháng", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Phiếu 18/11/2026: độ tuổi nhận theo chương trình từng cơ sở, không viết 12 tháng" },
-    { "mau": "\\b(from|aged)\\s+12\\s*months?\\b", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Bản tiếng Anh: tương đương 'từ 12 tháng'" },
-    { "mau": "18\\s*months?", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Bản tiếng Anh: nhận trẻ từ 15 tháng" },
-    { "mau": "world[- ]class|đẳng cấp thế giới|đẳng cấp quốc tế", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Lời hơn nhất có trong mẫu thông cáo của Cambridge, không dùng trên site (docs/CAMBRIDGE-HUONG-DAN.md)" },
-    { "mau": "Đại học Cambridge|University of Cambridge", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Kế hoạch SEO 23/11/2026: không viết 'Đại học Cambridge'" },
-    { "mau": "\\b(Sunshine House|Clover|Little Sol|Hanoi Academy|Shining Star|Sakura|Chubby|Maple Bear|AMS)\\b", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Không nêu tên trường khác (kế hoạch SEO 23/11/2026: các trường này chỉ dùng để chọn từ khóa)" }
+    {
+      "mau": "trường Cambridge",
+      "kieu": "chu",
+      "pham_vi": "toan-trang",
+      "ly_do": "Chỉ được viết 'chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi'"
+    },
+    {
+      "mau": "Cambridge International School",
+      "kieu": "chu",
+      "pham_vi": "toan-trang",
+      "ly_do": "Danh xưng Cambridge chưa được phép"
+    },
+    {
+      "mau": "trường mầm non quốc tế",
+      "kieu": "chu",
+      "pham_vi": "tieu-de",
+      "ly_do": "Không dùng làm tên hay tiêu đề"
+    },
+    {
+      "mau": "học sinh",
+      "kieu": "chu",
+      "pham_vi": "toan-trang",
+      "ly_do": "Gọi 'bé', 'trẻ', 'con'"
+    },
+    {
+      "mau": "tốt nhất",
+      "kieu": "chu",
+      "pham_vi": "toan-trang",
+      "ly_do": "Không so sánh hơn nhất"
+    },
+    {
+      "mau": "số\\s*(1|một)(?![0-9])",
+      "kieu": "regex",
+      "pham_vi": "toan-trang",
+      "ly_do": "Không viết 'số 1'"
+    },
+    {
+      "mau": "đã được cấp phép",
+      "kieu": "chu",
+      "pham_vi": "toan-trang",
+      "ly_do": "Ciputra chưa có quyết định thành lập"
+    },
+    {
+      "mau": "tuyensinh@casadeibambini",
+      "kieu": "chu",
+      "pham_vi": "toan-trang",
+      "ly_do": "Email đúng là tuyensinh@cdb.edu.vn"
+    },
+    {
+      "mau": "tháng 9/2027",
+      "kieu": "chu",
+      "pham_vi": "toan-trang",
+      "ly_do": "Chỉ viết 'dự kiến quý 4/2027'"
+    },
+    {
+      "mau": "18\\s*tháng",
+      "kieu": "regex",
+      "pham_vi": "toan-trang",
+      "ly_do": "Nhận trẻ từ 15 tháng (số liệu cũ của site WordPress)"
+    },
+    {
+      "mau": "18\\s*[–-]\\s*(26|36)",
+      "kieu": "regex",
+      "pham_vi": "toan-trang",
+      "ly_do": "Nhóm tuổi cũ 18–36 tháng của site WordPress"
+    },
+    {
+      "mau": "\\d[\\d.,]*\\s*(triệu|VNĐ|VND)",
+      "kieu": "regex",
+      "pham_vi": "toan-trang",
+      "ly_do": "Đề phòng lộ học phí"
+    },
+    {
+      "mau": "\\b(best|number one|no\\.\\s*1)\\b",
+      "kieu": "regex",
+      "pham_vi": "toan-trang",
+      "ly_do": "Bản tiếng Anh: không so sánh hơn nhất"
+    },
+    {
+      "mau": "\\bstudents?\\b",
+      "kieu": "regex",
+      "pham_vi": "toan-trang",
+      "ly_do": "Bản tiếng Anh: gọi 'children'"
+    },
+    {
+      "mau": "\\blicen[cs]ed\\b",
+      "kieu": "regex",
+      "pham_vi": "toan-trang",
+      "ly_do": "Bản tiếng Anh: tương đương 'đã được cấp phép'"
+    },
+    {
+      "mau": "Cambridge (pre)?school",
+      "kieu": "regex",
+      "pham_vi": "toan-trang",
+      "ly_do": "Bản tiếng Anh: tương đương 'trường Cambridge'"
+    },
+    {
+      "mau": "international (pre)?school",
+      "kieu": "regex",
+      "pham_vi": "tieu-de",
+      "ly_do": "Bản tiếng Anh: tương đương 'trường mầm non quốc tế' trong tiêu đề"
+    },
+    {
+      "mau": "từ\\s*12\\s*tháng",
+      "kieu": "regex",
+      "pham_vi": "toan-trang",
+      "ly_do": "Phiếu 18/11/2026: độ tuổi nhận theo chương trình từng cơ sở, không viết 12 tháng. Chủ trường 26/11/2026 (QUYET-DINH Q41): riêng cơ sở Ciputra nhận bé từ 12 tháng, nên chỉ được viết khi cùng câu hoặc cùng trang nói về Ciputra",
+      "cho_phep_neu_cung_khoi": "Ciputra"
+    },
+    {
+      "mau": "\\b(from|aged)\\s+12\\s*months?\\b",
+      "kieu": "regex",
+      "pham_vi": "toan-trang",
+      "ly_do": "Bản tiếng Anh: tương đương 'từ 12 tháng'. Chủ trường 26/11/2026 (QUYET-DINH Q41): riêng cơ sở Ciputra nhận bé từ 12 tháng, nên chỉ được viết khi cùng câu hoặc cùng trang nói về Ciputra",
+      "cho_phep_neu_cung_khoi": "Ciputra"
+    },
+    {
+      "mau": "18\\s*months?",
+      "kieu": "regex",
+      "pham_vi": "toan-trang",
+      "ly_do": "Bản tiếng Anh: nhận trẻ từ 15 tháng"
+    },
+    {
+      "mau": "world[- ]class|đẳng cấp thế giới|đẳng cấp quốc tế",
+      "kieu": "regex",
+      "pham_vi": "toan-trang",
+      "ly_do": "Lời hơn nhất có trong mẫu thông cáo của Cambridge, không dùng trên site (docs/CAMBRIDGE-HUONG-DAN.md)"
+    },
+    {
+      "mau": "Đại học Cambridge|University of Cambridge",
+      "kieu": "regex",
+      "pham_vi": "toan-trang",
+      "ly_do": "Kế hoạch SEO 23/11/2026: không viết 'Đại học Cambridge'"
+    },
+    {
+      "mau": "\\b(Sunshine House|Clover|Little Sol|Hanoi Academy|Shining Star|Sakura|Chubby|Maple Bear|AMS)\\b",
+      "kieu": "regex",
+      "pham_vi": "toan-trang",
+      "ly_do": "Không nêu tên trường khác (kế hoạch SEO 23/11/2026: các trường này chỉ dùng để chọn từ khóa)"
+    }
   ]
 }

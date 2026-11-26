@@ -54,8 +54,8 @@ These questions are not meant to put the school on the spot. A well-prepared sch
 
 Casa Preschool is completing a new campus inside the Ciputra urban area, Phú Thượng ward, Hanoi, on the 2nd and 3rd floors and rooftop of Block 1. The campus is expected to open in Q4 2027.
 
-- **Ages:** children from 15 months.
-- **Children from 15 months to 3 years:** mixed-age classes in the spirit of Montessori, where children choose their own activities, learn alongside older children and are introduced to English every day. The article [What is a mixed-age class?](/en/news/what-is-a-mixed-age-class/) explains more.
+- **Ages:** children from 12 months.
+- **Children from 12 months to 3 years:** mixed-age classes in the spirit of Montessori, where children choose their own activities, learn alongside older children and are introduced to English every day. The article [What is a mixed-age class?](/en/news/what-is-a-mixed-age-class/) explains more.
 - **Children aged 3–6:** a programme based on the Cambridge Early Years framework for children aged 3–6, with a pre-primary class in the final year.
 - **Two tracks (planned):** the international track, with a foreign teacher in every class; the bilingual track, where a foreign teacher teaches set lessons.
 - **Drop-off and pick-up:** parents drop off and pick up children in front of the building lobby, and children go up to class by lift (planned). Safety arrangements for the lifts, classroom floors, rooftop and emergency exits will be published once the campus is complete.

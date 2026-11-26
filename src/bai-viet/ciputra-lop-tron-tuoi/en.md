@@ -1,7 +1,7 @@
 ---
 duongDan: what-is-a-mixed-age-class
 tieuDe: "What is a mixed-age class? How children under 3 learn together"
-moTa: "What a mixed-age class is, how children from 15 months to 3 years learn alongside older children, and what to ask when looking at a mixed-age class."
+moTa: "What a mixed-age class is, how children under 3 learn alongside older children, and what to ask when looking at a mixed-age class."
 h1: "What is a mixed-age class? How children under 3 learn together"
 tom: "How a mixed-age class works, what younger and older children gain, and what to ask when you look at one."
 ngay: "2026-11-25"
@@ -58,6 +58,6 @@ Mixed-age classes encourage children to do things and make choices themselves. Y
 
 ## Mixed-age classes at Casa Preschool – Ciputra
 
-At the Ciputra campus (expected to open in Q4 2027), children from 15 months to 3 years learn in mixed-age classes in the spirit of Montessori: they choose their own activities, learn alongside older children and are introduced to English every day.
+At the Ciputra campus (expected to open in Q4 2027), children from 12 months to 3 years learn in mixed-age classes in the spirit of Montessori: they choose their own activities, learn alongside older children and are introduced to English every day.
 
 From age 3, children move on to the kindergarten programme based on the Cambridge Early Years framework for children aged 3–6. Read more about our nursery groups on the [Nursery, 15–36 months](/en/programmes/nursery/) page and about the new campus on the [Casa Preschool – Ciputra](/en/campuses/ciputra/) page.

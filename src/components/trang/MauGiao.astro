@@ -7,7 +7,7 @@ import BangLop from '../BangLop.astro';
 import BoAnh from '../BoAnh.astro';
 import { ANH } from '../../data/anh';
 import type { Lang } from '../../data/co-so';
-import { CAMBRIDGE_CENTRE } from '../../data/thuong-hieu';
+import { CAMBRIDGE_CENTRE, MONTESSORI_BO_TRO } from '../../data/thuong-hieu';
 import { url, taoT } from '../../i18n/routes';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -57,6 +57,7 @@ const LINH_VUC = [
       <h2 id="linh-vuc">{t('Con học qua chơi, phát triển đều sáu lĩnh vực', 'Learning through play across six areas')}</h2>
       <p>{t('Con phát triển cả ngôn ngữ, toán, vận động, cảm xúc và sự tò mò, không chỉ học chữ và số:', 'Children grow in language, maths, movement, emotions and curiosity, not just letters and numbers:')}</p>
       <ol>{LINH_VUC.map((l) => <li>{l}</li>)}</ol>
+      <p>{MONTESSORI_BO_TRO[lang]}</p>
       <p><a href={url('article-cey', lang)}>{t('Đọc: Cambridge Early Years là gì? Giải thích cho phụ huynh', 'Read: What is Cambridge Early Years? A guide for parents')}</a></p>
     </div>
   </section>
