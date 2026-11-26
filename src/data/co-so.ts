@@ -30,6 +30,8 @@ export interface CoSo {
   buaAn: { so: number; chiTiet: HaiNgu } | null;
   /** Mã Cambridge Early Years Centre nếu cơ sở đã đăng ký (chứng nhận VN068 chỉ cho Chùa Láng, QUYET-DINH Q39); null = không */
   maCambridge?: string | null;
+  /** Thông tin thực tế cho phụ huynh, theo phiếu 6 câu của từng cơ sở (S7, 26/11/2026; QUYET-DINH Q40) */
+  thucTe?: { duongDen: HaiNgu; guiXe: HaiNgu; donTra: HaiNgu; khongGian: HaiNgu; diemRieng: HaiNgu[] };
 }
 
 /**
@@ -51,6 +53,17 @@ const TAT_CA_CO_SO: CoSo[] = [
     banDo: '23 ngõ 294 Kim Mã, Hà Nội',
     schema: { streetAddress: 'Số 23, ngõ 294 Kim Mã', addressLocality: 'Hà Nội' },
     lop: { nhaTre: 'co', songNgu: 'co', quocTe: 'khong', tienTieuHoc: 'buoi-chieu' },
+    thucTe: {
+      duongDen: { vi: 'Từ phố Kim Mã, rẽ vào ngõ 294/2 (đầu ngõ có quán Phê La Núi Trúc). Đi tiếp đến siêu thị Prolife sẽ thấy cổng chào "Cổng làng Vạn Phúc"; qua cổng khoảng 5 m, trường ở bên tay phải.', en: 'From Kim Mã street, turn into lane 294/2 (Phê La Núi Trúc is at the entrance of the lane). Continue to the Prolife supermarket and you will see the "Vạn Phúc village gate"; about 5 m past the gate, the school is on your right.' },
+      guiXe: { vi: 'Ba mẹ nên đi xe máy; xe máy để ngay trước cổng trường. Ô tô vào được tới trường nhưng không có chỗ đỗ, nên nếu đi ô tô, ba mẹ nên dùng xe công nghệ.', en: 'We recommend coming by motorbike; motorbikes can park right in front of the school. Cars can reach the school but there is no parking, so if you come by car, a ride-hailing service is easiest.' },
+      donTra: { vi: 'Cô đón và trả bé trong khuôn viên trường.', en: 'Teachers receive and hand over children inside the school grounds.' },
+      khongGian: { vi: 'Sân chơi ngoài trời trong khuôn viên căn biệt thự, phòng thư viện và phòng nghệ thuật.', en: 'An outdoor playground within the villa grounds, a library room and an art room.' },
+      diemRieng: [
+        { vi: 'Không gian yên tĩnh, gần gũi: trường nằm trong khu Vạn Phúc, tách khỏi sự ồn ào của trục đường lớn, giúp bé thấy nhẹ nhàng, thân thiện mỗi ngày tới lớp.', en: 'A quiet, homely setting: the school is in the Vạn Phúc area, away from the noise of the main road, so children feel calm and at ease each day.' },
+        { vi: 'Chăm sóc sát sao: lớp học ấm cúng giúp cô theo sát nhịp sinh hoạt, bữa ăn, giấc ngủ và cảm xúc của từng bé.', en: 'Close care: cosy classes let teachers follow each child’s routine, meals, sleep and feelings closely.' },
+        { vi: 'Học qua trải nghiệm: hoạt động khám phá, ngôn ngữ và kỹ năng gần gũi với lứa tuổi mầm non; lớp nhà trẻ theo định hướng Montessori.', en: 'Learning through experience: exploration, language and skills activities suited to preschool age; nursery classes are guided by Montessori principles.' },
+      ],
+    },
     buaAn: BUA_4,
   },
   {
@@ -65,6 +78,17 @@ const TAT_CA_CO_SO: CoSo[] = [
     banDo: 'HongKong Tower, 185 Huỳnh Thúc Kháng, Hà Nội',
     schema: { streetAddress: 'Tầng 1–2, sảnh A1, tòa HongKong Tower, 185 Huỳnh Thúc Kháng, phường Láng', addressLocality: 'Hà Nội' },
     lop: { nhaTre: 'co', songNgu: 'khong', quocTe: 'co', tienTieuHoc: 'co' },
+    thucTe: {
+      duongDen: { vi: 'Trường ở tòa HongKong Tower (185 Huỳnh Thúc Kháng), ngay gần tòa Icon 4 Tower. Ba mẹ đi qua bốt bảo vệ rồi vào sảnh A1.', en: 'The school is in HongKong Tower (185 Huỳnh Thúc Kháng), right next to Icon 4 Tower. Pass the security booth and go into Lobby A1.' },
+      guiXe: { vi: 'Xe máy và ô tô gửi dưới tầng hầm của tòa nhà.', en: 'Motorbikes and cars park in the building’s basement.' },
+      donTra: { vi: 'Đón và trả bé ở sảnh tầng 1 hoặc tại tầng 2.', en: 'Children are received and handed over in the ground-floor lobby or on the 2nd floor.' },
+      khongGian: { vi: 'Hai sân chơi trong nhà và phòng thư viện.', en: 'Two indoor play areas and a library room.' },
+      diemRieng: [
+        { vi: 'Thuận tiện đưa đón: trường nằm trong khu tòa nhà văn phòng và căn hộ, gửi xe ngay dưới hầm.', en: 'Easy drop-off and pick-up: the school is in an office and apartment building, with parking in the basement.' },
+        { vi: 'Giáo viên nước ngoài toàn thời gian: lớp 3–6 tuổi học hệ quốc tế, mỗi lớp có giáo viên nước ngoài toàn thời gian cùng đội ngũ giáo viên tâm huyết, giúp bé làm quen tiếng Anh tự nhiên mỗi ngày.', en: 'A full-time foreign teacher: classes for ages 3–6 follow the international track, with a full-time foreign teacher in every class alongside a dedicated teaching team, so children get used to English naturally every day.' },
+        { vi: 'Trung tâm Cambridge Early Years: cơ sở Chùa Láng được Cambridge chấp thuận là Trung tâm Cambridge Early Years (mã VN068).', en: 'A Cambridge Early Years Centre: the Chùa Láng campus is an approved Cambridge Early Years Centre (centre number VN068).' },
+      ],
+    },
     buaAn: BUA_5,
     maCambridge: 'VN068',
   },
@@ -77,6 +101,17 @@ const TAT_CA_CO_SO: CoSo[] = [
     banDo: 'FLC Complex, 36 Phạm Hùng, Hà Nội',
     schema: { streetAddress: 'Tầng 3, tòa FLC Complex, số 36 Phạm Hùng', addressLocality: 'Hà Nội' },
     lop: { nhaTre: 'co', songNgu: 'khong', quocTe: 'co', tienTieuHoc: 'co' },
+    thucTe: {
+      duongDen: { vi: 'Trường ở tầng 3 tòa FLC Complex (36 Phạm Hùng), gần Bến xe Mỹ Đình.', en: 'The school is on the 3rd floor of FLC Complex (36 Phạm Hùng), near Mỹ Đình bus station.' },
+      guiXe: { vi: 'Xe máy và ô tô gửi dưới tầng hầm của tòa nhà.', en: 'Motorbikes and cars park in the building’s basement.' },
+      donTra: { vi: 'Đón và trả bé ở sảnh tầng 1 hoặc tại tầng 3.', en: 'Children are received and handed over in the ground-floor lobby or on the 3rd floor.' },
+      khongGian: { vi: 'Hai khu vui chơi trong nhà, phòng thư viện và khu vui chơi ngoài trời.', en: 'Two indoor play areas, a library room and an outdoor play area.' },
+      diemRieng: [
+        { vi: 'Thuận tiện đưa đón: trường nằm trong khu tòa nhà văn phòng và căn hộ, gửi xe ngay dưới hầm.', en: 'Easy drop-off and pick-up: the school is in an office and apartment building, with parking in the basement.' },
+        { vi: 'Giáo viên nước ngoài toàn thời gian: lớp 3–6 tuổi học hệ quốc tế, mỗi lớp có giáo viên nước ngoài toàn thời gian cùng đội ngũ giáo viên tâm huyết, giúp bé làm quen tiếng Anh tự nhiên mỗi ngày.', en: 'A full-time foreign teacher: classes for ages 3–6 follow the international track, with a full-time foreign teacher in every class alongside a dedicated teaching team, so children get used to English naturally every day.' },
+        { vi: 'Chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi: bé học qua chơi trong sáu lĩnh vực phát triển, trong đó có giao tiếp, ngôn ngữ và đọc viết.', en: 'A programme based on the Cambridge Early Years framework for children aged 3–6: children learn through play across six areas of development, including communication, language and literacy.' },
+      ],
+    },
     buaAn: BUA_5,
   },
   {

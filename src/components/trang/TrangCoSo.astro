@@ -115,6 +115,20 @@ const khac = CO_SO.filter((x) => x.slug !== slug && x.trangThai === 'dang-tuyen-
     </div>
   </section>
 
+  {c.thucTe && (
+    <section class="phan phan--phu phan--sat" aria-labelledby="den-truong">
+      <div class="khung noi-dung">
+        <h2 id="den-truong">{t(`Đến cơ sở ${c.ten.vi} và đưa đón bé`, `Getting to the ${c.ten.en} campus and drop-off`)}</h2>
+        <h3>{t('Đường đến trường', 'How to find us')}</h3>
+        <p>{c.thucTe.duongDen[lang]}</p>
+        <h3>{t('Gửi xe', 'Parking')}</h3>
+        <p>{c.thucTe.guiXe[lang]}</p>
+        <h3>{t('Đón và trả bé', 'Drop-off and pick-up')}</h3>
+        <p>{c.thucTe.donTra[lang]} {t('Nhà trường đón bé từ 7h30 và trả bé từ 16h30 đến 17h30; trông muộn đến 18h30 (có tính phí). Ba mẹ cần đưa sớm hoặc đón muộn hơn, xin liên hệ văn phòng nhà trường.', 'The school receives children from 7:30 and hands them over between 16:30 and 17:30; late care is available until 18:30 (fees apply). If you need an earlier drop-off or later pick-up, please contact the school office.')}</p>
+      </div>
+    </section>
+  )}
+
   {laCiputra ? (
     <section class="phan phan--phu phan--sat" aria-labelledby="theo-lua-tuoi">
       <div class="khung">
@@ -148,6 +162,21 @@ const khac = CO_SO.filter((x) => x.slug !== slug && x.trangThai === 'dang-tuyen-
           <a href={url('kindergarten', lang)}>{t('Mẫu giáo 3–6 tuổi', 'Kindergarten, 3–6 years')}</a> ·
           <a href={url('programmes', lang) + '#mot-ngay'}>{t('Giờ học, bữa ăn, mùa hè', 'School hours, meals, summer')}</a>
         </p>
+      </div>
+    </section>
+  )}
+
+  {c.thucTe && (
+    <section class="phan phan--sat" aria-labelledby="diem-rieng">
+      <div class="khung noi-dung">
+        <h2 id="diem-rieng">{t(`Không gian và điểm riêng của cơ sở ${c.ten.vi}`, `Spaces and highlights of the ${c.ten.en} campus`)}</h2>
+        <p><strong>{t('Không gian chơi và vận động:', 'Play and activity spaces:')}</strong> {c.thucTe.khongGian[lang]}</p>
+        <ul>
+          {c.thucTe.diemRieng.map((d) => {
+            const [nhan, ...con] = d[lang].split(': ');
+            return <li>{con.length ? <><strong>{nhan}:</strong> {con.join(': ')}</> : d[lang]}</li>;
+          })}
+        </ul>
       </div>
     </section>
   )}

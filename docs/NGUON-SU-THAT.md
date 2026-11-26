@@ -79,6 +79,21 @@ Khi lệch, **Casa facts thắng**: sửa bản chép này, không sửa ngượ
 - Đón trả ở Ciputra: trước sảnh tòa nhà, dừng xe không quá 10 phút; lên lớp bằng thang máy. **Dự kiến** (chỉ viết kèm chữ "dự kiến").
 - "Cầu Giấy" trên site cũ là cơ sở Chùa Láng (câu 5); "Phạm Hùng" là Mỹ Đình (câu 4). Ciputra: tòa **Block 1**, tầng 2, tầng 3 và sân thượng (Casa facts, 21/11/2026; thay cho "tòa CC1, tầng 3–4" ngày 18/11); số nhà **chưa có**.
 
+### Thông tin thực tế từng cơ sở (phiếu 6 câu S7, người phụ trách dự án chuyển 26/11/2026)
+
+Đã đưa lên trang cơ sở (`thucTe` trong `src/data/co-so.ts`). **Đã chốt.**
+
+| | Kim Mã | Chùa Láng | Mỹ Đình |
+|---|---|---|---|
+| Đường đến | Ngõ 294/2 Kim Mã (đầu ngõ có Phê La Núi Trúc) → siêu thị Prolife → cổng "Cổng làng Vạn Phúc", qua cổng ~5 m, bên phải | Tòa HongKong Tower (185 Huỳnh Thúc Kháng), gần Icon 4 Tower; qua bốt bảo vệ, vào sảnh A1 | Tòa FLC Complex (36 Phạm Hùng), gần Bến xe Mỹ Đình |
+| Gửi xe | Nên đi xe máy (để trước cổng); ô tô vào được nhưng không có chỗ đỗ, nên dùng xe công nghệ | Hầm tòa nhà | Hầm tòa nhà |
+| Đón trả | Trong khuôn viên trường | Sảnh tầng 1 hoặc tầng 2 | Sảnh tầng 1 hoặc tầng 3 |
+| Không gian | Sân chơi ngoài trời trong khuôn viên biệt thự, thư viện, phòng nghệ thuật | 2 sân chơi trong nhà, thư viện | 2 khu vui chơi trong nhà, thư viện, khu vui chơi ngoài trời |
+
+- Giờ đón trả chung: đón từ 7h30, trả từ 16h30 đến 17h30; đưa sớm/đón muộn theo khung giờ của trường thì liên hệ văn phòng.
+- Chùa Láng và Mỹ Đình: giáo viên nước ngoài **toàn thời gian** trong lớp hệ quốc tế.
+- Câu 5 (phụ huynh ở đâu): trong bán kính khoảng 3 km quanh trường; không dùng để nêu tên khu trên site.
+
 ## Liên hệ
 
 - Hotline 0989 059 838 (+84 989 059 838). Email tuyensinh@cdb.edu.vn. Facebook facebook.com/CasadeiBambiniSchools. **Đã chốt** (câu 24).
