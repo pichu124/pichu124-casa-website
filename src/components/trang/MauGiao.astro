@@ -7,6 +7,7 @@ import BangLop from '../BangLop.astro';
 import BoAnh from '../BoAnh.astro';
 import { ANH } from '../../data/anh';
 import type { Lang } from '../../data/co-so';
+import { CAMBRIDGE_CENTRE } from '../../data/thuong-hieu';
 import { url, taoT } from '../../i18n/routes';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -76,6 +77,7 @@ const LINH_VUC = [
         ))}
       </ol>
       <p class="sau-luoi">{t('Cả ba cơ sở đang tuyển sinh đều dạy chương trình tiền tiểu học. Chùa Láng và Mỹ Đình có lớp tiền tiểu học riêng. Ở Kim Mã, bé 3–6 tuổi học chung lớp; buổi chiều, bé 5–6 tuổi học riêng chương trình tiền tiểu học.', 'All three enrolling campuses teach the pre-primary programme. Chùa Láng and Mỹ Đình have a separate pre-primary class. At Kim Mã, children aged 3–6 share one class; in the afternoons, 5–6-year-olds study the pre-primary programme separately.')}</p>
+      <p class="sau-luoi">{CAMBRIDGE_CENTRE.cau[lang]} <a href={url('co-so-chua-lang', lang) + '#cambridge'}>{t('Xem cơ sở Chùa Láng', 'See the Chùa Láng campus')}</a></p>
       <BoAnh nhan={t('Ảnh lớp mẫu giáo', 'Kindergarten class photos')}
         anh={[ANH.tienTieuHoc, ANH.lopHocTron, ANH.gioHocBan].map((x) => ({ src: x.src, alt: x.alt[lang] }))} />
     </div>

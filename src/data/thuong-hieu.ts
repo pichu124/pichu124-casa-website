@@ -11,3 +11,14 @@ export const LOGO = {
   // alt khớp chữ thấy trên logo (WCAG 2.5.3)
   alt: 'Casa dei Bambini – Montessori Preschool',
 };
+
+/** Trạng thái Cambridge Early Years Centre (QUYET-DINH Q39; docs/CAMBRIDGE-HUONG-DAN.md).
+ * Chứng nhận VN068 chỉ áp dụng cho cơ sở Chùa Láng: mọi câu nhắc trạng thái phải có tên Chùa Láng
+ * (npm run check mục 3 báo đỏ nếu thiếu). Câu tiếng Anh theo câu mô tả Cambridge duyệt sẵn. */
+export const CAMBRIDGE_CENTRE = {
+  ma: 'VN068',
+  cau: {
+    vi: 'Cơ sở Chùa Láng là Trung tâm Cambridge Early Years được Cambridge chấp thuận (Cambridge Early Years Centre, mã VN068), đăng ký giảng dạy chương trình Cambridge Early Years cho trẻ 3–6 tuổi.',
+    en: 'The Chùa Láng campus is an approved Cambridge Early Years Centre (centre number VN068), registered to offer the early years programme from the Cambridge Pathway.',
+  },
+};

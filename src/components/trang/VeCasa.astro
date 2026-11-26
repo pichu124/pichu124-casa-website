@@ -10,7 +10,7 @@ import BoAnh from '../BoAnh.astro';
 import KhungVideo from '../KhungVideo.astro';
 import { ANH } from '../../data/anh';
 import { CIPUTRA_CONG_KHAI, type Lang } from '../../data/co-so';
-import { TEN, KHAU_HIEU, LOGO } from '../../data/thuong-hieu';
+import { TEN, KHAU_HIEU, LOGO, CAMBRIDGE_CENTRE } from '../../data/thuong-hieu';
 import { url, taoT } from '../../i18n/routes';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -185,6 +185,7 @@ const AN_TOAN = [
     <div class="khung noi-dung">
       <h2 id="chuong-trinh">{t('Chương trình học', 'Our programmes')}</h2>
       <p>{t('Nhà trẻ 15–36 tháng theo định hướng Montessori; mẫu giáo 3–6 tuổi theo khung Cambridge Early Years, gồm chương trình tiền tiểu học; hai hệ quốc tế và song ngữ.', 'Nursery for 15–36 months guided by Montessori principles; kindergarten for ages 3–6 based on the Cambridge Early Years framework, including a pre-primary programme; international and bilingual tracks.')}</p>
+      <p>{CAMBRIDGE_CENTRE.cau[lang]}</p>
       <p><a href={url('programmes', lang)}>{t('Xem chương trình học', 'See our programmes')}</a></p>
     </div>
   </section>

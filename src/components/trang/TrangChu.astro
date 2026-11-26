@@ -11,7 +11,7 @@ import MotNgay from '../MotNgay.astro';
 import { CO_SO, CIPUTRA_CONG_KHAI, type Lang } from '../../data/co-so';
 import { LIEN_HE, SITE } from '../../data/lien-he';
 import { url, taoT, FORM_ANCHOR } from '../../i18n/routes';
-import { TEN_CU, KHAU_HIEU } from '../../data/thuong-hieu';
+import { TEN_CU, KHAU_HIEU, CAMBRIDGE_CENTRE } from '../../data/thuong-hieu';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -32,6 +32,9 @@ const LY_DO = [
     noi: t('Bếp một chiều của trường nấu toàn bộ 4–5 bữa mỗi ngày tùy cơ sở, kể cả bánh và đồ ăn nhẹ.', 'The school’s one-way kitchen cooks all 4–5 daily meals, depending on the campus, including cakes and snacks.') },
   { ten: t('Giáo viên nước ngoài ở cả hai hệ', 'Foreign teachers in both tracks'),
     noi: t('Hệ quốc tế: mỗi lớp có giáo viên nước ngoài. Hệ song ngữ: giáo viên nước ngoài dạy theo tiết.', 'International track: a foreign teacher in every class. Bilingual track: a foreign teacher teaches scheduled lessons.') },
+  { ten: t('Chùa Láng: Trung tâm Cambridge Early Years', 'Chùa Láng: a Cambridge Early Years Centre'),
+    noi: t(`Cơ sở Chùa Láng được Cambridge chấp thuận là Trung tâm Cambridge Early Years (mã ${CAMBRIDGE_CENTRE.ma}).`, `The Chùa Láng campus is an approved Cambridge Early Years Centre (centre number ${CAMBRIDGE_CENTRE.ma}).`),
+    href: url('co-so-chua-lang', lang) + '#cambridge' },
   { ten: t('Lịch hợp với ba mẹ đi làm', 'A schedule that suits working parents'),
     noi: t('Học từ 7h30 đến 17h30, trông muộn đến 18h30 (có tính phí). Mùa hè trường vẫn học, chỉ nghỉ 1 tuần.', 'Classes from 7:30 to 17:30, late care until 18:30 (charged). School continues through the summer with just one week off.') },
 ];
@@ -90,7 +93,7 @@ const schema = [{
       <ul class="luoi luoi--3 danh-sach-tron" role="list">
         {LY_DO.map((l) => (
           <li class="the">
-            <h3>{l.ten}</h3>
+            <h3>{l.href ? <a href={l.href}>{l.ten}</a> : l.ten}</h3>
             <p class="the__mo-ta">{l.noi}</p>
           </li>
         ))}

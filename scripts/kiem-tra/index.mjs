@@ -110,7 +110,22 @@ for (const [p, { doc }] of TRANG) {
     if (m) loi('Cụm cấm', `${p}: "${m[0]}" (${q.ly_do})`);
   }
 }
-if (soLoi === truocLoi3) dat(`${quyTac.length} quy tắc, không trang nào vi phạm`);
+// Chứng nhận Cambridge Early Years Centre (VN068) chỉ áp dụng cho cơ sở Chùa Láng (QUYET-DINH Q39):
+// mọi khối chữ nhắc trạng thái này phải có tên Chùa Láng ngay trong khối đó, kể cả <title> và mô tả.
+const reTrungTam = /trung tâm cambridge early years|cambridge early years centre/iu;
+let soCauTrungTam = 0;
+for (const [p, { doc }] of TRANG) {
+  const khoi = doc.querySelectorAll('title, h1, h2, h3, h4, h5, h6, p, li, td, th, figcaption, dt, dd, blockquote')
+    .map((e) => e.textContent)
+    .concat(doc.querySelectorAll('meta[content]').map((e) => e.getAttribute('content')));
+  for (const chu of khoi) {
+    const s = (chu || '').normalize('NFC');
+    if (!reTrungTam.test(s)) continue;
+    soCauTrungTam++;
+    if (!/chùa láng/iu.test(s)) loi('Cambridge Early Years Centre không gắn cơ sở', `${p}: "${s.trim().slice(0, 90)}…" (chứng nhận VN068 chỉ cho cơ sở Chùa Láng)`);
+  }
+}
+if (soLoi === truocLoi3) dat(`${quyTac.length} quy tắc, không trang nào vi phạm; ${soCauTrungTam} câu "Cambridge Early Years Centre" đều gắn cơ sở Chùa Láng`);
 
 // ---------------------------------------------------------------- 4. Cấu trúc từng trang
 tieuDe('4. Một <h1>; <title>, mô tả riêng; hreflang khớp cặp; ảnh có alt');

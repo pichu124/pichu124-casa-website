@@ -204,6 +204,9 @@ main:focus { outline: none; }
 }
 .huy-hieu--sap { background: var(--mau-hanh-dong-nhat); color: var(--mau-hanh-dong-dam); }
 
+/* Đoạn nhấn một sự thật quan trọng (ví dụ trạng thái Cambridge Early Years Centre ở trang Chùa Láng) */
+.chu-noi-bat { background: var(--mau-be-mat); border-left: 4px solid var(--mau-chinh); border-radius: var(--bo-the); padding: var(--k-4) var(--k-5); max-width: 70ch; }
+
 /* Ô số liệu ngắn ("Một ngày ở Casa") */
 .o-so-lieu { display: grid; gap: var(--k-4); grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); list-style: none; padding: 0; margin: 0; }
 .o-so-lieu li { margin: 0; background: var(--mau-be-mat); border-radius: var(--bo-the); padding: var(--k-4) var(--k-5); border: 1px solid var(--mau-vien); }

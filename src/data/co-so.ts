@@ -28,6 +28,8 @@ export interface CoSo {
   lop: { nhaTre: GiaTriLop; songNgu: GiaTriLop; quocTe: GiaTriLop; tienTieuHoc: GiaTriLop };
   /** Bữa ăn mỗi ngày (chủ trường, A6 25/11/2026); null = chưa chốt */
   buaAn: { so: number; chiTiet: HaiNgu } | null;
+  /** Mã Cambridge Early Years Centre nếu cơ sở đã đăng ký (chứng nhận VN068 chỉ cho Chùa Láng, QUYET-DINH Q39); null = không */
+  maCambridge?: string | null;
 }
 
 /**
@@ -64,6 +66,7 @@ const TAT_CA_CO_SO: CoSo[] = [
     schema: { streetAddress: 'Tầng 1–2, sảnh A1, tòa HongKong Tower, 185 Huỳnh Thúc Kháng, phường Láng', addressLocality: 'Hà Nội' },
     lop: { nhaTre: 'co', songNgu: 'khong', quocTe: 'co', tienTieuHoc: 'co' },
     buaAn: BUA_5,
+    maCambridge: 'VN068',
   },
   {
     slug: 'my-dinh',

@@ -56,7 +56,7 @@ Phần cuối bài (lời mời đăng ký tham quan, nút gọi hotline, liên 
 
 - **Nguồn:** chỉ dùng dòng "Đã chốt" trong Casa facts. Dòng "Dự kiến" phải kèm chữ "dự kiến". Dòng "Chưa có" không viết. Bản chép: `docs/NGUON-SU-THAT.md`.
 - **Cách gọi tên** theo `CLAUDE.md`:
-  - Cambridge chỉ viết "chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi".
+  - Cambridge: câu chung viết "chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi". Riêng cơ sở Chùa Láng được viết "Trung tâm Cambridge Early Years" theo `docs/CAMBRIDGE-HUONG-DAN.md`; câu nào nhắc trạng thái này phải có tên Chùa Láng.
   - "Quốc tế" chỉ viết "hệ quốc tế: mỗi lớp có giáo viên nước ngoài".
   - Gọi "bé, trẻ, con", không gọi "học sinh".
 - **Không viết:**

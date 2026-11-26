@@ -25,7 +25,11 @@ Không tự bịa con số, bằng cấp, giải thưởng, sĩ số, học phí
 - **Site tĩnh**: HTML/CSS, chỉ dùng JS khi thật cần. Không PHP, không cơ sở dữ liệu, không trang quản trị. Phần chạy được trên máy chủ chỉ có dịch vụ nhận form (Giai đoạn 4).
 - **Hai thứ tiếng**: tiếng Việt (mặc định, ở gốc `/`) và tiếng Anh (`/en/`), có `hreflang` hai chiều. Bản tiếng Anh dịch đúng nghĩa, không thêm thông tin.
 - **Tên gọi** (sai một chữ có thể thành quảng cáo sai sự thật):
-  - Cambridge: chỉ viết "chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi". Không viết "trường Cambridge", "Cambridge International School"; không dùng logo Cambridge.
+  - Cambridge (chủ trường đổi quy tắc 26/11/2026, QUYET-DINH Q39; hướng dẫn chi tiết `docs/CAMBRIDGE-HUONG-DAN.md`): **cơ sở Chùa Láng** là Cambridge Early Years Centre (Casa dei Bambini Preschool, mã VN068, cấp 20/07/2026). Chứng nhận chỉ áp dụng cho Chùa Láng, nên mọi câu "Trung tâm Cambridge Early Years" / "Cambridge Early Years Centre" phải gắn tên Chùa Láng (bộ kiểm tra báo đỏ nếu thiếu).
+    - Được viết cho Chùa Láng: câu trạng thái theo mẫu Cambridge ("Cơ sở Chùa Láng là Trung tâm Cambridge Early Years được Cambridge chấp thuận…"), "chương trình Cambridge Early Years cho trẻ 3–6 tuổi".
+    - Câu chung cho cả hệ thống, Kim Mã, Mỹ Đình, Ciputra: giữ "chương trình theo khung Cambridge Early Years cho trẻ 3–6 tuổi".
+    - Logo: chỉ logo "Cambridge Early Years Centre" (không khiên riêng, không logo Cambridge chuẩn), nhỏ hơn logo Casa, chỉ gắn với cơ sở Chùa Láng, và chỉ đăng sau khi Cambridge duyệt bằng văn bản (logoapproval@cambridgeinternational.org).
+    - Vẫn cấm: "trường Cambridge"; "Cambridge International School"; chữ Cambridge trong tên trường; "Đại học Cambridge"; lời hơn nhất trong tài liệu Cambridge ("world-class", "best start").
   - "Quốc tế": chỉ viết "hệ quốc tế: mỗi lớp có giáo viên nước ngoài". Không dùng "trường mầm non quốc tế" làm tên hay tiêu đề.
   - Montessori: "lớp trộn tuổi theo tinh thần Montessori" cho nhóm dưới 3 tuổi ở Ciputra; không dùng làm định vị chính.
   - Gọi "bé", "trẻ", "con", không gọi "học sinh". Không nêu tên hay chê trường khác; không viết "tốt nhất", "số 1".

@@ -21,6 +21,7 @@
     { "mau": "từ\\s*12\\s*tháng", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Phiếu 18/11/2026: độ tuổi nhận theo chương trình từng cơ sở, không viết 12 tháng" },
     { "mau": "\\b(from|aged)\\s+12\\s*months?\\b", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Bản tiếng Anh: tương đương 'từ 12 tháng'" },
     { "mau": "18\\s*months?", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Bản tiếng Anh: nhận trẻ từ 15 tháng" },
+    { "mau": "world[- ]class|đẳng cấp thế giới|đẳng cấp quốc tế", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Lời hơn nhất có trong mẫu thông cáo của Cambridge, không dùng trên site (docs/CAMBRIDGE-HUONG-DAN.md)" },
     { "mau": "Đại học Cambridge|University of Cambridge", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Kế hoạch SEO 23/11/2026: không viết 'Đại học Cambridge'" },
     { "mau": "\\b(Sunshine House|Clover|Little Sol|Hanoi Academy|Shining Star|Sakura|Chubby|Maple Bear|AMS)\\b", "kieu": "regex", "pham_vi": "toan-trang", "ly_do": "Không nêu tên trường khác (kế hoạch SEO 23/11/2026: các trường này chỉ dùng để chọn từ khóa)" }
   ]

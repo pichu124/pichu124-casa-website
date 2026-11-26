@@ -2,7 +2,7 @@
 
 Tóm tắt tài liệu "Cambridge Early Years Centre logo guidelines" (Cambridge University Press & Assessment, 2023, 11 trang). Người phụ trách dự án gửi ngày 25/11/2026. Bản gốc tải ở khu Cambridge Early Years của School Support Hub: www.cambridgeinternational.org/earlyyearssupport (cần tài khoản của trường).
 
-Tình trạng của trường: "Casa dei Bambini Preschool has registered as a Cambridge Early Years Centre", Registered school **VN068**, cấp 20/07/2026 (`docs/NGUON-SU-THAT.md`).
+Tình trạng của trường: "Casa dei Bambini Preschool has registered as a Cambridge Early Years Centre", Registered school **VN068**, cấp 20/07/2026, **áp dụng cho cơ sở Chùa Láng** (xác nhận 26/11/2026; `docs/NGUON-SU-THAT.md`). Chủ trường đồng ý dùng trên site (QUYET-DINH Q39).
 
 ## Được làm
 
@@ -65,8 +65,8 @@ Nguồn: mẫu "Press information" Cambridge gửi trung tâm mới (bản 14/03
 
 | Chỗ dùng | Tiếng Việt | Tiếng Anh |
 | --- | --- | --- |
-| Câu trạng thái | Casa Preschool (Casa dei Bambini Preschool) là Trung tâm Cambridge Early Years được Cambridge chấp thuận, đăng ký giảng dạy chương trình Cambridge Early Years cho trẻ 3–6 tuổi. | Casa dei Bambini Preschool is an approved Cambridge Early Years Centre, registered to offer the early years programme from the Cambridge Pathway. |
-| Câu ngắn (chân trang, chữ ký email) | Casa dei Bambini Preschool là Trung tâm Cambridge Early Years. | Casa dei Bambini Preschool is a Cambridge Early Years Centre. |
+| Câu trạng thái (đang dùng, `CAMBRIDGE_CENTRE` trong `src/data/thuong-hieu.ts`) | Cơ sở Chùa Láng là Trung tâm Cambridge Early Years được Cambridge chấp thuận (Cambridge Early Years Centre, mã VN068), đăng ký giảng dạy chương trình Cambridge Early Years cho trẻ 3–6 tuổi. | The Chùa Láng campus is an approved Cambridge Early Years Centre (centre number VN068), registered to offer the early years programme from the Cambridge Pathway. |
+| Câu ngắn (chữ ký email của cơ sở Chùa Láng) | Casa dei Bambini Preschool – Chùa Láng là Trung tâm Cambridge Early Years. | Casa dei Bambini Preschool – Chùa Láng is a Cambridge Early Years Centre. |
 | Tên chương trình | chương trình Cambridge Early Years cho trẻ 3–6 tuổi | the Cambridge Early Years programme for children aged 3–6 |
 
-Tên trên chứng nhận là "Casa dei Bambini Preschool", nên câu trạng thái giữ đúng tên này (kèm tên hiển thị "Casa Preschool" ở bản tiếng Việt). Nếu chứng nhận không áp dụng cho cả ba cơ sở, câu trạng thái phải ghi rõ cơ sở nào.
+Chứng nhận chỉ áp dụng cho cơ sở Chùa Láng, nên câu trạng thái luôn nêu tên Chùa Láng; câu chung cho cả hệ thống và các cơ sở khác giữ "chương trình theo khung Cambridge Early Years". Bộ kiểm tra (`npm run check` mục 3) báo đỏ nếu một khối chữ nhắc "Trung tâm Cambridge Early Years" / "Cambridge Early Years Centre" mà không có tên Chùa Láng.

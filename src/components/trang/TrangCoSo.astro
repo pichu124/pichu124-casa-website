@@ -12,6 +12,7 @@ import { ANH_CO_SO } from '../../data/anh';
 import Can from '../Can.astro';
 import Icon from '../Icon.astro';
 import { CO_SO, coSoTheoSlug, linkBanDo, type Lang } from '../../data/co-so';
+import { CAMBRIDGE_CENTRE } from '../../data/thuong-hieu';
 import { LIEN_HE, SITE } from '../../data/lien-he';
 import { url, taoT } from '../../i18n/routes';
 
@@ -140,6 +141,7 @@ const khac = CO_SO.filter((x) => x.slug !== slug && x.trangThai === 'dang-tuyen-
         <ul class="danh-sach-dau">
           {lopCoSo.map((l) => <li>{l}</li>)}
         </ul>
+        {c.maCambridge && <p class="chu-noi-bat" id="cambridge">{CAMBRIDGE_CENTRE.cau[lang]}</p>}
         <BangLop lang={lang} tieuDe={t('So sánh lớp và hệ học ở các cơ sở', 'Classes and tracks across campuses')} />
         <p>
           <a href={url('nursery', lang)}>{t('Nhà trẻ 15–36 tháng', 'Nursery, 15–36 months')}</a> ·
