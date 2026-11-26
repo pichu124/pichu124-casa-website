@@ -25,3 +25,14 @@ export const LIEN_HE = {
 // đổi FORM_DA_HOAT_DONG thành true để bỏ dòng cảnh báo trong bản xem trước.
 export const FORM_ACTION = '/api/dang-ky';
 export const FORM_DA_HOAT_DONG = true; // dịch vụ form có trong form/ (Giai đoạn 4, 20/11/2026)
+
+/** "Ba mẹ biết Casa qua đâu?" (ô không bắt buộc trong form, QUYET-DINH Q42). Khớp BIET_QUA trong form/src/kiem-tra.mjs. */
+export const BIET_QUA: { gia: string; ten: { vi: string; en: string } }[] = [
+  { gia: 'google', ten: { vi: 'Tìm trên Google', en: 'Google search' } },
+  { gia: 'google-maps', ten: { vi: 'Google Maps', en: 'Google Maps' } },
+  { gia: 'facebook', ten: { vi: 'Facebook', en: 'Facebook' } },
+  { gia: 'zalo', ten: { vi: 'Zalo', en: 'Zalo' } },
+  { gia: 'nguoi-quen', ten: { vi: 'Người quen giới thiệu', en: 'Recommended by someone' } },
+  { gia: 'di-ngang-qua', ten: { vi: 'Đi ngang qua trường', en: 'Passed by the school' } },
+  { gia: 'khac', ten: { vi: 'Khác', en: 'Other' } },
+];

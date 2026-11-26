@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { kiemTraDangKy, chuanHoaSdt, laThuRac, gon } from '../src/kiem-tra.mjs';
+import { kiemTraDangKy, chuanHoaSdt, laThuRac, gon, chuanHoaNguon } from '../src/kiem-tra.mjs';
 import { taoGioiHan } from '../src/gioi-han.mjs';
 
 const NGAY = new Date('2026-11-20T10:00:00+07:00');
@@ -9,7 +9,20 @@ const hopLe = { ngon_ngu: 'vi', ten_phu_huynh: '  Nguyễn   Thị Lan ', so_die
 test('dữ liệu hợp lệ được chuẩn hoá', () => {
   const kq = kiemTraDangKy(hopLe, NGAY);
   assert.equal(kq.hopLe, true);
-  assert.deepEqual(kq.duLieu, { ten: 'Nguyễn Thị Lan', sdt: '0912345678', thang_sinh: 5, nam_sinh: 2023, co_so: 'kim-ma', ngon_ngu: 'vi' });
+  assert.deepEqual(kq.duLieu, { ten: 'Nguyễn Thị Lan', sdt: '0912345678', thang_sinh: 5, nam_sinh: 2023, co_so: 'kim-ma', ngon_ngu: 'vi', biet_qua: '', nguon: '' });
+});
+
+test('hai ô không bắt buộc: biết Casa qua đâu, nguồn truy cập', () => {
+  const kq = kiemTraDangKy({ ...hopLe, biet_qua: 'google-maps', nguon: 'Google-Maps' }, NGAY);
+  assert.equal(kq.hopLe, true);
+  assert.equal(kq.duLieu.biet_qua, 'google-maps');
+  assert.equal(kq.duLieu.nguon, 'google-maps');
+  const la = kiemTraDangKy({ ...hopLe, biet_qua: '<script>', nguon: 'a b?x=1' }, NGAY);
+  assert.equal(la.hopLe, true, 'giá trị lạ ở ô không bắt buộc không làm hỏng đăng ký');
+  assert.equal(la.duLieu.biet_qua, '');
+  assert.equal(la.duLieu.nguon, '');
+  assert.equal(chuanHoaNguon('ref-www.google.com'), 'ref-www.google.com');
+  assert.equal(chuanHoaNguon('x'.repeat(61)), '');
 });
 
 test('nhận cả URLSearchParams', () => {

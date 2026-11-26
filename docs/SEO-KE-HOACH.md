@@ -109,11 +109,15 @@ Giới hạn và ghi chú:
 
 Gửi đầu tháng cho ban giám hiệu, một trang.
 
-**1. Đăng ký tham quan qua website.** Ghi số lượt theo từng cơ sở, so với tháng trước. Người quản trị lấy số trên VPS bằng lệnh dưới đây. Lệnh chỉ đếm, không in tên hay số điện thoại.
+**1. Đăng ký tham quan qua website.** Ghi số lượt theo từng cơ sở, theo "biết Casa qua đâu" và theo nguồn truy cập (từ 26/11/2026, QUYET-DINH Q42), so với tháng trước. Người quản trị lấy số trên VPS bằng lệnh dưới đây. Lệnh chỉ đếm, không in tên hay số điện thoại.
 
 ```bash
-sudo -u casa-form node -e 'const f="/var/lib/casa-website/dang-ky.jsonl";const fs=require("fs");if(!fs.existsSync(f)){console.log("Chưa có đăng ký nào.");process.exit(0)}const d={};for(const l of fs.readFileSync(f,"utf8").split("\n").filter(Boolean)){const r=JSON.parse(l);const k=r.thoi_gian.slice(0,7)+"  "+r.co_so;d[k]=(d[k]||0)+1}console.table(d)'
+sudo -u casa-form node -e 'const f="/var/lib/casa-website/dang-ky.jsonl";const fs=require("fs");if(!fs.existsSync(f)){console.log("Chưa có đăng ký nào.");process.exit(0)}const d={},q={},n={};for(const l of fs.readFileSync(f,"utf8").split("\n").filter(Boolean)){const r=JSON.parse(l);const t=r.thoi_gian.slice(0,7);const a=t+"  "+r.co_so,b=t+"  "+(r.biet_qua||"(không chọn)"),c=t+"  "+(r.nguon||"(không rõ)");d[a]=(d[a]||0)+1;q[b]=(q[b]||0)+1;n[c]=(n[c]||0)+1}console.log("Theo cơ sở:");console.table(d);console.log("Biết Casa qua:");console.table(q);console.log("Nguồn truy cập:");console.table(n)'
 ```
+
+**1b. Nguồn khách ngoài website.** Bộ phận tuyển sinh hỏi mọi phụ huynh liên hệ (điện thoại, Zalo, form) "Anh/chị biết Casa qua đâu?" và ghi vào hệ thống quản lý tuyển sinh; mỗi tháng gửi số đếm theo nguồn (Google, Google Maps, Facebook, Zalo, người quen, đi ngang qua, khác). Đây là số chính xác nhất.
+
+**1c. Google Maps** (Thông tin chi tiết của từng hồ sơ): số cuộc gọi, số lượt chỉ đường, số lượt bấm vào website, số lượt xem hồ sơ; số đánh giá mới.
 
 **2. Search Console** (sau khi cài):
 

@@ -1,5 +1,6 @@
-// Kiểm tra dữ liệu form đăng ký tham quan. Chỉ nhận đúng 4 thông tin + ô đồng ý (CLAUDE.md, Giai đoạn 4).
-// Danh sách cơ sở phải khớp src/data/co-so.ts của website.
+// Kiểm tra dữ liệu form đăng ký tham quan: 4 thông tin bắt buộc + ô đồng ý (CLAUDE.md, Giai đoạn 4),
+// thêm 2 thông tin không bắt buộc để đo nguồn khách (QUYET-DINH Q42): biết Casa qua đâu, nguồn truy cập.
+// Danh sách cơ sở phải khớp src/data/co-so.ts; danh sách BIET_QUA phải khớp src/data/lien-he.ts của website.
 
 export const CO_SO = {
   'chua-chon': { vi: 'Chưa chọn, nhờ trường tư vấn', en: 'Not sure yet' },
@@ -8,6 +9,23 @@ export const CO_SO = {
   'my-dinh': { vi: 'Mỹ Đình', en: 'Mỹ Đình' },
   'ciputra': { vi: 'Ciputra (sắp khai trương)', en: 'Ciputra (opening soon)' },
 };
+
+/** "Ba mẹ biết Casa qua đâu?" (không bắt buộc). Khớp BIET_QUA trong src/data/lien-he.ts. */
+export const BIET_QUA = {
+  google: { vi: 'Tìm trên Google', en: 'Google search' },
+  'google-maps': { vi: 'Google Maps', en: 'Google Maps' },
+  facebook: { vi: 'Facebook', en: 'Facebook' },
+  zalo: { vi: 'Zalo', en: 'Zalo' },
+  'nguoi-quen': { vi: 'Người quen giới thiệu', en: 'Recommended by someone' },
+  'di-ngang-qua': { vi: 'Đi ngang qua trường', en: 'Passed by the school' },
+  khac: { vi: 'Khác', en: 'Other' },
+};
+
+/** Nguồn truy cập (ô ẩn, lấy từ ?nguon=… hoặc tên miền trang dẫn tới): chỉ chữ thường, số, dấu - và ., tối đa 60 ký tự. */
+export function chuanHoaNguon(s) {
+  const v = String(s ?? '').trim().toLowerCase();
+  return /^[a-z0-9][a-z0-9.-]{0,59}$/.test(v) ? v : '';
+}
 
 export const THONG_BAO = {
   ten: {
@@ -79,12 +97,17 @@ export function kiemTraDangKy(dauVao, bayGio = new Date()) {
 
   if (lay('dong_y') !== 'co') loi.push('dongY');
 
+  // Hai ô không bắt buộc: giá trị lạ thì bỏ qua, không làm hỏng đăng ký.
+  const bietQuaVao = String(lay('biet_qua') ?? '');
+  const bietQua = Object.hasOwn(BIET_QUA, bietQuaVao) ? bietQuaVao : '';
+  const nguon = chuanHoaNguon(lay('nguon'));
+
   if (loi.length) return { hopLe: false, loi, lang };
   return {
     hopLe: true,
     loi,
     lang,
-    duLieu: { ten, sdt, thang_sinh: thang, nam_sinh: nam, co_so: coSo, ngon_ngu: lang },
+    duLieu: { ten, sdt, thang_sinh: thang, nam_sinh: nam, co_so: coSo, ngon_ngu: lang, biet_qua: bietQua, nguon },
   };
 }
 

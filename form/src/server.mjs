@@ -5,7 +5,7 @@
 import http from 'node:http';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { kiemTraDangKy, laThuRac, CO_SO, THONG_BAO } from './kiem-tra.mjs';
+import { kiemTraDangKy, laThuRac, CO_SO, THONG_BAO, BIET_QUA } from './kiem-tra.mjs';
 import { taoGioiHan } from './gioi-han.mjs';
 import { guiThuSmtp } from './gui-thu.mjs';
 import { ghiDangKy } from './luu.mjs';
@@ -47,6 +47,8 @@ export function noiDungThu(d, bayGio = new Date()) {
       `Số điện thoại: ${d.sdt}`,
       `Tháng/năm sinh của bé: ${String(d.thang_sinh).padStart(2, '0')}/${d.nam_sinh}`,
       `Cơ sở muốn tham quan: ${coSo}`,
+      `Biết Casa qua: ${d.biet_qua ? BIET_QUA[d.biet_qua].vi : 'Không chọn'}`,
+      `Nguồn truy cập: ${d.nguon || 'Không rõ'}`,
       `Ngôn ngữ trang: ${d.ngon_ngu === 'en' ? 'Tiếng Anh' : 'Tiếng Việt'}`,
       `Thời gian gửi: ${gio}`,
       '',

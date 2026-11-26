@@ -1,10 +1,11 @@
 ---
-// Form đăng ký tham quan. Chỉ thu 4 thông tin + ô đồng ý (CLAUDE.md, Giai đoạn 4).
-// Gửi bằng HTML thường tới dịch vụ form trên máy chủ; không cần JS.
+// Form đăng ký tham quan: 4 thông tin bắt buộc + ô đồng ý (CLAUDE.md, Giai đoạn 4), thêm 2 thông tin không bắt buộc
+// để đo nguồn khách (QUYET-DINH Q42): "biết Casa qua đâu" và ô ẩn "nguon".
+// Gửi bằng HTML thường tới dịch vụ form; đoạn JS nhỏ cuối form chỉ điền ô "nguon" (form vẫn gửi được khi tắt JS).
 // Dịch vụ nhận form: thư mục form/ (Node, 127.0.0.1:3100), Caddy chuyển /api/* tới đó.
 import Can from './Can.astro';
 import { CO_SO, type Lang } from '../data/co-so';
-import { FORM_ACTION, FORM_DA_HOAT_DONG, LIEN_HE } from '../data/lien-he';
+import { FORM_ACTION, FORM_DA_HOAT_DONG, LIEN_HE, BIET_QUA } from '../data/lien-he';
 import { url, taoT } from '../i18n/routes';
 
 interface Props { lang: Lang; coSoChon?: string; tieuDe?: string; nhanNut?: string }
@@ -23,6 +24,7 @@ const nhanCoSo = (slug: string, ten: string, sap: boolean) =>
   <p class="chu-phu">{t('Các ô có dấu', 'Fields marked')} <span class="form__bat-buoc" aria-hidden="true">*</span> {t('là bắt buộc.', 'are required.')}</p>
 
   <input type="hidden" name="ngon_ngu" value={lang} />
+  <input type="hidden" name="nguon" value="" />
   <div class="form__bay" aria-hidden="true">
     <label for="dk-website">{t('Không điền ô này', 'Leave this empty')}</label>
     <input type="text" id="dk-website" name="website" tabindex="-1" autocomplete="off" />
@@ -72,6 +74,14 @@ const nhanCoSo = (slug: string, ten: string, sap: boolean) =>
   </div>
 
   <div class="form__o">
+    <label for="dk-biet-qua">{t('Ba mẹ biết Casa qua đâu? (không bắt buộc)', 'How did you hear about Casa? (optional)')}</label>
+    <select id="dk-biet-qua" name="biet_qua">
+      <option value="">{t('Chọn một ý', 'Choose one')}</option>
+      {BIET_QUA.map((b) => <option value={b.gia}>{b.ten[lang]}</option>)}
+    </select>
+  </div>
+
+  <div class="form__o">
     <label class="form__dong-y" for="dk-dong-y">
       <input type="checkbox" id="dk-dong-y" name="dong_y" value="co" required />
       <span>
@@ -92,3 +102,15 @@ const nhanCoSo = (slug: string, ten: string, sap: boolean) =>
     <a href={LIEN_HE.tel}>{lang === 'en' ? LIEN_HE.hotlineQuocTe : LIEN_HE.hotline}</a>.
   </p>
 </form>
+<script is:inline>
+  // Ghi nguồn truy cập vào ô ẩn "nguon": ?nguon=… trên đường dẫn (Google Maps, Facebook, Zalo),
+  // nếu không có thì tên miền trang dẫn tới (ví dụ ref-www.google.com). Không đặt cookie, không lưu gì.
+  (function () {
+    var m = location.search.match(/[?&]nguon=([a-z0-9-]{1,40})/i);
+    var v = m ? m[1].toLowerCase() : '';
+    if (!v && document.referrer) {
+      try { var h = new URL(document.referrer).hostname; if (h && h !== location.hostname) v = ('ref-' + h).slice(0, 60); } catch (e) {}
+    }
+    if (v) document.querySelectorAll('input[name="nguon"]').forEach(function (e) { e.value = v; });
+  })();
+</script>

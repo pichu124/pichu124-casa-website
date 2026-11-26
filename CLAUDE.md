@@ -97,7 +97,7 @@ Mỗi giai đoạn kết thúc bằng một báo cáo ngắn và chờ người 
 ### Giai đoạn 4: Form đăng ký tham quan
 
 - Một dịch vụ Node nhỏ, riêng, chỉ nghe trên `127.0.0.1` (ví dụ cổng 3100), chạy bằng systemd dưới một người dùng riêng.
-- Chỉ thu: tên phụ huynh, số điện thoại, tháng/năm sinh của bé, cơ sở quan tâm, ô đồng ý xử lý dữ liệu (bắt buộc, có liên kết tới trang chính sách).
+- Chỉ thu: tên phụ huynh, số điện thoại, tháng/năm sinh của bé, cơ sở quan tâm, ô đồng ý xử lý dữ liệu (bắt buộc, có liên kết tới trang chính sách). Thêm 2 ô không bắt buộc, không nhận diện người gửi (chủ trường đồng ý 26/11/2026, QUYET-DINH Q42): "biết Casa qua đâu" và ô ẩn nguồn truy cập (`?nguon=` hoặc tên miền trang dẫn tới).
 - Gửi email về tuyensinh@cdb.edu.vn qua SMTP của Google Workspace (mật khẩu ứng dụng do chủ trường tự đặt vào tệp môi trường trên máy chủ, không qua chat), và ghi thêm một dòng vào tệp dữ liệu ở `/var/lib/casa-website/`, không bao giờ ghi vào dữ liệu của app casa-mamnon.
 - Chống spam: ô bẫy ẩn, giới hạn số lần gửi theo IP. Báo lỗi bằng tiếng Việt; gửi hỏng thì hiện số hotline.
 
