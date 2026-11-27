@@ -29,7 +29,9 @@ if [ ! -f "$CAU_HINH" ]; then
   install -m 640 -o root -g casa-form "$NGUON/deploy/form.env.mau" "$CAU_HINH"
   echo "  Đã tạo tệp cấu hình mới từ mẫu."
 fi
-chown root:casa-form "$CAU_HINH"; chmod 640 "$CAU_HINH"
+# Mật khẩu ứng dụng chỉ root đọc: systemd nạp EnvironmentFile bằng quyền root trước khi chạy dịch vụ, nên user
+# casa-form không cần đọc tệp. Nhờ vậy cho thêm user khác vào nhóm casa-form (để đọc dữ liệu form, Q43) không lộ mật khẩu.
+chown root:root "$CAU_HINH"; chmod 600 "$CAU_HINH"
 
 echo "▶ Chép mã dịch vụ vào $DICH (chỉ root sửa được)"
 rm -rf "$DICH.moi"
@@ -44,6 +46,11 @@ for tep in casa-website-form.service casa-website-form-don.service casa-website-
   sed "s#/usr/bin/node#$NODE#g" "$NGUON/deploy/$tep" > "/etc/systemd/system/$tep"
 done
 systemctl daemon-reload
+# Dữ liệu cũ (từ bản trước dùng quyền 0700/0600): cho nhóm casa-form đọc. Thư mục được systemd đặt lại 0750 khi khởi động.
+if [ -d /var/lib/casa-website ]; then
+  chmod 750 /var/lib/casa-website
+  [ -f /var/lib/casa-website/dang-ky.jsonl ] && chmod 640 /var/lib/casa-website/dang-ky.jsonl
+fi
 systemctl enable --quiet casa-website-form.service casa-website-form-don.timer
 systemctl start casa-website-form-don.timer
 

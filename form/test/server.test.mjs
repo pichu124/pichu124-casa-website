@@ -124,7 +124,7 @@ test('chạy thật từ đầu đến cuối: SMTP giả + ghi tệp vào thư 
     const dong = (await fs.readFile(tep, 'utf8')).trim().split('\n');
     assert.equal(dong.length, 1);
     assert.equal(JSON.parse(dong[0]).co_so, 'chua-lang');
-    assert.equal((await fs.stat(tep)).mode & 0o777, 0o600, 'chỉ user dịch vụ đọc được');
+    assert.equal((await fs.stat(tep)).mode & 0o777, 0o640, 'user dịch vụ ghi, nhóm casa-form đọc, người khác không (Q43)');
 
     // Dọn dữ liệu quá hạn: thêm một bản ghi cũ 400 ngày rồi chạy kịch bản dọn.
     const cu = { ...JSON.parse(dong[0]), thoi_gian: new Date(Date.now() - 400 * 864e5).toISOString() };

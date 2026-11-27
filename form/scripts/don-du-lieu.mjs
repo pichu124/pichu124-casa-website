@@ -29,6 +29,6 @@ for (const dong of noiDung.split('\n')) {
 
 if (xoa === 0) { console.log(`Không có đăng ký nào quá ${soNgay} ngày. Đang lưu ${giu.length} đăng ký.`); process.exit(0); }
 const tam = tep + '.tam';
-await fs.writeFile(tam, giu.length ? giu.join('\n') + '\n' : '', { mode: 0o600 });
+await fs.writeFile(tam, giu.length ? giu.join('\n') + '\n' : '', { mode: 0o640 }); // nhóm casa-form đọc được (QUYET-DINH Q43)
 await fs.rename(tam, tep);
 console.log(`Đã xoá ${xoa} đăng ký quá ${soNgay} ngày. Còn lưu ${giu.length} đăng ký.`);

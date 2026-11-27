@@ -15,10 +15,10 @@ ExecStart=/usr/bin/node /opt/casa-website-form/src/server.mjs
 Restart=on-failure
 RestartSec=5
 
-# Dữ liệu form: /var/lib/casa-website (chỉ user casa-form đọc được)
+# Dữ liệu form: /var/lib/casa-website. User casa-form ghi; nhóm casa-form đọc (app casa-lead lấy đăng ký, QUYET-DINH Q43)
 StateDirectory=casa-website
-StateDirectoryMode=0700
-UMask=0077
+StateDirectoryMode=0750
+UMask=0027
 
 # Khoá chặt quyền: không đọc thư mục người dùng, không ghi ngoài thư mục dữ liệu
 NoNewPrivileges=yes

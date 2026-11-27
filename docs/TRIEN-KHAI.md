@@ -226,8 +226,8 @@ Form trên site gửi tới `/api/dang-ky`. Caddy chuyển yêu cầu đó tới
 | Thành phần | Ở đâu trên VPS | Ai sửa được |
 |---|---|---|
 | Mã dịch vụ | `/opt/casa-website-form` (chép từ `form/` trong repo) | Chỉ root |
-| Cấu hình, mật khẩu ứng dụng | `/etc/casa-website/form.env` | Chỉ root; user `casa-form` chỉ đọc |
-| Dữ liệu đăng ký | `/var/lib/casa-website/dang-ky.jsonl` | Chỉ user `casa-form` |
+| Cấu hình, mật khẩu ứng dụng | `/etc/casa-website/form.env` | Chỉ root (systemd đọc khi khởi động dịch vụ) |
+| Dữ liệu đăng ký | `/var/lib/casa-website/dang-ky.jsonl` | User `casa-form` ghi; nhóm `casa-form` đọc (app chăm sóc lead casa-lead lấy đăng ký giao cho sale, QUYET-DINH Q43) |
 | Dịch vụ chạy nền | `casa-website-form.service` (user `casa-form`) | systemd |
 | Xoá đăng ký quá 12 tháng | `casa-website-form-don.timer`, 2h30 sáng mỗi ngày | systemd |
 
